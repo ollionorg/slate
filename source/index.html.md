@@ -2153,7 +2153,7 @@ curl "https://api.goodcop.com/v1/product/5178306911535104/meta"
     "message": "meta updated successfully"
 }
 ```
-<aside style="default">
+<aside style="background:#5bc0de;">
 The category header can be provided with two options either api or user depending on which type meta you want to change 
 </aside>
 
@@ -2172,6 +2172,8 @@ productID | required | string | Valid product identifier
 Returns message string if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
 
 ## Get Meta By ID
+
+
 
 ## Delete Meta By ID
 
