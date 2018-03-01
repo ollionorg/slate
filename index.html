@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>GoodCop API Reference</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -212,9 +212,6 @@
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -222,218 +219,2586 @@
         <ul class="search-results"></ul>
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+            <a href="#api-reference" class="toc-h1 toc-link" data-title="api-reference">API Reference</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="authentication">Authentication</a>
           </li>
           <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#user" class="toc-h1 toc-link" data-title="user">User</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#sign-up-using-email-and-password" class="toc-h2 toc-link" data-title="sign-up-using-email-and-password">Sign Up Using Email and Password</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#sign-up-usinggithub" class="toc-h2 toc-link" data-title="sign-up-usinggithub">Sign Up UsingGitHub</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#sign-up-google" class="toc-h2 toc-link" data-title="sign-up-google">Sign Up Google</a>
+                  </li>
+                  <li>
+                    <a href="#login" class="toc-h2 toc-link" data-title="login">Login</a>
+                  </li>
+                  <li>
+                    <a href="#get-user-by-id" class="toc-h2 toc-link" data-title="get-user-by-id">Get User By ID</a>
+                  </li>
+                  <li>
+                    <a href="#get-user-by-email" class="toc-h2 toc-link" data-title="get-user-by-email">Get User By Email</a>
+                  </li>
+                  <li>
+                    <a href="#list-users" class="toc-h2 toc-link" data-title="list-users">List Users</a>
+                  </li>
+                  <li>
+                    <a href="#delete-user-by-id" class="toc-h2 toc-link" data-title="delete-user-by-id">Delete User By ID</a>
+                  </li>
+                  <li>
+                    <a href="#get-group-details-by-id" class="toc-h2 toc-link" data-title="get-group-details-by-id">Get Group Details By ID</a>
+                  </li>
+                  <li>
+                    <a href="#get-user-meta-by-id" class="toc-h2 toc-link" data-title="get-user-meta-by-id">Get User Meta By ID</a>
+                  </li>
+                  <li>
+                    <a href="#update-user-meta-by-id" class="toc-h2 toc-link" data-title="update-user-meta-by-id">Update User Meta By ID</a>
+                  </li>
+                  <li>
+                    <a href="#list-user-rules-by-id" class="toc-h2 toc-link" data-title="list-user-rules-by-id">List User Rules By ID</a>
+                  </li>
+                  <li>
+                    <a href="#update-user-rules-by-id" class="toc-h2 toc-link" data-title="update-user-rules-by-id">Update User Rules By ID</a>
+                  </li>
+                  <li>
+                    <a href="#delete-user-rules-by-id" class="toc-h2 toc-link" data-title="delete-user-rules-by-id">Delete User Rules By ID</a>
+                  </li>
+                  <li>
+                    <a href="#get-group-details-for-user-by-id" class="toc-h2 toc-link" data-title="get-group-details-for-user-by-id">Get Group Details for user By ID</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#group" class="toc-h1 toc-link" data-title="group">Group</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-group" class="toc-h2 toc-link" data-title="create-group">Create Group</a>
+                  </li>
+                  <li>
+                    <a href="#get-group-by-id" class="toc-h2 toc-link" data-title="get-group-by-id">Get Group By ID</a>
+                  </li>
+                  <li>
+                    <a href="#list-groups" class="toc-h2 toc-link" data-title="list-groups">List Groups</a>
+                  </li>
+                  <li>
+                    <a href="#delete-group-by-id" class="toc-h2 toc-link" data-title="delete-group-by-id">Delete Group By ID</a>
+                  </li>
+                  <li>
+                    <a href="#delete-multiple-group" class="toc-h2 toc-link" data-title="delete-multiple-group">Delete Multiple Group</a>
+                  </li>
+                  <li>
+                    <a href="#add-multiple-users-to-group-by-id" class="toc-h2 toc-link" data-title="add-multiple-users-to-group-by-id">Add Multiple Users to Group By ID</a>
+                  </li>
+                  <li>
+                    <a href="#add-single-user-to-group-by-email" class="toc-h2 toc-link" data-title="add-single-user-to-group-by-email">Add Single User to Group By Email</a>
+                  </li>
+                  <li>
+                    <a href="#get-user-for-group-by-id" class="toc-h2 toc-link" data-title="get-user-for-group-by-id">Get User for Group By ID</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-users-for-group-by-id" class="toc-h2 toc-link" data-title="get-all-users-for-group-by-id">Get All Users for Group By ID</a>
+                  </li>
+                  <li>
+                    <a href="#delete-user-from-group-by-id" class="toc-h2 toc-link" data-title="delete-user-from-group-by-id">Delete User from Group By ID</a>
+                  </li>
+                  <li>
+                    <a href="#get-group-meta-by-id" class="toc-h2 toc-link" data-title="get-group-meta-by-id">Get Group Meta By ID</a>
+                  </li>
+                  <li>
+                    <a href="#update-group-meta-by-id" class="toc-h2 toc-link" data-title="update-group-meta-by-id">Update Group Meta By ID</a>
+                  </li>
+                  <li>
+                    <a href="#delete-group-meta-by-id" class="toc-h2 toc-link" data-title="delete-group-meta-by-id">Delete Group Meta By ID</a>
+                  </li>
+                  <li>
+                    <a href="#get-group-rules-by-id" class="toc-h2 toc-link" data-title="get-group-rules-by-id">Get Group Rules By ID</a>
+                  </li>
+                  <li>
+                    <a href="#update-group-rules-by-id" class="toc-h2 toc-link" data-title="update-group-rules-by-id">Update Group Rules By ID</a>
+                  </li>
+                  <li>
+                    <a href="#delete-group-rules-by-id" class="toc-h2 toc-link" data-title="delete-group-rules-by-id">Delete Group Rules By ID</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#product" class="toc-h1 toc-link" data-title="product">Product</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#list-products" class="toc-h2 toc-link" data-title="list-products">List Products</a>
+                  </li>
+                  <li>
+                    <a href="#create-product" class="toc-h2 toc-link" data-title="create-product">Create Product</a>
+                  </li>
+                  <li>
+                    <a href="#get-product-by-id" class="toc-h2 toc-link" data-title="get-product-by-id">Get Product By ID</a>
+                  </li>
+                  <li>
+                    <a href="#update-product-by-id" class="toc-h2 toc-link" data-title="update-product-by-id">Update Product By ID</a>
+                  </li>
+                  <li>
+                    <a href="#delete-product-by-id" class="toc-h2 toc-link" data-title="delete-product-by-id">Delete Product By ID</a>
+                  </li>
+                  <li>
+                    <a href="#update-meta-by-id" class="toc-h2 toc-link" data-title="update-meta-by-id">Update Meta By ID</a>
+                  </li>
+                  <li>
+                    <a href="#get-meta-by-id" class="toc-h2 toc-link" data-title="get-meta-by-id">Get Meta By ID</a>
+                  </li>
+                  <li>
+                    <a href="#delete-meta-by-id" class="toc-h2 toc-link" data-title="delete-meta-by-id">Delete Meta By ID</a>
+                  </li>
+                  <li>
+                    <a href="#get-rules-by-id" class="toc-h2 toc-link" data-title="get-rules-by-id">Get Rules By ID</a>
+                  </li>
+                  <li>
+                    <a href="#update-rules-by-id" class="toc-h2 toc-link" data-title="update-rules-by-id">Update Rules By ID</a>
+                  </li>
+                  <li>
+                    <a href="#delete-rules-by-id" class="toc-h2 toc-link" data-title="delete-rules-by-id">Delete Rules By ID</a>
+                  </li>
+                  <li>
+                    <a href="#create-apikey-by-id" class="toc-h2 toc-link" data-title="create-apikey-by-id">Create APIKey By ID</a>
+                  </li>
+                  <li>
+                    <a href="#get-apikey-by-id" class="toc-h2 toc-link" data-title="get-apikey-by-id">Get APIKey By ID</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-apikeys-by-id" class="toc-h2 toc-link" data-title="get-all-apikeys-by-id">Get All APIKeys By ID</a>
+                  </li>
+                  <li>
+                    <a href="#delete-apikeys-by-id" class="toc-h2 toc-link" data-title="delete-apikeys-by-id">Delete APIKeys By ID</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#tenant" class="toc-h1 toc-link" data-title="tenant">Tenant</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-tenant" class="toc-h2 toc-link" data-title="create-tenant">Create Tenant</a>
+                  </li>
+                  <li>
+                    <a href="#get-tenant-by-id" class="toc-h2 toc-link" data-title="get-tenant-by-id">Get Tenant By ID</a>
+                  </li>
+                  <li>
+                    <a href="#delete-tenant-by-id" class="toc-h2 toc-link" data-title="delete-tenant-by-id">Delete Tenant By ID</a>
+                  </li>
+                  <li>
+                    <a href="#get-rule-by-id" class="toc-h2 toc-link" data-title="get-rule-by-id">Get Rule By ID</a>
+                  </li>
+                  <li>
+                    <a href="#update-rule-by-id" class="toc-h2 toc-link" data-title="update-rule-by-id">Update Rule By ID</a>
+                  </li>
+                  <li>
+                    <a href="#delete-rule-by-id" class="toc-h2 toc-link" data-title="delete-rule-by-id">Delete Rule By ID</a>
+                  </li>
+                  <li>
+                    <a href="#update-secret-by-id" class="toc-h2 toc-link" data-title="update-secret-by-id">Update Secret By ID</a>
+                  </li>
+                  <li>
+                    <a href="#get-secret-by-id" class="toc-h2 toc-link" data-title="get-secret-by-id">Get Secret By ID</a>
+                  </li>
+                  <li>
+                    <a href="#get-meta-by-id-2" class="toc-h2 toc-link" data-title="get-meta-by-id">Get Meta By ID</a>
+                  </li>
+                  <li>
+                    <a href="#update-meta-by-id-2" class="toc-h2 toc-link" data-title="update-meta-by-id">Update Meta By ID</a>
+                  </li>
+                  <li>
+                    <a href="#delete-meta-by-id-2" class="toc-h2 toc-link" data-title="delete-meta-by-id">Delete Meta By ID</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api" class="toc-h1 toc-link" data-title="api">Api</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-api" class="toc-h2 toc-link" data-title="create-api">Create Api</a>
+                  </li>
+                  <li>
+                    <a href="#get-api-by-id" class="toc-h2 toc-link" data-title="get-api-by-id">Get Api By ID</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-apis" class="toc-h2 toc-link" data-title="get-all-apis">Get All Apis</a>
+                  </li>
+                  <li>
+                    <a href="#delete-api-by-id" class="toc-h2 toc-link" data-title="delete-api-by-id">Delete Api By ID</a>
+                  </li>
+                  <li>
+                    <a href="#get-rule-by-id-2" class="toc-h2 toc-link" data-title="get-rule-by-id">Get rule By ID</a>
+                  </li>
+                  <li>
+                    <a href="#update-rule-by-id-2" class="toc-h2 toc-link" data-title="update-rule-by-id">Update rule By ID</a>
+                  </li>
+                  <li>
+                    <a href="#delete-rule-by-id-2" class="toc-h2 toc-link" data-title="delete-rule-by-id">Delete rule By ID</a>
+                  </li>
+                  <li>
+                    <a href="#get-meta-by-id-3" class="toc-h2 toc-link" data-title="get-meta-by-id">Get Meta By ID</a>
+                  </li>
+                  <li>
+                    <a href="#update-meta-by-id-3" class="toc-h2 toc-link" data-title="update-meta-by-id">Update Meta By ID</a>
+                  </li>
+                  <li>
+                    <a href="#delete-meta-by-id-3" class="toc-h2 toc-link" data-title="delete-meta-by-id">Delete Meta By ID</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#auth" class="toc-h1 toc-link" data-title="auth">Auth</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#check-auth" class="toc-h2 toc-link" data-title="check-auth">Check Auth</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="errors">Errors</a>
           </li>
       </div>
         <ul class="toc-footer">
             <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+            <li><a href=''>Documentation Powered by Slate</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
-
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
+        <h1 id='api-reference'>API Reference</h1>
+<p>The GoodCop API is organized around REST. Our API has resource-oriented URLs, and uses HTTPS response codes to indicate API errors. We use built-in HTTPS features, like HTTPS authentication and HTTPS verbs, which are understood by off-the-shelf HTTPS clients. JSON is returned by all API responses, including errors.</p>
 <h1 id='authentication'>Authentication</h1>
 <blockquote>
 <p>To authorize, use this code:</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+<pre class="highlight shell tab-shell"><code><span class="gp">&gt; </span>Example Request
 curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span>
 </code></pre>
 <blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
+<p>Make sure to replace Authorization header with your Product API key.</p>
 </blockquote>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<p>Authenticate your account when using the API by including your Product API key in the request.
+GoodCop expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p><code>Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=</code></p>
 
-<p><code>Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+<aside style="background:#5bc0de;">
+You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=</code> with your product API key.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h1 id='user'>User</h1><h2 id='sign-up-using-email-and-password'>Sign Up Using Email and Password</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/signup
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
 </code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/signup"</span>
+  -d <span class="s1">'{"email":"test", "password":"test@#987"}'</span>
+  -X <span class="s2">"POST"</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@mail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="s2">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_IDvekbzln82kvCPKxv6-lYwovmucoRVlPtRlKAoo1N13l3PgfaxJeprTtfHgihddKfITPrgDvre8RKM8w=="</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Creates a user object provided the email and password in the request body and returns the user object.</p>
+<h3 id='https-request'>HTTPS Request</h3>
+<p><code>POST https://api.goodcop.com/v1/signup</code></p>
+<h3 id='request-body'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email</td>
+<td>required</td>
+<td>string</td>
+<td>The email address to send the verfication.</td>
+</tr>
+<tr>
+<td>password</td>
+<td>required</td>
+<td>string</td>
+<td>The password to set for the user to authenticate.</td>
+</tr>
+</tbody></table>
+<h3 id='returns'>Returns</h3>
+<p>Returns user object if correct email and password was provided, and returns an error otherwise.</p>
+<h2 id='sign-up-usinggithub'>Sign Up UsingGitHub</h2><h2 id='sign-up-google'>Sign Up Google</h2><h2 id='login'>Login</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/login
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/login"</span>
+  -d <span class="s1">'{"email":"test", "password":"test@#987"}'</span>
+  -X <span class="s2">"POST"</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@mail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"groups"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eUhWVAYVcw_guO-XRLs_JIZimSiXycUAesf0VkBNptZvhZQnkC0uZacvuhtj8BVI2m5YoHbCU_AU_3hK-tytRg=="</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Authenticates the user provided the valid email and password and Retrieves the details of a user that has previously been created.</p>
+<h3 id='https-request-2'>HTTPS Request</h3>
+<p><code>POST https://api.goodcop.com/v1/login</code></p>
+<h3 id='request-body-2'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email</td>
+<td>required</td>
+<td>string</td>
+<td>The email address to validate against.</td>
+</tr>
+<tr>
+<td>password</td>
+<td>required</td>
+<td>string</td>
+<td>The password to authenticate user.</td>
+</tr>
+</tbody></table>
+<h3 id='returns-2'>Returns</h3>
+<p>Returns the user object. In case of any validation of invalid email or password, the return 
+will be an error.</p>
+<h2 id='get-user-by-id'>Get User By ID</h2>
+<p>Retrieves the details of a user that has previously been created. Provide the unique user ID that was returned from your login request and Goodcop will return the corresponding user information.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/user/{userID}
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@mail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"groups"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eUhWVAYVcw_guO-XRLs_JIZimSiXycUAesf0VkBNptZvhZQnkC0uZacvuhtj8BVI2m5YoHbCU_AU_3hK-tytRg=="</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='https-request-3'>HTTPS Request</h3>
+<p><code>POST https://api.goodcop.com/v1/user/{userID}</code></p>
+<h3 id='url-params'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid user identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-3'>Returns</h3>
+<p>Returns user if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='get-user-by-email'>Get User By Email</h2>
+<p>Retrieves the details of a user that has previously been created. Provide the unique email that was returned from your login request and Goodcop will return the corresponding user information.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/user/{email}
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test@mail.com"</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@mail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"groups"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eUhWVAYVcw_guO-XRLs_JIZimSiXycUAesf0VkBNptZvhZQnkC0uZacvuhtj8BVI2m5YoHbCU_AU_3hK-tytRg=="</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='https-request-4'>HTTPS Request</h3>
+<p><code>GET https://api.goodcop.com/v1/user/{email}</code></p>
+<h3 id='url-params-2'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email</td>
+<td>required</td>
+<td>string</td>
+<td>Valid email address</td>
+</tr>
+</tbody></table>
+<h3 id='returns-4'>Returns</h3>
+<p>Returns user if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='list-users'>List Users</h2>
+<p>Retrieves the details of all users that has previously been created.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/user
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user"</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@mail.tv"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/new/smart/5687539843203072"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"groups"</span><span class="p">:</span><span class="w">  </span><span class="p">[</span><span class="w">
+                </span><span class="mi">5647053199769600</span><span class="p">,</span><span class="w">
+                </span><span class="mi">5687905720729600</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usPAGnmuNtq8JXIprybHXq2c90uC6Jxr62DFv9CpwFO3S25x6WYdT20AZT1xVE1rmSMT5ZwxQhT7sgo5-S42ag=="</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+              </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test1_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test1@mail.com"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"groups"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eUhWVAYVcw_guO-XRLs_JIZimSiXycUAesf0VkBNptZvhZQnkC0uZacvuhtj8BVI2m5YoHbCU_AU_3hK-tytRg=="</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='https-request-5'>HTTPS Request</h3>
+<p><code>GET https://api.goodcop.com/v1/user</code></p>
+<h3 id='returns-5'>Returns</h3>
+<p>Returns list of user objects if a valid authorization key was provided, and returns an error otherwise.</p>
+<h2 id='delete-user-by-id'>Delete User By ID</h2>
+<p>Provide the unique user ID and Goodcop will return the message for successful deletion of user.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>DELETE  https://api.goodcop.com/v1/user/{userID}
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User deleted successfully"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='https-request-6'>HTTPS Request</h3>
+<p><code>DELETE https://api.goodcop.com/v1/user/{userID}</code></p>
+<h3 id='url-params-3'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid user identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-6'>Returns</h3>
+<p>Returns a string message if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='get-group-details-by-id'>Get Group Details By ID</h2>
+<p>Provide the unique user ID and Goodcop will return the group details.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/user/{userID}/groups
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/groups"</span>
+  -X GET
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"groupId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5717800035287040</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CloudCover"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/new/smart/5687539843203072"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/new/smart/*"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5750501782061056</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"groupId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5664530495438848</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CloudCover|admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5717800035287040"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5664530495438848"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5750501782061056</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+</span></code></pre><h3 id='https-request-7'>HTTPS Request</h3>
+<p><code>GET https://api.goodcop.com/v1/user/{userID}/groups</code></p>
+<h3 id='url-params-4'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
+<th>Value</th>
+<th>Type</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>userID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid user identifier</td>
 </tr>
 </tbody></table>
+<h3 id='returns-7'>Returns</h3>
+<p>Returns a array of groups if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='get-user-meta-by-id'>Get User Meta By ID</h2>
+<p>Provide the unique user ID and Goodcop will return the meta details.</p>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/user/{userID}/meta
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 </code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/meta"</span>
+  -X GET
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"storing test meta info"</span><span class="p">,</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+</span></code></pre><h3 id='https-request-8'>HTTPS Request</h3>
+<p><code>GET https://api.goodcop.com/v1/user/{userID}/meta</code></p>
+<h3 id='url-params-5'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>userID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid user identifier</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h3 id='request-body-3'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>meta</td>
+<td>required</td>
+<td>string</td>
+<td>The email address to send the verfication.</td>
+</tr>
+</tbody></table>
+<h3 id='returns-8'>Returns</h3>
+<p>Returns meta if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='update-user-meta-by-id'>Update User Meta By ID</h2>
+<p>Provide the unique user ID and Goodcop will return the meta details.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>PUT  https://api.goodcop.com/v1/user/{userID}/meta
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/meta"</span>
+  -X PUT
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@mail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="mi">5717800035287040</span><span class="p">,</span><span class="w">
+        </span><span class="mi">5664530495438848</span><span class="p">,</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"storing test meta info"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wv0X3yJCKhzFxX92vRVs4ube944zY3YJCVtI1EAUBXTQpXrGEFmNdFSLyk6ygA7CDaK8sbN8xHhkxuwBUu5xNQ=="</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='https-request-9'>HTTPS Request</h3>
+<p><code>PUT https://api.goodcop.com/v1/user/{userID}/meta</code></p>
+<h3 id='request-body-4'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>meta</td>
+<td>required</td>
+<td>string</td>
+<td>Metadata to be stored for the user</td>
+</tr>
+</tbody></table>
+<h3 id='url-params-6'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid user identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-9'>Returns</h3>
+<p>Returns user object with updated meta if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='list-user-rules-by-id'>List User Rules By ID</h2>
+<p>Provide the unique user ID and Goodcop will return the list of all rules.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/user/{userID}/rule
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"</span>
+  -X GET
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DELETE"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='https-request-10'>HTTPS Request</h3>
+<p><code>GET https://api.goodcop.com/v1/user/{userID}/rule</code></p>
+<h3 id='url-params-7'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid user identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-10'>Returns</h3>
+<p>Returns rules object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='update-user-rules-by-id'>Update User Rules By ID</h2>
+<p>Provide the unique user ID and Goodcop will return the updated list of all rules.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>PUT  https://api.goodcop.com/v1/user/{userID}/rule
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"</span>
+  -X PUT
+  -d <span class="s1">'[{
+            "verb": "GET",
+            "path": "/credentials/5687539843203072",
+            "effect": true
+        }]'</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@mail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DELETE"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="mi">5717800035287040</span><span class="p">,</span><span class="w">
+        </span><span class="mi">5664530495438848</span><span class="p">,</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"storing test meta info"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wv0X3yJCKhzFxX92vRVs4ube944zY3YJCVtI1EAUBXTQpXrGEFmNdFSLyk6ygA7CDaK8sbN8xHhkxuwBUu5xNQ=="</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='https-request-11'>HTTPS Request</h3>
+<p><code>PUT https://api.goodcop.com/v1/user/{userID}/rule</code></p>
+<h3 id='request-body-5'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>rules</td>
+<td>required</td>
+<td>array</td>
+<td>rules to be updated</td>
+</tr>
+</tbody></table>
+<h3 id='url-params-8'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid user identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-11'>Returns</h3>
+<p>Returns user object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='delete-user-rules-by-id'>Delete User Rules By ID</h2>
+<p>Provide the unique user ID and Goodcop will return the updated list of all rules.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>DELETE  https://api.goodcop.com/v1/user/{userID}/rule
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"</span>
   -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+  -d <span class="s1">'[{
+            "verb": "GET",
+            "path": "/credentials/5687539843203072",
+            "effect": true
+        }]'</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
 </code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Example Response</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+    </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@mail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DELETE"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="mi">5717800035287040</span><span class="p">,</span><span class="w">
+        </span><span class="mi">5664530495438848</span><span class="p">,</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"storing test meta info"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wv0X3yJCKhzFxX92vRVs4ube944zY3YJCVtI1EAUBXTQpXrGEFmNdFSLyk6ygA7CDaK8sbN8xHhkxuwBUu5xNQ=="</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+</span></code></pre><h3 id='https-request-12'>HTTPS Request</h3>
+<p><code>DELETE https://api.goodcop.com/v1/user/{userID}/rule</code></p>
+<h3 id='url-params-9'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>userID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid user identifier</td>
 </tr>
 </tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
+<h3 id='returns-12'>Returns</h3>
+<p>Returns user object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='get-group-details-for-user-by-id'>Get Group Details for user By ID</h2>
+<p>Provide the unique user ID and Goodcop will return the list of all groups.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/user/{userID}/groups
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/groups"</span>
+  -X GET
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"groupId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5198802495471616</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5750501782061056</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"groupId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5631639635886080</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"general"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5714163003293696/*"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5750501782061056</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"groupId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5673202705498112</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"editor"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5714163003293696/*"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5714163003293696/*"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5750501782061056</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+
+</span></code></pre><h3 id='https-request-13'>HTTPS Request</h3>
+<p><code>GET https://api.goodcop.com/v1/user/{userID}/groups</code></p>
+<h3 id='url-params-10'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid user identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-13'>Returns</h3>
+<p>Returns array of group details with a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h1 id='group'>Group</h1><h2 id='create-group'>Create Group</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/group
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/group"</span>
+  -d <span class="s1">'{
+    "name":"test_group",
+    "rules":[
+        {"path":"thrifty/billing","verb":"GET","effect":true}
+    ]
+    }'</span>
+  -X <span class="s2">"POST"</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"groupId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5707274949492736</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_group"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/thrifty/billing"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5750501782061056</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Creates a group object provided the name in the request body and returns the group object.</p>
+<h3 id='https-request-14'>HTTPS Request</h3>
+<p><code>POST https://api.goodcop.com/v1/group</code></p>
+<h3 id='request-body-6'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>required</td>
+<td>string</td>
+<td>The name of the group. Group with same name can be created.</td>
+</tr>
+<tr>
+<td>rule</td>
+<td>optional</td>
+<td>array</td>
+<td>The rules to set for the group</td>
+</tr>
+<tr>
+<td>description</td>
+<td>optional</td>
+<td>string</td>
+<td>The Description of the group</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>optional</td>
+<td>string</td>
+<td>Provide metadata to store against the group</td>
+</tr>
+</tbody></table>
+<h3 id='returns-14'>Returns</h3>
+<p>Returns group object if correct type of name is provided, and returns an error otherwise.</p>
+<h2 id='get-group-by-id'>Get Group By ID</h2>
+<p>Retrieves the details of a group that has previously been created. Provide the unique group ID that was returned from your login request and Goodcop will return the corresponding user information.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/group/{groupID}
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/group/5707274949492736"</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"groupId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5707274949492736</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_group1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/thrifty/billing"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5750501782061056</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='https-request-15'>HTTPS Request</h3>
+<p><code>GET https://api.goodcop.com/v1/group/{groupID}</code></p>
+<h3 id='url-params-11'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>groupID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid group identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-15'>Returns</h3>
+<p>Returns group details if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='list-groups'>List Groups</h2>
+<p>Retrieves the details of all groups that has previously been created.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/group
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/group"</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"groupId"</span><span class="p">:</span><span class="w"> </span><span class="mi">4889147835678720</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5750501782061056</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"groupId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5707274949492736</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_group1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/thrifty/billing"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5750501782061056</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='https-request-16'>HTTPS Request</h3>
+<p><code>GET https://api.goodcop.com/v1/group</code></p>
+<h3 id='returns-16'>Returns</h3>
+<p>Returns list of group objects if a valid authorization key was provided, and returns an error otherwise.</p>
+<h2 id='delete-group-by-id'>Delete Group By ID</h2>
+<p>Provide the unique group ID and Goodcop will return the message for successful deletion of group.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>DELETE  https://api.goodcop.com/v1/group/{groupID}
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/group/5707274949492736"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Group has been deleted for groupID - 5707274949492736"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='https-request-17'>HTTPS Request</h3>
+<p><code>DELETE https://api.goodcop.com/v1/group/{groupID}</code></p>
+<h3 id='url-params-12'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>groupID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid group identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-17'>Returns</h3>
+<p>Returns a string message if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='delete-multiple-group'>Delete Multiple Group</h2>
+<p>Provide the unique array of group IDs and Goodcop will return the message for successful deletion of group.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>DELETE  https://api.goodcop.com/v1/group
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/group"</span>
+  -X DELETE
+  -d <span class="s1">'[5717800035287040,5717800035287766]'</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Groups Deleted Successfully"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='https-request-18'>HTTPS Request</h3>
+<p><code>DELETE https://api.goodcop.com/v1/group</code></p>
+<h3 id='request-body-7'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>groupIDs</td>
+<td>array</td>
+<td>integer</td>
+<td>Array of Valid group identifiers</td>
+</tr>
+</tbody></table>
+<h3 id='returns-18'>Returns</h3>
+<p>Returns a string message if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='add-multiple-users-to-group-by-id'>Add Multiple Users to Group By ID</h2>
+<p>Provide the unique group ID and Goodcop will add multiple users to the group.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>PUT  https://api.goodcop.com/v1/group/{groupID}/user
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/group/5707274949492736/user"</span>
+  -X PUT
+  -d <span class="s1">'{ "users":[
+                    "01e097a1-fedd-466f-96c9-3eaee6cc7f1f",
+                    "022fa660-9242-4521-b614-e46ffead2b2b"
+                ]
+    }'</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_a660-9242-4521-b614-e46ffead2b2b"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Group added successfully"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test1_97a1-fedd-466f-96c9-3eaee6cc7f1f"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Group added successfully"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='https-request-19'>HTTPS Request</h3>
+<p><code>PUT https://api.goodcop.com/v1/group/{groupID}/users</code></p>
+<h3 id='request-body-8'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>users</td>
+<td>required</td>
+<td>string array</td>
+<td>Valid user indentifier array</td>
+</tr>
+</tbody></table>
+<h3 id='url-params-13'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>groupID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid group identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-19'>Returns</h3>
+<p>Returns a object with updated mesage if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='add-single-user-to-group-by-email'>Add Single User to Group By Email</h2>
+<p>Provide the unique email address and Goodcop will add the user to the specified group.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>PUT  https://api.goodcop.com/v1/group/{groupID}/userEmail
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/group/5707274949492736/userEmail"</span>
+  -X PUT
+  -d <span class="s1">'{ 
+    "email":"test@mail.com"
+    }'</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_a660-9242-4521-b614-e46ffead2b2b"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='https-request-20'>HTTPS Request</h3>
+<p><code>PUT https://api.goodcop.com/v1/group/{groupID}/userEmail</code></p>
+<h3 id='request-body-9'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email</td>
+<td>required</td>
+<td>string</td>
+<td>Valid email address</td>
+</tr>
+</tbody></table>
+<h3 id='url-params-14'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>groupID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid group identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-20'>Returns</h3>
+<p>Returns a user ID to which was added if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='get-user-for-group-by-id'>Get User for Group By ID</h2>
+<p>Provide the unique user ID, Group ID and Goodcop will return the user details.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/group/{groupID}/user/{userID}
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/group/5717800035287040/user/test_a660-9242-4521-b614-e46ffead2b2b"</span>
+  -X GET
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_a660-9242-4521-b614-e46ffead2b2b"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@mail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="mi">5717800035287040</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usPAGnmuNtq8JXIprybHXq2c90uC6Jxr62DFv9CpwFO3S25x6WYdT20AZT1xVE1rmSMT5ZwxQhT7sgo5-S42ag=="</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='https-request-21'>HTTPS Request</h3>
+<p><code>GET  https://api.goodcop.com/v1/group/{groupID}/user/{userID}</code></p>
+<h3 id='url-params-15'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>groupID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid group identifier</td>
+</tr>
+<tr>
+<td>userID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid user identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-21'>Returns</h3>
+<p>Returns user object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='get-all-users-for-group-by-id'>Get All Users for Group By ID</h2>
+<p>Provide the unique Group ID and Goodcop will return the list of user details.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/group/{groupID}/user
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/group/5717800035287040/user"</span>
+  -X GET
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_a660-9242-4521-b614-e46ffead2b2b"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@mail.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="mi">5717800035287040</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usPAGnmuNtq8JXIprybHXq2c90uC6Jxr62DFv9CpwFO3S25x6WYdT20AZT1xVE1rmSMT5ZwxQhT7sgo5-S42ag=="</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test1_a660-9242-4521-b614-e46ffead2b2b"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test1@mail.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/users/254c244a-bc58-43d2-a85e-378dc6195795/*"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/users/254c244a-bc58-43d2-a85e-378dc6195795/*"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DELETE"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/users/254c244a-bc58-43d2-a85e-378dc6195795/*"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="mi">5204687808626688</span><span class="p">,</span><span class="w">
+                </span><span class="mi">5663311798468608</span><span class="p">,</span><span class="w">
+                </span><span class="mi">5762893836451840</span><span class="p">,</span><span class="w">
+                </span><span class="mi">5717800035287040</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mo6Z-QWu5Lgpm14tDaP1Wz_Rz-pyLOae6LVTheWKxSJI4Vmfqfdrn0NfZ1niOr3f8mwrG791EOcTiEY2jbdgMw=="</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='https-request-22'>HTTPS Request</h3>
+<p><code>GET  https://api.goodcop.com/v1/group/{groupID}/user</code></p>
+<h3 id='url-params-16'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>groupID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid group identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-22'>Returns</h3>
+<p>Returns list of user object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='delete-user-from-group-by-id'>Delete User from Group By ID</h2>
+<p>Provide the unique user ID and Goodcop will return the message for successful deletion of user.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>DELETE  https://api.goodcop.com/v1/group/{groupID}/user/{userID}
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/group/5717800035287040/user/test_a660-9242-4521-b614-e46ffead2b2b"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Group deleted successfully"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='https-request-23'>HTTPS Request</h3>
+<p><code>DELETE https://api.goodcop.com/v1/group/{groupID}/user/{userID}</code></p>
+<h3 id='url-params-17'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>groupID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid group identifier</td>
+</tr>
+<tr>
+<td>userID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid user identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-23'>Returns</h3>
+<p>Returns a string message if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='get-group-meta-by-id'>Get Group Meta By ID</h2>
+<p>Provide the unique group ID and Goodcop will return the meta inforamtion for the group.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/group/{groupID}/meta
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/group/5717800035287040/meta"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test meta"</span><span class="w">
+
+</span></code></pre><h3 id='https-request-24'>HTTPS Request</h3>
+<p><code>DELETE https://api.goodcop.com/v1/group/{groupID}/meta</code></p>
+<h3 id='url-params-18'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>groupID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid group identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-24'>Returns</h3>
+<p>Returns a meta string if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='update-group-meta-by-id'>Update Group Meta By ID</h2>
+<p>Provide the unique user ID and Goodcop will return the meta details.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>PUT  https://api.goodcop.com/v1/group/{groupID}/meta
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/group/5717800035287040/meta"</span>
+  -X PUT
+  -d <span class="s1">'{
+    "meta":"update test meta"
+    }'</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"update test meta"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='https-request-25'>HTTPS Request</h3>
+<p><code>PUT https://api.goodcop.com/v1/group/{groupID}/meta</code></p>
+<h3 id='request-body-10'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>meta</td>
+<td>required</td>
+<td>string</td>
+<td>Metadata to be updated for the group</td>
+</tr>
+</tbody></table>
+<h3 id='url-params-19'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>groupID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid group identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-25'>Returns</h3>
+<p>Returns string with updated meta if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='delete-group-meta-by-id'>Delete Group Meta By ID</h2>
+<p>Provide the unique group ID, meta and Goodcop will return the group details with empty meta.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>DELETE  https://api.goodcop.com/v1/group/{groupID}/meta
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/group/5717800035287040/meta"</span>
+  -X DELETE
+  -d <span class="s1">'{
+    "meta":"update test meta"
+    }'</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"groupId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5717800035287040</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DELETE"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5750501782061056</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='https-request-26'>HTTPS Request</h3>
+<p><code>DELETE https://api.goodcop.com/v1/group/{groupID}/meta</code></p>
+<h3 id='request-body-11'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>meta</td>
+<td>required</td>
+<td>string</td>
+<td>Metadata to be deleted for the group</td>
+</tr>
+</tbody></table>
+<h3 id='url-params-20'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>groupID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid group identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-26'>Returns</h3>
+<p>Returns group object with deleted meta if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='get-group-rules-by-id'>Get Group Rules By ID</h2>
+<p>Provide the unique group ID and Goodcop will return the list of all rules.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/group/{groupID}/rule
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/group/5717800035287040/rule"</span>
+  -X GET
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DELETE"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='https-request-27'>HTTPS Request</h3>
+<p><code>GET https://api.goodcop.com/v1/group/{groupID}/rule</code></p>
+<h3 id='url-params-21'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>groupID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid group identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-27'>Returns</h3>
+<p>Returns rules object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='update-group-rules-by-id'>Update Group Rules By ID</h2>
+<p>Provide the unique user ID and Goodcop will return the updated list of all rules.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>PUT  https://api.goodcop.com/v1/user/{userID}/rule
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/group/5717800035287040/rule"</span>
+  -X PUT
+  -d <span class="s1">'[{
+            "verb": "DELETE",
+            "path": "/credentials/5687539843203072",
+            "effect": true
+        }]'</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+     </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DELETE"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='https-request-28'>HTTPS Request</h3>
+<p><code>PUT https://api.goodcop.com/v1/group/{groupID}/rule</code></p>
+<h3 id='request-body-12'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>rules</td>
+<td>required</td>
+<td>array</td>
+<td>rules to be updated</td>
+</tr>
+</tbody></table>
+<h3 id='url-params-22'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>groupID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid group identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-28'>Returns</h3>
+<p>Returns update rules object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='delete-group-rules-by-id'>Delete Group Rules By ID</h2>
+<p>Provide the unique group ID, rule array and Goodcop will return the updated list of all rules.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>DELETE  https://api.goodcop.com/v1/group/{groupID}/rule
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/group/5717800035287040/rule"</span>
+  -X DELETE
+  -d <span class="s1">'[{
+            "verb": "GET",
+            "path": "/credentials/5687539843203072",
+            "effect": true
+        }]'</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DELETE"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='https-request-29'>HTTPS Request</h3>
+<p><code>DELETE https://api.goodcop.com/v1/group/{groupID}/rule</code></p>
+<h3 id='url-params-23'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>groupID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid group identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-29'>Returns</h3>
+<p>Returns updated rules object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h1 id='product'>Product</h1><h2 id='list-products'>List Products</h2>
+<p>Retrieves the details of all products that has previously been created. </p>
+
+<aside style="background:#f0ad4e;">
+The Authorization token is a super secure token that is only accessible to administrators of Goodcop Api.
+</aside>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/product
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/product"</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"Products"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5735995932672000</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"product_1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"product_1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"authCallback"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://requestb.in/1f4y9ho1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"apiRules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/product_1/billing"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/product_1/billin"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/dkd"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"apiMeta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"userRules"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"userMeta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"apiKeys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FIaxZkJNOmj3MjPNgo2tFvZOXvWbNAdlAWWaAZnb9fg="</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5760586365272064</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"product_2"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"product_2"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"authCallback"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"apiRules"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"apiMeta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"userRules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/hello/hi"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"userMeta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"apiKeys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"II4htdb2eUx0FKDrA7Fr0INyd4WsamLlrzCIjKW8fTI="</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5750501782061056</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"product_3"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"product_3"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"authCallback"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"apiRules"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"apiMeta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"userRules"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"userMeta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"apiKeys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aIsKmHDTaSvYJ7JBzc5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='https-request-30'>HTTPS Request</h3>
+<p><code>GET https://api.goodcop.com/v1/product</code></p>
+<h3 id='returns-30'>Returns</h3>
+<p>Returns list of products if a valid authorization key was provided, and returns an error otherwise.</p>
+<h2 id='create-product'>Create Product</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/product
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/product"</span>
+  -d <span class="s1">'{
+    "name":"test_product"
+    }'</span>
+  -X <span class="s2">"POST"</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6308443803615232</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_product"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"authCallback"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"apiRules"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"apiMeta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"userRules"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"userMeta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"apiKeys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_2va8vfZ4j1Ci1qvGreQ-u8OwD3LjYQ9ksegxEp0="</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>Creates a product provided the name in the request body.</p>
+
+<aside style="background:#f0ad4e;">
+The Authorization token is a super secure token that is only accessible to administrators of Goodcop Api.
+</aside>
+<h3 id='https-request-31'>HTTPS Request</h3>
+<p><code>POST https://api.goodcop.com/v1/group</code></p>
+<h3 id='request-body-13'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>required</td>
+<td>string</td>
+<td>The name of the product.</td>
+</tr>
+</tbody></table>
+<h3 id='returns-31'>Returns</h3>
+<p>Returns product object if correct type of name is provided, and returns an error otherwise.</p>
+<h2 id='get-product-by-id'>Get Product By ID</h2>
+<p>Retrieves the details of a product. Provide the unique product ID and Goodcop will return the corresponding user information.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/product/{productID}
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/product/5735995932672000"</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5735995932672000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"product_1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"authCallback"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://requestb.in/1f4y9ho1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"apiRules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/product_1/billing"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/product_1/billin"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/dkd"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"apiMeta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"userRules"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"userMeta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"apiKeys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_3MjPNgo2tFvZOXvWbNAdlAWWaAZnb9fg="</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='https-request-32'>HTTPS Request</h3>
+<p><code>GET https://api.goodcop.com/v1/product/{productID}</code></p>
+<h3 id='url-params-24'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>productID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid product identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-32'>Returns</h3>
+<p>Returns product detauls if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='update-product-by-id'>Update Product By ID</h2>
+<p>Provide the product details and Goodcop will return the updated product information.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>PUT  https://api.goodcop.com/v1/product/{productID}
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/product/6308443803615232"</span>
+  -X PUT
+  -d <span class="s1">'{
+    "name":"test_product",
+    "description":"This is test description",
+    "apiMeta": "test meta",
+    "authCallback":"/callback",
+    "apiRules":[{
+            "verb": "GET",
+            "path": "/credentials/5687539843203072",
+            "effect": true
+
+    }],
+    "userRules":[{
+            "verb": "GET",
+            "path": "/new/5687539843203072",
+            "effect": true
+
+    }],
+    "userMeta":"user meta"
+    }'</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"test_product"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="s2">"This is test description"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"apiMeta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test meta"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"authCallback"</span><span class="p">:</span><span class="s2">"/callback"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"apiRules"</span><span class="p">:[{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">"userRules"</span><span class="p">:[{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/new/5687539843203072"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">"userMeta"</span><span class="p">:</span><span class="s2">"user meta"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='https-request-33'>HTTPS Request</h3>
+<p><code>PUT https://api.goodcop.com/v1/product/{productID}</code></p>
+<h3 id='request-body-14'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>optional</td>
+<td>string</td>
+<td>name of the product</td>
+</tr>
+<tr>
+<td>description</td>
+<td>optional</td>
+<td>string</td>
+<td>description of the product</td>
+</tr>
+<tr>
+<td>authCallback</td>
+<td>optional</td>
+<td>string</td>
+<td>define a callback for federated auth</td>
+</tr>
+<tr>
+<td>apiMeta</td>
+<td>optional</td>
+<td>string</td>
+<td>meta information of the api</td>
+</tr>
+<tr>
+<td>apiRules</td>
+<td>optional</td>
+<td>array</td>
+<td>rules of api</td>
+</tr>
+<tr>
+<td>userMeta</td>
+<td>optional</td>
+<td>string</td>
+<td>meta information of the user</td>
+</tr>
+<tr>
+<td>userRules</td>
+<td>optional</td>
+<td>array</td>
+<td>rules of user</td>
+</tr>
+</tbody></table>
+<h3 id='url-params-25'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>productID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid user identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-33'>Returns</h3>
+<p>Returns product object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='delete-product-by-id'>Delete Product By ID</h2>
+<p>Provide the unique product ID and Goodcop will return the message for successful deletion of product.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>DELETE  https://api.goodcop.com/v1/product/{productID}
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/product/5178306911535104"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Product Deleted Successfully"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='https-request-34'>HTTPS Request</h3>
+<p><code>DELETE https://api.goodcop.com/v1/product/{productID}</code></p>
+<h3 id='url-params-26'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>productID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid product identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-34'>Returns</h3>
+<p>Returns a string message if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='update-meta-by-id'>Update Meta By ID</h2>
+<p>Provide the unique product ID and Goodcop will return the meta details.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>PUT  https://api.goodcop.com/v1/product/{productID}/meta
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/product/5178306911535104/meta"</span>
+  -X PUT
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"category: user"</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"meta updated successfully"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<aside style="default">
+The category header can be provided with two options either api or user depending on which type meta you want to change 
+</aside>
+<h3 id='https-request-35'>HTTPS Request</h3>
+<p><code>PUT https://api.goodcop.com/v1/product/{productID}/meta</code></p>
+<h3 id='url-params-27'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>productID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid product identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-35'>Returns</h3>
+<p>Returns message string if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='get-meta-by-id'>Get Meta By ID</h2><h2 id='delete-meta-by-id'>Delete Meta By ID</h2><h2 id='get-rules-by-id'>Get Rules By ID</h2><h2 id='update-rules-by-id'>Update Rules By ID</h2><h2 id='delete-rules-by-id'>Delete Rules By ID</h2><h2 id='create-apikey-by-id'>Create APIKey By ID</h2><h2 id='get-apikey-by-id'>Get APIKey By ID</h2><h2 id='get-all-apikeys-by-id'>Get All APIKeys By ID</h2><h2 id='delete-apikeys-by-id'>Delete APIKeys By ID</h2><h1 id='tenant'>Tenant</h1><h2 id='create-tenant'>Create Tenant</h2><h2 id='get-tenant-by-id'>Get Tenant By ID</h2><h2 id='delete-tenant-by-id'>Delete Tenant By ID</h2><h2 id='get-rule-by-id'>Get Rule By ID</h2><h2 id='update-rule-by-id'>Update Rule By ID</h2><h2 id='delete-rule-by-id'>Delete Rule By ID</h2><h2 id='update-secret-by-id'>Update Secret By ID</h2><h2 id='get-secret-by-id'>Get Secret By ID</h2><h2 id='get-meta-by-id-2'>Get Meta By ID</h2><h2 id='update-meta-by-id-2'>Update Meta By ID</h2><h2 id='delete-meta-by-id-2'>Delete Meta By ID</h2><h1 id='api'>Api</h1><h2 id='create-api'>Create Api</h2><h2 id='get-api-by-id'>Get Api By ID</h2><h2 id='get-all-apis'>Get All Apis</h2><h2 id='delete-api-by-id'>Delete Api By ID</h2><h2 id='get-rule-by-id-2'>Get rule By ID</h2><h2 id='update-rule-by-id-2'>Update rule By ID</h2><h2 id='delete-rule-by-id-2'>Delete rule By ID</h2><h2 id='get-meta-by-id-3'>Get Meta By ID</h2><h2 id='update-meta-by-id-3'>Update Meta By ID</h2><h2 id='delete-meta-by-id-3'>Delete Meta By ID</h2><h1 id='auth'>Auth</h1><h2 id='check-auth'>Check Auth</h2><h1 id='errors'>Errors</h1>
+<aside class="notice">
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside>
 
 <p>The Kittn API uses the following error codes:</p>
 
@@ -445,7 +2810,7 @@ Remember — a happy kitten is an authenticated kitten!
 </thead><tbody>
 <tr>
 <td>400</td>
-<td>Bad Request -- Your request sucks.</td>
+<td>Bad Request -- Your request is invalid.</td>
 </tr>
 <tr>
 <td>401</td>
@@ -493,9 +2858,6 @@ Remember — a happy kitten is an authenticated kitten!
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
     </div>
