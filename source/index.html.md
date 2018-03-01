@@ -1870,13 +1870,13 @@ POST  https://api.goodcop.com/v1/product
 
 ```shell
 curl "https://api.goodcop.com/v1/product"
-  -d '{
-	"name":"test_product"
-    }'
-  -X "POST"
+  -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
+  -d '{
+	    "name":"test_product"
+    }'
 ```
 
 > Example Response
@@ -2125,7 +2125,7 @@ productID | required | string | Valid product identifier
 
 Returns a string message if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
 
-## Update Meta By ID
+## Update Product Meta By ID
 
 Provide the unique product ID and Goodcop will return the meta details.
 
@@ -2171,49 +2171,1224 @@ productID | required | string | Valid product identifier
 
 Returns message string if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
 
-## Get Meta By ID
+## Get Product Meta By ID
+
+Provide the unique product ID and Goodcop will return the meta details.
+
+> Definition
+
+```
+GET  https://api.goodcop.com/v1/product/{productID}/meta
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/product/5178306911535104/meta"
+  -X GET
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "category: api" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+```
+
+> Example Response
+
+```json
+{
+    "apiMeta": "test meta"
+}
+```
+
+### HTTPS Request
+
+`GET https://api.goodcop.com/v1/product/{productID}/meta`
+
+### URL Params
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+productID | required | string | Valid product identifier 
+
+### Returns
+
+Returns meta string if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+
+## Delete Product Meta By ID
+
+Provide the unique product ID and Goodcop will delete the meta string.
+
+> Definition
+
+```
+DELETE  https://api.goodcop.com/v1/product/{productID}/meta
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/product/5178306911535104/meta"
+  -X DELETE
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "category: api" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+```
+
+> Example Response
+
+```json
+{
+    "message": "meta deleted successfully"
+}
+```
+
+### HTTPS Request
+
+`DELETE https://api.goodcop.com/v1/product/{productID}/meta`
+
+### URL Params
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+productID | required | string | Valid product identifier 
+
+### Returns
+
+Returns success message string if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
 
 
+## Get Product Rules By ID
 
-## Delete Meta By ID
+Provide the unique product ID and Goodcop will return the rule details.
 
-## Get Rules By ID
+> Definition
 
-## Update Rules By ID
+```
+GET  https://api.goodcop.com/v1/product/{productID}/rule
 
-## Delete Rules By ID
+```
+> Example Request
 
-## Create APIKey By ID
+```shell
+curl "https://api.goodcop.com/v1/product/5178306911535104/rule"
+  -X GET
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "category: api" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+```
 
-## Get APIKey By ID
+> Example Response
 
-## Get All APIKeys By ID
+```json
+{
+    "apiRules": [
+        {
+            "verb": "GET",
+            "path": "/credentials/5687539843203072",
+            "effect": true
+        }
+    ]
+}
+```
 
-## Delete APIKeys By ID
+### HTTPS Request
+
+`GET https://api.goodcop.com/v1/product/{productID}/rule`
+
+### URL Params
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+productID | required | string | Valid product identifier 
+
+### Returns
+
+Returns rules array if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+
+
+## Update Product Rules By ID
+
+Provide the unique product ID, rule array and Goodcop will return the updated rule details.
+
+> Definition
+
+```
+PUT  https://api.goodcop.com/v1/product/{productID}/rule
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/product/5178306911535104/rule"
+  -X PUT
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "category: api" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+  -d ' [
+        {
+            "verb": "PUT",
+            "path": "/credentials/5687539843203072",
+            "effect": true
+        }
+    ]
+'
+```
+
+> Example Response
+
+```json
+{
+    "apiRules": [
+        {
+            "verb": "GET",
+            "path": "/credentials/5687539843203072",
+            "effect": true
+        },
+        {
+            "verb": "PUT",
+            "path": "/credentials/5687539843203072",
+            "effect": true
+        }
+    ]
+}
+```
+
+### HTTPS Request
+
+`PUT https://api.goodcop.com/v1/product/{productID}/rule`
+
+### Request Body
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+rules | required | array | rules to be updated 
+
+### URL Params
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+productID | required | string | Valid product identifier 
+
+### Returns
+
+Returns updated rules array if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+
+## Delete Product Rules By ID
+
+Provide the unique product ID, rule array and Goodcop will return the updated rule details.
+
+> Definition
+
+```
+DELETE  https://api.goodcop.com/v1/product/{productID}/rule
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/product/5178306911535104/rule"
+  -X DELETE
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "category: api" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+  -d ' [
+        {
+            "verb": "PUT",
+            "path": "/credentials/5687539843203072",
+            "effect": true
+        }
+    ]
+'
+```
+
+> Example Response
+
+```json
+{
+    "apiRules": [
+        {
+            "verb": "GET",
+            "path": "/credentials/5687539843203072",
+            "effect": true
+        }
+    ]
+}
+```
+
+### HTTPS Request
+
+`DELETE https://api.goodcop.com/v1/product/{productID}/rule`
+
+### Request Body
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+rules | required | array | rules to be deleted 
+
+### URL Params
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+productID | required | string | Valid product identifier 
+
+### Returns
+
+Returns updated rules array if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+
+## Create Product APIKey By ID
+
+> Definition
+
+```
+PUT  https://api.goodcop.com/v1/product/{productID}/apikey/{apikeyname}
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/product/6308443803615232/apikey/testKey"
+  -X PUT
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+```
+
+> Example Response
+
+```json
+{
+    "ApiKeys": [
+        {
+            "name": "default",
+            "value": "1y4y2va8vfZ4j1Ci1qvGreQ-u8OwD3LjYQ9ksegxEp0="
+        },
+        {
+            "name": "testKey",
+            "value": "yIaoGc11rS8g0sTh6Iz1QFz-nvnK6Ou3j5VxZ9z_6JU="
+        }
+    ]
+}
+
+```
+
+Creates a new product api key with the name in url params.
+
+### HTTPS Request
+
+`PUT https://api.goodcop.com/v1/product/{productID}/apikey/{apikeyname}`
+
+### URL Params
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+productID | required | string | Valid product identifier
+apikeyname | required | string | Name of the api key to be generated
+ 
+
+### Returns
+
+Returns array of ApiKeys if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+
+
+## Get Product APIKey By ID
+
+> Definition
+
+```
+GET  https://api.goodcop.com/v1/product/{productID}/apikey/{apikeyname}
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/product/6308443803615232/apikey/testKey"
+  -X GET
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+```
+
+> Example Response
+
+```json
+{
+    "name": "testKey",
+    "value": "yIaoGc11rS8g0sTh6Iz1QFz-nvnK6Ou3j5VxZ9z_6JU="
+}
+
+```
+
+Provide the unique product ID, ApiKey Name and Goodcop will return the key details.
+
+### HTTPS Request
+
+`GET https://api.goodcop.com/v1/product/{productID}/apikey/{apikeyname}`
+
+### URL Params
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+productID | required | string | Valid product identifier
+apikeyname | required | string | Name of the api key to be generated
+ 
+
+### Returns
+
+Returns array of ApiKeys if a valid authorization key and a valid identifiers were provided, and returns an error otherwise.
+
+
+## Get All Product APIKeys By ID
+
+> Definition
+
+```
+GET  https://api.goodcop.com/v1/product/{productID}/apikey
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/product/6308443803615232/apikey"
+  -X GET
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+```
+
+> Example Response
+
+```json
+{
+    "ApiKeys": [
+        {
+            "name": "default",
+            "value": "1y4y2va8vfZ4j1Ci1qvGreQ-u8OwD3LjYQ9ksegxEp0="
+        },
+        {
+            "name": "testKey",
+            "value": "yIaoGc11rS8g0sTh6Iz1QFz-nvnK6Ou3j5VxZ9z_6JU="
+        }
+    ]
+}
+
+```
+
+Provide the unique product ID and Goodcop will return the all available keys details.
+
+### HTTPS Request
+
+`GET https://api.goodcop.com/v1/product/{productID}/apikey/`
+
+### URL Params
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+productID | required | string | Valid product identifier
+
+### Returns
+
+Returns array of ApiKeys if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+
+## Delete Product APIKey By ID
+
+> Definition
+
+```
+DELETE  https://api.goodcop.com/v1/product/{productID}/apikey/{apikeyname}
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/product/6308443803615232/apikey/testKey"
+  -X DELETE
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+```
+
+> Example Response
+
+```json
+{
+    "message": "Key deleted successfuly."
+}
+
+```
+
+Provide the unique product ID, ApiKey Name and Goodcop will delete the api key.
+
+### HTTPS Request
+
+`DELETE https://api.goodcop.com/v1/product/{productID}/apikey/{apikeyname}`
+
+### URL Params
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+productID | required | string | Valid product identifier
+apikeyname | required | string | Name of the api key to be generated
+ 
+
+### Returns
+
+Returns string message if a valid authorization key and a valid identifiers were provided, and returns an error otherwise.
 
 # Tenant
 
 ## Create Tenant
 
+> Definition
+
+```
+POST  https://api.goodcop.com/v1/tenant
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/tenant"
+  -X "POST"
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+  -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
+  -d '{
+	"name":"test tenant",
+	"apiId":5916827746041856,
+	"rules": [
+        {
+            "verb": "GET",
+            "path": "/organizations/5746055551385600/*",
+            "effect": true
+        }
+    ],
+    "meta":"tenant meta",
+    "secrets":"secrets"
+    }'
+```
+
+> Example Response
+
+```json
+{
+    "id": 5996636694118400,
+    "name": "test tenant",
+    "apiId": 5916827746041856,
+    "rules": [
+        {
+            "verb": "GET",
+            "path": "/organizations/5746055551385600/*",
+            "effect": true
+        }
+    ],
+    "meta": "tenant meta",
+    "secrets": "secrets"
+}
+```
+
+Creates a tenant object provided the request body and returns the group object.
+
+<aside style="background:#5bc0de;">
+The x-api-key header must be provided to create a tenant.
+</aside>
+
+### HTTPS Request
+
+`POST https://api.goodcop.com/v1/tenant`
+
+### Request Body
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+name | required | string | name of the tenant
+apiID | optional | integer |  apiID of the tenant
+rules | optional | array | rules of tenant
+meta | optional | string | meta information of the tenant 
+secrets | optional | string | secrets of tenant  
+
+
+### Returns
+
+Returns new tenant object if a valid authorization key and api key was provided, and returns an error otherwise.
+
 ## Get Tenant By ID
+
+> Definition
+
+```
+GET  https://api.goodcop.com/v1/tenant/{tenantID}
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/tenant/{tenantID}"
+  -X "GET"
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+  -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
+```
+
+> Example Response
+
+```json
+{
+    "id": 5996636694118400,
+    "name": "test tenant",
+    "apiId": 5916827746041856,
+    "rules": [
+        {
+            "verb": "GET",
+            "path": "/organizations/5746055551385600/*",
+            "effect": true
+        }
+    ],
+    "meta": "tenant meta",
+    "secrets": "secrets"
+}
+
+```
+
+Retrieves the details of a tenant. Provide the unique tenant ID and Goodcop will return the corresponding user information.
+
+### HTTPS Request
+
+`GET https://api.goodcop.com/v1/tenant/{tenantID}`
+
+### URL Params
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+tenantID | required | string | Valid tenant identifier
+
+
+### Returns
+
+Returns tenant details if a valid authorization key, api key and valid indentifier was provided, and returns an error otherwise.
+
+## Get All Tenants
+
+> Definition
+
+```
+GET  https://api.goodcop.com/v1/tenant
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/tenant"
+  -X "GET"
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+  -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
+```
+
+> Example Response
+
+```json
+{
+    "tenants": [
+        {
+            "id": 5996636694118400,
+            "name": "test tenant",
+            "apiId": 5916827746041856,
+            "rules": [
+                {
+                    "verb": "GET",
+                    "path": "/organizations/5746055551385600/*",
+                    "effect": true
+                }
+            ],
+            "meta": "tenant meta",
+            "secrets": "secrets"
+        }
+    ]
+}
+
+```
+
+Retrieves the details of a all tenants for a particular api.
+
+### HTTPS Request
+
+`GET https://api.goodcop.com/v1/tenant`
+
+
+### Returns
+
+Returns array of tenants if a valid authorization key, api key was provided, and returns an error otherwise.
 
 ## Delete Tenant By ID
 
+> Definition
+
+```
+DELETE  https://api.goodcop.com/v1/tenant/{tenantID}
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/tenant/{tenantID}"
+  -X DELETE
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+  -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
+```
+
+> Example Response
+
+```json
+{
+    "message": "Tenant has been deleted for tenantID - 5996636694118400"
+}
+
+```
+
+Deletes the tenant.
+
+### HTTPS Request
+
+`DELETE https://api.goodcop.com/v1/tenant/{tenantID}`
+
+
+### URL Params
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+tenantID | required | string | Valid tenant identifier
+
+
+### Returns
+
+Returns string message if a valid authorization key, api key was provided, and returns an error otherwise.
+
 ## Get Rule By ID
+
+> Definition
+
+```
+GET  https://api.goodcop.com/v1/tenant/{tenantID}/rule
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/tenant/{tenantID}/rule"
+  -X GET
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+  -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
+```
+
+> Example Response
+
+```json
+{
+    "Rules": [
+        {
+            "verb": "GET",
+            "path": "/organizations/5746055551385600/*",
+            "effect": true
+        }
+    ]
+}
+
+```
+
+Provide the unique tenant ID and Goodcop will return the list of all rules.
+
+### HTTPS Request
+
+`GET https://api.goodcop.com/v1/tenant/{tenantID}/rule`
+
+### URL Params
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+tenantID | required | string | Valid tenant identifier
+
+
+### Returns
+
+Returns rules object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+
 
 ## Update Rule By ID
 
+> Definition
+
+```
+PUT  https://api.goodcop.com/v1/tenant/{tenantID}/rule
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/tenant/{tenantID}/rule"
+  -X PUT
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+  -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
+  -d '[
+        {
+            "verb": "PUT",
+            "path": "/organizations/5162157834502144/*",
+            "effect": true
+        },
+        {
+            "verb": "POST",
+            "path": "/organizations/5162157834502144/*",
+            "effect": true
+        }
+    ]'
+```
+
+> Example Response
+
+```json
+{
+    "rules": [
+        {
+            "verb": "GET",
+            "path": "/organizations/5746055551385600/*",
+            "effect": true
+        },
+        {
+            "verb": "PUT",
+            "path": "/organizations/5162157834502144/*",
+            "effect": true
+        },
+        {
+            "verb": "POST",
+            "path": "/organizations/5162157834502144/*",
+            "effect": true
+        }
+    ]
+}
+
+```
+
+Retrives all rules of a tenants for a particular api.
+
+### HTTPS Request
+
+`PUT https://api.goodcop.com/v1/tenant/{tenantID}/rule`
+
+### Request Body
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+rules | required | array | rules to be deleted 
+
+### URL Params
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+tenantID | required | string | Valid tenant identifier
+
+
+### Returns
+
+Returns array of rules if a valid authorization key, api key was provided, and returns an error otherwise.
+
+
 ## Delete Rule By ID
+
+
+> Definition
+
+```
+DELETE  https://api.goodcop.com/v1/tenant/{tenantID}/rule
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/tenant/{tenantID}/rule"
+  -X DELETE
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+  -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
+  -d '[
+        {
+            "verb": "PUT",
+            "path": "/organizations/5162157834502144/*",
+            "effect": true
+        },
+        {
+            "verb": "POST",
+            "path": "/organizations/5162157834502144/*",
+            "effect": true
+        }
+    ]'
+```
+
+> Example Response
+
+```json
+{
+    "id": 5996636694118400,
+    "name": "test tenant",
+    "apiId": 5916827746041856,
+    "rules": [
+        {
+            "verb": "GET",
+            "path": "/organizations/5746055551385600/*",
+            "effect": true
+        }
+    ],
+    "meta": "",
+    "secrets": "{\"email\":\"mail@gmail.com\"}"
+}
+```
+
+Deletes the rules associated with the tenant. 
+
+### HTTPS Request
+
+`DELETE https://api.goodcop.com/v1/tenant/{tenantID}/rule`
+
+
+### Request Body
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+rules | required | array | rules to be deleted 
+
+### URL Params
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+tenantID | required | string | Valid tenant identifier
+
+
+### Returns
+
+Returns tenant object with deleted rules info if a valid authorization key, api key was provided, and returns an error otherwise.
 
 ## Update Secret By ID
 
+> Definition
+
+```
+PUT  https://api.goodcop.com/v1/tenant/{tenantID}/secret
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/tenant/{tenantID}/secret"
+  -X PUT
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+  -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
+  -d '{
+	"secrets":"{\"email\":\"mail@gmail.com\"}"
+}'
+```
+
+> Example Response
+
+```json
+{
+    "id": 5996636694118400,
+    "name": "test api",
+    "apiId": 5916827746041856,
+    "rules": [
+        {
+            "verb": "GET",
+            "path": "/organizations/5746055551385600/*",
+            "effect": true
+        },
+        {
+            "verb": "PUT",
+            "path": "/organizations/5162157834502144/*",
+            "effect": true
+        },
+        {
+            "verb": "POST",
+            "path": "/organizations/5162157834502144/*",
+            "effect": true
+        }
+    ],
+    "meta": "api meta",
+    "secrets": "{\"email\":\"mail@gmail.com\"}"
+}
+```
+
+Retrives all rules of a tenants for a particular api.
+
+### HTTPS Request
+
+`PUT https://api.goodcop.com/v1/tenant/{tenantID}/secret`
+
+### Request Body
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+secrets | required | string object | secrets to be updated 
+
+### URL Params
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+tenantID | required | string | Valid tenant identifier
+
+
+### Returns
+
+Returns tenant object with updated secret info if a valid authorization key, api key was provided, and returns an error otherwise.
+
 ## Get Secret By ID
+
+> Definition
+
+```
+GET  https://api.goodcop.com/v1/tenant/{tenantID}/secret
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/tenant/{tenantID}/secret"
+  -X "GET"
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+  -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
+```
+
+> Example Response
+
+```json
+{
+    "secrets": {
+        "email": "guggs24@gmail.com"
+    }
+}
+
+```
+
+Provide the unique tenant ID and Goodcop will return the secret.
+
+### HTTPS Request
+
+`GET https://api.goodcop.com/v1/tenant/{tenantID}/secret`
+
+### URL Params
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+tenantID | required | string | Valid tenant identifier
+
+
+### Returns
+
+Returns secrets if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
 
 ## Get Meta By ID
 
+> Definition
+
+```
+GET  https://api.goodcop.com/v1/tenant/{tenantID}/meta
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/tenant/{tenantID}/meta"
+  -X "GET"
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+  -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
+```
+
+> Example Response
+
+```json
+{
+    "meta": "tenant meta"
+}
+
+```
+
+Provide the unique tenant ID and Goodcop will return the meta information.
+
+### HTTPS Request
+
+`GET https://api.goodcop.com/v1/tenant/{tenantID}/meta`
+
+### URL Params
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+tenantID | required | string | Valid tenant identifier
+
+
+### Returns
+
+Returns string meta if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+
 ## Update Meta By ID
 
+
+> Definition
+
+```
+PUT  https://api.goodcop.com/v1/tenant/{tenantID}/meta
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/tenant/{tenantID}/meta"
+  -X PUT
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+  -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
+  -d '{
+	"meta":"update tenant meta"
+}'
+```
+
+> Example Response
+
+```json
+{
+    "id": 5996636694118400,
+    "name": "test tenant",
+    "apiId": 5916827746041856,
+    "rules": [
+        {
+            "verb": "GET",
+            "path": "/organizations/5746055551385600/*",
+            "effect": true
+        },
+        {
+            "verb": "PUT",
+            "path": "/organizations/5162157834502144/*",
+            "effect": true
+        },
+        {
+            "verb": "POST",
+            "path": "/organizations/5162157834502144/*",
+            "effect": true
+        }
+    ],
+    "meta": "updated tenant meta",
+    "secrets": "{\"email\":\"mail@gmail.com\"}"
+}
+```
+
+Updated meta details of the tenant.
+
+### HTTPS Request
+
+`PUT https://api.goodcop.com/v1/tenant/{tenantID}/meta`
+
+### Request Body
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+meta | required | string  | meta to be updated 
+
+### URL Params
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+tenantID | required | string | Valid tenant identifier
+
+
+### Returns
+
+Returns tenant object with updated meta info if a valid authorization key, api key was provided, and returns an error otherwise.
+
 ## Delete Meta By ID 
+
+
+> Definition
+
+```
+DELETE  https://api.goodcop.com/v1/tenant/{tenantID}/meta
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/tenant/{tenantID}/meta"
+  -X DELETE
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+  -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
+  -d '{
+	"meta":""
+}'
+```
+
+> Example Response
+
+```json
+{
+    "id": 5996636694118400,
+    "name": "test tenant",
+    "apiId": 5916827746041856,
+    "rules": [
+        {
+            "verb": "GET",
+            "path": "/organizations/5746055551385600/*",
+            "effect": true
+        },
+        {
+            "verb": "PUT",
+            "path": "/organizations/5162157834502144/*",
+            "effect": true
+        },
+        {
+            "verb": "POST",
+            "path": "/organizations/5162157834502144/*",
+            "effect": true
+        }
+    ],
+    "meta": "",
+    "secrets": "{\"email\":\"mail@gmail.com\"}"
+}
+```
+
+Deletes the meta associated with the tenant. 
+
+### HTTPS Request
+
+`DELETE https://api.goodcop.com/v1/tenant/{tenantID}/meta`
+
+
+### URL Params
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+tenantID | required | string | Valid tenant identifier
+
+
+### Returns
+
+Returns tenant object with deleted meta info if a valid authorization key, api key was provided, and returns an error otherwise.
 
 # Api
 
