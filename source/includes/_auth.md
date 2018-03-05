@@ -7,16 +7,16 @@ header information and checking the already set rules.
 
 GoodCop provides a precedance specification according to the type of entity as shown:
 
-A. User > Group > Product
-B. Tenant > API
+1. **User > Group > Product**
+2. **Tenant > API**
 
 GoodCop also provides a mechanism to specify wildcard while setting rules.
-Wildcard userd `*`.
+**Wildcard used `*`**
 
 
 Lets take few examples to illustrate the above.
 
-Example 1 :
+**Example 1 :**
 
 As a company you have specified the below rules:
 
@@ -25,10 +25,10 @@ As a company you have specified the below rules:
 
 In the above case, if `user1` request for url `/organization/blog`, the question is will the user has access to the
 above url.
-As per GoodCop precedance sepcification `A` the user will not have access to the url because as per precedance User has more
+As per GoodCop precedance sepcification `1` the user will not have access to the url because as per precedance User has more
 priority over Group, hence `false`.
 
-Example 2 :
+**Example 2 :**
 
 As a company you have specified the below rules:
 
