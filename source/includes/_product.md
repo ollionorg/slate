@@ -20,6 +20,7 @@ GET  https://api.goodcop.com/v1/product
 
 ```shell
 curl "https://api.goodcop.com/v1/product"
+  -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
@@ -190,6 +191,7 @@ GET  https://api.goodcop.com/v1/product/{productID}
 
 ```shell
 curl "https://api.goodcop.com/v1/product/5735995932672000"
+  -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
@@ -262,6 +264,9 @@ PUT  https://api.goodcop.com/v1/product/{productID}
 ```shell
 curl "https://api.goodcop.com/v1/product/6308443803615232"
   -X PUT
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
   -d '{
 	"name":"test_product",
 	"description":"This is test description",
@@ -281,9 +286,6 @@ curl "https://api.goodcop.com/v1/product/6308443803615232"
 	}],
 	"userMeta":"user meta"
     }'
-  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
 ```
 
 > Example Response
@@ -398,6 +400,9 @@ curl "https://api.goodcop.com/v1/product/5178306911535104/meta"
   -H "category: user" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
+  -d '{
+	    "meta":"meta updated successfully"
+    }'
 ```
 
 > Example Response

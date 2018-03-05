@@ -699,8 +699,8 @@ curl "https://api.goodcop.com/v1/tenant/{tenantID}/meta"
   -H "Device-Identifier: test_56789657567"
   -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
   -d '{
-	"meta":""
-}'
+	    "meta":""
+    }'
 ```
 
 > Example Response

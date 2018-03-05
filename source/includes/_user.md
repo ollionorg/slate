@@ -12,11 +12,14 @@ POST  https://api.goodcop.com/v1/signup
 
 ```shell
 curl "https://api.goodcop.com/v1/signup"
-  -d '{"email":"test", "password":"test@#987"}'
-  -X "POST"
+  -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
+  -d '{
+       "email":"test", 
+       "password":"test@#987"
+    }'
 ```
 
 > Example Response
@@ -66,11 +69,14 @@ POST  https://api.goodcop.com/v1/login
 
 ```shell
 curl "https://api.goodcop.com/v1/login"
-  -d '{"email":"test", "password":"test@#987"}'
-  -X "POST"
+  -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
+  -d '{
+       "email":"test", 
+       "password":"test@#987"
+    }'
 ```
 
 > Example Response
@@ -119,6 +125,7 @@ GET  https://api.goodcop.com/v1/user/{userID}
 
 ```shell
 curl "https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"
+  -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
@@ -166,6 +173,7 @@ GET  https://api.goodcop.com/v1/user/{email}
 
 ```shell
 curl "https://api.goodcop.com/v1/user/test@mail.com"
+  -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
@@ -213,6 +221,7 @@ GET  https://api.goodcop.com/v1/user
 
 ```shell
 curl "https://api.goodcop.com/v1/user"
+  -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
@@ -451,6 +460,9 @@ curl "https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
+  -d '{
+	"meta":"storing test meta info"
+    }'
 ```
 
 > Example Response
@@ -569,14 +581,14 @@ PUT  https://api.goodcop.com/v1/user/{userID}/rule
 ```shell
 curl "https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"
   -X PUT
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
   -d '[{
             "verb": "GET",
             "path": "/credentials/5687539843203072",
             "effect": true
-        }]'
-  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+    }]'
 ```
 
 > Example Response
@@ -648,14 +660,14 @@ DELETE  https://api.goodcop.com/v1/user/{userID}/rule
 ```shell
 curl "https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"
   -X DELETE
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
   -d '[{
             "verb": "GET",
             "path": "/credentials/5687539843203072",
             "effect": true
-        }]'
-  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+    }]'
 ```
 
 > Example Response

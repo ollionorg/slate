@@ -12,16 +12,16 @@ POST  https://api.goodcop.com/v1/group
 
 ```shell
 curl "https://api.goodcop.com/v1/group"
-  -d '{
-	"name":"test_group",
-    "rules":[
-		{"path":"thrifty/billing","verb":"GET","effect":true}
-	]
-    }'
-  -X "POST"
+  -X  POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
+  -d '{
+        "name":"test_group",
+        "rules":[
+            {"path":"thrifty/billing","verb":"GET","effect":true}
+        ]
+    }'
 ```
 
 > Example Response
@@ -77,6 +77,7 @@ GET  https://api.goodcop.com/v1/group/{groupID}
 
 ```shell
 curl "https://api.goodcop.com/v1/group/5707274949492736"
+  -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
@@ -131,6 +132,7 @@ GET  https://api.goodcop.com/v1/group
 
 ```shell
 curl "https://api.goodcop.com/v1/group"
+  -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
@@ -277,14 +279,15 @@ PUT  https://api.goodcop.com/v1/group/{groupID}/user
 ```shell
 curl "https://api.goodcop.com/v1/group/5707274949492736/user"
   -X PUT
-  -d '{ "users":[
-                    "01e097a1-fedd-466f-96c9-3eaee6cc7f1f",
-                    "022fa660-9242-4521-b614-e46ffead2b2b"
-                ]
-    }'
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
+  -d '{ 
+      "users":[
+                    "01e097a1-fedd-466f-96c9-3eaee6cc7f1f",
+                    "022fa660-9242-4521-b614-e46ffead2b2b"
+              ]
+    }'
 ```
 
 > Example Response
@@ -342,12 +345,12 @@ PUT  https://api.goodcop.com/v1/group/{groupID}/userEmail
 ```shell
 curl "https://api.goodcop.com/v1/group/5707274949492736/userEmail"
   -X PUT
-  -d '{ 
-	"email":"test@mail.com"
-    }'
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
+  -d '{ 
+	    "email":"test@mail.com"
+    }'
 ```
 
 > Example Response
@@ -620,12 +623,12 @@ PUT  https://api.goodcop.com/v1/group/{groupID}/meta
 ```shell
 curl "https://api.goodcop.com/v1/group/5717800035287040/meta"
   -X PUT
-  -d '{
-	"meta":"update test meta"
-    }'
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
+  -d '{
+	    "meta":"update test meta"
+    }'
 ```
 
 > Example Response
@@ -673,12 +676,12 @@ DELETE  https://api.goodcop.com/v1/group/{groupID}/meta
 ```shell
 curl "https://api.goodcop.com/v1/group/5717800035287040/meta"
   -X DELETE
-  -d '{
-	"meta":"update test meta"
-    }'
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
+  -d '{
+	    "meta":""
+    }'
 ```
 
 > Example Response
@@ -804,14 +807,14 @@ PUT  https://api.goodcop.com/v1/user/{userID}/rule
 ```shell
 curl "https://api.goodcop.com/v1/group/5717800035287040/rule"
   -X PUT
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
   -d '[{
             "verb": "DELETE",
             "path": "/credentials/5687539843203072",
             "effect": true
-        }]'
-  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+    }]'
 ```
 
 > Example Response
@@ -874,14 +877,14 @@ DELETE  https://api.goodcop.com/v1/group/{groupID}/rule
 ```shell
 curl "https://api.goodcop.com/v1/group/5717800035287040/rule"
   -X DELETE
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
   -d '[{
             "verb": "GET",
             "path": "/credentials/5687539843203072",
             "effect": true
-        }]'
-  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+    }]'
 ```
 
 > Example Response
