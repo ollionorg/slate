@@ -24,7 +24,7 @@ As a company you have specified the below rules:
 2. `GET` request for url `/organization/blog` is set to `false` for `user1`.
 
 In the above case, if `user1` request for url `/organization/blog`, will the user has access to the
-above url.
+above url.  
 As per GoodCop precedance sepcification `1` the user will not have access to the url because as per precedance User has more
 priority over Group, hence `false`.
 
@@ -34,7 +34,7 @@ As a company you have specified the below rules:
 
 1. `PUT` request for url `/organization/*` is set to `true` for `group1`.
 
-In the above case, if `user1` within `group1` request for url `/organization/blog`, will the user has access to the above url.
+In the above case, if `user1` within `group1` request for url `/organization/blog`, will the user has access to the above url.  
 As per GoodCop Wildcard mechanism any url after `/organization/`(inclusive) will be given access, hence `true`.
 
 
