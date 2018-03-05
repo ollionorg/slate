@@ -2,7 +2,7 @@
 
 ## Check Auth
 
-This api provides a mechanism to get the authorization status/ access level of the request url by retreiving the
+This api provides a mechanism to get the authorization status/access level of the request url by retreiving the
 header information and checking the already set rules.
 
 GoodCop provides a precedance specification according to the type of entity as shown:
