@@ -434,22 +434,22 @@
                     <a href="#delete-api-by-id" class="toc-h2 toc-link" data-title="delete-api-by-id">Delete Api By ID</a>
                   </li>
                   <li>
-                    <a href="#get-rule-by-id-2" class="toc-h2 toc-link" data-title="get-rule-by-id">Get rule By ID</a>
+                    <a href="#get-rule-by-id" class="toc-h2 toc-link" data-title="get-rule-by-id">Get rule By ID</a>
                   </li>
                   <li>
-                    <a href="#update-rule-by-id-2" class="toc-h2 toc-link" data-title="update-rule-by-id">Update rule By ID</a>
+                    <a href="#update-rule-by-id" class="toc-h2 toc-link" data-title="update-rule-by-id">Update rule By ID</a>
                   </li>
                   <li>
-                    <a href="#delete-rule-by-id-2" class="toc-h2 toc-link" data-title="delete-rule-by-id">Delete rule By ID</a>
+                    <a href="#delete-rule-by-id" class="toc-h2 toc-link" data-title="delete-rule-by-id">Delete rule By ID</a>
                   </li>
                   <li>
-                    <a href="#get-meta-by-id-2" class="toc-h2 toc-link" data-title="get-meta-by-id">Get Meta By ID</a>
+                    <a href="#get-meta-by-id" class="toc-h2 toc-link" data-title="get-meta-by-id">Get Meta By ID</a>
                   </li>
                   <li>
-                    <a href="#update-meta-by-id-2" class="toc-h2 toc-link" data-title="update-meta-by-id">Update Meta By ID</a>
+                    <a href="#update-meta-by-id" class="toc-h2 toc-link" data-title="update-meta-by-id">Update Meta By ID</a>
                   </li>
                   <li>
-                    <a href="#delete-meta-by-id-2" class="toc-h2 toc-link" data-title="delete-meta-by-id">Delete Meta By ID</a>
+                    <a href="#delete-meta-by-id" class="toc-h2 toc-link" data-title="delete-meta-by-id">Delete Meta By ID</a>
                   </li>
               </ul>
           </li>
@@ -1368,9 +1368,9 @@ will be an error.</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Creates a group object provided the name in the request body and returns the group object.</p>
-<h3 id='https-request-14'>HTTPS Request</h3>
+<h3 id='https-request'>HTTPS Request</h3>
 <p><code>POST https://api.goodcop.com/v1/group</code></p>
-<h3 id='request-body-6'>Request Body</h3>
+<h3 id='request-body'>Request Body</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1404,7 +1404,7 @@ will be an error.</p>
 <td>Provide metadata to store against the group</td>
 </tr>
 </tbody></table>
-<h3 id='returns-14'>Returns</h3>
+<h3 id='returns'>Returns</h3>
 <p>Returns group object if correct type of name is provided, and returns an error otherwise.</p>
 <h2 id='get-group-by-id'>Get Group By ID</h2>
 <p>Retrieves the details of a group that has previously been created. Provide the unique group ID that was returned from your login request and Goodcop will return the corresponding user information.</p>
@@ -1441,9 +1441,9 @@ will be an error.</p>
     </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5750501782061056</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='https-request-15'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-2'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/group/{groupID}</code></p>
-<h3 id='url-params-11'>URL Params</h3>
+<h3 id='url-params'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1459,7 +1459,7 @@ will be an error.</p>
 <td>Valid group identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-15'>Returns</h3>
+<h3 id='returns-2'>Returns</h3>
 <p>Returns group details if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='list-groups'>List Groups</h2>
 <p>Retrieves the details of all groups that has previously been created.</p>
@@ -1509,9 +1509,9 @@ will be an error.</p>
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='https-request-16'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-3'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/group</code></p>
-<h3 id='returns-16'>Returns</h3>
+<h3 id='returns-3'>Returns</h3>
 <p>Returns list of group objects if a valid authorization key was provided, and returns an error otherwise.</p>
 <h2 id='delete-group-by-id'>Delete Group By ID</h2>
 <p>Provide the unique group ID and Goodcop will return the message for successful deletion of group.</p>
@@ -1537,9 +1537,9 @@ will be an error.</p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Group has been deleted for groupID - 5707274949492736"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-17'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-4'>HTTPS Request</h3>
 <p><code>DELETE https://api.goodcop.com/v1/group/{groupID}</code></p>
-<h3 id='url-params-12'>URL Params</h3>
+<h3 id='url-params-2'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1555,7 +1555,7 @@ will be an error.</p>
 <td>Valid group identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-17'>Returns</h3>
+<h3 id='returns-4'>Returns</h3>
 <p>Returns a string message if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='delete-multiple-group'>Delete Multiple Group</h2>
 <p>Provide the unique array of group IDs and Goodcop will return the message for successful deletion of group.</p>
@@ -1582,9 +1582,9 @@ will be an error.</p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Groups Deleted Successfully"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-18'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-5'>HTTPS Request</h3>
 <p><code>DELETE https://api.goodcop.com/v1/group</code></p>
-<h3 id='request-body-7'>Request Body</h3>
+<h3 id='request-body-2'>Request Body</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1600,7 +1600,7 @@ will be an error.</p>
 <td>Array of Valid group identifiers</td>
 </tr>
 </tbody></table>
-<h3 id='returns-18'>Returns</h3>
+<h3 id='returns-5'>Returns</h3>
 <p>Returns a string message if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='add-multiple-users-to-group-by-id'>Add Multiple Users to Group By ID</h2>
 <p>Provide the unique group ID and Goodcop will add multiple users to the group.</p>
@@ -1642,9 +1642,9 @@ will be an error.</p>
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-19'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-6'>HTTPS Request</h3>
 <p><code>PUT https://api.goodcop.com/v1/group/{groupID}/users</code></p>
-<h3 id='request-body-8'>Request Body</h3>
+<h3 id='request-body-3'>Request Body</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1660,7 +1660,7 @@ will be an error.</p>
 <td>Valid user indentifier array</td>
 </tr>
 </tbody></table>
-<h3 id='url-params-13'>URL Params</h3>
+<h3 id='url-params-3'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1676,7 +1676,7 @@ will be an error.</p>
 <td>Valid group identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-19'>Returns</h3>
+<h3 id='returns-6'>Returns</h3>
 <p>Returns a object with updated mesage if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='add-single-user-to-group-by-email'>Add Single User to Group By Email</h2>
 <p>Provide the unique email address and Goodcop will add the user to the specified group.</p>
@@ -1706,9 +1706,9 @@ will be an error.</p>
     </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_a660-9242-4521-b614-e46ffead2b2b"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='https-request-20'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-7'>HTTPS Request</h3>
 <p><code>PUT https://api.goodcop.com/v1/group/{groupID}/userEmail</code></p>
-<h3 id='request-body-9'>Request Body</h3>
+<h3 id='request-body-4'>Request Body</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1724,7 +1724,7 @@ will be an error.</p>
 <td>Valid email address</td>
 </tr>
 </tbody></table>
-<h3 id='url-params-14'>URL Params</h3>
+<h3 id='url-params-4'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1740,7 +1740,7 @@ will be an error.</p>
 <td>Valid group identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-20'>Returns</h3>
+<h3 id='returns-7'>Returns</h3>
 <p>Returns a user ID to which was added if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='get-user-for-group-by-id'>Get User for Group By ID</h2>
 <p>Provide the unique user ID, Group ID and Goodcop will return the user details.</p>
@@ -1775,9 +1775,9 @@ will be an error.</p>
     </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='https-request-21'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-8'>HTTPS Request</h3>
 <p><code>GET  https://api.goodcop.com/v1/group/{groupID}/user/{userID}</code></p>
-<h3 id='url-params-15'>URL Params</h3>
+<h3 id='url-params-5'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1799,7 +1799,7 @@ will be an error.</p>
 <td>Valid user identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-21'>Returns</h3>
+<h3 id='returns-8'>Returns</h3>
 <p>Returns user object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='get-all-users-for-group-by-id'>Get All Users for Group By ID</h2>
 <p>Provide the unique Group ID and Goodcop will return the list of user details.</p>
@@ -1868,9 +1868,9 @@ will be an error.</p>
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='https-request-22'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-9'>HTTPS Request</h3>
 <p><code>GET  https://api.goodcop.com/v1/group/{groupID}/user</code></p>
-<h3 id='url-params-16'>URL Params</h3>
+<h3 id='url-params-6'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1886,7 +1886,7 @@ will be an error.</p>
 <td>Valid group identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-22'>Returns</h3>
+<h3 id='returns-9'>Returns</h3>
 <p>Returns list of user object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='delete-user-from-group-by-id'>Delete User from Group By ID</h2>
 <p>Provide the unique user ID and Goodcop will return the message for successful deletion of user.</p>
@@ -1912,9 +1912,9 @@ will be an error.</p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Group deleted successfully"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-23'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-10'>HTTPS Request</h3>
 <p><code>DELETE https://api.goodcop.com/v1/group/{groupID}/user/{userID}</code></p>
-<h3 id='url-params-17'>URL Params</h3>
+<h3 id='url-params-7'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1936,7 +1936,7 @@ will be an error.</p>
 <td>Valid user identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-23'>Returns</h3>
+<h3 id='returns-10'>Returns</h3>
 <p>Returns a string message if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='get-group-meta-by-id'>Get Group Meta By ID</h2>
 <p>Provide the unique group ID and Goodcop will return the meta inforamtion for the group.</p>
@@ -1962,9 +1962,9 @@ will be an error.</p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test meta"</span><span class="w">
 
-</span></code></pre><h3 id='https-request-24'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-11'>HTTPS Request</h3>
 <p><code>DELETE https://api.goodcop.com/v1/group/{groupID}/meta</code></p>
-<h3 id='url-params-18'>URL Params</h3>
+<h3 id='url-params-8'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1980,7 +1980,7 @@ will be an error.</p>
 <td>Valid group identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-24'>Returns</h3>
+<h3 id='returns-11'>Returns</h3>
 <p>Returns a meta string if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='update-group-meta-by-id'>Update Group Meta By ID</h2>
 <p>Provide the unique user ID and Goodcop will return the meta details.</p>
@@ -2010,9 +2010,9 @@ will be an error.</p>
     </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"update test meta"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='https-request-25'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-12'>HTTPS Request</h3>
 <p><code>PUT https://api.goodcop.com/v1/group/{groupID}/meta</code></p>
-<h3 id='request-body-10'>Request Body</h3>
+<h3 id='request-body-5'>Request Body</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2028,7 +2028,7 @@ will be an error.</p>
 <td>Metadata to be updated for the group</td>
 </tr>
 </tbody></table>
-<h3 id='url-params-19'>URL Params</h3>
+<h3 id='url-params-9'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2044,7 +2044,7 @@ will be an error.</p>
 <td>Valid group identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-25'>Returns</h3>
+<h3 id='returns-12'>Returns</h3>
 <p>Returns string with updated meta if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='delete-group-meta-by-id'>Delete Group Meta By ID</h2>
 <p>Provide the unique group ID, meta and Goodcop will return the group details with empty meta.</p>
@@ -2095,9 +2095,9 @@ will be an error.</p>
     </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5750501782061056</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='https-request-26'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-13'>HTTPS Request</h3>
 <p><code>DELETE https://api.goodcop.com/v1/group/{groupID}/meta</code></p>
-<h3 id='request-body-11'>Request Body</h3>
+<h3 id='request-body-6'>Request Body</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2113,7 +2113,7 @@ will be an error.</p>
 <td>Metadata to be deleted for the group</td>
 </tr>
 </tbody></table>
-<h3 id='url-params-20'>URL Params</h3>
+<h3 id='url-params-10'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2129,7 +2129,7 @@ will be an error.</p>
 <td>Valid group identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-26'>Returns</h3>
+<h3 id='returns-13'>Returns</h3>
 <p>Returns group object with deleted meta if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='get-group-rules-by-id'>Get Group Rules By ID</h2>
 <p>Provide the unique group ID and Goodcop will return the list of all rules.</p>
@@ -2171,9 +2171,9 @@ will be an error.</p>
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-27'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-14'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/group/{groupID}/rule</code></p>
-<h3 id='url-params-21'>URL Params</h3>
+<h3 id='url-params-11'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2189,7 +2189,7 @@ will be an error.</p>
 <td>Valid group identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-27'>Returns</h3>
+<h3 id='returns-14'>Returns</h3>
 <p>Returns rules object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='update-group-rules-by-id'>Update Group Rules By ID</h2>
 <p>Provide the unique user ID and Goodcop will return the updated list of all rules.</p>
@@ -2237,9 +2237,9 @@ will be an error.</p>
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='https-request-28'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-15'>HTTPS Request</h3>
 <p><code>PUT https://api.goodcop.com/v1/group/{groupID}/rule</code></p>
-<h3 id='request-body-12'>Request Body</h3>
+<h3 id='request-body-7'>Request Body</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2255,7 +2255,7 @@ will be an error.</p>
 <td>rules to be updated</td>
 </tr>
 </tbody></table>
-<h3 id='url-params-22'>URL Params</h3>
+<h3 id='url-params-12'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2271,7 +2271,7 @@ will be an error.</p>
 <td>Valid group identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-28'>Returns</h3>
+<h3 id='returns-15'>Returns</h3>
 <p>Returns update rules object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='delete-group-rules-by-id'>Delete Group Rules By ID</h2>
 <p>Provide the unique group ID, rule array and Goodcop will return the updated list of all rules.</p>
@@ -2313,9 +2313,9 @@ will be an error.</p>
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-29'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-16'>HTTPS Request</h3>
 <p><code>DELETE https://api.goodcop.com/v1/group/{groupID}/rule</code></p>
-<h3 id='url-params-23'>URL Params</h3>
+<h3 id='url-params-13'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2331,7 +2331,7 @@ will be an error.</p>
 <td>Valid group identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-29'>Returns</h3>
+<h3 id='returns-16'>Returns</h3>
 <p>Returns updated rules object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h1 id='product'>Product</h1><h2 id='list-products'>List Products</h2>
 <p>Retrieves the details of all products that has previously been created. </p>
@@ -2431,9 +2431,9 @@ The Authorization token is a super secure token that is only accessible to admin
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-30'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/product</code></p>
-<h3 id='returns-30'>Returns</h3>
+<h3 id='returns'>Returns</h3>
 <p>Returns list of products if a valid authorization key was provided, and returns an error otherwise.</p>
 <h2 id='create-product'>Create Product</h2>
 <blockquote>
@@ -2480,9 +2480,9 @@ The Authorization token is a super secure token that is only accessible to admin
 <aside style="background:#f0ad4e;">
 The Authorization token is a super secure token that is only accessible to administrators of Goodcop Api.
 </aside>
-<h3 id='https-request-31'>HTTPS Request</h3>
+<h3 id='https-request-2'>HTTPS Request</h3>
 <p><code>POST https://api.goodcop.com/v1/group</code></p>
-<h3 id='request-body-13'>Request Body</h3>
+<h3 id='request-body'>Request Body</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2498,7 +2498,7 @@ The Authorization token is a super secure token that is only accessible to admin
 <td>The name of the product.</td>
 </tr>
 </tbody></table>
-<h3 id='returns-31'>Returns</h3>
+<h3 id='returns-2'>Returns</h3>
 <p>Returns product object if correct type of name is provided, and returns an error otherwise.</p>
 <h2 id='get-product-by-id'>Get Product By ID</h2>
 <p>Retrieves the details of a product. Provide the unique product ID and Goodcop will return the corresponding user information.</p>
@@ -2553,9 +2553,9 @@ The Authorization token is a super secure token that is only accessible to admin
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='https-request-32'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-3'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/product/{productID}</code></p>
-<h3 id='url-params-24'>URL Params</h3>
+<h3 id='url-params'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2571,7 +2571,7 @@ The Authorization token is a super secure token that is only accessible to admin
 <td>Valid product identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-32'>Returns</h3>
+<h3 id='returns-3'>Returns</h3>
 <p>Returns product detauls if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='update-product-by-id'>Update Product By ID</h2>
 <p>Provide the product details and Goodcop will return the updated product information.</p>
@@ -2633,9 +2633,9 @@ The Authorization token is a super secure token that is only accessible to admin
     </span><span class="s2">"userMeta"</span><span class="p">:</span><span class="s2">"user meta"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='https-request-33'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-4'>HTTPS Request</h3>
 <p><code>PUT https://api.goodcop.com/v1/product/{productID}</code></p>
-<h3 id='request-body-14'>Request Body</h3>
+<h3 id='request-body-2'>Request Body</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2687,7 +2687,7 @@ The Authorization token is a super secure token that is only accessible to admin
 <td>rules of user</td>
 </tr>
 </tbody></table>
-<h3 id='url-params-25'>URL Params</h3>
+<h3 id='url-params-2'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2703,7 +2703,7 @@ The Authorization token is a super secure token that is only accessible to admin
 <td>Valid user identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-33'>Returns</h3>
+<h3 id='returns-4'>Returns</h3>
 <p>Returns product object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='delete-product-by-id'>Delete Product By ID</h2>
 <p>Provide the unique product ID and Goodcop will return the message for successful deletion of product.</p>
@@ -2729,9 +2729,9 @@ The Authorization token is a super secure token that is only accessible to admin
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Product Deleted Successfully"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-34'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-5'>HTTPS Request</h3>
 <p><code>DELETE https://api.goodcop.com/v1/product/{productID}</code></p>
-<h3 id='url-params-26'>URL Params</h3>
+<h3 id='url-params-3'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2747,7 +2747,7 @@ The Authorization token is a super secure token that is only accessible to admin
 <td>Valid product identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-34'>Returns</h3>
+<h3 id='returns-5'>Returns</h3>
 <p>Returns a string message if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='update-product-meta-by-id'>Update Product Meta By ID</h2>
 <p>Provide the unique product ID and Goodcop will return the meta details.</p>
@@ -2778,9 +2778,9 @@ The Authorization token is a super secure token that is only accessible to admin
 <aside style="background:#5bc0de;">
 The category header can be provided with two options either api or user depending on which type meta you want to change 
 </aside>
-<h3 id='https-request-35'>HTTPS Request</h3>
+<h3 id='https-request-6'>HTTPS Request</h3>
 <p><code>PUT https://api.goodcop.com/v1/product/{productID}/meta</code></p>
-<h3 id='url-params-27'>URL Params</h3>
+<h3 id='url-params-4'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2796,7 +2796,7 @@ The category header can be provided with two options either api or user dependin
 <td>Valid product identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-35'>Returns</h3>
+<h3 id='returns-6'>Returns</h3>
 <p>Returns message string if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='get-product-meta-by-id'>Get Product Meta By ID</h2>
 <p>Provide the unique product ID and Goodcop will return the meta details.</p>
@@ -2823,9 +2823,9 @@ The category header can be provided with two options either api or user dependin
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"apiMeta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test meta"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-36'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-7'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/product/{productID}/meta</code></p>
-<h3 id='url-params-28'>URL Params</h3>
+<h3 id='url-params-5'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2841,7 +2841,7 @@ The category header can be provided with two options either api or user dependin
 <td>Valid product identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-36'>Returns</h3>
+<h3 id='returns-7'>Returns</h3>
 <p>Returns meta string if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='delete-product-meta-by-id'>Delete Product Meta By ID</h2>
 <p>Provide the unique product ID and Goodcop will delete the meta string.</p>
@@ -2868,9 +2868,9 @@ The category header can be provided with two options either api or user dependin
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"meta deleted successfully"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-37'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-8'>HTTPS Request</h3>
 <p><code>DELETE https://api.goodcop.com/v1/product/{productID}/meta</code></p>
-<h3 id='url-params-29'>URL Params</h3>
+<h3 id='url-params-6'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2886,7 +2886,7 @@ The category header can be provided with two options either api or user dependin
 <td>Valid product identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-37'>Returns</h3>
+<h3 id='returns-8'>Returns</h3>
 <p>Returns success message string if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='get-product-rules-by-id'>Get Product Rules By ID</h2>
 <p>Provide the unique product ID and Goodcop will return the rule details.</p>
@@ -2919,9 +2919,9 @@ The category header can be provided with two options either api or user dependin
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-38'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-9'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/product/{productID}/rule</code></p>
-<h3 id='url-params-30'>URL Params</h3>
+<h3 id='url-params-7'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2937,7 +2937,7 @@ The category header can be provided with two options either api or user dependin
 <td>Valid product identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-38'>Returns</h3>
+<h3 id='returns-9'>Returns</h3>
 <p>Returns rules array if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='update-product-rules-by-id'>Update Product Rules By ID</h2>
 <p>Provide the unique product ID, rule array and Goodcop will return the updated rule details.</p>
@@ -2983,9 +2983,9 @@ The category header can be provided with two options either api or user dependin
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-39'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-10'>HTTPS Request</h3>
 <p><code>PUT https://api.goodcop.com/v1/product/{productID}/rule</code></p>
-<h3 id='request-body-15'>Request Body</h3>
+<h3 id='request-body-3'>Request Body</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3001,7 +3001,7 @@ The category header can be provided with two options either api or user dependin
 <td>rules to be updated</td>
 </tr>
 </tbody></table>
-<h3 id='url-params-31'>URL Params</h3>
+<h3 id='url-params-8'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3017,7 +3017,7 @@ The category header can be provided with two options either api or user dependin
 <td>Valid product identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-39'>Returns</h3>
+<h3 id='returns-10'>Returns</h3>
 <p>Returns updated rules array if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='delete-product-rules-by-id'>Delete Product Rules By ID</h2>
 <p>Provide the unique product ID, rule array and Goodcop will return the updated rule details.</p>
@@ -3058,9 +3058,9 @@ The category header can be provided with two options either api or user dependin
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-40'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-11'>HTTPS Request</h3>
 <p><code>DELETE https://api.goodcop.com/v1/product/{productID}/rule</code></p>
-<h3 id='request-body-16'>Request Body</h3>
+<h3 id='request-body-4'>Request Body</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3076,7 +3076,7 @@ The category header can be provided with two options either api or user dependin
 <td>rules to be deleted</td>
 </tr>
 </tbody></table>
-<h3 id='url-params-32'>URL Params</h3>
+<h3 id='url-params-9'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3092,7 +3092,7 @@ The category header can be provided with two options either api or user dependin
 <td>Valid product identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-40'>Returns</h3>
+<h3 id='returns-11'>Returns</h3>
 <p>Returns updated rules array if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='create-product-apikey-by-id'>Create Product APIKey By ID</h2>
 <blockquote>
@@ -3128,9 +3128,9 @@ The category header can be provided with two options either api or user dependin
 
 </span></code></pre>
 <p>Creates a new product api key with the name in url params.</p>
-<h3 id='https-request-41'>HTTPS Request</h3>
+<h3 id='https-request-12'>HTTPS Request</h3>
 <p><code>PUT https://api.goodcop.com/v1/product/{productID}/apikey/{apikeyname}</code></p>
-<h3 id='url-params-33'>URL Params</h3>
+<h3 id='url-params-10'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3152,7 +3152,7 @@ The category header can be provided with two options either api or user dependin
 <td>Name of the api key to be generated</td>
 </tr>
 </tbody></table>
-<h3 id='returns-41'>Returns</h3>
+<h3 id='returns-12'>Returns</h3>
 <p>Returns array of ApiKeys if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='get-product-apikey-by-id'>Get Product APIKey By ID</h2>
 <blockquote>
@@ -3180,9 +3180,9 @@ The category header can be provided with two options either api or user dependin
 
 </span></code></pre>
 <p>Provide the unique product ID, ApiKey Name and Goodcop will return the key details.</p>
-<h3 id='https-request-42'>HTTPS Request</h3>
+<h3 id='https-request-13'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/product/{productID}/apikey/{apikeyname}</code></p>
-<h3 id='url-params-34'>URL Params</h3>
+<h3 id='url-params-11'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3204,7 +3204,7 @@ The category header can be provided with two options either api or user dependin
 <td>Name of the api key to be generated</td>
 </tr>
 </tbody></table>
-<h3 id='returns-42'>Returns</h3>
+<h3 id='returns-13'>Returns</h3>
 <p>Returns array of ApiKeys if a valid authorization key and a valid identifiers were provided, and returns an error otherwise.</p>
 <h2 id='get-all-product-apikeys-by-id'>Get All Product APIKeys By ID</h2>
 <blockquote>
@@ -3240,9 +3240,9 @@ The category header can be provided with two options either api or user dependin
 
 </span></code></pre>
 <p>Provide the unique product ID and Goodcop will return the all available keys details.</p>
-<h3 id='https-request-43'>HTTPS Request</h3>
+<h3 id='https-request-14'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/product/{productID}/apikey/</code></p>
-<h3 id='url-params-35'>URL Params</h3>
+<h3 id='url-params-12'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3258,7 +3258,7 @@ The category header can be provided with two options either api or user dependin
 <td>Valid product identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-43'>Returns</h3>
+<h3 id='returns-14'>Returns</h3>
 <p>Returns array of ApiKeys if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='delete-product-apikey-by-id'>Delete Product APIKey By ID</h2>
 <blockquote>
@@ -3285,9 +3285,9 @@ The category header can be provided with two options either api or user dependin
 
 </span></code></pre>
 <p>Provide the unique product ID, ApiKey Name and Goodcop will delete the api key.</p>
-<h3 id='https-request-44'>HTTPS Request</h3>
+<h3 id='https-request-15'>HTTPS Request</h3>
 <p><code>DELETE https://api.goodcop.com/v1/product/{productID}/apikey/{apikeyname}</code></p>
-<h3 id='url-params-36'>URL Params</h3>
+<h3 id='url-params-13'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3309,7 +3309,7 @@ The category header can be provided with two options either api or user dependin
 <td>Name of the api key to be generated</td>
 </tr>
 </tbody></table>
-<h3 id='returns-44'>Returns</h3>
+<h3 id='returns-15'>Returns</h3>
 <p>Returns string message if a valid authorization key and a valid identifiers were provided, and returns an error otherwise.</p>
 <h1 id='tenant'>Tenant</h1><h2 id='create-tenant'>Create Tenant</h2>
 <blockquote>
@@ -3364,9 +3364,9 @@ The category header can be provided with two options either api or user dependin
 <aside style="background:#5bc0de;">
 The x-api-key header must be provided to create a tenant.
 </aside>
-<h3 id='https-request-45'>HTTPS Request</h3>
+<h3 id='https-request'>HTTPS Request</h3>
 <p><code>POST https://api.goodcop.com/v1/tenant</code></p>
-<h3 id='request-body-17'>Request Body</h3>
+<h3 id='request-body'>Request Body</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3406,7 +3406,7 @@ The x-api-key header must be provided to create a tenant.
 <td>secrets of tenant</td>
 </tr>
 </tbody></table>
-<h3 id='returns-45'>Returns</h3>
+<h3 id='returns'>Returns</h3>
 <p>Returns new tenant object if a valid authorization key and api key was provided, and returns an error otherwise.</p>
 <h2 id='get-tenant-by-id'>Get Tenant By ID</h2>
 <blockquote>
@@ -3445,9 +3445,9 @@ The x-api-key header must be provided to create a tenant.
 
 </span></code></pre>
 <p>Retrieves the details of a tenant. Provide the unique tenant ID and Goodcop will return the corresponding user information.</p>
-<h3 id='https-request-46'>HTTPS Request</h3>
+<h3 id='https-request-2'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/tenant/{tenantID}</code></p>
-<h3 id='url-params-37'>URL Params</h3>
+<h3 id='url-params'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3463,7 +3463,7 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid tenant identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-46'>Returns</h3>
+<h3 id='returns-2'>Returns</h3>
 <p>Returns tenant details if a valid authorization key, api key and valid indentifier was provided, and returns an error otherwise.</p>
 <h2 id='get-all-tenants'>Get All Tenants</h2>
 <blockquote>
@@ -3506,9 +3506,9 @@ The x-api-key header must be provided to create a tenant.
 
 </span></code></pre>
 <p>Retrieves the details of a all tenants for a particular api.</p>
-<h3 id='https-request-47'>HTTPS Request</h3>
+<h3 id='https-request-3'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/tenant</code></p>
-<h3 id='returns-47'>Returns</h3>
+<h3 id='returns-3'>Returns</h3>
 <p>Returns array of tenants if a valid authorization key, api key was provided, and returns an error otherwise.</p>
 <h2 id='delete-tenant-by-id'>Delete Tenant By ID</h2>
 <blockquote>
@@ -3536,9 +3536,9 @@ The x-api-key header must be provided to create a tenant.
 
 </span></code></pre>
 <p>Deletes the tenant.</p>
-<h3 id='https-request-48'>HTTPS Request</h3>
+<h3 id='https-request-4'>HTTPS Request</h3>
 <p><code>DELETE https://api.goodcop.com/v1/tenant/{tenantID}</code></p>
-<h3 id='url-params-38'>URL Params</h3>
+<h3 id='url-params-2'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3554,7 +3554,7 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid tenant identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-48'>Returns</h3>
+<h3 id='returns-4'>Returns</h3>
 <p>Returns string message if a valid authorization key, api key was provided, and returns an error otherwise.</p>
 <h2 id='get-rule-by-id'>Get Rule By ID</h2>
 <blockquote>
@@ -3588,9 +3588,9 @@ The x-api-key header must be provided to create a tenant.
 
 </span></code></pre>
 <p>Provide the unique tenant ID and Goodcop will return the list of all rules.</p>
-<h3 id='https-request-49'>HTTPS Request</h3>
+<h3 id='https-request-5'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/tenant/{tenantID}/rule</code></p>
-<h3 id='url-params-39'>URL Params</h3>
+<h3 id='url-params-3'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3606,7 +3606,7 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid tenant identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-49'>Returns</h3>
+<h3 id='returns-5'>Returns</h3>
 <p>Returns rules object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='update-rule-by-id'>Update Rule By ID</h2>
 <blockquote>
@@ -3662,9 +3662,9 @@ The x-api-key header must be provided to create a tenant.
 
 </span></code></pre>
 <p>Retrives all rules of a tenants for a particular api.</p>
-<h3 id='https-request-50'>HTTPS Request</h3>
+<h3 id='https-request-6'>HTTPS Request</h3>
 <p><code>PUT https://api.goodcop.com/v1/tenant/{tenantID}/rule</code></p>
-<h3 id='request-body-18'>Request Body</h3>
+<h3 id='request-body-2'>Request Body</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3680,7 +3680,7 @@ The x-api-key header must be provided to create a tenant.
 <td>rules to be deleted</td>
 </tr>
 </tbody></table>
-<h3 id='url-params-40'>URL Params</h3>
+<h3 id='url-params-4'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3696,7 +3696,7 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid tenant identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-50'>Returns</h3>
+<h3 id='returns-6'>Returns</h3>
 <p>Returns array of rules if a valid authorization key, api key was provided, and returns an error otherwise.</p>
 <h2 id='delete-rule-by-id'>Delete Rule By ID</h2>
 <blockquote>
@@ -3746,9 +3746,9 @@ The x-api-key header must be provided to create a tenant.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Deletes the rules associated with the tenant. </p>
-<h3 id='https-request-51'>HTTPS Request</h3>
+<h3 id='https-request-7'>HTTPS Request</h3>
 <p><code>DELETE https://api.goodcop.com/v1/tenant/{tenantID}/rule</code></p>
-<h3 id='request-body-19'>Request Body</h3>
+<h3 id='request-body-3'>Request Body</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3764,7 +3764,7 @@ The x-api-key header must be provided to create a tenant.
 <td>rules to be deleted</td>
 </tr>
 </tbody></table>
-<h3 id='url-params-41'>URL Params</h3>
+<h3 id='url-params-5'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3780,7 +3780,7 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid tenant identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-51'>Returns</h3>
+<h3 id='returns-7'>Returns</h3>
 <p>Returns tenant object with deleted rules info if a valid authorization key, api key was provided, and returns an error otherwise.</p>
 <h2 id='update-secret-by-id'>Update Secret By ID</h2>
 <blockquote>
@@ -3831,9 +3831,9 @@ The x-api-key header must be provided to create a tenant.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Retrives all rules of a tenants for a particular api.</p>
-<h3 id='https-request-52'>HTTPS Request</h3>
+<h3 id='https-request-8'>HTTPS Request</h3>
 <p><code>PUT https://api.goodcop.com/v1/tenant/{tenantID}/secret</code></p>
-<h3 id='request-body-20'>Request Body</h3>
+<h3 id='request-body-4'>Request Body</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3849,7 +3849,7 @@ The x-api-key header must be provided to create a tenant.
 <td>secrets to be updated</td>
 </tr>
 </tbody></table>
-<h3 id='url-params-42'>URL Params</h3>
+<h3 id='url-params-6'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3865,7 +3865,7 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid tenant identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-52'>Returns</h3>
+<h3 id='returns-8'>Returns</h3>
 <p>Returns tenant object with updated secret info if a valid authorization key, api key was provided, and returns an error otherwise.</p>
 <h2 id='get-secret-by-id'>Get Secret By ID</h2>
 <blockquote>
@@ -3895,9 +3895,9 @@ The x-api-key header must be provided to create a tenant.
 
 </span></code></pre>
 <p>Provide the unique tenant ID and Goodcop will return the secret.</p>
-<h3 id='https-request-53'>HTTPS Request</h3>
+<h3 id='https-request-9'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/tenant/{tenantID}/secret</code></p>
-<h3 id='url-params-43'>URL Params</h3>
+<h3 id='url-params-7'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3913,7 +3913,7 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid tenant identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-53'>Returns</h3>
+<h3 id='returns-9'>Returns</h3>
 <p>Returns secrets if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='get-meta-by-id'>Get Meta By ID</h2>
 <blockquote>
@@ -3941,9 +3941,9 @@ The x-api-key header must be provided to create a tenant.
 
 </span></code></pre>
 <p>Provide the unique tenant ID and Goodcop will return the meta information.</p>
-<h3 id='https-request-54'>HTTPS Request</h3>
+<h3 id='https-request-10'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/tenant/{tenantID}/meta</code></p>
-<h3 id='url-params-44'>URL Params</h3>
+<h3 id='url-params-8'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3959,7 +3959,7 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid tenant identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-54'>Returns</h3>
+<h3 id='returns-10'>Returns</h3>
 <p>Returns string meta if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='update-meta-by-id'>Update Meta By ID</h2>
 <blockquote>
@@ -4010,9 +4010,9 @@ The x-api-key header must be provided to create a tenant.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Updated meta details of the tenant.</p>
-<h3 id='https-request-55'>HTTPS Request</h3>
+<h3 id='https-request-11'>HTTPS Request</h3>
 <p><code>PUT https://api.goodcop.com/v1/tenant/{tenantID}/meta</code></p>
-<h3 id='request-body-21'>Request Body</h3>
+<h3 id='request-body-5'>Request Body</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4028,7 +4028,7 @@ The x-api-key header must be provided to create a tenant.
 <td>meta to be updated</td>
 </tr>
 </tbody></table>
-<h3 id='url-params-45'>URL Params</h3>
+<h3 id='url-params-9'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4044,7 +4044,7 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid tenant identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-55'>Returns</h3>
+<h3 id='returns-11'>Returns</h3>
 <p>Returns tenant object with updated meta info if a valid authorization key, api key was provided, and returns an error otherwise.</p>
 <h2 id='delete-meta-by-id'>Delete Meta By ID</h2>
 <blockquote>
@@ -4095,9 +4095,9 @@ The x-api-key header must be provided to create a tenant.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Deletes the meta associated with the tenant. </p>
-<h3 id='https-request-56'>HTTPS Request</h3>
+<h3 id='https-request-12'>HTTPS Request</h3>
 <p><code>DELETE https://api.goodcop.com/v1/tenant/{tenantID}/meta</code></p>
-<h3 id='url-params-46'>URL Params</h3>
+<h3 id='url-params-10'>URL Params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4113,14 +4113,802 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid tenant identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-56'>Returns</h3>
+<h3 id='returns-12'>Returns</h3>
 <p>Returns tenant object with deleted meta info if a valid authorization key, api key was provided, and returns an error otherwise.</p>
-<h1 id='api'>Api</h1><h2 id='create-api'>Create Api</h2><h2 id='get-api-by-id'>Get Api By ID</h2><h2 id='get-all-apis'>Get All Apis</h2><h2 id='delete-api-by-id'>Delete Api By ID</h2><h2 id='get-rule-by-id-2'>Get rule By ID</h2><h2 id='update-rule-by-id-2'>Update rule By ID</h2><h2 id='delete-rule-by-id-2'>Delete rule By ID</h2><h2 id='get-meta-by-id-2'>Get Meta By ID</h2><h2 id='update-meta-by-id-2'>Update Meta By ID</h2><h2 id='delete-meta-by-id-2'>Delete Meta By ID</h2><h1 id='auth'>Auth</h1><h2 id='check-auth'>Check Auth</h2><h1 id='errors'>Errors</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
+<h1 id='api'>Api</h1><h2 id='create-api'>Create Api</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/api
 
-<p>The Kittn API uses the following error codes:</p>
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/api"</span>
+  -X  POST
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -d <span class="s1">'{
+    "name":"api test",
+    "description":"this is test api",
+    "rules": [
+        {
+            "verb": "GET",
+            "path": "/organizations/5746055551385600/*",
+            "effect": true
+        }
+    ],
+    "meta":"test api",
+    }'</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5643625413214208</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api test"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"this is test api"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5746055551385600/*"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test api"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"apiKeys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"asZ7nYKajsIl8RqtYYK-oyS2MC_6EKMYXMCDq0J7FfQ="</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6308443803615232</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>Creates a api object provided the request body and returns the api object.</p>
+<h3 id='https-request'>HTTPS Request</h3>
+<p><code>POST https://api.goodcop.com/v1/api</code></p>
+<h3 id='request-body'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>required</td>
+<td>string</td>
+<td>name of the api</td>
+</tr>
+<tr>
+<td>description</td>
+<td>optional</td>
+<td>string</td>
+<td>description of the api</td>
+</tr>
+<tr>
+<td>rules</td>
+<td>optional</td>
+<td>array</td>
+<td>rules of api</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>optional</td>
+<td>string</td>
+<td>meta information of the api</td>
+</tr>
+</tbody></table>
+<h3 id='returns'>Returns</h3>
+<p>Returns new api object if a valid authorization key and api key was provided, and returns an error otherwise.</p>
+<h2 id='get-api-by-id'>Get Api By ID</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/api/{apiID}
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/api/{apiID}"</span>
+  -X GET
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5643625413214208</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api test"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"this is test api"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5746055551385600/*"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test api"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"apiKeys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"asZ7nYKajsIl8RqtYYK-oyS2MC_6EKMYXMCDq0J7FfQ="</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6308443803615232</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>Provide the unique api ID and Goodcop will return the corresponding api information.</p>
+<h3 id='https-request-2'>HTTPS Request</h3>
+<p><code>GET https://api.goodcop.com/v1/api/{apiID}</code></p>
+<h3 id='url-params'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>apiID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid api identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-2'>Returns</h3>
+<p>Returns api details if a valid authorization key, api key and valid indentifier was provided, and returns an error otherwise.</p>
+<h2 id='get-all-apis'>Get All Apis</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/api
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/api/"</span>
+  -X GET
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"Apis"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5643625413214208</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api test"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"this is test api"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5746055551385600/*"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test api"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"apiKeys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"asZ7nYKajsIl8RqtYYK-oyS2MC_6EKMYXMCDq0J7FfQ="</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6308443803615232</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5765033938124800</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api test1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"this is test api"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5746055551385600/*"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test api"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"apiKeys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"erFaJxbDbHp_J_WlpqpFXzH_OsUiudCNRPYm_bS_V7w="</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6308443803615232</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5916827746041856</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test api"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5746055551385600/*"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api meta"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"apiKeys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"o_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8="</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6308443803615232</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>PGoodcop will return the all api information for the product.</p>
+<h3 id='https-request-3'>HTTPS Request</h3>
+<p><code>GET https://api.goodcop.com/v1/api</code></p>
+<h3 id='url-params-2'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>apiID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid api identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-3'>Returns</h3>
+<p>Returns all apis details if a valid authorization key, api key and valid indentifier was provided, and returns an error otherwise.</p>
+<h2 id='delete-api-by-id'>Delete Api By ID</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>DELETE  https://api.goodcop.com/v1/api/{apiID}
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/api/{apiID}"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Api has been deleted for apiID - 5765033938124800"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>Provide the unique api ID and Goodcop will delete the api information.</p>
+<h3 id='https-request-4'>HTTPS Request</h3>
+<p><code>DELETE https://api.goodcop.com/v1/api/{apiID}</code></p>
+<h3 id='url-params-3'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>apiID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid api identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-4'>Returns</h3>
+<p>Returns a string message if a valid authorization key, api key and valid indentifier was provided, and returns an error otherwise.</p>
+<h2 id='get-rule-by-id'>Get rule By ID</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/api/{apiID}/rule
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/api/{apiID}/rule"</span>
+  -X GET
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"Rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5746055551385600/*"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>Provide the unique api ID and Goodcop will return the list of all rules.</p>
+<h3 id='https-request-5'>HTTPS Request</h3>
+<p><code>GET https://api.goodcop.com/v1/api/{apiID}/rule</code></p>
+<h3 id='url-params-4'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>apiID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid api identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-5'>Returns</h3>
+<p>Returns rules object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='update-rule-by-id'>Update rule By ID</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>PUT  https://api.goodcop.com/v1/api/{apiID}/rule
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/api/{apiID}/rule"</span>
+  -X PUT
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -d <span class="s1">'[
+        {
+            "verb": "PUT",
+            "path": "/organizations/5162157834502144/*",
+            "effect": true
+        },
+        {
+            "verb": "POST",
+            "path": "/organizations/5162157834502144/*",
+            "effect": true
+        }
+    ]'</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5746055551385600/*"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5162157834502144/*"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5162157834502144/*"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>Retrives all rules of a api.</p>
+<h3 id='https-request-6'>HTTPS Request</h3>
+<p><code>PUT https://api.goodcop.com/v1/api/{apiID}/rule</code></p>
+<h3 id='request-body-2'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>rules</td>
+<td>required</td>
+<td>array</td>
+<td>rules to be deleted</td>
+</tr>
+</tbody></table>
+<h3 id='url-params-5'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>apiID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid api identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-6'>Returns</h3>
+<p>Returns array of rules if a valid authorization key and returns an error otherwise.</p>
+<h2 id='delete-rule-by-id'>Delete rule By ID</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>DELETE  https://api.goodcop.com/v1/api/{apiID}/rule
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/api/{apiID}/rule"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -d <span class="s1">'[
+        {
+            "verb": "PUT",
+            "path": "/organizations/5162157834502144/*",
+            "effect": true
+        },
+        {
+            "verb": "POST",
+            "path": "/organizations/5162157834502144/*",
+            "effect": true
+        }
+    ]'</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5643625413214208</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api test"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"this is test api"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5746055551385600/*"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test api"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"apiKeys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"asZ7nYKajsIl8RqtYYK-oyS2MC_6EKMYXMCDq0J7FfQ="</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6308443803615232</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Deletes the rules associated with the tenant. </p>
+<h3 id='https-request-7'>HTTPS Request</h3>
+<p><code>DELETE https://api.goodcop.com/v1/api/{apiID}/rule</code></p>
+<h3 id='request-body-3'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>rules</td>
+<td>required</td>
+<td>array</td>
+<td>rules to be deleted</td>
+</tr>
+</tbody></table>
+<h3 id='url-params-6'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>apiID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid api identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-7'>Returns</h3>
+<p>Returns api object with deleted rules info if a valid authorization key and returns an error otherwise.</p>
+<h2 id='get-meta-by-id'>Get Meta By ID</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/api/{apiID}/meta
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/api/{apiID}/meta"</span>
+  -X  GET
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api meta"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>Provide the unique tenant ID and Goodcop will return the meta information.</p>
+<h3 id='https-request-8'>HTTPS Request</h3>
+<p><code>GET https://api.goodcop.com/v1/api/{apiID}/meta</code></p>
+<h3 id='url-params-7'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>apiID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid api identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-8'>Returns</h3>
+<p>Returns string meta if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='update-meta-by-id'>Update Meta By ID</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>PUT  https://api.goodcop.com/v1/api/{apiID}/meta
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/api/{apiID}/meta"</span>
+  -X PUT
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -d <span class="s1">'{
+    "meta":"update tenant meta"
+}'</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5643625413214208</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api test"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"this is test api"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5746055551385600/*"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"updated api meta"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"apiKeys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"asZ7nYKajsIl8RqtYYK-oyS2MC_6EKMYXMCDq0J7FfQ="</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6308443803615232</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Updated meta details of the api.</p>
+<h3 id='https-request-9'>HTTPS Request</h3>
+<p><code>PUT https://api.goodcop.com/v1/api/{apiID}/meta</code></p>
+<h3 id='request-body-4'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>meta</td>
+<td>required</td>
+<td>string</td>
+<td>meta to be updated</td>
+</tr>
+</tbody></table>
+<h3 id='url-params-8'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>apiID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid api identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-9'>Returns</h3>
+<p>Returns api object with updated meta info if a valid authorization key and returns an error otherwise.</p>
+<h2 id='delete-meta-by-id'>Delete Meta By ID</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>DELETE  https://api.goodcop.com/v1/api/{apiID}/meta
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/api/{apiID}/meta"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -d <span class="s1">'{
+    "meta":""
+}'</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5643625413214208</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api test"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"this is test api"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5746055551385600/*"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"apiKeys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"asZ7nYKajsIl8RqtYYK-oyS2MC_6EKMYXMCDq0J7FfQ="</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6308443803615232</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Deletes the meta associated with the api. </p>
+<h3 id='https-request-10'>HTTPS Request</h3>
+<p><code>DELETE https://api.goodcop.com/v1/api/{apiID}/meta</code></p>
+<h3 id='url-params-9'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>apiID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid api identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-10'>Returns</h3>
+<p>Returns api object with deleted meta info if a valid authorization key and returns an error otherwise.</p>
+<h1 id='auth'>Auth</h1><h2 id='check-auth'>Check Auth</h2>
+<p>This api provides a mechanism to get the authorization status/ access level of the request url by retreiving the
+header information and checking the already set rules.</p>
+
+<p>GoodCop provides a precedance specification according to the type of entity as shown:</p>
+
+<p>A. User &gt; Group &gt; Product
+B. Tenant &gt; API</p>
+
+<p>GoodCop also provides a mechanism to specify wildcard while setting rules.
+Wildcard userd <code>*</code>.</p>
+
+<p>Lets take few examples to illustrate the above.</p>
+
+<p>Example 1 :</p>
+
+<p>As a company you have specified the below rules:</p>
+
+<ol>
+<li><code>GET</code> request for url <code>/organization/blog</code> is set to <code>true</code> for <code>group1</code>.(Assuming user1 is part of group1)</li>
+<li><code>GET</code> request for url <code>/organization/blog</code> is set to <code>false</code> for <code>user1</code>.</li>
+</ol>
+
+<p>In the above case, if <code>user1</code> request for url <code>/organization/blog</code>, the question is will the user has access to the
+above url.
+As per GoodCop precedance sepcification <code>A</code> the user will not have access to the url because as per precedance User has more
+priority over Group, hence <code>false</code>.</p>
+
+<p>Example 2 :</p>
+
+<p>As a company you have specified the below rules:</p>
+
+<ol>
+<li><code>PUT</code> request for url <code>/organization/*</code> is set to <code>true</code> for <code>group1</code>.</li>
+</ol>
+
+<p>In the above case, if <code>user1</code> within <code>group1</code> request for url <code>/organization/blog</code>, the question is will the user has access to theabove url.
+As per GoodCop Wildcard mechanism any url after <code>/organization/</code>(inclusive) will be given access, hence <code>true</code>.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/auth
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/auth"</span>
+  -X GET
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -H <span class="s1">'verb: PUT'</span>
+  -H <span class="s1">'path: /organization/*'</span>
+  -H <span class="s1">'user-token: test_rFU7Xu347hJL9UcFon1FzywvyA_8lERRhUWrf3cWivPLXaQ=='</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='https-request'>HTTPS Request</h3>
+<p><code>GET https://api.goodcop.com/v1/auth</code></p>
+<h3 id='returns'>Returns</h3>
+<p>Returns boolean value if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h1 id='errors'>Errors</h1>
+<p>The GoodCop API uses the following error codes:</p>
 
 <table><thead>
 <tr>
@@ -4138,15 +4926,15 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 </tr>
 <tr>
 <td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+<td>Forbidden -- The request is hidden for administrators only.</td>
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
+<td>Not Found -- The specified resource could not be found.</td>
 </tr>
 <tr>
 <td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+<td>Method Not Allowed -- You tried to access a resource with an invalid method.</td>
 </tr>
 <tr>
 <td>406</td>
@@ -4154,7 +4942,7 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 </tr>
 <tr>
 <td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
+<td>Gone -- The resource requested has been removed from our servers.</td>
 </tr>
 <tr>
 <td>418</td>
@@ -4162,7 +4950,7 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 </tr>
 <tr>
 <td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+<td>Too Many Requests -- You&#39;re requesting too many resources! Slow down!</td>
 </tr>
 <tr>
 <td>500</td>
