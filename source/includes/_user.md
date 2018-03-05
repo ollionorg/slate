@@ -54,7 +54,81 @@ password | required | string | The password to set for the user to authenticate.
 Returns user object if correct email and password was provided, and returns an error otherwise.
 
 ## Sign Up UsingGitHub
+
+> Definition
+
+```
+POST  https://api.goodcop.com/v1/user/signin/github
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/user/signin/github"
+  -X POST
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+```
+
+> Example Response
+
+```json
+
+{
+    "redirectUrl": "https://github.com/login/oauth/authorize?access_type=online&approval_prompt=auto&client_id=2857b5e2c2a665741368&redirect_uri=http%3A%2F%2Fa2c77437.ngrok.io%2Fv1%2Fcallback%2Fgithub&response_type=code&scope=user&state=eyJib2R5Ijoie1xuXHRcIm1ldGFcIjpcInVwZGF0ZWQgYXBpIG1ldGFcIlxufSIsInByb2R1Y3RUb2tlbiI6IjF5NHkydmE4dmZaNGoxQ2kxcXZHcmVRLXU4T3dEM0xqWVE5a3NlZ3hFcDA9In0%3D_a50b822630358ec4b16cc66f8e7d51c9508f3ed1"
+}
+
+```
+
+Creates a user object provided once authorized by github using the redirect url.
+
+### HTTPS Request
+
+`POST https://api.goodcop.com/v1/signin/google`
+
+### Returns
+
+Returns user object from google, and returns an error otherwise.
+
 ## Sign Up Google
+
+
+> Definition
+
+```
+POST  https://api.goodcop.com/v1/user/signin/google
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/user/signin/google"
+  -X POST
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+```
+
+> Example Response
+
+```json
+
+{
+    "redirectUrl": "https://accounts.google.com/o/oauth2/auth?access_type=online&approval_prompt=auto&client_id=581118883872-dgnlvtv9l8h3j0m7nipgtcoot3rgcc41.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fa2c77437.ngrok.io%2Fv1%2Fcallback%2Fgoogle&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&state=eyJib2R5Ijoie1xuXHRcIm1ldGFcIjpcInVwZGF0ZWQgYXBpIG1ldGFcIlxufSIsInByb2R1Y3RUb2tlbiI6IjF5NHkydmE4dmZaNGoxQ2kxcXZHcmVRLXU4T3dEM0xqWVE5a3NlZ3hFcDA9In0%3D_a50b822630358ec4b16cc66f8e7d51c9508f3ed1"
+}
+
+```
+
+Creates a user object provided once authorized by google using the redirect url.
+
+### HTTPS Request
+
+`POST https://api.goodcop.com/v1/signin/google`
+
+### Returns
+
+Returns user object from google, and returns an error otherwise.
 
 
 ## Login
