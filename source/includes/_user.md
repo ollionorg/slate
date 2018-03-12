@@ -185,8 +185,6 @@ password | required | string | The password to authenticate user.
 Returns the user object. In case of any validation of invalid email or password, the return 
 will be an error.
 
-## Forgot Password
-
 ## Change Password
 
 > Definition
