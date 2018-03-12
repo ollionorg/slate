@@ -1,7 +1,7 @@
 ---
 title: GoodCop API Reference
 
-language_tabs: # must be one of https://git.io/vQNgJ
+language_tabs:
   - shell
 
 toc_footers:

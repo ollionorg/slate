@@ -136,13 +136,13 @@ Returns user object from google, and returns an error otherwise.
 > Definition
 
 ```
-POST  https://api.goodcop.com/v1/login
+POST  https://api.goodcop.com/v1/user/login
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/login"
+curl "https://api.goodcop.com/v1/user/login"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -171,7 +171,7 @@ Authenticates the user provided the valid email and password and Retrieves the d
 
 ### HTTPS Request
 
-`POST https://api.goodcop.com/v1/login`
+`POST https://api.goodcop.com/v1/user/login`
 
 ### Request Body
 
@@ -184,6 +184,57 @@ password | required | string | The password to authenticate user.
 
 Returns the user object. In case of any validation of invalid email or password, the return 
 will be an error.
+
+## Forgot Password
+
+## Change Password
+
+> Definition
+
+```
+POST  https://api.goodcop.com/v1/user/passwordChange
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/user/passwordChange"
+  -X POST
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+  -H 'user-token: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
+  -d '{
+       "oldapassword":"test", 
+       "newpassword":"test@#987"
+    }'
+```
+
+> Example Response
+
+```json
+{
+   "message":"Password Changed Successfully"
+}
+```
+
+Change the password for the logged in user providing the oldpassword and new password.
+### HTTPS Request
+
+`POST https://api.goodcop.com/v1/user/passwordChange`
+
+### Request Body
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+oldapassword | required | string | The old password of the user. 
+newapassword | required | string | The new password to to set. 
+
+### Returns
+
+Returns the string message. In case of any validation of invalid oldpassword, the return 
+will be an error.
+
 
 ## Get User By ID
 
