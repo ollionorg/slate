@@ -2,7 +2,7 @@
 title: GoodCop API Reference
 
 language_tabs:
-  - shell
+  - cURL
 
 toc_footers:
   - <a href='#'>GoodCop Api Documentation</a>

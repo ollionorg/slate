@@ -46,6 +46,8 @@ $default: auto;
     width: $default !important;
     a {
         float: right;
+        border-radius: 8px;
+        margin-right: 10px;
     }
 }
 
