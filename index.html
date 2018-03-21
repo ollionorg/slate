@@ -457,6 +457,44 @@
               </ul>
           </li>
           <li>
+            <a href="#organization" class="toc-h1 toc-link" data-title="organization">Organization</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-org" class="toc-h2 toc-link" data-title="create-org">Create Org</a>
+                  </li>
+                  <li>
+                    <a href="#list-org" class="toc-h2 toc-link" data-title="list-org">List Org</a>
+                  </li>
+                  <li>
+                    <a href="#get-org-by-id" class="toc-h2 toc-link" data-title="get-org-by-id">Get Org by ID</a>
+                  </li>
+                  <li>
+                    <a href="#delete-org-by-id" class="toc-h2 toc-link" data-title="delete-org-by-id">Delete Org By ID</a>
+                  </li>
+                  <li>
+                    <a href="#update-org" class="toc-h2 toc-link" data-title="update-org">Update Org</a>
+                  </li>
+                  <li>
+                    <a href="#get-org-meta-by-id" class="toc-h2 toc-link" data-title="get-org-meta-by-id">Get Org Meta By ID</a>
+                  </li>
+                  <li>
+                    <a href="#update-org-meta-by-id" class="toc-h2 toc-link" data-title="update-org-meta-by-id">Update Org Meta By ID</a>
+                  </li>
+                  <li>
+                    <a href="#delete-org-meta-by-id" class="toc-h2 toc-link" data-title="delete-org-meta-by-id">Delete Org Meta By ID</a>
+                  </li>
+                  <li>
+                    <a href="#add-users-to-org" class="toc-h2 toc-link" data-title="add-users-to-org">Add Users to Org</a>
+                  </li>
+                  <li>
+                    <a href="#get-org-users-by-id" class="toc-h2 toc-link" data-title="get-org-users-by-id">Get Org Users By ID</a>
+                  </li>
+                  <li>
+                    <a href="#remove-users-from-org-by-id" class="toc-h2 toc-link" data-title="remove-users-from-org-by-id">Remove Users from Org By ID</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#auth" class="toc-h1 toc-link" data-title="auth">Auth</a>
               <ul class="toc-list-h2">
                   <li>
@@ -502,13 +540,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/user/signup
+<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/signup
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/signup"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/signup"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -533,7 +571,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a user object provided the email and password in the request body and returns the user object.</p>
 <h3 id='https-request'>HTTPS Request</h3>
-<p><code>POST https://api.goodcop.com/v1/user/signup</code></p>
+<p><code>POST https://api.goodcop.com/v1/signup</code></p>
 <h3 id='request-body'>Request Body</h3>
 <table><thead>
 <tr>
@@ -585,7 +623,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a user object provided once authorized by github using the redirect url.</p>
 <h3 id='https-request-2'>HTTPS Request</h3>
-<p><code>POST https://api.goodcop.com/v1/user/signin/github</code></p>
+<p><code>POST https://api.goodcop.com/v1/signin/google</code></p>
 <h3 id='returns-2'>Returns</h3>
 <p>Returns user object from google, and returns an error otherwise.</p>
 <h2 id='sign-up-google'>Sign Up Google</h2>
@@ -615,7 +653,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a user object provided once authorized by google using the redirect url.</p>
 <h3 id='https-request-3'>HTTPS Request</h3>
-<p><code>POST https://api.goodcop.com/v1/user/signin/google</code></p>
+<p><code>POST https://api.goodcop.com/v1/signin/google</code></p>
 <h3 id='returns-3'>Returns</h3>
 <p>Returns user object from google, and returns an error otherwise.</p>
 <h2 id='login'>Login</h2>
@@ -4494,7 +4532,7 @@ The x-api-key header must be provided to create a tenant.
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>PGoodcop will return the all api information for the product.</p>
+<p>Goodcop will return the all api information for the product.</p>
 <h3 id='https-request-3'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/api</code></p>
 <h3 id='url-params-2'>URL Params</h3>
@@ -4978,6 +5016,564 @@ The x-api-key header must be provided to create a tenant.
 </tbody></table>
 <h3 id='returns-10'>Returns</h3>
 <p>Returns api object with deleted meta info if a valid authorization key and returns an error otherwise.</p>
+<h1 id='organization'>Organization</h1><h2 id='create-org'>Create Org</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/org
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/org"</span>
+  -X  POST
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -d <span class="s1">'{
+    "name":"testorg",
+    "meta":"test meta",
+    "contactdetails":"+918879777777"
+}'</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5642425909379072</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testorg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test meta"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"contactDetails"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+918879777777"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"CreatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-21T17:03:16.024791+05:30"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"UpdatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-21T17:03:16.024793+05:30"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>Creates a organization</p>
+<h3 id='https-request'>HTTPS Request</h3>
+<p><code>POST https://api.goodcop.com/v1/org</code></p>
+<h3 id='request-body'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>required</td>
+<td>string</td>
+<td>name of the org</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>optional</td>
+<td>string</td>
+<td>metadata for org</td>
+</tr>
+<tr>
+<td>contactDetails</td>
+<td>optional</td>
+<td>string</td>
+<td>contact details to be stored for the org</td>
+</tr>
+</tbody></table>
+<h3 id='returns'>Returns</h3>
+<p>Returns new org object if a valid authorization key provided, and returns an error otherwise.</p>
+<h2 id='list-org'>List Org</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/org
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/org"</span>
+  -X GET
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"Organizations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5649353691627520</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test-org"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"contactDetails"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CreatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-19T15:32:22.677154+05:30"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"UpdatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-19T15:32:22.677154+05:30"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5642425909379072</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testorg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test meta"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"contactDetails"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+918879777777"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CreatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-21T17:03:16.024791+05:30"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"UpdatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-21T17:03:16.024793+05:30"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Goodcop will return the all organization information for the product.</p>
+<h3 id='https-request-2'>HTTPS Request</h3>
+<p><code>GET https://api.goodcop.com/v1/org</code></p>
+<h3 id='returns-2'>Returns</h3>
+<p>Returns all organization details if a valid authorization key and returns an error otherwise.</p>
+<h2 id='get-org-by-id'>Get Org by ID</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/org/{orgID}
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/org/5642425909379072"</span>
+  -X GET
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+
+</span></code></pre>
+<p>Goodcop will return the all api information for the product.</p>
+<h3 id='https-request-3'>HTTPS Request</h3>
+<p><code>GET https://api.goodcop.com/v1/org/{orgID}</code></p>
+<h3 id='url-params'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>orgID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid org identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-3'>Returns</h3>
+<p>Returns org details if a valid authorization key, and valid indentifier was provided, and returns an error otherwise.</p>
+<h2 id='delete-org-by-id'>Delete Org By ID</h2>
+<p>Provide the unique org ID and Goodcop will return the message for successful deletion of org.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>DELETE  https://api.goodcop.com/v1/org/{orgID}
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/org/6309146567639040"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Org Deleted Successfully"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='https-request-4'>HTTPS Request</h3>
+<p><code>DELETE https://api.goodcop.com/v1/org/{orgID}</code></p>
+<h3 id='url-params-2'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>orgID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid org identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-4'>Returns</h3>
+<p>Returns a string message if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='update-org'>Update Org</h2>
+<p>Provide the unique org ID and Goodcop will return the organization details.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>PUT  https://api.goodcop.com/v1/org/{orgID}
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/5642425909379072"</span>
+  -X PUT
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -d <span class="s1">'{
+    "contactdetails":"+91877777776666"
+    }'</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5642425909379072</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testorg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test meta"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"contactDetails"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+91877777776666"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"CreatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-21T17:03:16.024791+05:30"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"UpdatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-21T17:16:10.013299+05:30"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='https-request-5'>HTTPS Request</h3>
+<p><code>PUT https://api.goodcop.com/v1/org/{orgID}</code></p>
+<h3 id='request-body-2'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>contactdetails</td>
+<td>required</td>
+<td>string</td>
+<td>contactdetails to be updated for the org</td>
+</tr>
+</tbody></table>
+<h3 id='url-params-3'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>orgID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid org identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-5'>Returns</h3>
+<p>Returns org object with updated contact details if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='get-org-meta-by-id'>Get Org Meta By ID</h2>
+<p>Provide the unique org ID and Goodcop will return the meta details.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/org/{orgID}/meta
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/5642425909379072/meta"</span>
+  -X GET
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test meta"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='https-request-6'>HTTPS Request</h3>
+<p><code>GET https://api.goodcop.com/v1/org/{orgID}/meta</code></p>
+<h3 id='url-params-4'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>orgID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid org identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-6'>Returns</h3>
+<p>Returns meta information if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='update-org-meta-by-id'>Update Org Meta By ID</h2>
+<p>Provide the unique org ID and Goodcop will return the meta details.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>PUT  https://api.goodcop.com/v1/user/{userID}/meta
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/meta"</span>
+  -X PUT
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -d <span class="s1">'{
+    "meta":"updated test meta"
+    }'</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"meta updated successfully"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='https-request-7'>HTTPS Request</h3>
+<p><code>PUT https://api.goodcop.com/v1/org/{orgID}/meta</code></p>
+<h3 id='request-body-3'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>meta</td>
+<td>required</td>
+<td>string</td>
+<td>Metadata to be updated for the org</td>
+</tr>
+</tbody></table>
+<h3 id='url-params-5'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>orgID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid org identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-7'>Returns</h3>
+<p>Returns string message of updation if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='delete-org-meta-by-id'>Delete Org Meta By ID</h2>
+<p>Provide the unique org ID and Goodcop will delete the meta string.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>DELETE  https://api.goodcop.com/v1/org/{orgID}/meta
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/product/5642425909379072/meta"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"category: api"</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"meta deleted successfully"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='https-request-8'>HTTPS Request</h3>
+<p><code>DELETE https://api.goodcop.com/v1/org/{orgID}/meta</code></p>
+<h3 id='url-params-6'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>orgID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid org identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-8'>Returns</h3>
+<p>Returns success message string if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='add-users-to-org'>Add Users to Org</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/org/{orgID}/users
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/org/5642425909379072/users"</span>
+  -X  POST
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -d <span class="s1">'{
+    "users":["0ef3011b-b228-4771-bad5-bd7c0ebd70d8","3fd58316-6f6d-4c1b-9eb7-2678fe886b4d"]
+}'</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Users added to organizations"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>Creates a organization</p>
+<h3 id='https-request-9'>HTTPS Request</h3>
+<p><code>POST https://api.goodcop.com/v1/org/{orgID}/users</code></p>
+<h3 id='request-body-4'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>users</td>
+<td>required</td>
+<td>array</td>
+<td>users ids</td>
+</tr>
+</tbody></table>
+<h3 id='returns-9'>Returns</h3>
+<p>Returns success message string if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='get-org-users-by-id'>Get Org Users By ID</h2>
+<p>Provide the unique org ID and Goodcop will return the users details.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/org/{orgID}/users
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/org/5642425909379072/users"</span>
+  -X GET
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"response"</span><span class="p">:</span><span class="w"> </span><span class="s2">"to be updated"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='https-request-10'>HTTPS Request</h3>
+<p><code>GET https://api.goodcop.com/v1/org/{orgID}/users</code></p>
+<h3 id='url-params-7'>URL Params</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>orgID</td>
+<td>required</td>
+<td>string</td>
+<td>Valid org identifier</td>
+</tr>
+</tbody></table>
+<h3 id='returns-10'>Returns</h3>
+<p>Returns users array associated with the org if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h2 id='remove-users-from-org-by-id'>Remove Users from Org By ID</h2>
+<p>Provide the unique array of user IDs and Goodcop will return the message for successful deletion of users from org.</p>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>DELETE  https://api.goodcop.com/v1/org/{orgID}/users
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/org/5642425909379072/users"</span>
+  -X DELETE
+  -d <span class="s1">'[5717800035287040,5717800035287766]'</span>
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Users deleted from organizations"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='https-request-11'>HTTPS Request</h3>
+<p><code>DELETE https://api.goodcop.com/v1/org/{orgID}/users</code></p>
+<h3 id='request-body-5'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>usersIDs</td>
+<td>array</td>
+<td>integer</td>
+<td>Array of Valid user identifiers</td>
+</tr>
+</tbody></table>
+<h3 id='returns-11'>Returns</h3>
+<p>Returns a string message if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h1 id='auth'>Auth</h1><h2 id='check-auth'>Check Auth</h2>
 <p>This api provides a mechanism to get the authorization status/access level of the request url by retreiving the
 header information and checking the already set rules.</p>
