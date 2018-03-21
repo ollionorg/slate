@@ -224,7 +224,7 @@ curl "https://api.goodcop.com/v1/api/"
 }
 
 ```
-PGoodcop will return the all api information for the product.
+Goodcop will return the all api information for the product.
 
 ### HTTPS Request
 
