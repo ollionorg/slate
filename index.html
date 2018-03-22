@@ -555,7 +555,7 @@ GoodCop expects for the Authorization key to be included in all API requests to 
 You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=</code> with your product authorization key.
 </aside>
 <h1 id='user'>User</h1>
-<p>The API allows you to create, delete, and update your users with addition of socail providers. You can retrieve individual users as well as a list of all your users. Also the api gives ability to set authorization using the rules object.</p>
+<p>The API allows you to create, delete, and update your users with addition of socail providers. You can retrieve individual users as well as a list of all your users. Also the api gives ability to set authorization level privileges using the rules object.</p>
 <h2 id='sign-up-using-email-and-password'>Sign Up Using Email and Password</h2>
 <blockquote>
 <p>Definition</p>
@@ -616,6 +616,10 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </tbody></table>
 <h3 id='returns'>Returns</h3>
 <p>Returns a user object if correct email and password was provided. The returned object will have information about the rules, groups, metadata. If no email or password was provided, same email which already exists or any other backend validation failes an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='errors'>Errors</h3>
+<p><code>Either email or password is missing</code>
+<code>Email is not valid</code>
+<code>You are already registered with product1 and product2</code></p>
 <h2 id='signin-usinggithub'>SignIn UsingGitHub</h2>
 <blockquote>
 <p>Definition</p>
