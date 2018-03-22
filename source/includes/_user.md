@@ -1,8 +1,8 @@
 # User
 
-The API allows you to create, delete, and update your users with addition of socail providers and passwordless authentication using magic link. You can retrieve individual users as well as a list of all your users. Also the api gives ability to set authorization level privileges using the rules object.
+The API allows you to create, delete, and update your users with addition of social providers and passwordless authentication using magic link. You can retrieve individual users as well as a list of all your users. Also the api gives ability to set authorization level privileges using the rules object.
 
-## Sign Up Using Email and Password
+## Signup using eamil and passowrd
 
 > Definition
 
@@ -17,7 +17,7 @@ curl "https://dev.goodcop.com/v1/user/signup"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Device-Token: test_56789657567"
   -d '{
        "email":"test", 
        "password":"test@#987"
@@ -33,8 +33,15 @@ curl "https://dev.goodcop.com/v1/user/signup"
     "rules": [],
     "groups": [],
     "meta": "",
-    "token": "test_IDvekbzln82kvCPKxv6-lYwovmucoRVlPtRlKAoo1N13l3PgfaxJeprTtfHgihddKfITPrgDvre8RKM8w==",
-    "verified": false
+    "devicetokens": [
+        {
+            "token": "KHE-PdB5YpsUPYnudAzRMflS1n-gDzgvOgGSa5jvEKYRlirNtQ76Vurvq2GsM3FnmGdno7eKBltB0T047mbgKg==",
+            "deviceid": "test_56789657567"
+        }
+    ],
+    "verified": false,
+    "createdAt": "2018-03-22T14:12:14.780714+05:30",
+    "updatedAt": "2018-03-22T14:12:14.780716+05:30"
 }
 ```
 
@@ -60,10 +67,11 @@ Returns a user object if correct email and password was provided. The returned o
 1.  `Invalid product API key`
 2.  `Either email or password is missing`
 3.  `Email is not valid`
-4.  `You are already registered with product1 and product2`
+4.  `Password must be atleast 7 characters long`
+5.  `You are already registered with product1 and product2`
 
 
-## SignIn Using GitHub
+## SignIn using github
 
 > Definition
 
@@ -78,7 +86,7 @@ curl "https://dev.goodcop.com/v1/user/signin/github"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Device-Token: test_56789657567"
 ```
 
 > Example Response
@@ -106,7 +114,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 1.  `Invalid product API key`
 2.  `No Callback is set for your product, please set that first`
 
-## SignIn Using Google
+## SignIn using facebook
 
 
 > Definition
@@ -122,7 +130,7 @@ curl "https://dev.goodcop.com/v1/user/signin/google"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Device-Token: test_56789657567"
 ```
 
 > Example Response
@@ -150,7 +158,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 1.  `Invalid product API key`
 2.  `No Callback is set for your product, please set that first`
 
-## SignIn Using Facebook
+## SignIn using facebook
 
 > Definition
 
@@ -165,7 +173,7 @@ curl "https://dev.goodcop.com/v1/user/signin/facebook"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Device-Token: test_56789657567"
 ```
 
 > Example Response
@@ -193,7 +201,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 1.  `Invalid product API key`
 2.  `No Callback is set for your product, please set that first`
 
-## SignIn Using Twitter
+## SignIn using twitter
 
 > Definition
 
@@ -208,7 +216,7 @@ curl "https://dev.goodcop.com/v1/user/signin/twitter"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Device-Token: test_56789657567"
 ```
 
 > Example Response
@@ -236,7 +244,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 1.  `Invalid product API key`
 2.  `No Callback is set for your product, please set that first`
 
-## SignIn Using Instagram
+## SignIn using instagram
 
 > Definition
 
@@ -251,7 +259,7 @@ curl "https://dev.goodcop.com/v1/user/signin/instagram"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Device-Token: test_56789657567"
 ```
 
 > Example Response
@@ -279,7 +287,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 1.  `Invalid product API key`
 2.  `No Callback is set for your product, please set that first`
 
-## SignIn Using MagicLink
+## SignIn using magiclink
 
 > Definition
 
@@ -294,7 +302,7 @@ curl "https://dev.goodcop.com/v1/user/magiclink"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Device-Token: test_56789657567"
   -d '{
        "email":"some_email@mail.com", 
     }'
@@ -332,7 +340,7 @@ Returns a success message and an email will be sent to user with the magic link.
 2.  `Email is missing`
 
 
-## Sign Up PhoneNumber
+## SignIn using phonenumber
 
 > Definition
 
@@ -347,7 +355,7 @@ curl "https://dev.goodcop.com/v1/user/signin/phone"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Device-Token: test_56789657567"
   -d '{
        "phoneNumber":"+917678788789", 
     }'
@@ -363,8 +371,7 @@ curl "https://dev.goodcop.com/v1/user/signin/phone"
 
 ```
 
-GoodCop will send the sms with a auto genrated otp. User needs to verfiy the otp against the phone number to 
-sign in the user
+Creates an one time password for user verfication.
 
 ### HTTPS Request
 
@@ -378,10 +385,15 @@ phoneNumber | required | string | Phone number to send otp
 
 ### Returns
 
-Returns the success message if correct phone number is provided otherwise return 
-will be an error.
+Returns a success message and an one time password will be sent to user to verify.If no email was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Verfiy PhoneNumber
+### Error Messages
+
+1.  `Invalid product API key`
+2.  `Phone number is missing`
+3.  `SMS sending error`
+
+## Verfiy phonenumber
 
 > Definition
 
@@ -396,7 +408,7 @@ curl "https://dev.goodcop.com/v1/user/signin/phone/verify"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Device-Token: test_56789657567"
   -d '{
        "phoneNumber":"+917678788789", 
        "otp":"878787"
@@ -412,7 +424,7 @@ curl "https://dev.goodcop.com/v1/user/signin/phone/verify"
 
 ```
 
-User will verify the authenticity by verifying the otp.
+Creates a new user object after verifying the otp.
 
 ### HTTPS Request
 
@@ -427,9 +439,12 @@ otp | required | string | otp sent to user mobile
 
 ### Returns
 
-Returns the user object if phonenumber was verified with otp provided otherwise return 
-will be an error.
+Returns a user object if correct otp and phoneNumber was provided. The returned object will have user details with phone number and token. If no otp or phoneNumber was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
+### Error Messages
+
+1.  `Invalid product API key`
+2.  `Phone number or OTP missing`
 
 ## Login
 
@@ -446,7 +461,7 @@ curl "https://dev.goodcop.com/v1/user/login"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Device-Token: test_56789657567"
   -d '{
        "email":"test", 
        "password":"test@#987"
@@ -462,12 +477,20 @@ curl "https://dev.goodcop.com/v1/user/login"
     "rules": null,
     "groups": null,
     "meta": "",
-    "token": "eUhWVAYVcw_guO-XRLs_JIZimSiXycUAesf0VkBNptZvhZQnkC0uZacvuhtj8BVI2m5YoHbCU_AU_3hK-tytRg==",
-    "verified": false
+    "devicetokens": [
+        {
+            "token": "R4QzpVxvYuS03W-ap54J6tgDj86pkGNQ60szc_7PbR1D4jbhJk1cFmJAjOUPpoew5vSV_prXFsRUxKeuY-GLxg==",
+            "deviceid": "test_56789657567"
+        }
+    ],
+    "verified": false,
+    "createdAt": "2018-03-22T14:13:19.654089+05:30",
+    "updatedAt": "2018-03-22T14:13:19.654091+05:30"
 }
+
 ```
 
-Authenticates the user provided the valid email and password and Retrieves the details of a user that has previously been created.
+LogIn the user.
 
 ### HTTPS Request
 
@@ -477,15 +500,21 @@ Authenticates the user provided the valid email and password and Retrieves the d
 
 Parameter | Value | Type | Description
 --------- | ------- | --------------- | -----------
-email | required | string | The email address to validate against. 
-password | required | string | The password to authenticate user. 
+email | required | string | The email address of the user
+password | required | string | The password of the user
 
 ### Returns
 
-Returns the user object. In case of any validation of invalid email or password, the return 
-will be an error.
+Returns a user object if correct email and password was provided. The returned object will have information about the rules, groups, metadata. If no email or password was provided, incorrect passowrd/email validation or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Change Password
+### Error Messages
+
+1.  `Invalid product API key`
+2.  `Either email or password is missing`
+3.  `Password must be atleast 7 characters long`
+3.  `No Password,Please Set a password after signing in using magic link`
+
+## Change password
 
 > Definition
 
@@ -500,7 +529,7 @@ curl "https://dev.goodcop.com/v1/user/passwordChange"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Device-Token: test_56789657567"
   -H 'user-token: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
   -d '{
        "oldapassword":"test", 
@@ -517,6 +546,7 @@ curl "https://dev.goodcop.com/v1/user/passwordChange"
 ```
 
 Change the password for the logged in user providing the oldpassword and new password.
+
 ### HTTPS Request
 
 `POST https://dev.goodcop.com/v1/user/passwordChange`
@@ -526,17 +556,21 @@ Change the password for the logged in user providing the oldpassword and new pas
 Parameter | Value | Type | Description
 --------- | ------- | --------------- | -----------
 oldapassword | required | string | The old password of the user. 
-newapassword | required | string | The new password to to set. 
+newapassword | required | string | The new password to set. 
 
 ### Returns
 
-Returns the string message. In case of any validation of invalid oldpassword, the return 
-will be an error.
+Returns a success message. If no user token was provided, incorrect passwords or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  `Invalid product API key`
+2.  `user not found`
+3.  `Wrong Old Password`
+4.  `Password must be atleast 7 characters long`
 
 
-## Get User By ID
-
-Retrieves the details of a user that has previously been created. Provide the unique user ID that was returned from your login request and Goodcop will return the corresponding user information.
+## Get user by Id
 
 > Definition
 
@@ -551,7 +585,7 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Device-Token: test_56789657567"
 ```
 
 > Example Response
@@ -563,10 +597,19 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
     "rules": null,
     "groups": null,
     "meta": "",
-    "token": "eUhWVAYVcw_guO-XRLs_JIZimSiXycUAesf0VkBNptZvhZQnkC0uZacvuhtj8BVI2m5YoHbCU_AU_3hK-tytRg==",
-    "verified": false
+    "devicetokens": [
+        {
+            "token": "u82e715S5xutCVdu-EIL4A63g7Z_uFNLYAnrIjQbO10iYFiwkPher5BVqoin8hcHeFifSpcQ6x3hAx1CPigNbA==",
+            "deviceid": "test_56789657567"
+        }
+    ],
+    "verified": true,
+    "createdAt": "0001-01-01T05:21:10+05:21",
+    "updatedAt": "0001-01-01T05:21:10+05:21"
 }
 ```
+
+Retrieves the details of an existing user. You need only supply the unique user identifier that was returned upon user creation.
 
 ### HTTPS Request
 
@@ -580,26 +623,30 @@ userID | required | string | Valid user identifier
 
 ### Returns
 
-Returns user if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns a user object if a valid identifier was provided. If invalide user id was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Get User By Email
+### Error Messages
 
-Retrieves the details of a user that has previously been created. Provide the unique email that was returned from your login request and Goodcop will return the corresponding user information.
+1.  `Invalid product API key`
+2.  `User not found`
+
+## Get user By email
+
 
 > Definition
 
 ```
-GET  https://dev.goodcop.com/v1/user/{email}
+GET  https://dev.goodcop.com/v1/getUser/{email}
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user/test@mail.com"
+curl "https://dev.goodcop.com/v1/getUser/test@mail.com"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Device-Token: test_56789657567"
 ```
 
 > Example Response
@@ -611,14 +658,23 @@ curl "https://dev.goodcop.com/v1/user/test@mail.com"
     "rules": null,
     "groups": null,
     "meta": "",
-    "token": "eUhWVAYVcw_guO-XRLs_JIZimSiXycUAesf0VkBNptZvhZQnkC0uZacvuhtj8BVI2m5YoHbCU_AU_3hK-tytRg==",
-    "verified": false
+    "devicetokens": [
+        {
+            "token": "e_aMotSZFW0A9QiXWE0N2dkDIiLUBLHLrS6hAQyhD98Py11RAb4_YKjNijvaX4m5qWN8JwBhhi48iecFF38DmA==",
+            "deviceid": ""
+        }
+    ],
+    "verified": true,
+    "createdAt": "2018-03-22T11:25:29.803822+05:30",
+    "updatedAt": "2018-03-22T11:26:29.536281+05:30"
 }
 ```
 
+Retrieves the details of an existing user. You need only supply the unique email of the user.
+
 ### HTTPS Request
 
-`GET https://dev.goodcop.com/v1/user/{email}`
+`GET https://dev.goodcop.com/v1/getUser/{email}`
 
 ### URL Params
 
@@ -628,11 +684,14 @@ email | required | string | Valid email address
 
 ### Returns
 
-Returns user if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns a user object if a valid identifier was provided. If invalid email was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## List Users
+### Error Messages
 
-Retrieves the details of all users that has previously been created.
+1.  `Invalid product API key`
+2.  `Email is not valid`
+
+## List all users
 
 > Definition
 
@@ -647,7 +706,6 @@ curl "https://dev.goodcop.com/v1/user"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
 ```
 
 > Example Response
@@ -670,8 +728,15 @@ curl "https://dev.goodcop.com/v1/user"
                 5687905720729600
             ],
             "meta": "",
-            "token": "usPAGnmuNtq8JXIprybHXq2c90uC6Jxr62DFv9CpwFO3S25x6WYdT20AZT1xVE1rmSMT5ZwxQhT7sgo5-S42ag==",
-            "verified": false
+            "devicetokens": [
+                    {
+                        "token": "TVzm6SDRY5i5lpXgrsNYxok9zgJODJsA7VB15yl2qvUeTG_n3HYmEHaYwt73K-1vGpsUTV18wssDyEWGHdInPw==",
+                        "deviceid": ""
+                    }
+                ],
+            "verified": false,
+            "createdAt": "0001-01-01T05:21:10+05:21",
+            "updatedAt": "2018-03-22T12:08:02.07777+05:30"
         },
         {
               "userId": "test1_oio4205c7-4139-4e14-a0d0-c5932ad99e9a",
@@ -679,12 +744,20 @@ curl "https://dev.goodcop.com/v1/user"
               "rules": null,
               "groups": null,
               "meta": "",
-              "token": "eUhWVAYVcw_guO-XRLs_JIZimSiXycUAesf0VkBNptZvhZQnkC0uZacvuhtj8BVI2m5YoHbCU_AU_3hK-tytRg==",
-              "verified": false
+               "devicetokens": [
+                    {
+                        "token": "TVzm6SDRY5i5lpXgrsNYxok9zgJODJsA7VB15yl2qvUeTG_n3HYmEHaYwt73K-1vGpsUTV18wssDyEWGHdInPw==",
+                        "deviceid": "13ACFCFB-40F6-4823-B8FC-8CA3D3A5DEDE"
+                    }
+                ],
+              "verified": true,
+              "createdAt": "0001-01-01T05:21:10+05:21",
+              "updatedAt": "2018-03-22T12:08:02.07777+05:30"
         },
-            ]
+    ]
 }
 ```
+Retrieves the detailed list of all product users. The users are returned in descending order of creation.
 
 ### HTTPS Request
 
@@ -692,11 +765,13 @@ curl "https://dev.goodcop.com/v1/user"
 
 ### Returns
 
-Returns list of user objects if a valid authorization key was provided, and returns an error otherwise.
+Returns a list of user objects. If any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Delete User By ID
+### Error Messages
 
-Provide the unique user ID and Goodcop will return the message for successful deletion of user.
+1.  `Invalid product API key`
+
+## Delete user by Id
 
 > Definition
 
@@ -710,8 +785,7 @@ DELETE  https://dev.goodcop.com/v1/user/{userID}
 curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response
@@ -720,7 +794,10 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
 {
     "message": "User deleted successfully"
 }
+
 ```
+
+Deletes a user from the product. The user is not deleted permanently.
 
 ### HTTPS Request
 
@@ -734,12 +811,14 @@ userID | required | string | Valid user identifier
 
 ### Returns
 
-Returns a string message if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns a message on success. If the user ID does not exist an appropriate error message will be returned with an error code associated with it.
 
+### Error Messages
+
+1.  `Invalid product API key`
+2.  `User not found`
 
 ## Get Group Details By ID
-
-Provide the unique user ID and Goodcop will return the group details.
 
 > Definition
 
@@ -754,7 +833,7 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Device-Token: test_56789657567"
 ```
 
 > Example Response
@@ -802,6 +881,8 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
 ]
 ```
 
+Retrieves the group details provided the user ID.
+
 ### HTTPS Request
 
 `GET https://dev.goodcop.com/v1/user/{userID}/groups`
@@ -814,12 +895,15 @@ userID | required | string | Valid user identifier
 
 ### Returns
 
-Returns a array of groups if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns an array of group objects. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  `Invalid product API key`
+2.  `User not found`
 
 
 ## Get User Meta By ID
-
-Provide the unique user ID and Goodcop will return the meta details.
 
 > Definition
 
@@ -834,7 +918,7 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Device-Token: test_56789657567"
 ```
 
 > Example Response
@@ -844,6 +928,7 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
     "meta": "storing test meta info",
 }
 ```
+Retrieves the meta details provided the user ID.
 
 ### HTTPS Request
 
@@ -855,15 +940,17 @@ Parameter | Value | Type | Description
 --------- | ------- | --------------- | -----------
 userID | required | string | Valid user identifier 
 
-### Request Body
-
-Parameter | Value | Type | Description
---------- | ------- | --------------- | -----------
-meta | required | string | The email address to send the verfication. 
 
 ### Returns
 
-Returns meta if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns meta string. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  `Invalid product API key` <aside style="background:#5bc0de;">400</aside> 
+2.  `User not found`
+
+
 
 ## Update User Meta By ID
 
@@ -882,7 +969,7 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Device-Token: test_56789657567"
   -d '{
 	"meta":"storing test meta info"
     }'
@@ -948,7 +1035,7 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Device-Token: test_56789657567"
 ```
 
 > Example Response
@@ -1006,7 +1093,7 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Device-Token: test_56789657567"
   -d '[{
             "verb": "GET",
             "path": "/credentials/5687539843203072",
@@ -1085,7 +1172,7 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Device-Token: test_56789657567"
   -d '[{
             "verb": "GET",
             "path": "/credentials/5687539843203072",
@@ -1153,7 +1240,7 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Device-Token: test_56789657567"
 ```
 
 > Example Response
