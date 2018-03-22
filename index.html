@@ -228,7 +228,7 @@
             <a href="#user" class="toc-h1 toc-link" data-title="user">User</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#signup-using-eamil-and-passowrd" class="toc-h2 toc-link" data-title="signup-using-eamil-and-passowrd">Signup using eamil and passowrd</a>
+                    <a href="#signup-using-eamil-and-password" class="toc-h2 toc-link" data-title="signup-using-eamil-and-password">Signup using eamil and password</a>
                   </li>
                   <li>
                     <a href="#signin-using-github" class="toc-h2 toc-link" data-title="signin-using-github">SignIn using github</a>
@@ -556,7 +556,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </aside>
 <h1 id='user'>User</h1>
 <p>The API allows you to create, delete, and update your users with addition of social providers and passwordless authentication using magic link. You can retrieve individual users as well as a list of all your users. Also the api gives ability to set authorization level privileges using the rules object.</p>
-<h2 id='signup-using-eamil-and-passowrd'>Signup using eamil and passowrd</h2>
+<h2 id='signup-using-eamil-and-password'>Signup using eamil and password</h2>
 <blockquote>
 <p>Definition</p>
 </blockquote>
@@ -1583,8 +1583,6 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <li> <code style="background:#FFC107;"> 400 </code> <code>User not found</code></li>
 </ol>
 <h2 id='list-user-rules-by-id'>List User Rules By ID</h2>
-<p>Provide the unique user ID and Goodcop will return the list of all rules.</p>
-
 <blockquote>
 <p>Definition</p>
 </blockquote>
@@ -1622,7 +1620,9 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-19'>HTTPS Request</h3>
+</span></code></pre>
+<p>Retrieves the details of all user rules.</p>
+<h3 id='https-request-19'>HTTPS Request</h3>
 <p><code>GET https://dev.goodcop.com/v1/user/{userID}/rule</code></p>
 <h3 id='url-params-7'>URL Params</h3>
 <table><thead>
@@ -1641,10 +1641,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </tr>
 </tbody></table>
 <h3 id='returns-19'>Returns</h3>
-<p>Returns rules object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<p>Returns the list of user rules. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='error-messages-19'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FFC107;"> 401 </code> <code style="background:#FFC107;"> 401 </code> <code>Invalid product API key</code><br></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>User not found</code></li>
+</ol>
 <h2 id='update-user-rules-by-id'>Update User Rules By ID</h2>
-<p>Provide the unique user ID and Goodcop will return the updated list of all rules.</p>
-
 <blockquote>
 <p>Definition</p>
 </blockquote>
@@ -1703,7 +1706,9 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
     </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0001-01-01T05:21:10+05:21"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-22T12:08:02.07777+05:30"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-20'>HTTPS Request</h3>
+</span></code></pre>
+<p>Updates the rules by setting the value of the body parameter passed.</p>
+<h3 id='https-request-20'>HTTPS Request</h3>
 <p><code>PUT https://dev.goodcop.com/v1/user/{userID}/rule</code></p>
 <h3 id='request-body-8'>Request Body</h3>
 <table><thead>
@@ -1738,10 +1743,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </tr>
 </tbody></table>
 <h3 id='returns-20'>Returns</h3>
-<p>Returns user object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<p>Returns user object with updated rules. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='error-messages-20'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FFC107;"> 401 </code> <code style="background:#FFC107;"> 401 </code> <code>Invalid product API key</code><br></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>User not found</code></li>
+</ol>
 <h2 id='delete-user-rules-by-id'>Delete User Rules By ID</h2>
-<p>Provide the unique user ID and Goodcop will return the updated list of all rules.</p>
-
 <blockquote>
 <p>Definition</p>
 </blockquote>
@@ -1795,7 +1803,9 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
     </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0001-01-01T05:21:10+05:21"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-22T12:08:02.07777+05:30"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-21'>HTTPS Request</h3>
+</span></code></pre>
+<p>Deletes the rules from the user.</p>
+<h3 id='https-request-21'>HTTPS Request</h3>
 <p><code>DELETE https://dev.goodcop.com/v1/user/{userID}/rule</code></p>
 <h3 id='url-params-9'>URL Params</h3>
 <table><thead>
@@ -1814,10 +1824,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </tr>
 </tbody></table>
 <h3 id='returns-21'>Returns</h3>
-<p>Returns user object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<p>Returns user object with updated rules. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='error-messages-21'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FFC107;"> 401 </code> <code style="background:#FFC107;"> 401 </code> <code>Invalid product API key</code><br></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>User not found</code></li>
+</ol>
 <h2 id='get-group-details-for-user-by-id'>Get Group Details for user By ID</h2>
-<p>Provide the unique user ID and Goodcop will return the list of all groups.</p>
-
 <blockquote>
 <p>Definition</p>
 </blockquote>
@@ -1880,7 +1893,9 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 
-</span></code></pre><h3 id='https-request-22'>HTTPS Request</h3>
+</span></code></pre>
+<p>Retrieves the details of all groups for a user.</p>
+<h3 id='https-request-22'>HTTPS Request</h3>
 <p><code>GET https://dev.goodcop.com/v1/user/{userID}/groups</code></p>
 <h3 id='url-params-10'>URL Params</h3>
 <table><thead>
@@ -1899,7 +1914,12 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </tr>
 </tbody></table>
 <h3 id='returns-22'>Returns</h3>
-<p>Returns array of group details with a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<p>Returns list of groups details for a unique userID. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='error-messages-22'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FFC107;"> 401 </code> <code style="background:#FFC107;"> 401 </code> <code>Invalid product API key</code><br></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>User not found</code></li>
+</ol>
 <h1 id='group'>Group</h1><h2 id='create-group'>Create Group</h2>
 <blockquote>
 <p>Definition</p>
@@ -5424,13 +5444,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/org
+<pre class="highlight plaintext"><code>POST  https://dev.goodcop.cldcvr.com/v1/org
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/org"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.cldcvr.com/v1/org"</span>
   -X  POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
