@@ -921,7 +921,7 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
   -H "Device-Token: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:green;"> 200 OK</code>
 
 ```json
 {
@@ -947,8 +947,8 @@ Returns meta string. If invalid user ID or any other backend failures an appropr
 
 ### Error Messages
 
-1.  <code style="background:orange;">400</code>`Invalid product API key` 
-2.  `User not found`
+1.  <code style="background:orange;"> 401 Unauthorized </code> `Invalid product API key` 
+2.  <code style="background:orange;"> 400 Bad Request </code> `User not found`
 
 
 
