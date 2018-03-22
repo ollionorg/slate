@@ -947,7 +947,7 @@ Returns meta string. If invalid user ID or any other backend failures an appropr
 
 ### Error Messages
 
-1.  `Invalid product API key` <aside style="background:#5bc0de;">400</aside> 
+1.  <code style="background:orange;">400</code>`Invalid product API key` 
 2.  `User not found`
 
 
