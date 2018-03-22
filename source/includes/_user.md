@@ -57,9 +57,9 @@ Returns a user object if correct email and password was provided. The returned o
 
 ### Errors
 
-`Either email or password is missing`
-`Email is not valid`
-`You are already registered with product1 and product2`
+1.  `Either email or password is missing`
+2.  `Email is not valid`
+3.  `You are already registered with product1 and product2`
 
 
 ## SignIn UsingGitHub
