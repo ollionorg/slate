@@ -560,13 +560,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/signup
+<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/user/signup
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/signup"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/signup"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -598,7 +598,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a new user object.</p>
 <h3 id='https-request'>HTTPS Request</h3>
-<p><code>POST https://dev.goodcop.com/v1/user/signup</code></p>
+<p><code>POST https://[GOODCOP_URL]/v1/user/signup</code></p>
 <h3 id='request-body'>Request Body</h3>
 <table><thead>
 <tr>
@@ -635,13 +635,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/signin/github
+<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/user/signin/github
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/signin/github"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/signin/github"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -658,7 +658,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a new user object via github.</p>
 <h3 id='https-request-2'>HTTPS Request</h3>
-<p><code>POST https://dev.goodcop.com/v1/user/signin/github</code></p>
+<p><code>POST https://[GOODCOP_URL]/v1/user/signin/github</code></p>
 <h3 id='returns-2'>Returns</h3>
 <p>Returns a redirect url. The redirect url will be used to authenticate the user using github. If the user is successfully authenticated using github, goodcop will redirect to the product callback. If no callback is set by the product, social auth provider failure or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-2'>Error Messages</h3>
@@ -670,13 +670,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/signin/google
+<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/user/signin/google
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/signin/google"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/signin/google"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -693,7 +693,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a new user object via google.</p>
 <h3 id='https-request-3'>HTTPS Request</h3>
-<p><code>POST https://dev.goodcop.com/v1/user/signin/google</code></p>
+<p><code>POST https://[GOODCOP_URL]/v1/user/signin/google</code></p>
 <h3 id='returns-3'>Returns</h3>
 <p>Returns a redirect url. The redirect url will be used to authenticate the user using google. If the user is successfully authenticated using google, goodcop will redirect to the product callback. If no callback is set by the product, social auth provider failure or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-3'>Error Messages</h3>
@@ -705,13 +705,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/signin/facebook
+<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/user/signin/facebook
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/signin/facebook"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/signin/facebook"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -728,7 +728,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a new user object via facebook.</p>
 <h3 id='https-request-4'>HTTPS Request</h3>
-<p><code>POST https://dev.goodcop.com/v1/user/signin/facebook</code></p>
+<p><code>POST https://[GOODCOP_URL]/v1/user/signin/facebook</code></p>
 <h3 id='returns-4'>Returns</h3>
 <p>Returns a redirect url. The redirect url will be used to authenticate the user using facebook. If the user is successfully authenticated using facebook, goodcop will redirect to the product callback. If no callback is set by the product, social auth provider failure or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-4'>Error Messages</h3>
@@ -740,13 +740,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/signin/twitter
+<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/user/signin/twitter
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/signin/twitter"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/signin/twitter"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -763,7 +763,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a new user object via twitter.</p>
 <h3 id='https-request-5'>HTTPS Request</h3>
-<p><code>POST https://dev.goodcop.com/v1/user/signin/twitter</code></p>
+<p><code>POST https://[GOODCOP_URL]/v1/user/signin/twitter</code></p>
 <h3 id='returns-5'>Returns</h3>
 <p>Returns a redirect url. The redirect url will be used to authenticate the user using twitter. If the user is successfully authenticated using twitter, goodcop will redirect to the product callback. If no callback is set by the product, social auth provider failure or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-5'>Error Messages</h3>
@@ -775,13 +775,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/signin/instagram
+<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/user/signin/instagram
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/signin/instagram"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/signin/instagram"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -798,7 +798,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a new user object via instagram.</p>
 <h3 id='https-request-6'>HTTPS Request</h3>
-<p><code>POST https://dev.goodcop.com/v1/user/signin/instagram</code></p>
+<p><code>POST https://[GOODCOP_URL]/v1/user/signin/instagram</code></p>
 <h3 id='returns-6'>Returns</h3>
 <p>Returns a redirect url. The redirect url will be used to authenticate the user using instagram. If the user is successfully authenticated using instagram, goodcop will redirect to the product callback. If no callback is set by the product, social auth provider failure or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-6'>Error Messages</h3>
@@ -810,13 +810,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/magiclink
+<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/user/magiclink
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/magiclink"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/magiclink"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -835,7 +835,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a new user object via email by creating a token that will allow user to log in through the link sent to their email.</p>
 <h3 id='https-request-7'>HTTPS Request</h3>
-<p><code>POST https://dev.goodcop.com/v1/signup/magiclink</code></p>
+<p><code>POST https://[GOODCOP_URL]/v1/signup/magiclink</code></p>
 <h3 id='request-body-2'>Request Body</h3>
 <table><thead>
 <tr>
@@ -863,13 +863,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/signin/phone
+<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/user/signin/phone
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/signin/phone"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/signin/phone"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -889,7 +889,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates an one time password for user verfication.</p>
 <h3 id='https-request-8'>HTTPS Request</h3>
-<p><code>POST https://dev.goodcop.com/v1/user/signin/phone</code></p>
+<p><code>POST https://[GOODCOP_URL]/v1/user/signin/phone</code></p>
 <h3 id='request-body-3'>Request Body</h3>
 <table><thead>
 <tr>
@@ -918,13 +918,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/signin/phone/verify
+<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/user/signin/phone/verify
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/signin/phone/verify"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/signin/phone/verify"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -944,7 +944,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a new user object after verifying the otp.</p>
 <h3 id='https-request-9'>HTTPS Request</h3>
-<p><code>POST https://dev.goodcop.com/v1/user/signin/phone/verify</code></p>
+<p><code>POST https://[GOODCOP_URL]/v1/user/signin/phone/verify</code></p>
 <h3 id='request-body-4'>Request Body</h3>
 <table><thead>
 <tr>
@@ -978,13 +978,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/login
+<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/user/login
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/login"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/login"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1017,7 +1017,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>LogIn the user.</p>
 <h3 id='https-request-10'>HTTPS Request</h3>
-<p><code>POST https://dev.goodcop.com/v1/user/login</code></p>
+<p><code>POST https://[GOODCOP_URL]/v1/user/login</code></p>
 <h3 id='request-body-5'>Request Body</h3>
 <table><thead>
 <tr>
@@ -1053,13 +1053,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/passwordChange
+<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/user/passwordChange
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/passwordChange"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/passwordChange"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1079,7 +1079,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Change the password for the logged in user providing the oldpassword and new password.</p>
 <h3 id='https-request-11'>HTTPS Request</h3>
-<p><code>POST https://dev.goodcop.com/v1/user/passwordChange</code></p>
+<p><code>POST https://[GOODCOP_URL]/v1/user/passwordChange</code></p>
 <h3 id='request-body-6'>Request Body</h3>
 <table><thead>
 <tr>
@@ -1115,13 +1115,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/user/{userID}
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/user/{userID}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1149,7 +1149,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Retrieves the details of an existing user. You need only supply the unique user identifier that was returned upon user creation.</p>
 <h3 id='https-request-12'>HTTPS Request</h3>
-<p><code>POST https://dev.goodcop.com/v1/user/{userID}</code></p>
+<p><code>POST https://[GOODCOP_URL]/v1/user/{userID}</code></p>
 <h3 id='url-params'>URL Params</h3>
 <table><thead>
 <tr>
@@ -1177,13 +1177,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/getUser/{email}
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/getUser/{email}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/getUser/test@mail.com"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/getUser/test@mail.com"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1211,7 +1211,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Retrieves the details of an existing user. You need only supply the unique email of the user.</p>
 <h3 id='https-request-13'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/getUser/{email}</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/getUser/{email}</code></p>
 <h3 id='url-params-2'>URL Params</h3>
 <table><thead>
 <tr>
@@ -1239,13 +1239,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/user
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/user
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1301,7 +1301,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Retrieves the detailed list of all product users. The users are returned in descending order of creation.</p>
 <h3 id='https-request-14'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/user</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/user</code></p>
 <h3 id='returns-14'>Returns</h3>
 <p>Returns a list of user objects. If any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-14'>Error Messages</h3>
@@ -1312,13 +1312,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://dev.goodcop.com/v1/user/{userID}
+<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/user/{userID}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span>
@@ -1333,7 +1333,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Deletes a user from the product. The user is not deleted permanently.</p>
 <h3 id='https-request-15'>HTTPS Request</h3>
-<p><code>DELETE https://dev.goodcop.com/v1/user/{userID}</code></p>
+<p><code>DELETE https://[GOODCOP_URL]/v1/user/{userID}</code></p>
 <h3 id='url-params-3'>URL Params</h3>
 <table><thead>
 <tr>
@@ -1361,13 +1361,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/user/{userID}/groups
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/user/{userID}/groups
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/groups"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/groups"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1419,7 +1419,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Retrieves the group details provided the user ID.</p>
 <h3 id='https-request-16'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/user/{userID}/groups</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/user/{userID}/groups</code></p>
 <h3 id='url-params-4'>URL Params</h3>
 <table><thead>
 <tr>
@@ -1447,13 +1447,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/user/{userID}/meta
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/user/{userID}/meta
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/meta"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/meta"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1468,7 +1468,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Retrieves the meta details provided the user ID.</p>
 <h3 id='https-request-17'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/user/{userID}/meta</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/user/{userID}/meta</code></p>
 <h3 id='url-params-5'>URL Params</h3>
 <table><thead>
 <tr>
@@ -1496,13 +1496,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>PUT  https://dev.goodcop.com/v1/user/{userID}/meta
+<pre class="highlight plaintext"><code>PUT  https://[GOODCOP_URL]/v1/user/{userID}/meta
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/meta"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/meta"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1542,7 +1542,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Updates the meta by setting the value of the body parameter passed.</p>
 <h3 id='https-request-18'>HTTPS Request</h3>
-<p><code>PUT https://dev.goodcop.com/v1/user/{userID}/meta</code></p>
+<p><code>PUT https://[GOODCOP_URL]/v1/user/{userID}/meta</code></p>
 <h3 id='request-body-7'>Request Body</h3>
 <table><thead>
 <tr>
@@ -1586,13 +1586,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/user/{userID}/rule
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/user/{userID}/rule
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1623,7 +1623,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Retrieves the details of all user rules.</p>
 <h3 id='https-request-19'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/user/{userID}/rule</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/user/{userID}/rule</code></p>
 <h3 id='url-params-7'>URL Params</h3>
 <table><thead>
 <tr>
@@ -1651,13 +1651,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>PUT  https://dev.goodcop.com/v1/user/{userID}/rule
+<pre class="highlight plaintext"><code>PUT  https://[GOODCOP_URL]/v1/user/{userID}/rule
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1709,7 +1709,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Updates the rules by setting the value of the body parameter passed.</p>
 <h3 id='https-request-20'>HTTPS Request</h3>
-<p><code>PUT https://dev.goodcop.com/v1/user/{userID}/rule</code></p>
+<p><code>PUT https://[GOODCOP_URL]/v1/user/{userID}/rule</code></p>
 <h3 id='request-body-8'>Request Body</h3>
 <table><thead>
 <tr>
@@ -1753,13 +1753,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://dev.goodcop.com/v1/user/{userID}/rule
+<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/user/{userID}/rule
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1806,7 +1806,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Deletes the rules from the user.</p>
 <h3 id='https-request-21'>HTTPS Request</h3>
-<p><code>DELETE https://dev.goodcop.com/v1/user/{userID}/rule</code></p>
+<p><code>DELETE https://[GOODCOP_URL]/v1/user/{userID}/rule</code></p>
 <h3 id='url-params-9'>URL Params</h3>
 <table><thead>
 <tr>
@@ -1834,13 +1834,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/user/{userID}/groups
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/user/{userID}/groups
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/groups"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/groups"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1896,7 +1896,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Retrieves the details of all groups for a user.</p>
 <h3 id='https-request-22'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/user/{userID}/groups</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/user/{userID}/groups</code></p>
 <h3 id='url-params-10'>URL Params</h3>
 <table><thead>
 <tr>
@@ -1924,13 +1924,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/group
+<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/group
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/group"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/group"</span>
   -X  POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1962,7 +1962,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a group object provided the name in the request body and returns the group object.</p>
 <h3 id='https-request'>HTTPS Request</h3>
-<p><code>POST https://dev.goodcop.com/v1/group</code></p>
+<p><code>POST https://[GOODCOP_URL]/v1/group</code></p>
 <h3 id='request-body'>Request Body</h3>
 <table><thead>
 <tr>
@@ -2005,13 +2005,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/group/{groupID}
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/group/{groupID}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/group/5707274949492736"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/group/5707274949492736"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -2036,7 +2036,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre><h3 id='https-request-2'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/group/{groupID}</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/group/{groupID}</code></p>
 <h3 id='url-params'>URL Params</h3>
 <table><thead>
 <tr>
@@ -2061,13 +2061,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/group
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/group
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/group"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/group"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -2105,7 +2105,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre><h3 id='https-request-3'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/group</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/group</code></p>
 <h3 id='returns-3'>Returns</h3>
 <p>Returns list of group objects if a valid authorization key was provided, and returns an error otherwise.</p>
 <h2 id='delete-group-by-id'>Delete Group By ID</h2>
@@ -2114,13 +2114,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://dev.goodcop.com/v1/group/{groupID}
+<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/group/{groupID}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/group/5707274949492736"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/group/5707274949492736"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -2133,7 +2133,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
     </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Group has been deleted for groupID - 5707274949492736"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-4'>HTTPS Request</h3>
-<p><code>DELETE https://dev.goodcop.com/v1/group/{groupID}</code></p>
+<p><code>DELETE https://[GOODCOP_URL]/v1/group/{groupID}</code></p>
 <h3 id='url-params-2'>URL Params</h3>
 <table><thead>
 <tr>
@@ -2158,13 +2158,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://dev.goodcop.com/v1/group
+<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/group
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/group"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/group"</span>
   -X DELETE
   -d <span class="s1">'[5717800035287040,5717800035287766]'</span>
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
@@ -2178,7 +2178,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
     </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Groups Deleted Successfully"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-5'>HTTPS Request</h3>
-<p><code>DELETE https://dev.goodcop.com/v1/group</code></p>
+<p><code>DELETE https://[GOODCOP_URL]/v1/group</code></p>
 <h3 id='request-body-2'>Request Body</h3>
 <table><thead>
 <tr>
@@ -2203,13 +2203,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>PUT  https://dev.goodcop.com/v1/group/{groupID}/user
+<pre class="highlight plaintext"><code>PUT  https://[GOODCOP_URL]/v1/group/{groupID}/user
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/group/5707274949492736/user"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/group/5707274949492736/user"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -2239,7 +2239,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-6'>HTTPS Request</h3>
-<p><code>PUT https://dev.goodcop.com/v1/group/{groupID}/users</code></p>
+<p><code>PUT https://[GOODCOP_URL]/v1/group/{groupID}/users</code></p>
 <h3 id='request-body-3'>Request Body</h3>
 <table><thead>
 <tr>
@@ -2280,13 +2280,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>PUT  https://dev.goodcop.com/v1/group/{groupID}/userEmail
+<pre class="highlight plaintext"><code>PUT  https://[GOODCOP_URL]/v1/group/{groupID}/userEmail
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/group/5707274949492736/userEmail"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/group/5707274949492736/userEmail"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -2303,7 +2303,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre><h3 id='https-request-7'>HTTPS Request</h3>
-<p><code>PUT https://dev.goodcop.com/v1/group/{groupID}/userEmail</code></p>
+<p><code>PUT https://[GOODCOP_URL]/v1/group/{groupID}/userEmail</code></p>
 <h3 id='request-body-4'>Request Body</h3>
 <table><thead>
 <tr>
@@ -2344,13 +2344,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/group/{groupID}/user/{userID}
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/group/{groupID}/user/{userID}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/group/5717800035287040/user/test_a660-9242-4521-b614-e46ffead2b2b"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/group/5717800035287040/user/test_a660-9242-4521-b614-e46ffead2b2b"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -2372,7 +2372,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre><h3 id='https-request-8'>HTTPS Request</h3>
-<p><code>GET  https://dev.goodcop.com/v1/group/{groupID}/user/{userID}</code></p>
+<p><code>GET  https://[GOODCOP_URL]/v1/group/{groupID}/user/{userID}</code></p>
 <h3 id='url-params-5'>URL Params</h3>
 <table><thead>
 <tr>
@@ -2403,13 +2403,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/group/{groupID}/user
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/group/{groupID}/user
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/group/5717800035287040/user"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/group/5717800035287040/user"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -2465,7 +2465,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre><h3 id='https-request-9'>HTTPS Request</h3>
-<p><code>GET  https://dev.goodcop.com/v1/group/{groupID}/user</code></p>
+<p><code>GET  https://[GOODCOP_URL]/v1/group/{groupID}/user</code></p>
 <h3 id='url-params-6'>URL Params</h3>
 <table><thead>
 <tr>
@@ -2490,13 +2490,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://dev.goodcop.com/v1/group/{groupID}/user/{userID}
+<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/group/{groupID}/user/{userID}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/group/5717800035287040/user/test_a660-9242-4521-b614-e46ffead2b2b"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/group/5717800035287040/user/test_a660-9242-4521-b614-e46ffead2b2b"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -2509,7 +2509,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
     </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Group deleted successfully"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-10'>HTTPS Request</h3>
-<p><code>DELETE https://dev.goodcop.com/v1/group/{groupID}/user/{userID}</code></p>
+<p><code>DELETE https://[GOODCOP_URL]/v1/group/{groupID}/user/{userID}</code></p>
 <h3 id='url-params-7'>URL Params</h3>
 <table><thead>
 <tr>
@@ -2540,13 +2540,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/group/{groupID}/meta
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/group/{groupID}/meta
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/group/5717800035287040/meta"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/group/5717800035287040/meta"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -2559,7 +2559,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
     </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test meta"</span><span class="w">
 
 </span></code></pre><h3 id='https-request-11'>HTTPS Request</h3>
-<p><code>DELETE https://dev.goodcop.com/v1/group/{groupID}/meta</code></p>
+<p><code>DELETE https://[GOODCOP_URL]/v1/group/{groupID}/meta</code></p>
 <h3 id='url-params-8'>URL Params</h3>
 <table><thead>
 <tr>
@@ -2584,13 +2584,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>PUT  https://dev.goodcop.com/v1/group/{groupID}/meta
+<pre class="highlight plaintext"><code>PUT  https://[GOODCOP_URL]/v1/group/{groupID}/meta
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/group/5717800035287040/meta"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/group/5717800035287040/meta"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -2607,7 +2607,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre><h3 id='https-request-12'>HTTPS Request</h3>
-<p><code>PUT https://dev.goodcop.com/v1/group/{groupID}/meta</code></p>
+<p><code>PUT https://[GOODCOP_URL]/v1/group/{groupID}/meta</code></p>
 <h3 id='request-body-5'>Request Body</h3>
 <table><thead>
 <tr>
@@ -2648,13 +2648,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://dev.goodcop.com/v1/group/{groupID}/meta
+<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/group/{groupID}/meta
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/group/5717800035287040/meta"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/group/5717800035287040/meta"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -2692,7 +2692,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre><h3 id='https-request-13'>HTTPS Request</h3>
-<p><code>DELETE https://dev.goodcop.com/v1/group/{groupID}/meta</code></p>
+<p><code>DELETE https://[GOODCOP_URL]/v1/group/{groupID}/meta</code></p>
 <h3 id='request-body-6'>Request Body</h3>
 <table><thead>
 <tr>
@@ -2733,13 +2733,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/group/{groupID}/rule
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/group/{groupID}/rule
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/group/5717800035287040/rule"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/group/5717800035287040/rule"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -2768,7 +2768,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-14'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/group/{groupID}/rule</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/group/{groupID}/rule</code></p>
 <h3 id='url-params-11'>URL Params</h3>
 <table><thead>
 <tr>
@@ -2793,13 +2793,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>PUT  https://dev.goodcop.com/v1/user/{userID}/rule
+<pre class="highlight plaintext"><code>PUT  https://[GOODCOP_URL]/v1/user/{userID}/rule
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/group/5717800035287040/rule"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/group/5717800035287040/rule"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -2834,7 +2834,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre><h3 id='https-request-15'>HTTPS Request</h3>
-<p><code>PUT https://dev.goodcop.com/v1/group/{groupID}/rule</code></p>
+<p><code>PUT https://[GOODCOP_URL]/v1/group/{groupID}/rule</code></p>
 <h3 id='request-body-7'>Request Body</h3>
 <table><thead>
 <tr>
@@ -2875,13 +2875,13 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://dev.goodcop.com/v1/group/{groupID}/rule
+<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/group/{groupID}/rule
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/group/5717800035287040/rule"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/group/5717800035287040/rule"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -2910,7 +2910,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-16'>HTTPS Request</h3>
-<p><code>DELETE https://dev.goodcop.com/v1/group/{groupID}/rule</code></p>
+<p><code>DELETE https://[GOODCOP_URL]/v1/group/{groupID}/rule</code></p>
 <h3 id='url-params-13'>URL Params</h3>
 <table><thead>
 <tr>
@@ -2939,13 +2939,13 @@ The Authorization token is a super secure token that is only accessible to admin
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/product
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/product
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/product"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -3029,20 +3029,20 @@ The Authorization token is a super secure token that is only accessible to admin
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/product</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/product</code></p>
 <h3 id='returns'>Returns</h3>
 <p>Returns list of products if a valid authorization key was provided, and returns an error otherwise.</p>
 <h2 id='create-product'>Create Product</h2>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/product
+<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/product
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/product"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -3078,7 +3078,7 @@ The Authorization token is a super secure token that is only accessible to admin
 The Authorization token is a super secure token that is only accessible to administrators of Goodcop Api.
 </aside>
 <h3 id='https-request-2'>HTTPS Request</h3>
-<p><code>POST https://dev.goodcop.com/v1/group</code></p>
+<p><code>POST https://[GOODCOP_URL]/v1/group</code></p>
 <h3 id='request-body'>Request Body</h3>
 <table><thead>
 <tr>
@@ -3103,13 +3103,13 @@ The Authorization token is a super secure token that is only accessible to admin
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/product/{productID}
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/product/{productID}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/product/5735995932672000"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product/5735995932672000"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -3152,7 +3152,7 @@ The Authorization token is a super secure token that is only accessible to admin
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre><h3 id='https-request-3'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/product/{productID}</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/product/{productID}</code></p>
 <h3 id='url-params'>URL Params</h3>
 <table><thead>
 <tr>
@@ -3177,13 +3177,13 @@ The Authorization token is a super secure token that is only accessible to admin
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>PUT  https://dev.goodcop.com/v1/product/{productID}
+<pre class="highlight plaintext"><code>PUT  https://[GOODCOP_URL]/v1/product/{productID}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/product/6308443803615232"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product/6308443803615232"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -3232,7 +3232,7 @@ The Authorization token is a super secure token that is only accessible to admin
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre><h3 id='https-request-4'>HTTPS Request</h3>
-<p><code>PUT https://dev.goodcop.com/v1/product/{productID}</code></p>
+<p><code>PUT https://[GOODCOP_URL]/v1/product/{productID}</code></p>
 <h3 id='request-body-2'>Request Body</h3>
 <table><thead>
 <tr>
@@ -3309,13 +3309,13 @@ The Authorization token is a super secure token that is only accessible to admin
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://dev.goodcop.com/v1/product/{productID}
+<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/product/{productID}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/product/5178306911535104"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product/5178306911535104"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -3328,7 +3328,7 @@ The Authorization token is a super secure token that is only accessible to admin
     </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Product Deleted Successfully"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-5'>HTTPS Request</h3>
-<p><code>DELETE https://dev.goodcop.com/v1/product/{productID}</code></p>
+<p><code>DELETE https://[GOODCOP_URL]/v1/product/{productID}</code></p>
 <h3 id='url-params-3'>URL Params</h3>
 <table><thead>
 <tr>
@@ -3353,13 +3353,13 @@ The Authorization token is a super secure token that is only accessible to admin
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>PUT  https://dev.goodcop.com/v1/product/{productID}/meta
+<pre class="highlight plaintext"><code>PUT  https://[GOODCOP_URL]/v1/product/{productID}/meta
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/product/5178306911535104/meta"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product/5178306911535104/meta"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"category: user"</span> <span class="se">\</span>
@@ -3380,7 +3380,7 @@ The Authorization token is a super secure token that is only accessible to admin
 The category header can be provided with two options either api or user depending on which type meta you want to change 
 </aside>
 <h3 id='https-request-6'>HTTPS Request</h3>
-<p><code>PUT https://dev.goodcop.com/v1/product/{productID}/meta</code></p>
+<p><code>PUT https://[GOODCOP_URL]/v1/product/{productID}/meta</code></p>
 <h3 id='url-params-4'>URL Params</h3>
 <table><thead>
 <tr>
@@ -3405,13 +3405,13 @@ The category header can be provided with two options either api or user dependin
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/product/{productID}/meta
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/product/{productID}/meta
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/product/5178306911535104/meta"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product/5178306911535104/meta"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"category: api"</span> <span class="se">\</span>
@@ -3425,7 +3425,7 @@ The category header can be provided with two options either api or user dependin
     </span><span class="s2">"apiMeta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test meta"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-7'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/product/{productID}/meta</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/product/{productID}/meta</code></p>
 <h3 id='url-params-5'>URL Params</h3>
 <table><thead>
 <tr>
@@ -3450,13 +3450,13 @@ The category header can be provided with two options either api or user dependin
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://dev.goodcop.com/v1/product/{productID}/meta
+<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/product/{productID}/meta
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/product/5178306911535104/meta"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product/5178306911535104/meta"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"category: api"</span> <span class="se">\</span>
@@ -3470,7 +3470,7 @@ The category header can be provided with two options either api or user dependin
     </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"meta deleted successfully"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-8'>HTTPS Request</h3>
-<p><code>DELETE https://dev.goodcop.com/v1/product/{productID}/meta</code></p>
+<p><code>DELETE https://[GOODCOP_URL]/v1/product/{productID}/meta</code></p>
 <h3 id='url-params-6'>URL Params</h3>
 <table><thead>
 <tr>
@@ -3495,13 +3495,13 @@ The category header can be provided with two options either api or user dependin
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/product/{productID}/rule
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/product/{productID}/rule
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/product/5178306911535104/rule"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product/5178306911535104/rule"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"category: api"</span> <span class="se">\</span>
@@ -3521,7 +3521,7 @@ The category header can be provided with two options either api or user dependin
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-9'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/product/{productID}/rule</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/product/{productID}/rule</code></p>
 <h3 id='url-params-7'>URL Params</h3>
 <table><thead>
 <tr>
@@ -3546,13 +3546,13 @@ The category header can be provided with two options either api or user dependin
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>PUT  https://dev.goodcop.com/v1/product/{productID}/rule
+<pre class="highlight plaintext"><code>PUT  https://[GOODCOP_URL]/v1/product/{productID}/rule
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/product/5178306911535104/rule"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product/5178306911535104/rule"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"category: api"</span> <span class="se">\</span>
@@ -3585,7 +3585,7 @@ The category header can be provided with two options either api or user dependin
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-10'>HTTPS Request</h3>
-<p><code>PUT https://dev.goodcop.com/v1/product/{productID}/rule</code></p>
+<p><code>PUT https://[GOODCOP_URL]/v1/product/{productID}/rule</code></p>
 <h3 id='request-body-3'>Request Body</h3>
 <table><thead>
 <tr>
@@ -3626,13 +3626,13 @@ The category header can be provided with two options either api or user dependin
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://dev.goodcop.com/v1/product/{productID}/rule
+<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/product/{productID}/rule
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/product/5178306911535104/rule"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product/5178306911535104/rule"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"category: api"</span> <span class="se">\</span>
@@ -3660,7 +3660,7 @@ The category header can be provided with two options either api or user dependin
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-11'>HTTPS Request</h3>
-<p><code>DELETE https://dev.goodcop.com/v1/product/{productID}/rule</code></p>
+<p><code>DELETE https://[GOODCOP_URL]/v1/product/{productID}/rule</code></p>
 <h3 id='request-body-4'>Request Body</h3>
 <table><thead>
 <tr>
@@ -3699,13 +3699,13 @@ The category header can be provided with two options either api or user dependin
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>PUT  https://dev.goodcop.com/v1/product/{productID}/apikey/{apikeyname}
+<pre class="highlight plaintext"><code>PUT  https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/product/6308443803615232/apikey/testKey"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product/6308443803615232/apikey/testKey"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -3730,7 +3730,7 @@ The category header can be provided with two options either api or user dependin
 </span></code></pre>
 <p>Creates a new product api key with the name in url params.</p>
 <h3 id='https-request-12'>HTTPS Request</h3>
-<p><code>PUT https://dev.goodcop.com/v1/product/{productID}/apikey/{apikeyname}</code></p>
+<p><code>PUT https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}</code></p>
 <h3 id='url-params-10'>URL Params</h3>
 <table><thead>
 <tr>
@@ -3759,13 +3759,13 @@ The category header can be provided with two options either api or user dependin
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/product/{productID}/apikey/{apikeyname}
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/product/6308443803615232/apikey/testKey"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product/6308443803615232/apikey/testKey"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -3782,7 +3782,7 @@ The category header can be provided with two options either api or user dependin
 </span></code></pre>
 <p>Provide the unique product ID, ApiKey Name and Goodcop will return the key details.</p>
 <h3 id='https-request-13'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/product/{productID}/apikey/{apikeyname}</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}</code></p>
 <h3 id='url-params-11'>URL Params</h3>
 <table><thead>
 <tr>
@@ -3811,13 +3811,13 @@ The category header can be provided with two options either api or user dependin
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/product/{productID}/apikey
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/product/{productID}/apikey
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/product/6308443803615232/apikey"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product/6308443803615232/apikey"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -3842,7 +3842,7 @@ The category header can be provided with two options either api or user dependin
 </span></code></pre>
 <p>Provide the unique product ID and Goodcop will return the all available keys details.</p>
 <h3 id='https-request-14'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/product/{productID}/apikey/</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/product/{productID}/apikey/</code></p>
 <h3 id='url-params-12'>URL Params</h3>
 <table><thead>
 <tr>
@@ -3865,13 +3865,13 @@ The category header can be provided with two options either api or user dependin
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://dev.goodcop.com/v1/product/{productID}/apikey/{apikeyname}
+<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/product/6308443803615232/apikey/testKey"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product/6308443803615232/apikey/testKey"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -3887,7 +3887,7 @@ The category header can be provided with two options either api or user dependin
 </span></code></pre>
 <p>Provide the unique product ID, ApiKey Name and Goodcop will delete the api key.</p>
 <h3 id='https-request-15'>HTTPS Request</h3>
-<p><code>DELETE https://dev.goodcop.com/v1/product/{productID}/apikey/{apikeyname}</code></p>
+<p><code>DELETE https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}</code></p>
 <h3 id='url-params-13'>URL Params</h3>
 <table><thead>
 <tr>
@@ -3916,13 +3916,13 @@ The category header can be provided with two options either api or user dependin
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/tenant
+<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/tenant
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/tenant"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant"</span>
   -X <span class="s2">"POST"</span>
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -3966,7 +3966,7 @@ The category header can be provided with two options either api or user dependin
 The x-api-key header must be provided to create a tenant.
 </aside>
 <h3 id='https-request'>HTTPS Request</h3>
-<p><code>POST https://dev.goodcop.com/v1/tenant</code></p>
+<p><code>POST https://[GOODCOP_URL]/v1/tenant</code></p>
 <h3 id='request-body'>Request Body</h3>
 <table><thead>
 <tr>
@@ -4013,13 +4013,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/tenant/{tenantID}
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/tenant/{tenantID}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/tenant/{tenantID}"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant/{tenantID}"</span>
   -X <span class="s2">"GET"</span>
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -4047,7 +4047,7 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Retrieves the details of a tenant. Provide the unique tenant ID and Goodcop will return the corresponding user information.</p>
 <h3 id='https-request-2'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/tenant/{tenantID}</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/tenant/{tenantID}</code></p>
 <h3 id='url-params'>URL Params</h3>
 <table><thead>
 <tr>
@@ -4070,13 +4070,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/tenant
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/tenant
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/tenant"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant"</span>
   -X <span class="s2">"GET"</span>
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -4108,20 +4108,20 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Retrieves the details of a all tenants for a particular api.</p>
 <h3 id='https-request-3'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/tenant</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/tenant</code></p>
 <h3 id='returns-3'>Returns</h3>
 <p>Returns array of tenants if a valid authorization key, api key was provided, and returns an error otherwise.</p>
 <h2 id='delete-tenant-by-id'>Delete Tenant By ID</h2>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://dev.goodcop.com/v1/tenant/{tenantID}
+<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/tenant/{tenantID}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/tenant/{tenantID}"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant/{tenantID}"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -4138,7 +4138,7 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Deletes the tenant.</p>
 <h3 id='https-request-4'>HTTPS Request</h3>
-<p><code>DELETE https://dev.goodcop.com/v1/tenant/{tenantID}</code></p>
+<p><code>DELETE https://[GOODCOP_URL]/v1/tenant/{tenantID}</code></p>
 <h3 id='url-params-2'>URL Params</h3>
 <table><thead>
 <tr>
@@ -4161,13 +4161,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/tenant/{tenantID}/rule
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/tenant/{tenantID}/rule"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -4190,7 +4190,7 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Provide the unique tenant ID and Goodcop will return the list of all rules.</p>
 <h3 id='https-request-5'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/tenant/{tenantID}/rule</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule</code></p>
 <h3 id='url-params-3'>URL Params</h3>
 <table><thead>
 <tr>
@@ -4213,13 +4213,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>PUT  https://dev.goodcop.com/v1/tenant/{tenantID}/rule
+<pre class="highlight plaintext"><code>PUT  https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/tenant/{tenantID}/rule"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -4264,7 +4264,7 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Retrives all rules of a tenants for a particular api.</p>
 <h3 id='https-request-6'>HTTPS Request</h3>
-<p><code>PUT https://dev.goodcop.com/v1/tenant/{tenantID}/rule</code></p>
+<p><code>PUT https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule</code></p>
 <h3 id='request-body-2'>Request Body</h3>
 <table><thead>
 <tr>
@@ -4303,13 +4303,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://dev.goodcop.com/v1/tenant/{tenantID}/rule
+<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/tenant/{tenantID}/rule"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -4348,7 +4348,7 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Deletes the rules associated with the tenant. </p>
 <h3 id='https-request-7'>HTTPS Request</h3>
-<p><code>DELETE https://dev.goodcop.com/v1/tenant/{tenantID}/rule</code></p>
+<p><code>DELETE https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule</code></p>
 <h3 id='request-body-3'>Request Body</h3>
 <table><thead>
 <tr>
@@ -4387,13 +4387,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>PUT  https://dev.goodcop.com/v1/tenant/{tenantID}/secret
+<pre class="highlight plaintext"><code>PUT  https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/tenant/{tenantID}/secret"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -4433,7 +4433,7 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Retrives all rules of a tenants for a particular api.</p>
 <h3 id='https-request-8'>HTTPS Request</h3>
-<p><code>PUT https://dev.goodcop.com/v1/tenant/{tenantID}/secret</code></p>
+<p><code>PUT https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret</code></p>
 <h3 id='request-body-4'>Request Body</h3>
 <table><thead>
 <tr>
@@ -4472,13 +4472,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/tenant/{tenantID}/secret
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/tenant/{tenantID}/secret"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret"</span>
   -X <span class="s2">"GET"</span>
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -4497,7 +4497,7 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Provide the unique tenant ID and Goodcop will return the secret.</p>
 <h3 id='https-request-9'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/tenant/{tenantID}/secret</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret</code></p>
 <h3 id='url-params-7'>URL Params</h3>
 <table><thead>
 <tr>
@@ -4520,13 +4520,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/tenant/{tenantID}/meta
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/tenant/{tenantID}/meta"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta"</span>
   -X <span class="s2">"GET"</span>
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -4543,7 +4543,7 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Provide the unique tenant ID and Goodcop will return the meta information.</p>
 <h3 id='https-request-10'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/tenant/{tenantID}/meta</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta</code></p>
 <h3 id='url-params-8'>URL Params</h3>
 <table><thead>
 <tr>
@@ -4566,13 +4566,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>PUT  https://dev.goodcop.com/v1/tenant/{tenantID}/meta
+<pre class="highlight plaintext"><code>PUT  https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/tenant/{tenantID}/meta"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -4612,7 +4612,7 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Updated meta details of the tenant.</p>
 <h3 id='https-request-11'>HTTPS Request</h3>
-<p><code>PUT https://dev.goodcop.com/v1/tenant/{tenantID}/meta</code></p>
+<p><code>PUT https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta</code></p>
 <h3 id='request-body-5'>Request Body</h3>
 <table><thead>
 <tr>
@@ -4651,13 +4651,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://dev.goodcop.com/v1/tenant/{tenantID}/meta
+<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/tenant/{tenantID}/meta"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -4697,7 +4697,7 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Deletes the meta associated with the tenant. </p>
 <h3 id='https-request-12'>HTTPS Request</h3>
-<p><code>DELETE https://dev.goodcop.com/v1/tenant/{tenantID}/meta</code></p>
+<p><code>DELETE https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta</code></p>
 <h3 id='url-params-10'>URL Params</h3>
 <table><thead>
 <tr>
@@ -4720,13 +4720,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/api
+<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/api
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/api"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/api"</span>
   -X  POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -4772,7 +4772,7 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Creates a api object provided the request body and returns the api object.</p>
 <h3 id='https-request'>HTTPS Request</h3>
-<p><code>POST https://dev.goodcop.com/v1/api</code></p>
+<p><code>POST https://[GOODCOP_URL]/v1/api</code></p>
 <h3 id='request-body'>Request Body</h3>
 <table><thead>
 <tr>
@@ -4813,13 +4813,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/api/{apiID}
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/api/{apiID}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/api/{apiID}"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/api/{apiID}"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -4852,7 +4852,7 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Provide the unique api ID and Goodcop will return the corresponding api information.</p>
 <h3 id='https-request-2'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/api/{apiID}</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/api/{apiID}</code></p>
 <h3 id='url-params'>URL Params</h3>
 <table><thead>
 <tr>
@@ -4875,13 +4875,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/api
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/api
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/api/"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/api/"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -4958,7 +4958,7 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Goodcop will return the all api information for the product.</p>
 <h3 id='https-request-3'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/api</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/api</code></p>
 <h3 id='url-params-2'>URL Params</h3>
 <table><thead>
 <tr>
@@ -4981,13 +4981,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://dev.goodcop.com/v1/api/{apiID}
+<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/api/{apiID}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/api/{apiID}"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/api/{apiID}"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -5003,7 +5003,7 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Provide the unique api ID and Goodcop will delete the api information.</p>
 <h3 id='https-request-4'>HTTPS Request</h3>
-<p><code>DELETE https://dev.goodcop.com/v1/api/{apiID}</code></p>
+<p><code>DELETE https://[GOODCOP_URL]/v1/api/{apiID}</code></p>
 <h3 id='url-params-3'>URL Params</h3>
 <table><thead>
 <tr>
@@ -5026,13 +5026,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/api/{apiID}/rule
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/api/{apiID}/rule
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/api/{apiID}/rule"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/api/{apiID}/rule"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -5054,7 +5054,7 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Provide the unique api ID and Goodcop will return the list of all rules.</p>
 <h3 id='https-request-5'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/api/{apiID}/rule</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/api/{apiID}/rule</code></p>
 <h3 id='url-params-4'>URL Params</h3>
 <table><thead>
 <tr>
@@ -5077,13 +5077,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>PUT  https://dev.goodcop.com/v1/api/{apiID}/rule
+<pre class="highlight plaintext"><code>PUT  https://[GOODCOP_URL]/v1/api/{apiID}/rule
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/api/{apiID}/rule"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/api/{apiID}/rule"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -5127,7 +5127,7 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Retrives all rules of a api.</p>
 <h3 id='https-request-6'>HTTPS Request</h3>
-<p><code>PUT https://dev.goodcop.com/v1/api/{apiID}/rule</code></p>
+<p><code>PUT https://[GOODCOP_URL]/v1/api/{apiID}/rule</code></p>
 <h3 id='request-body-2'>Request Body</h3>
 <table><thead>
 <tr>
@@ -5166,13 +5166,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://dev.goodcop.com/v1/api/{apiID}/rule
+<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/api/{apiID}/rule
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/api/{apiID}/rule"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/api/{apiID}/rule"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -5216,7 +5216,7 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Deletes the rules associated with the tenant. </p>
 <h3 id='https-request-7'>HTTPS Request</h3>
-<p><code>DELETE https://dev.goodcop.com/v1/api/{apiID}/rule</code></p>
+<p><code>DELETE https://[GOODCOP_URL]/v1/api/{apiID}/rule</code></p>
 <h3 id='request-body-3'>Request Body</h3>
 <table><thead>
 <tr>
@@ -5255,13 +5255,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/api/{apiID}/meta
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/api/{apiID}/meta
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/api/{apiID}/meta"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/api/{apiID}/meta"</span>
   -X  GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -5277,7 +5277,7 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Provide the unique tenant ID and Goodcop will return the meta information.</p>
 <h3 id='https-request-8'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/api/{apiID}/meta</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/api/{apiID}/meta</code></p>
 <h3 id='url-params-7'>URL Params</h3>
 <table><thead>
 <tr>
@@ -5300,13 +5300,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>PUT  https://dev.goodcop.com/v1/api/{apiID}/meta
+<pre class="highlight plaintext"><code>PUT  https://[GOODCOP_URL]/v1/api/{apiID}/meta
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/api/{apiID}/meta"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/api/{apiID}/meta"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -5341,7 +5341,7 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Updated meta details of the api.</p>
 <h3 id='https-request-9'>HTTPS Request</h3>
-<p><code>PUT https://dev.goodcop.com/v1/api/{apiID}/meta</code></p>
+<p><code>PUT https://[GOODCOP_URL]/v1/api/{apiID}/meta</code></p>
 <h3 id='request-body-4'>Request Body</h3>
 <table><thead>
 <tr>
@@ -5380,13 +5380,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://dev.goodcop.com/v1/api/{apiID}/meta
+<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/api/{apiID}/meta
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/api/{apiID}/meta"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/api/{apiID}/meta"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -5421,7 +5421,7 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Deletes the meta associated with the api. </p>
 <h3 id='https-request-10'>HTTPS Request</h3>
-<p><code>DELETE https://dev.goodcop.com/v1/api/{apiID}/meta</code></p>
+<p><code>DELETE https://[GOODCOP_URL]/v1/api/{apiID}/meta</code></p>
 <h3 id='url-params-9'>URL Params</h3>
 <table><thead>
 <tr>
@@ -5444,13 +5444,13 @@ The x-api-key header must be provided to create a tenant.
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://dev.goodcop.cldcvr.com/v1/org
+<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/org
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.cldcvr.com/v1/org"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/org"</span>
   -X  POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -5458,17 +5458,17 @@ The x-api-key header must be provided to create a tenant.
   -d <span class="s1">'{
     "name":"testorg",
     "meta":"test meta",
-    "contactdetails":"+918879777777"
+    "contactdetails":"customer_detail_in_string"
 }'</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#4CAF50;"> 201</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5642425909379072</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">12345668787989</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testorg"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test meta"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"contactDetails"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+918879777777"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"contactDetails"</span><span class="p">:</span><span class="w"> </span><span class="s2">"customer_detail_in_string"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"CreatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-21T17:03:16.024791+05:30"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"UpdatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-21T17:03:16.024793+05:30"</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -5476,7 +5476,7 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Creates a organization</p>
 <h3 id='https-request'>HTTPS Request</h3>
-<p><code>POST https://api.goodcop.com/v1/org</code></p>
+<p><code>POST https://[GOODCOP_URL]/v1/org</code></p>
 <h3 id='request-body'>Request Body</h3>
 <table><thead>
 <tr>
@@ -5506,18 +5506,24 @@ The x-api-key header must be provided to create a tenant.
 </tr>
 </tbody></table>
 <h3 id='returns'>Returns</h3>
-<p>Returns new org object if a valid authorization key provided, and returns an error otherwise.</p>
+<p>Returns new org object if a valid authorization key provided, and returns an error otherwise, If Organization already exist with the name provided, it will throw an error </p>
+<h3 id='error-messages'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization error. Kindly provide product API key</code> </li>
+<li> <code style="background:#FFC107;"> 404 </code> <code>Name is required field</code></li>
+<li> <code style="background:#FF0000;"> 500 </code> <code>Organization Already Exist with the name provided</code></li>
+</ol>
 <h2 id='list-org'>List Org</h2>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/org
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/org
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/org"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/org"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -5527,27 +5533,27 @@ The x-api-key header must be provided to create a tenant.
 <p>Example Response</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"Organizations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"orgs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5649353691627520</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test-org"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"contactDetails"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"CreatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-19T15:32:22.677154+05:30"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"UpdatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-19T15:32:22.677154+05:30"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5642425909379072</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">12345668787989</span><span class="p">,</span><span class="w">
             </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testorg"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test meta"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"contactDetails"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+918879777777"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"contactDetails"</span><span class="p">:</span><span class="w"> </span><span class="s2">"customer_detail_in_string"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"CreatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-21T17:03:16.024791+05:30"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"UpdatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-21T17:03:16.024793+05:30"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">56424259099072</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testorg2"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"contactDetails"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CreatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-21T17:03:18.024791+05:30"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"UpdatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-21T17:03:18.024793+05:30"</span><span class="w">
         </span><span class="p">},</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>Goodcop will return the all organization information for the product.</p>
+<p>Goodcop will return the all organization inside a tenant, will be accessible to each product for that tenant</p>
 <h3 id='https-request-2'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/org</code></p>
 <h3 id='returns-2'>Returns</h3>
@@ -6042,13 +6048,13 @@ As per GoodCop Wildcard mechanism any url after <code>/organization/</code>(incl
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/auth
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/auth
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/auth"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/auth"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -6065,7 +6071,7 @@ As per GoodCop Wildcard mechanism any url after <code>/organization/</code>(incl
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre><h3 id='https-request'>HTTPS Request</h3>
-<p><code>GET https://dev.goodcop.com/v1/auth</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/auth</code></p>
 <h3 id='returns'>Returns</h3>
 <p>Returns boolean value if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h1 id='errors'>Errors</h1>
