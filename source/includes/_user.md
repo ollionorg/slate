@@ -991,8 +991,15 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
         5664530495438848,
     ],
     "meta": "storing test meta info",
-    "token": "wv0X3yJCKhzFxX92vRVs4ube944zY3YJCVtI1EAUBXTQpXrGEFmNdFSLyk6ygA7CDaK8sbN8xHhkxuwBUu5xNQ==",
-    "verified": false
+    "devicetokens": [
+                    {
+                        "token": "TVzm6SDRY5i5lpXgrsNYxok9zgJODJsA7VB15yl2qvUeTG_n3HYmEHaYwt73K-1vGpsUTV18wssDyEWGHdInPw==",
+                        "deviceid": ""
+                    }
+    ],
+    "verified": false,
+    "createdAt": "0001-01-01T05:21:10+05:21",
+    "updatedAt": "2018-03-22T12:08:02.07777+05:30"
 }
 ```
 
@@ -1134,8 +1141,15 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
         5664530495438848,
     ],
     "meta": "storing test meta info",
-    "token": "wv0X3yJCKhzFxX92vRVs4ube944zY3YJCVtI1EAUBXTQpXrGEFmNdFSLyk6ygA7CDaK8sbN8xHhkxuwBUu5xNQ==",
-    "verified": false
+    "devicetokens": [
+                    {
+                        "token": "TVzm6SDRY5i5lpXgrsNYxok9zgJODJsA7VB15yl2qvUeTG_n3HYmEHaYwt73K-1vGpsUTV18wssDyEWGHdInPw==",
+                        "deviceid": ""
+                    }
+    ],
+    "verified": false,
+    "createdAt": "0001-01-01T05:21:10+05:21",
+    "updatedAt": "2018-03-22T12:08:02.07777+05:30"
 }
 ```
 
@@ -1208,8 +1222,15 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
         5664530495438848,
     ],
     "meta": "storing test meta info",
-    "token": "wv0X3yJCKhzFxX92vRVs4ube944zY3YJCVtI1EAUBXTQpXrGEFmNdFSLyk6ygA7CDaK8sbN8xHhkxuwBUu5xNQ==",
-    "verified": false
+    "devicetokens": [
+                    {
+                        "token": "TVzm6SDRY5i5lpXgrsNYxok9zgJODJsA7VB15yl2qvUeTG_n3HYmEHaYwt73K-1vGpsUTV18wssDyEWGHdInPw==",
+                        "deviceid": ""
+                    }
+    ],
+    "verified": false,
+    "createdAt": "0001-01-01T05:21:10+05:21",
+    "updatedAt": "2018-03-22T12:08:02.07777+05:30"
 }
 ```
 
