@@ -5,13 +5,13 @@
 > Definition
 
 ```
-POST  https://api.goodcop.com/v1/api
+POST  https://dev.goodcop.com/v1/api
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/api"
+curl "https://dev.goodcop.com/v1/api"
   -X  POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -30,7 +30,7 @@ curl "https://api.goodcop.com/v1/api"
     }'
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 
@@ -61,7 +61,7 @@ Creates a api object provided the request body and returns the api object.
 
 ### HTTPS Request
 
-`POST https://api.goodcop.com/v1/api`
+`POST https://dev.goodcop.com/v1/api`
 
 ### Request Body
 
@@ -82,20 +82,20 @@ Returns new api object if a valid authorization key and api key was provided, an
 > Definition
 
 ```
-GET  https://api.goodcop.com/v1/api/{apiID}
+GET  https://dev.goodcop.com/v1/api/{apiID}
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/api/{apiID}"
+curl "https://dev.goodcop.com/v1/api/{apiID}"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -124,7 +124,7 @@ Provide the unique api ID and Goodcop will return the corresponding api informat
 
 ### HTTPS Request
 
-`GET https://api.goodcop.com/v1/api/{apiID}`
+`GET https://dev.goodcop.com/v1/api/{apiID}`
 
 ### URL Params
 
@@ -142,20 +142,20 @@ Returns api details if a valid authorization key, api key and valid indentifier 
 > Definition
 
 ```
-GET  https://api.goodcop.com/v1/api
+GET  https://dev.goodcop.com/v1/api
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/api/"
+curl "https://dev.goodcop.com/v1/api/"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -228,7 +228,7 @@ Goodcop will return the all api information for the product.
 
 ### HTTPS Request
 
-`GET https://api.goodcop.com/v1/api`
+`GET https://dev.goodcop.com/v1/api`
 
 ### URL Params
 
@@ -246,20 +246,20 @@ Returns all apis details if a valid authorization key, api key and valid indenti
 > Definition
 
 ```
-DELETE  https://api.goodcop.com/v1/api/{apiID}
+DELETE  https://dev.goodcop.com/v1/api/{apiID}
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/api/{apiID}"
+curl "https://dev.goodcop.com/v1/api/{apiID}"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -271,7 +271,7 @@ Provide the unique api ID and Goodcop will delete the api information.
 
 ### HTTPS Request
 
-`DELETE https://api.goodcop.com/v1/api/{apiID}`
+`DELETE https://dev.goodcop.com/v1/api/{apiID}`
 
 ### URL Params
 
@@ -290,20 +290,20 @@ Returns a string message if a valid authorization key, api key and valid indenti
 > Definition
 
 ```
-GET  https://api.goodcop.com/v1/api/{apiID}/rule
+GET  https://dev.goodcop.com/v1/api/{apiID}/rule
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/api/{apiID}/rule"
+curl "https://dev.goodcop.com/v1/api/{apiID}/rule"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -322,7 +322,7 @@ Provide the unique api ID and Goodcop will return the list of all rules.
 
 ### HTTPS Request
 
-`GET https://api.goodcop.com/v1/api/{apiID}/rule`
+`GET https://dev.goodcop.com/v1/api/{apiID}/rule`
 
 ### URL Params
 
@@ -340,13 +340,13 @@ Returns rules object if a valid authorization key and a valid identifier was pro
 > Definition
 
 ```
-PUT  https://api.goodcop.com/v1/api/{apiID}/rule
+PUT  https://dev.goodcop.com/v1/api/{apiID}/rule
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/api/{apiID}/rule"
+curl "https://dev.goodcop.com/v1/api/{apiID}/rule"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -365,7 +365,7 @@ curl "https://api.goodcop.com/v1/api/{apiID}/rule"
     ]'
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -394,7 +394,7 @@ Retrives all rules of a api.
 
 ### HTTPS Request
 
-`PUT https://api.goodcop.com/v1/api/{apiID}/rule`
+`PUT https://dev.goodcop.com/v1/api/{apiID}/rule`
 
 ### Request Body
 
@@ -419,13 +419,13 @@ Returns array of rules if a valid authorization key and returns an error otherwi
 > Definition
 
 ```
-DELETE  https://api.goodcop.com/v1/api/{apiID}/rule
+DELETE  https://dev.goodcop.com/v1/api/{apiID}/rule
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/api/{apiID}/rule"
+curl "https://dev.goodcop.com/v1/api/{apiID}/rule"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -444,7 +444,7 @@ curl "https://api.goodcop.com/v1/api/{apiID}/rule"
     ]'
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -473,7 +473,7 @@ Deletes the rules associated with the tenant.
 
 ### HTTPS Request
 
-`DELETE https://api.goodcop.com/v1/api/{apiID}/rule`
+`DELETE https://dev.goodcop.com/v1/api/{apiID}/rule`
 
 
 ### Request Body
@@ -498,20 +498,20 @@ Returns api object with deleted rules info if a valid authorization key and retu
 > Definition
 
 ```
-GET  https://api.goodcop.com/v1/api/{apiID}/meta
+GET  https://dev.goodcop.com/v1/api/{apiID}/meta
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/api/{apiID}/meta"
+curl "https://dev.goodcop.com/v1/api/{apiID}/meta"
   -X  GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -524,7 +524,7 @@ Provide the unique tenant ID and Goodcop will return the meta information.
 
 ### HTTPS Request
 
-`GET https://api.goodcop.com/v1/api/{apiID}/meta`
+`GET https://dev.goodcop.com/v1/api/{apiID}/meta`
 
 ### URL Params
 
@@ -542,13 +542,13 @@ Returns string meta if a valid authorization key and a valid identifier was prov
 > Definition
 
 ```
-PUT  https://api.goodcop.com/v1/api/{apiID}/meta
+PUT  https://dev.goodcop.com/v1/api/{apiID}/meta
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/api/{apiID}/meta"
+curl "https://dev.goodcop.com/v1/api/{apiID}/meta"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -558,7 +558,7 @@ curl "https://api.goodcop.com/v1/api/{apiID}/meta"
 }'
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -587,7 +587,7 @@ Updated meta details of the api.
 
 ### HTTPS Request
 
-`PUT https://api.goodcop.com/v1/api/{apiID}/meta`
+`PUT https://dev.goodcop.com/v1/api/{apiID}/meta`
 
 ### Request Body
 
@@ -611,13 +611,13 @@ Returns api object with updated meta info if a valid authorization key and retur
 > Definition
 
 ```
-DELETE  https://api.goodcop.com/v1/api/{apiID}/meta
+DELETE  https://dev.goodcop.com/v1/api/{apiID}/meta
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/api/{apiID}/meta"
+curl "https://dev.goodcop.com/v1/api/{apiID}/meta"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -627,7 +627,7 @@ curl "https://api.goodcop.com/v1/api/{apiID}/meta"
 }'
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -656,7 +656,7 @@ Deletes the meta associated with the api.
 
 ### HTTPS Request
 
-`DELETE https://api.goodcop.com/v1/api/{apiID}/meta`
+`DELETE https://dev.goodcop.com/v1/api/{apiID}/meta`
 
 
 ### URL Params

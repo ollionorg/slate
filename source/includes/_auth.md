@@ -41,13 +41,13 @@ As per GoodCop Wildcard mechanism any url after `/organization/`(inclusive) will
 > Definition
 
 ```
-GET  https://api.goodcop.com/v1/auth
+GET  https://dev.goodcop.com/v1/auth
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/auth"
+curl "https://dev.goodcop.com/v1/auth"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -57,7 +57,7 @@ curl "https://api.goodcop.com/v1/auth"
   -H 'user-token: test_rFU7Xu347hJL9UcFon1FzywvyA_8lERRhUWrf3cWivPLXaQ=='
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -68,7 +68,7 @@ curl "https://api.goodcop.com/v1/auth"
 
 ### HTTPS Request
 
-`GET https://api.goodcop.com/v1/auth`
+`GET https://dev.goodcop.com/v1/auth`
 
 
 ### Returns

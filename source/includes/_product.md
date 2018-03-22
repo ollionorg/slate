@@ -13,20 +13,20 @@ The Authorization token is a super secure token that is only accessible to admin
 > Definition
 
 ```
-GET  https://api.goodcop.com/v1/product
+GET  https://dev.goodcop.com/v1/product
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/product"
+curl "https://dev.goodcop.com/v1/product"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -107,7 +107,7 @@ curl "https://api.goodcop.com/v1/product"
 
 ### HTTPS Request
 
-`GET https://api.goodcop.com/v1/product`
+`GET https://dev.goodcop.com/v1/product`
 
 ### Returns
 
@@ -118,13 +118,13 @@ Returns list of products if a valid authorization key was provided, and returns 
 > Definition
 
 ```
-POST  https://api.goodcop.com/v1/product
+POST  https://dev.goodcop.com/v1/product
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/product"
+curl "https://dev.goodcop.com/v1/product"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -134,7 +134,7 @@ curl "https://api.goodcop.com/v1/product"
     }'
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -164,7 +164,7 @@ The Authorization token is a super secure token that is only accessible to admin
 
 ### HTTPS Request
 
-`POST https://api.goodcop.com/v1/group`
+`POST https://dev.goodcop.com/v1/group`
 
 ### Request Body
 
@@ -184,20 +184,20 @@ Retrieves the details of a product. Provide the unique product ID and Goodcop wi
 > Definition
 
 ```
-GET  https://api.goodcop.com/v1/product/{productID}
+GET  https://dev.goodcop.com/v1/product/{productID}
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/product/5735995932672000"
+curl "https://dev.goodcop.com/v1/product/5735995932672000"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -237,7 +237,7 @@ curl "https://api.goodcop.com/v1/product/5735995932672000"
 
 ### HTTPS Request
 
-`GET https://api.goodcop.com/v1/product/{productID}`
+`GET https://dev.goodcop.com/v1/product/{productID}`
 
 ### URL Params
 
@@ -256,13 +256,13 @@ Provide the product details and Goodcop will return the updated product informat
 > Definition
 
 ```
-PUT  https://api.goodcop.com/v1/product/{productID}
+PUT  https://dev.goodcop.com/v1/product/{productID}
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/product/6308443803615232"
+curl "https://dev.goodcop.com/v1/product/6308443803615232"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -288,7 +288,7 @@ curl "https://api.goodcop.com/v1/product/6308443803615232"
     }'
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -315,7 +315,7 @@ curl "https://api.goodcop.com/v1/product/6308443803615232"
 
 ### HTTPS Request
 
-`PUT https://api.goodcop.com/v1/product/{productID}`
+`PUT https://dev.goodcop.com/v1/product/{productID}`
 
 ### Request Body
 
@@ -346,20 +346,20 @@ Provide the unique product ID and Goodcop will return the message for successful
 > Definition
 
 ```
-DELETE  https://api.goodcop.com/v1/product/{productID}
+DELETE  https://dev.goodcop.com/v1/product/{productID}
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/product/5178306911535104"
+curl "https://dev.goodcop.com/v1/product/5178306911535104"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -369,7 +369,7 @@ curl "https://api.goodcop.com/v1/product/5178306911535104"
 
 ### HTTPS Request
 
-`DELETE https://api.goodcop.com/v1/product/{productID}`
+`DELETE https://dev.goodcop.com/v1/product/{productID}`
 
 ### URL Params
 
@@ -388,13 +388,13 @@ Provide the unique product ID and Goodcop will return the meta details.
 > Definition
 
 ```
-PUT  https://api.goodcop.com/v1/product/{productID}/meta
+PUT  https://dev.goodcop.com/v1/product/{productID}/meta
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/product/5178306911535104/meta"
+curl "https://dev.goodcop.com/v1/product/5178306911535104/meta"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "category: user" \
@@ -405,7 +405,7 @@ curl "https://api.goodcop.com/v1/product/5178306911535104/meta"
     }'
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -418,7 +418,7 @@ The category header can be provided with two options either api or user dependin
 
 ### HTTPS Request
 
-`PUT https://api.goodcop.com/v1/product/{productID}/meta`
+`PUT https://dev.goodcop.com/v1/product/{productID}/meta`
 
 ### URL Params
 
@@ -437,13 +437,13 @@ Provide the unique product ID and Goodcop will return the meta details.
 > Definition
 
 ```
-GET  https://api.goodcop.com/v1/product/{productID}/meta
+GET  https://dev.goodcop.com/v1/product/{productID}/meta
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/product/5178306911535104/meta"
+curl "https://dev.goodcop.com/v1/product/5178306911535104/meta"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "category: api" \
@@ -451,7 +451,7 @@ curl "https://api.goodcop.com/v1/product/5178306911535104/meta"
   -H "Device-Identifier: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -461,7 +461,7 @@ curl "https://api.goodcop.com/v1/product/5178306911535104/meta"
 
 ### HTTPS Request
 
-`GET https://api.goodcop.com/v1/product/{productID}/meta`
+`GET https://dev.goodcop.com/v1/product/{productID}/meta`
 
 ### URL Params
 
@@ -480,13 +480,13 @@ Provide the unique product ID and Goodcop will delete the meta string.
 > Definition
 
 ```
-DELETE  https://api.goodcop.com/v1/product/{productID}/meta
+DELETE  https://dev.goodcop.com/v1/product/{productID}/meta
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/product/5178306911535104/meta"
+curl "https://dev.goodcop.com/v1/product/5178306911535104/meta"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "category: api" \
@@ -494,7 +494,7 @@ curl "https://api.goodcop.com/v1/product/5178306911535104/meta"
   -H "Device-Identifier: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -504,7 +504,7 @@ curl "https://api.goodcop.com/v1/product/5178306911535104/meta"
 
 ### HTTPS Request
 
-`DELETE https://api.goodcop.com/v1/product/{productID}/meta`
+`DELETE https://dev.goodcop.com/v1/product/{productID}/meta`
 
 ### URL Params
 
@@ -524,13 +524,13 @@ Provide the unique product ID and Goodcop will return the rule details.
 > Definition
 
 ```
-GET  https://api.goodcop.com/v1/product/{productID}/rule
+GET  https://dev.goodcop.com/v1/product/{productID}/rule
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/product/5178306911535104/rule"
+curl "https://dev.goodcop.com/v1/product/5178306911535104/rule"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "category: api" \
@@ -538,7 +538,7 @@ curl "https://api.goodcop.com/v1/product/5178306911535104/rule"
   -H "Device-Identifier: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -554,7 +554,7 @@ curl "https://api.goodcop.com/v1/product/5178306911535104/rule"
 
 ### HTTPS Request
 
-`GET https://api.goodcop.com/v1/product/{productID}/rule`
+`GET https://dev.goodcop.com/v1/product/{productID}/rule`
 
 ### URL Params
 
@@ -574,13 +574,13 @@ Provide the unique product ID, rule array and Goodcop will return the updated ru
 > Definition
 
 ```
-PUT  https://api.goodcop.com/v1/product/{productID}/rule
+PUT  https://dev.goodcop.com/v1/product/{productID}/rule
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/product/5178306911535104/rule"
+curl "https://dev.goodcop.com/v1/product/5178306911535104/rule"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "category: api" \
@@ -596,7 +596,7 @@ curl "https://api.goodcop.com/v1/product/5178306911535104/rule"
 '
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -617,7 +617,7 @@ curl "https://api.goodcop.com/v1/product/5178306911535104/rule"
 
 ### HTTPS Request
 
-`PUT https://api.goodcop.com/v1/product/{productID}/rule`
+`PUT https://dev.goodcop.com/v1/product/{productID}/rule`
 
 ### Request Body
 
@@ -642,13 +642,13 @@ Provide the unique product ID, rule array and Goodcop will return the updated ru
 > Definition
 
 ```
-DELETE  https://api.goodcop.com/v1/product/{productID}/rule
+DELETE  https://dev.goodcop.com/v1/product/{productID}/rule
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/product/5178306911535104/rule"
+curl "https://dev.goodcop.com/v1/product/5178306911535104/rule"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "category: api" \
@@ -664,7 +664,7 @@ curl "https://api.goodcop.com/v1/product/5178306911535104/rule"
 '
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -680,7 +680,7 @@ curl "https://api.goodcop.com/v1/product/5178306911535104/rule"
 
 ### HTTPS Request
 
-`DELETE https://api.goodcop.com/v1/product/{productID}/rule`
+`DELETE https://dev.goodcop.com/v1/product/{productID}/rule`
 
 ### Request Body
 
@@ -703,20 +703,20 @@ Returns updated rules array if a valid authorization key and a valid identifier 
 > Definition
 
 ```
-PUT  https://api.goodcop.com/v1/product/{productID}/apikey/{apikeyname}
+PUT  https://dev.goodcop.com/v1/product/{productID}/apikey/{apikeyname}
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/product/6308443803615232/apikey/testKey"
+curl "https://dev.goodcop.com/v1/product/6308443803615232/apikey/testKey"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -738,7 +738,7 @@ Creates a new product api key with the name in url params.
 
 ### HTTPS Request
 
-`PUT https://api.goodcop.com/v1/product/{productID}/apikey/{apikeyname}`
+`PUT https://dev.goodcop.com/v1/product/{productID}/apikey/{apikeyname}`
 
 ### URL Params
 
@@ -758,20 +758,20 @@ Returns array of ApiKeys if a valid authorization key and a valid identifier was
 > Definition
 
 ```
-GET  https://api.goodcop.com/v1/product/{productID}/apikey/{apikeyname}
+GET  https://dev.goodcop.com/v1/product/{productID}/apikey/{apikeyname}
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/product/6308443803615232/apikey/testKey"
+curl "https://dev.goodcop.com/v1/product/6308443803615232/apikey/testKey"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -785,7 +785,7 @@ Provide the unique product ID, ApiKey Name and Goodcop will return the key detai
 
 ### HTTPS Request
 
-`GET https://api.goodcop.com/v1/product/{productID}/apikey/{apikeyname}`
+`GET https://dev.goodcop.com/v1/product/{productID}/apikey/{apikeyname}`
 
 ### URL Params
 
@@ -805,20 +805,20 @@ Returns array of ApiKeys if a valid authorization key and a valid identifiers we
 > Definition
 
 ```
-GET  https://api.goodcop.com/v1/product/{productID}/apikey
+GET  https://dev.goodcop.com/v1/product/{productID}/apikey
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/product/6308443803615232/apikey"
+curl "https://dev.goodcop.com/v1/product/6308443803615232/apikey"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -840,7 +840,7 @@ Provide the unique product ID and Goodcop will return the all available keys det
 
 ### HTTPS Request
 
-`GET https://api.goodcop.com/v1/product/{productID}/apikey/`
+`GET https://dev.goodcop.com/v1/product/{productID}/apikey/`
 
 ### URL Params
 
@@ -857,20 +857,20 @@ Returns array of ApiKeys if a valid authorization key and a valid identifier was
 > Definition
 
 ```
-DELETE  https://api.goodcop.com/v1/product/{productID}/apikey/{apikeyname}
+DELETE  https://dev.goodcop.com/v1/product/{productID}/apikey/{apikeyname}
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/product/6308443803615232/apikey/testKey"
+curl "https://dev.goodcop.com/v1/product/6308443803615232/apikey/testKey"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
   -H "Device-Identifier: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 200</code>
 
 ```json
 {
@@ -883,7 +883,7 @@ Provide the unique product ID, ApiKey Name and Goodcop will delete the api key.
 
 ### HTTPS Request
 
-`DELETE https://api.goodcop.com/v1/product/{productID}/apikey/{apikeyname}`
+`DELETE https://dev.goodcop.com/v1/product/{productID}/apikey/{apikeyname}`
 
 ### URL Params
 
