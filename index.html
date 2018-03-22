@@ -5530,7 +5530,7 @@ The x-api-key header must be provided to create a tenant.
   -H <span class="s2">"Device-Identifier: test_56789657567"</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#4CAF50;">200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"orgs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -5555,34 +5555,45 @@ The x-api-key header must be provided to create a tenant.
 </span></code></pre>
 <p>Goodcop will return the all organization inside a tenant, will be accessible to each product for that tenant</p>
 <h3 id='https-request-2'>HTTPS Request</h3>
-<p><code>GET https://api.goodcop.com/v1/org</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/org</code></p>
 <h3 id='returns-2'>Returns</h3>
 <p>Returns all organization details if a valid authorization key and returns an error otherwise.</p>
+<h3 id='error-messages-2'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization error. Kindly provide product API key</code> </li>
+</ol>
 <h2 id='get-org-by-id'>Get Org by ID</h2>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/org/{orgID}
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/org/{orgID}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/org/5642425909379072"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/org/5642425909379072"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   -H <span class="s2">"Device-Identifier: test_56789657567"</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#4CAF50;">200</code></p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> 
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">12345668787989</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testorg"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test meta"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"contactDetails"</span><span class="p">:</span><span class="w"> </span><span class="s2">"customer_detail_in_string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"CreatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-21T17:03:16.024791+05:30"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"UpdatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-21T17:03:16.024793+05:30"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Goodcop will return the all api information for the product.</p>
+<p>Goodcop will return the api&#39;s all information.</p>
 <h3 id='https-request-3'>HTTPS Request</h3>
-<p><code>GET https://api.goodcop.com/v1/org/{orgID}</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/org/{orgID}</code></p>
 <h3 id='url-params'>URL Params</h3>
 <table><thead>
 <tr>
@@ -5601,32 +5612,39 @@ The x-api-key header must be provided to create a tenant.
 </tbody></table>
 <h3 id='returns-3'>Returns</h3>
 <p>Returns org details if a valid authorization key, and valid indentifier was provided, and returns an error otherwise.</p>
+<h3 id='error-messages-3'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization error. Kindly provide product API key</code> </li>
+<li> <code style="background:#FF7043;"> 400 </code> <code>Org id should be valid and parsable</code> </li>
+<li> <code style="background:#FFC107;"> 404 </code> <code>Org not Found</code></li>
+<li> <code style="background:#FF0000;"> 500 </code> <code>Some error occured</code></li>
+</ol>
 <h2 id='delete-org-by-id'>Delete Org By ID</h2>
 <p>Provide the unique org ID and Goodcop will return the message for successful deletion of org.</p>
 
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://api.goodcop.com/v1/org/{orgID}
+<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/org/{orgID}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/org/6309146567639040"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/org/6309146567639040"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   -H <span class="s2">"Device-Identifier: test_56789657567"</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#4CAF50;">200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Org Deleted Successfully"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-4'>HTTPS Request</h3>
-<p><code>DELETE https://api.goodcop.com/v1/org/{orgID}</code></p>
+<p><code>DELETE https://[GOODCOP_URL]/v1/org/{orgID}</code></p>
 <h3 id='url-params-2'>URL Params</h3>
 <table><thead>
 <tr>
@@ -5645,19 +5663,25 @@ The x-api-key header must be provided to create a tenant.
 </tbody></table>
 <h3 id='returns-4'>Returns</h3>
 <p>Returns a string message if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h3 id='error-messages-4'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization error. Kindly provide product API key</code> </li>
+<li> <code style="background:#FF7043;"> 400 </code> <code>Org id should be valid and parsable</code> </li>
+<li> <code style="background:#FF0000;"> 500 </code> <code>Some error occured</code></li>
+</ol>
 <h2 id='update-org'>Update Org</h2>
-<p>Provide the unique org ID and Goodcop will return the organization details.</p>
+<p>Provide the unique org ID and Goodcop will return the organization details, contactdetail can be updated only as of now.</p>
 
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>PUT  https://api.goodcop.com/v1/org/{orgID}
+<pre class="highlight plaintext"><code>PUT  https://[GOODCOP_URL]/v1/org/{orgID}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/5642425909379072"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/5642425909379072"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -5667,7 +5691,7 @@ The x-api-key header must be provided to create a tenant.
     }'</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response  <code style="background:#4CAF50;">201</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5642425909379072</span><span class="p">,</span><span class="w">
@@ -5679,7 +5703,7 @@ The x-api-key header must be provided to create a tenant.
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre><h3 id='https-request-5'>HTTPS Request</h3>
-<p><code>PUT https://api.goodcop.com/v1/org/{orgID}</code></p>
+<p><code>PUT https://[GOODCOP_URL]/v1/org/{orgID}</code></p>
 <h3 id='request-body-2'>Request Body</h3>
 <table><thead>
 <tr>
@@ -5691,7 +5715,7 @@ The x-api-key header must be provided to create a tenant.
 </thead><tbody>
 <tr>
 <td>contactdetails</td>
-<td>required</td>
+<td>optional</td>
 <td>string</td>
 <td>contactdetails to be updated for the org</td>
 </tr>
@@ -5714,32 +5738,38 @@ The x-api-key header must be provided to create a tenant.
 </tbody></table>
 <h3 id='returns-5'>Returns</h3>
 <p>Returns org object with updated contact details if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h3 id='error-messages-5'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization error. Kindly provide product API key</code> </li>
+<li> <code style="background:#FF7043;"> 400 </code> <code>Org id should be valid and parsable</code> </li>
+<li> <code style="background:#FF7043;"> 400 </code> <code>Nothing to Update</code></li>
+</ol>
 <h2 id='get-org-meta-by-id'>Get Org Meta By ID</h2>
 <p>Provide the unique org ID and Goodcop will return the meta details.</p>
 
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/org/{orgID}/meta
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/org/{orgID}/meta
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/5642425909379072/meta"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/5642425909379072/meta"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   -H <span class="s2">"Device-Identifier: test_56789657567"</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#4CAF50;">200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test meta"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-6'>HTTPS Request</h3>
-<p><code>GET https://api.goodcop.com/v1/org/{orgID}/meta</code></p>
+<p><code>GET https://[GOODCOP_URL]/v1/org/{orgID}/meta</code></p>
 <h3 id='url-params-4'>URL Params</h3>
 <table><thead>
 <tr>
@@ -5758,19 +5788,24 @@ The x-api-key header must be provided to create a tenant.
 </tbody></table>
 <h3 id='returns-6'>Returns</h3>
 <p>Returns meta information if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h3 id='error-messages-6'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization error. Kindly provide product API key</code> </li>
+<li> <code style="background:#FF7043;"> 400 </code> <code>Org id should be valid and parsable</code> </li>
+</ol>
 <h2 id='update-org-meta-by-id'>Update Org Meta By ID</h2>
 <p>Provide the unique org ID and Goodcop will return the meta details.</p>
 
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>PUT  https://api.goodcop.com/v1/user/{userID}/meta
+<pre class="highlight plaintext"><code>PUT  https://[GOODCOP_URL]/v1/user/{userID}/meta
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/meta"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/meta"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -5780,14 +5815,14 @@ The x-api-key header must be provided to create a tenant.
     }'</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#4CAF50;">201</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"meta updated successfully"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre><h3 id='https-request-7'>HTTPS Request</h3>
-<p><code>PUT https://api.goodcop.com/v1/org/{orgID}/meta</code></p>
+<p><code>PUT https://[GOODCOP_URL]/v1/org/{orgID}/meta</code></p>
 <h3 id='request-body-3'>Request Body</h3>
 <table><thead>
 <tr>
@@ -5822,19 +5857,26 @@ The x-api-key header must be provided to create a tenant.
 </tbody></table>
 <h3 id='returns-7'>Returns</h3>
 <p>Returns string message of updation if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h3 id='error-messages-7'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization error. Kindly provide product API key</code> </li>
+<li> <code style="background:#FF7043;"> 400 </code> <code>Org id should be valid and parsable</code> </li>
+<li> <code style="background:#FF7043;"> 400 </code> <code>Meta should not empty, use \&quot;deletemeta\&quot; to delete it</code></li>
+<li> <code style="background:#FF0000;"> 500 </code> <code>some error occured</code></li>
+</ol>
 <h2 id='delete-org-meta-by-id'>Delete Org Meta By ID</h2>
 <p>Provide the unique org ID and Goodcop will delete the meta string.</p>
 
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://api.goodcop.com/v1/org/{orgID}/meta
+<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/org/{orgID}/meta
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/product/5642425909379072/meta"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product/5642425909379072/meta"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"category: api"</span> <span class="se">\</span>
@@ -5842,13 +5884,13 @@ The x-api-key header must be provided to create a tenant.
   -H <span class="s2">"Device-Identifier: test_56789657567"</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#4CAF50;">200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"meta deleted successfully"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-8'>HTTPS Request</h3>
-<p><code>DELETE https://api.goodcop.com/v1/org/{orgID}/meta</code></p>
+<p><code>DELETE https://[GOODCOP_URL]/v1/org/{orgID}/meta</code></p>
 <h3 id='url-params-6'>URL Params</h3>
 <table><thead>
 <tr>
@@ -5867,17 +5909,23 @@ The x-api-key header must be provided to create a tenant.
 </tbody></table>
 <h3 id='returns-8'>Returns</h3>
 <p>Returns success message string if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h3 id='error-messages-8'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization error. Kindly provide product API key</code> </li>
+<li> <code style="background:#FF7043;"> 400 </code> <code>Org id should be valid and parsable</code> </li>
+<li> <code style="background:#FF0000;"> 500 </code> <code>some error occured</code></li>
+</ol>
 <h2 id='add-users-to-org'>Add Users to Org</h2>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/org/{orgID}/users
+<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/org/{orgID}/users
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/org/5642425909379072/users"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/org/5642425909379072/users"</span>
   -X  POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -5887,16 +5935,16 @@ The x-api-key header must be provided to create a tenant.
 }'</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#4CAF50;">201</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Users added to organizations"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Creates a organization</p>
+<p>Add Users to Org</p>
 <h3 id='https-request-9'>HTTPS Request</h3>
-<p><code>POST https://api.goodcop.com/v1/org/{orgID}/users</code></p>
+<p><code>POST https://[GOODCOP_URL]/v1/org/{orgID}/users</code></p>
 <h3 id='request-body-4'>Request Body</h3>
 <table><thead>
 <tr>
@@ -5912,35 +5960,49 @@ The x-api-key header must be provided to create a tenant.
 <td>array</td>
 <td>users ids</td>
 </tr>
+<tr>
+<td>orgID</td>
+<td>required</td>
+<td>param</td>
+<td>orgid</td>
+</tr>
 </tbody></table>
 <h3 id='returns-9'>Returns</h3>
 <p>Returns success message string if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h3 id='error-messages-9'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization error. Kindly provide product API key</code> </li>
+<li> <code style="background:#FF7043;"> 400 </code> <code>Org id should be valid and parsable</code> </li>
+<li> <code style="background:#FF7043;"> 400 </code> <code>field missing</code> </li>
+</ol>
 <h2 id='get-org-users-by-id'>Get Org Users By ID</h2>
 <p>Provide the unique org ID and Goodcop will return the users details.</p>
 
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/org/{orgID}/users
+<pre class="highlight plaintext"><code>GET  https://[GOODCOP_URL]/v1/org/{orgID}/users
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/org/5642425909379072/users"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/org/5642425909379072/users"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   -H <span class="s2">"Device-Identifier: test_56789657567"</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#4CAF50;">200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"response"</span><span class="p">:</span><span class="w"> </span><span class="s2">"to be updated"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"0ef3011b-b228-4771-bad5-bd7c0ebd70d8"</span><span class="p">,</span><span class="s2">"3fd58316-6f6d-4c1b-9eb7-2678fe886b4d"</span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-10'>HTTPS Request</h3>
-<p><code>GET https://api.goodcop.com/v1/org/{orgID}/users</code></p>
+</span></code></pre>
+<p>Get Org Users By ID</p>
+<h3 id='https-request-10'>HTTPS Request</h3>
+<p><code>GET https://[GOODCOP_URL]/v1/org/{orgID}/users</code></p>
 <h3 id='url-params-7'>URL Params</h3>
 <table><thead>
 <tr>
@@ -5959,33 +6021,43 @@ The x-api-key header must be provided to create a tenant.
 </tbody></table>
 <h3 id='returns-10'>Returns</h3>
 <p>Returns users array associated with the org if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h3 id='error-messages-10'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization error. Kindly provide product API key</code> </li>
+<li> <code style="background:#FF7043;"> 400 </code> <code>Org id should be valid and parsable</code> </li>
+</ol>
 <h2 id='remove-users-from-org-by-id'>Remove Users from Org By ID</h2>
 <p>Provide the unique array of user IDs and Goodcop will return the message for successful deletion of users from org.</p>
 
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://api.goodcop.com/v1/org/{orgID}/users
+<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/org/{orgID}/users
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/org/5642425909379072/users"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/org/5642425909379072/users"</span>
   -X DELETE
   -d <span class="s1">'[5717800035287040,5717800035287766]'</span>
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
   -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -d <span class="s1">'{
+    "users":["0ef3011b-b228-4771-bad5-bd7c0ebd70d8","3fd58316-6f6d-4c1b-9eb7-2678fe886b4d"]
+}'</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#4CAF50;">200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Users deleted from organizations"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-11'>HTTPS Request</h3>
-<p><code>DELETE https://api.goodcop.com/v1/org/{orgID}/users</code></p>
+</span></code></pre>
+<p>Remove Users from Org By ID</p>
+<h3 id='https-request-11'>HTTPS Request</h3>
+<p><code>DELETE https://[GOODCOP_URL]/v1/org/{orgID}/users</code></p>
 <h3 id='request-body-5'>Request Body</h3>
 <table><thead>
 <tr>
@@ -5996,14 +6068,19 @@ The x-api-key header must be provided to create a tenant.
 </tr>
 </thead><tbody>
 <tr>
-<td>usersIDs</td>
-<td>array</td>
+<td>orgID</td>
+<td>required</td>
 <td>integer</td>
-<td>Array of Valid user identifiers</td>
+<td>Org id to be passed in param</td>
 </tr>
 </tbody></table>
 <h3 id='returns-11'>Returns</h3>
 <p>Returns a string message if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h3 id='error-messages-11'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization error. Kindly provide product API key</code> </li>
+<li> <code style="background:#FF7043;"> 400 </code> <code>Org id should be valid and parsable</code> </li>
+</ol>
 <h1 id='auth'>Auth</h1><h2 id='check-auth'>Check Auth</h2>
 <p>This api provides a mechanism to get the authorization status/access level of the request url by retreiving the
 header information and checking the already set rules.</p>
