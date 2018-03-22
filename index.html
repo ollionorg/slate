@@ -231,19 +231,19 @@
                     <a href="#sign-up-using-email-and-password" class="toc-h2 toc-link" data-title="sign-up-using-email-and-password">Sign Up Using Email and Password</a>
                   </li>
                   <li>
-                    <a href="#signin-usinggithub" class="toc-h2 toc-link" data-title="signin-usinggithub">SignIn UsingGitHub</a>
+                    <a href="#signin-using-github" class="toc-h2 toc-link" data-title="signin-using-github">SignIn Using GitHub</a>
                   </li>
                   <li>
-                    <a href="#signin-google" class="toc-h2 toc-link" data-title="signin-google">SignIn Google</a>
+                    <a href="#signin-using-google" class="toc-h2 toc-link" data-title="signin-using-google">SignIn Using Google</a>
                   </li>
                   <li>
-                    <a href="#signin-facebook" class="toc-h2 toc-link" data-title="signin-facebook">SignIn Facebook</a>
+                    <a href="#signin-using-facebook" class="toc-h2 toc-link" data-title="signin-using-facebook">SignIn Using Facebook</a>
                   </li>
                   <li>
-                    <a href="#signin-twitter" class="toc-h2 toc-link" data-title="signin-twitter">SignIn Twitter</a>
+                    <a href="#signin-using-twitter" class="toc-h2 toc-link" data-title="signin-using-twitter">SignIn Using Twitter</a>
                   </li>
                   <li>
-                    <a href="#signin-instagram" class="toc-h2 toc-link" data-title="signin-instagram">SignIn Instagram</a>
+                    <a href="#signin-using-instagram" class="toc-h2 toc-link" data-title="signin-using-instagram">SignIn Using Instagram</a>
                   </li>
                   <li>
                     <a href="#signin-using-magiclink" class="toc-h2 toc-link" data-title="signin-using-magiclink">SignIn Using MagicLink</a>
@@ -555,18 +555,18 @@ GoodCop expects for the Authorization key to be included in all API requests to 
 You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=</code> with your product authorization key.
 </aside>
 <h1 id='user'>User</h1>
-<p>The API allows you to create, delete, and update your users with addition of socail providers. You can retrieve individual users as well as a list of all your users. Also the api gives ability to set authorization level privileges using the rules object.</p>
+<p>The API allows you to create, delete, and update your users with addition of socail providers and passwordless authentication using magic link. You can retrieve individual users as well as a list of all your users. Also the api gives ability to set authorization level privileges using the rules object.</p>
 <h2 id='sign-up-using-email-and-password'>Sign Up Using Email and Password</h2>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/user/signup
+<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/signup
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/signup"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/signup"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -591,7 +591,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a new user object.</p>
 <h3 id='https-request'>HTTPS Request</h3>
-<p><code>POST https://api.goodcop.com/v1/user/signup</code></p>
+<p><code>POST https://dev.goodcop.com/v1/user/signup</code></p>
 <h3 id='request-body'>Request Body</h3>
 <table><thead>
 <tr>
@@ -615,24 +615,25 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </tr>
 </tbody></table>
 <h3 id='returns'>Returns</h3>
-<p>Returns a user object if correct email and password was provided. The returned object will have information about the rules, groups, metadata. If no email or password was provided, same email which already exists or any other backend validation failures an appropriate error message will be returned with an error code associated with it.</p>
+<p>Returns a user object if correct email and password was provided. The returned object will have information about the rules, groups, metadata. If no email or password was provided, same email which already exists or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages'>Error Messages</h3>
 <ol>
+<li> <code>Invalid product API key</code></li>
 <li> <code>Either email or password is missing</code></li>
 <li> <code>Email is not valid</code></li>
 <li> <code>You are already registered with product1 and product2</code></li>
 </ol>
-<h2 id='signin-usinggithub'>SignIn UsingGitHub</h2>
+<h2 id='signin-using-github'>SignIn Using GitHub</h2>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/user/signin/github
+<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/signin/github
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/signin/github"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/signin/github"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -647,22 +648,27 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Creates a user object provided once authorized by github using the redirect url.</p>
+<p>Creates a new user object via github.</p>
 <h3 id='https-request-2'>HTTPS Request</h3>
-<p><code>POST https://api.goodcop.com/v1/signin/github</code></p>
+<p><code>POST https://dev.goodcop.com/v1/user/signin/github</code></p>
 <h3 id='returns-2'>Returns</h3>
-<p>Returns user object from github, and returns an error otherwise.</p>
-<h2 id='signin-google'>SignIn Google</h2>
+<p>Returns a redirect url. The redirect url will be used to authenticate the user using github. If the user is successfully authenticated using github, goodcop will redirect to the product callback. If no callback is set by the product, social auth provider failure or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='error-messages-2'>Error Messages</h3>
+<ol>
+<li> <code>Invalid product API key</code></li>
+<li> <code>No Callback is set for your product, please set that first</code></li>
+</ol>
+<h2 id='signin-using-google'>SignIn Using Google</h2>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/user/signin/google
+<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/signin/google
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/signin/google"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/signin/google"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -677,22 +683,27 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Creates a user object provided once authorized by google using the redirect url.</p>
+<p>Creates a new user object via google.</p>
 <h3 id='https-request-3'>HTTPS Request</h3>
-<p><code>POST https://api.goodcop.com/v1/signin/google</code></p>
+<p><code>POST https://dev.goodcop.com/v1/user/signin/google</code></p>
 <h3 id='returns-3'>Returns</h3>
-<p>Returns user object from google, and returns an error otherwise.</p>
-<h2 id='signin-facebook'>SignIn Facebook</h2>
+<p>Returns a redirect url. The redirect url will be used to authenticate the user using google. If the user is successfully authenticated using google, goodcop will redirect to the product callback. If no callback is set by the product, social auth provider failure or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='error-messages-3'>Error Messages</h3>
+<ol>
+<li> <code>Invalid product API key</code></li>
+<li> <code>No Callback is set for your product, please set that first</code></li>
+</ol>
+<h2 id='signin-using-facebook'>SignIn Using Facebook</h2>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/user/signin/facebook
+<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/signin/facebook
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/signin/facebook"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/signin/facebook"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -707,22 +718,27 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Creates a user object provided once authorized by facebook using the redirect url.</p>
+<p>Creates a new user object via facebook.</p>
 <h3 id='https-request-4'>HTTPS Request</h3>
-<p><code>POST https://api.goodcop.com/v1/signin/facebook</code></p>
+<p><code>POST https://dev.goodcop.com/v1/user/signin/facebook</code></p>
 <h3 id='returns-4'>Returns</h3>
-<p>Returns user object from facebook, and returns an error otherwise.</p>
-<h2 id='signin-twitter'>SignIn Twitter</h2>
+<p>Returns a redirect url. The redirect url will be used to authenticate the user using facebook. If the user is successfully authenticated using facebook, goodcop will redirect to the product callback. If no callback is set by the product, social auth provider failure or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='error-messages-4'>Error Messages</h3>
+<ol>
+<li> <code>Invalid product API key</code></li>
+<li> <code>No Callback is set for your product, please set that first</code></li>
+</ol>
+<h2 id='signin-using-twitter'>SignIn Using Twitter</h2>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/user/signin/twitter
+<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/signin/twitter
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/signin/twitter"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/signin/twitter"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -737,22 +753,27 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Creates a user object provided once authorized by twitter using the redirect url.</p>
+<p>Creates a new user object via twitter.</p>
 <h3 id='https-request-5'>HTTPS Request</h3>
-<p><code>POST https://api.goodcop.com/v1/signin/twitter</code></p>
+<p><code>POST https://dev.goodcop.com/v1/user/signin/twitter</code></p>
 <h3 id='returns-5'>Returns</h3>
-<p>Returns user object from twitter, and returns an error otherwise.</p>
-<h2 id='signin-instagram'>SignIn Instagram</h2>
+<p>Returns a redirect url. The redirect url will be used to authenticate the user using twitter. If the user is successfully authenticated using twitter, goodcop will redirect to the product callback. If no callback is set by the product, social auth provider failure or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='error-messages-5'>Error Messages</h3>
+<ol>
+<li> <code>Invalid product API key</code></li>
+<li> <code>No Callback is set for your product, please set that first</code></li>
+</ol>
+<h2 id='signin-using-instagram'>SignIn Using Instagram</h2>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/user/signin/instagram
+<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/signin/instagram
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/signin/instagram"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/signin/instagram"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -767,22 +788,27 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Creates a user object provided once authorized by instagram using the redirect url.</p>
+<p>Creates a new user object via instagram.</p>
 <h3 id='https-request-6'>HTTPS Request</h3>
-<p><code>POST https://api.goodcop.com/v1/signin/instagram</code></p>
+<p><code>POST https://dev.goodcop.com/v1/user/signin/instagram</code></p>
 <h3 id='returns-6'>Returns</h3>
-<p>Returns user object from instagram, and returns an error otherwise.</p>
+<p>Returns a redirect url. The redirect url will be used to authenticate the user using instagram. If the user is successfully authenticated using instagram, goodcop will redirect to the product callback. If no callback is set by the product, social auth provider failure or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='error-messages-6'>Error Messages</h3>
+<ol>
+<li> <code>Invalid product API key</code></li>
+<li> <code>No Callback is set for your product, please set that first</code></li>
+</ol>
 <h2 id='signin-using-magiclink'>SignIn Using MagicLink</h2>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/user/magiclink
+<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/magiclink
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/magiclink"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/magiclink"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -797,10 +823,11 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Magic link sent to email successfully"</span><span class="w">
 </span><span class="p">}</span><span class="w">
+
 </span></code></pre>
-<p>A magic link is sent to user email to sign in.</p>
+<p>Creates a new user object via email by creating a token that will allow user to log in through the link sent to their email.</p>
 <h3 id='https-request-7'>HTTPS Request</h3>
-<p><code>POST https://api.goodcop.com/v1/signup/magiclink</code></p>
+<p><code>POST https://dev.goodcop.com/v1/signup/magiclink</code></p>
 <h3 id='request-body-2'>Request Body</h3>
 <table><thead>
 <tr>
@@ -814,22 +841,27 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <td>email</td>
 <td>required</td>
 <td>string</td>
-<td>The email address to send to sign in.</td>
+<td>The email address to send the magic link to.</td>
 </tr>
 </tbody></table>
 <h3 id='returns-7'>Returns</h3>
-<p>Returns user object if correct email was provided, and returns an error otherwise.</p>
+<p>Returns a success message and an email will be sent to user with the magic link. Once user clicks on magic link goodcop will redirect to the product callback. If no email was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='error-messages-7'>Error Messages</h3>
+<ol>
+<li> <code>Invalid product API key</code></li>
+<li> <code>Email is missing</code></li>
+</ol>
 <h2 id='sign-up-phonenumber'>Sign Up PhoneNumber</h2>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/user/signin/phone
+<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/signin/phone
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/signin/phone"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/signin/phone"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -850,7 +882,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>GoodCop will send the sms with a auto genrated otp. User needs to verfiy the otp against the phone number to 
 sign in the user</p>
 <h3 id='https-request-8'>HTTPS Request</h3>
-<p><code>POST https://api.goodcop.com/v1/user/signin/phone</code></p>
+<p><code>POST https://dev.goodcop.com/v1/user/signin/phone</code></p>
 <h3 id='request-body-3'>Request Body</h3>
 <table><thead>
 <tr>
@@ -874,13 +906,13 @@ will be an error.</p>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/user/signin/phone/verify
+<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/signin/phone/verify
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/signin/phone/verify"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/signin/phone/verify"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -900,7 +932,7 @@ will be an error.</p>
 </span></code></pre>
 <p>User will verify the authenticity by verifying the otp.</p>
 <h3 id='https-request-9'>HTTPS Request</h3>
-<p><code>POST https://api.goodcop.com/v1/user/signin/phone/verify</code></p>
+<p><code>POST https://dev.goodcop.com/v1/user/signin/phone/verify</code></p>
 <h3 id='request-body-4'>Request Body</h3>
 <table><thead>
 <tr>
@@ -930,13 +962,13 @@ will be an error.</p>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/user/login
+<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/login
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/login"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/login"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -961,7 +993,7 @@ will be an error.</p>
 </span></code></pre>
 <p>Authenticates the user provided the valid email and password and Retrieves the details of a user that has previously been created.</p>
 <h3 id='https-request-10'>HTTPS Request</h3>
-<p><code>POST https://api.goodcop.com/v1/user/login</code></p>
+<p><code>POST https://dev.goodcop.com/v1/user/login</code></p>
 <h3 id='request-body-5'>Request Body</h3>
 <table><thead>
 <tr>
@@ -991,13 +1023,13 @@ will be an error.</p>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/user/passwordChange
+<pre class="highlight plaintext"><code>POST  https://dev.goodcop.com/v1/user/passwordChange
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/passwordChange"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/passwordChange"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1017,7 +1049,7 @@ will be an error.</p>
 </span></code></pre>
 <p>Change the password for the logged in user providing the oldpassword and new password.</p>
 <h3 id='https-request-11'>HTTPS Request</h3>
-<p><code>POST https://api.goodcop.com/v1/user/passwordChange</code></p>
+<p><code>POST https://dev.goodcop.com/v1/user/passwordChange</code></p>
 <h3 id='request-body-6'>Request Body</h3>
 <table><thead>
 <tr>
@@ -1049,13 +1081,13 @@ will be an error.</p>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/user/{userID}
+<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/user/{userID}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1074,7 +1106,7 @@ will be an error.</p>
     </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-12'>HTTPS Request</h3>
-<p><code>POST https://api.goodcop.com/v1/user/{userID}</code></p>
+<p><code>POST https://dev.goodcop.com/v1/user/{userID}</code></p>
 <h3 id='url-params'>URL Params</h3>
 <table><thead>
 <tr>
@@ -1099,13 +1131,13 @@ will be an error.</p>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/user/{email}
+<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/user/{email}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test@mail.com"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/test@mail.com"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1124,7 +1156,7 @@ will be an error.</p>
     </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-13'>HTTPS Request</h3>
-<p><code>GET https://api.goodcop.com/v1/user/{email}</code></p>
+<p><code>GET https://dev.goodcop.com/v1/user/{email}</code></p>
 <h3 id='url-params-2'>URL Params</h3>
 <table><thead>
 <tr>
@@ -1149,13 +1181,13 @@ will be an error.</p>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/user
+<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/user
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1196,7 +1228,7 @@ will be an error.</p>
             </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-14'>HTTPS Request</h3>
-<p><code>GET https://api.goodcop.com/v1/user</code></p>
+<p><code>GET https://dev.goodcop.com/v1/user</code></p>
 <h3 id='returns-14'>Returns</h3>
 <p>Returns list of user objects if a valid authorization key was provided, and returns an error otherwise.</p>
 <h2 id='delete-user-by-id'>Delete User By ID</h2>
@@ -1205,13 +1237,13 @@ will be an error.</p>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://api.goodcop.com/v1/user/{userID}
+<pre class="highlight plaintext"><code>DELETE  https://dev.goodcop.com/v1/user/{userID}
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1224,7 +1256,7 @@ will be an error.</p>
     </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User deleted successfully"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-15'>HTTPS Request</h3>
-<p><code>DELETE https://api.goodcop.com/v1/user/{userID}</code></p>
+<p><code>DELETE https://dev.goodcop.com/v1/user/{userID}</code></p>
 <h3 id='url-params-3'>URL Params</h3>
 <table><thead>
 <tr>
@@ -1249,13 +1281,13 @@ will be an error.</p>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/user/{userID}/groups
+<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/user/{userID}/groups
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/groups"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/groups"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1305,7 +1337,7 @@ will be an error.</p>
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre><h3 id='https-request-16'>HTTPS Request</h3>
-<p><code>GET https://api.goodcop.com/v1/user/{userID}/groups</code></p>
+<p><code>GET https://dev.goodcop.com/v1/user/{userID}/groups</code></p>
 <h3 id='url-params-4'>URL Params</h3>
 <table><thead>
 <tr>
@@ -1330,13 +1362,13 @@ will be an error.</p>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/user/{userID}/meta
+<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/user/{userID}/meta
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/meta"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/meta"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1349,7 +1381,7 @@ will be an error.</p>
     </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"storing test meta info"</span><span class="p">,</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-17'>HTTPS Request</h3>
-<p><code>GET https://api.goodcop.com/v1/user/{userID}/meta</code></p>
+<p><code>GET https://dev.goodcop.com/v1/user/{userID}/meta</code></p>
 <h3 id='url-params-5'>URL Params</h3>
 <table><thead>
 <tr>
@@ -1390,13 +1422,13 @@ will be an error.</p>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>PUT  https://api.goodcop.com/v1/user/{userID}/meta
+<pre class="highlight plaintext"><code>PUT  https://dev.goodcop.com/v1/user/{userID}/meta
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/meta"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/meta"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1427,7 +1459,7 @@ will be an error.</p>
     </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-18'>HTTPS Request</h3>
-<p><code>PUT https://api.goodcop.com/v1/user/{userID}/meta</code></p>
+<p><code>PUT https://dev.goodcop.com/v1/user/{userID}/meta</code></p>
 <h3 id='request-body-8'>Request Body</h3>
 <table><thead>
 <tr>
@@ -1468,13 +1500,13 @@ will be an error.</p>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/user/{userID}/rule
+<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/user/{userID}/rule
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1503,7 +1535,7 @@ will be an error.</p>
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-19'>HTTPS Request</h3>
-<p><code>GET https://api.goodcop.com/v1/user/{userID}/rule</code></p>
+<p><code>GET https://dev.goodcop.com/v1/user/{userID}/rule</code></p>
 <h3 id='url-params-7'>URL Params</h3>
 <table><thead>
 <tr>
@@ -1528,13 +1560,13 @@ will be an error.</p>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>PUT  https://api.goodcop.com/v1/user/{userID}/rule
+<pre class="highlight plaintext"><code>PUT  https://dev.goodcop.com/v1/user/{userID}/rule
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1577,7 +1609,7 @@ will be an error.</p>
     </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-20'>HTTPS Request</h3>
-<p><code>PUT https://api.goodcop.com/v1/user/{userID}/rule</code></p>
+<p><code>PUT https://dev.goodcop.com/v1/user/{userID}/rule</code></p>
 <h3 id='request-body-9'>Request Body</h3>
 <table><thead>
 <tr>
@@ -1618,13 +1650,13 @@ will be an error.</p>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://api.goodcop.com/v1/user/{userID}/rule
+<pre class="highlight plaintext"><code>DELETE  https://dev.goodcop.com/v1/user/{userID}/rule
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1662,7 +1694,7 @@ will be an error.</p>
     </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='https-request-21'>HTTPS Request</h3>
-<p><code>DELETE https://api.goodcop.com/v1/user/{userID}/rule</code></p>
+<p><code>DELETE https://dev.goodcop.com/v1/user/{userID}/rule</code></p>
 <h3 id='url-params-9'>URL Params</h3>
 <table><thead>
 <tr>
@@ -1687,13 +1719,13 @@ will be an error.</p>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>GET  https://api.goodcop.com/v1/user/{userID}/groups
+<pre class="highlight plaintext"><code>GET  https://dev.goodcop.com/v1/user/{userID}/groups
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/groups"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/groups"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -1747,7 +1779,7 @@ will be an error.</p>
 </span><span class="p">]</span><span class="w">
 
 </span></code></pre><h3 id='https-request-22'>HTTPS Request</h3>
-<p><code>GET https://api.goodcop.com/v1/user/{userID}/groups</code></p>
+<p><code>GET https://dev.goodcop.com/v1/user/{userID}/groups</code></p>
 <h3 id='url-params-10'>URL Params</h3>
 <table><thead>
 <tr>
