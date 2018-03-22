@@ -5,13 +5,13 @@
 > Definition
 
 ```
-POST  https://dev.goodcop.com/v1/tenant
+POST  https://[GOODCOP_URL]/v1/tenant
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/tenant"
+curl "https://[GOODCOP_URL]/v1/tenant"
   -X "POST"
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -59,7 +59,7 @@ The x-api-key header must be provided to create a tenant.
 
 ### HTTPS Request
 
-`POST https://dev.goodcop.com/v1/tenant`
+`POST https://[GOODCOP_URL]/v1/tenant`
 
 ### Request Body
 
@@ -81,13 +81,13 @@ Returns new tenant object if a valid authorization key and api key was provided,
 > Definition
 
 ```
-GET  https://dev.goodcop.com/v1/tenant/{tenantID}
+GET  https://[GOODCOP_URL]/v1/tenant/{tenantID}
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/tenant/{tenantID}"
+curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}"
   -X "GET"
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -119,7 +119,7 @@ Retrieves the details of a tenant. Provide the unique tenant ID and Goodcop will
 
 ### HTTPS Request
 
-`GET https://dev.goodcop.com/v1/tenant/{tenantID}`
+`GET https://[GOODCOP_URL]/v1/tenant/{tenantID}`
 
 ### URL Params
 
@@ -137,13 +137,13 @@ Returns tenant details if a valid authorization key, api key and valid indentifi
 > Definition
 
 ```
-GET  https://dev.goodcop.com/v1/tenant
+GET  https://[GOODCOP_URL]/v1/tenant
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/tenant"
+curl "https://[GOODCOP_URL]/v1/tenant"
   -X "GET"
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -179,7 +179,7 @@ Retrieves the details of a all tenants for a particular api.
 
 ### HTTPS Request
 
-`GET https://dev.goodcop.com/v1/tenant`
+`GET https://[GOODCOP_URL]/v1/tenant`
 
 
 ### Returns
@@ -191,13 +191,13 @@ Returns array of tenants if a valid authorization key, api key was provided, and
 > Definition
 
 ```
-DELETE  https://dev.goodcop.com/v1/tenant/{tenantID}
+DELETE  https://[GOODCOP_URL]/v1/tenant/{tenantID}
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/tenant/{tenantID}"
+curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -218,7 +218,7 @@ Deletes the tenant.
 
 ### HTTPS Request
 
-`DELETE https://dev.goodcop.com/v1/tenant/{tenantID}`
+`DELETE https://[GOODCOP_URL]/v1/tenant/{tenantID}`
 
 
 ### URL Params
@@ -237,13 +237,13 @@ Returns string message if a valid authorization key, api key was provided, and r
 > Definition
 
 ```
-GET  https://dev.goodcop.com/v1/tenant/{tenantID}/rule
+GET  https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/tenant/{tenantID}/rule"
+curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -270,7 +270,7 @@ Provide the unique tenant ID and Goodcop will return the list of all rules.
 
 ### HTTPS Request
 
-`GET https://dev.goodcop.com/v1/tenant/{tenantID}/rule`
+`GET https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule`
 
 ### URL Params
 
@@ -289,13 +289,13 @@ Returns rules object if a valid authorization key and a valid identifier was pro
 > Definition
 
 ```
-PUT  https://dev.goodcop.com/v1/tenant/{tenantID}/rule
+PUT  https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/tenant/{tenantID}/rule"
+curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -344,7 +344,7 @@ Retrives all rules of a tenants for a particular api.
 
 ### HTTPS Request
 
-`PUT https://dev.goodcop.com/v1/tenant/{tenantID}/rule`
+`PUT https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule`
 
 ### Request Body
 
@@ -370,13 +370,13 @@ Returns array of rules if a valid authorization key, api key was provided, and r
 > Definition
 
 ```
-DELETE  https://dev.goodcop.com/v1/tenant/{tenantID}/rule
+DELETE  https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/tenant/{tenantID}/rule"
+curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -419,7 +419,7 @@ Deletes the rules associated with the tenant.
 
 ### HTTPS Request
 
-`DELETE https://dev.goodcop.com/v1/tenant/{tenantID}/rule`
+`DELETE https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule`
 
 
 ### Request Body
@@ -444,13 +444,13 @@ Returns tenant object with deleted rules info if a valid authorization key, api 
 > Definition
 
 ```
-PUT  https://dev.goodcop.com/v1/tenant/{tenantID}/secret
+PUT  https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/tenant/{tenantID}/secret"
+curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -494,7 +494,7 @@ Retrives all rules of a tenants for a particular api.
 
 ### HTTPS Request
 
-`PUT https://dev.goodcop.com/v1/tenant/{tenantID}/secret`
+`PUT https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret`
 
 ### Request Body
 
@@ -518,13 +518,13 @@ Returns tenant object with updated secret info if a valid authorization key, api
 > Definition
 
 ```
-GET  https://dev.goodcop.com/v1/tenant/{tenantID}/secret
+GET  https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/tenant/{tenantID}/secret"
+curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret"
   -X "GET"
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -547,7 +547,7 @@ Provide the unique tenant ID and Goodcop will return the secret.
 
 ### HTTPS Request
 
-`GET https://dev.goodcop.com/v1/tenant/{tenantID}/secret`
+`GET https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret`
 
 ### URL Params
 
@@ -565,13 +565,13 @@ Returns secrets if a valid authorization key and a valid identifier was provided
 > Definition
 
 ```
-GET  https://dev.goodcop.com/v1/tenant/{tenantID}/meta
+GET  https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/tenant/{tenantID}/meta"
+curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta"
   -X "GET"
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -592,7 +592,7 @@ Provide the unique tenant ID and Goodcop will return the meta information.
 
 ### HTTPS Request
 
-`GET https://dev.goodcop.com/v1/tenant/{tenantID}/meta`
+`GET https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta`
 
 ### URL Params
 
@@ -611,13 +611,13 @@ Returns string meta if a valid authorization key and a valid identifier was prov
 > Definition
 
 ```
-PUT  https://dev.goodcop.com/v1/tenant/{tenantID}/meta
+PUT  https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/tenant/{tenantID}/meta"
+curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -661,7 +661,7 @@ Updated meta details of the tenant.
 
 ### HTTPS Request
 
-`PUT https://dev.goodcop.com/v1/tenant/{tenantID}/meta`
+`PUT https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta`
 
 ### Request Body
 
@@ -686,13 +686,13 @@ Returns tenant object with updated meta info if a valid authorization key, api k
 > Definition
 
 ```
-DELETE  https://dev.goodcop.com/v1/tenant/{tenantID}/meta
+DELETE  https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/tenant/{tenantID}/meta"
+curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -736,7 +736,7 @@ Deletes the meta associated with the tenant.
 
 ### HTTPS Request
 
-`DELETE https://dev.goodcop.com/v1/tenant/{tenantID}/meta`
+`DELETE https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta`
 
 
 ### URL Params

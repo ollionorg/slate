@@ -7,13 +7,13 @@ The API allows you to create, delete, and update your users with addition of soc
 > Definition
 
 ```
-POST  https://dev.goodcop.com/v1/user/signup
+POST  https://[GOODCOP_URL]/v1/user/signup
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user/signup"
+curl "https://[GOODCOP_URL]/v1/user/signup"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -49,7 +49,7 @@ Creates a new user object.
 
 ### HTTPS Request
 
-`POST https://dev.goodcop.com/v1/user/signup`
+`POST https://[GOODCOP_URL]/v1/user/signup`
 
 ### Request Body
 
@@ -76,13 +76,13 @@ Returns a user object if correct email and password was provided. The returned o
 > Definition
 
 ```
-POST  https://dev.goodcop.com/v1/user/signin/github
+POST  https://[GOODCOP_URL]/v1/user/signin/github
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user/signin/github"
+curl "https://[GOODCOP_URL]/v1/user/signin/github"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -103,7 +103,7 @@ Creates a new user object via github.
 
 ### HTTPS Request
 
-`POST https://dev.goodcop.com/v1/user/signin/github`
+`POST https://[GOODCOP_URL]/v1/user/signin/github`
 
 ### Returns
 
@@ -120,13 +120,13 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 > Definition
 
 ```
-POST  https://dev.goodcop.com/v1/user/signin/google
+POST  https://[GOODCOP_URL]/v1/user/signin/google
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user/signin/google"
+curl "https://[GOODCOP_URL]/v1/user/signin/google"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -147,7 +147,7 @@ Creates a new user object via google.
 
 ### HTTPS Request
 
-`POST https://dev.goodcop.com/v1/user/signin/google`
+`POST https://[GOODCOP_URL]/v1/user/signin/google`
 
 ### Returns
 
@@ -163,13 +163,13 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 > Definition
 
 ```
-POST  https://dev.goodcop.com/v1/user/signin/facebook
+POST  https://[GOODCOP_URL]/v1/user/signin/facebook
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user/signin/facebook"
+curl "https://[GOODCOP_URL]/v1/user/signin/facebook"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -190,7 +190,7 @@ Creates a new user object via facebook.
 
 ### HTTPS Request
 
-`POST https://dev.goodcop.com/v1/user/signin/facebook`
+`POST https://[GOODCOP_URL]/v1/user/signin/facebook`
 
 ### Returns
 
@@ -206,13 +206,13 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 > Definition
 
 ```
-POST  https://dev.goodcop.com/v1/user/signin/twitter
+POST  https://[GOODCOP_URL]/v1/user/signin/twitter
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user/signin/twitter"
+curl "https://[GOODCOP_URL]/v1/user/signin/twitter"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -233,7 +233,7 @@ Creates a new user object via twitter.
 
 ### HTTPS Request
 
-`POST https://dev.goodcop.com/v1/user/signin/twitter`
+`POST https://[GOODCOP_URL]/v1/user/signin/twitter`
 
 ### Returns
 
@@ -249,13 +249,13 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 > Definition
 
 ```
-POST  https://dev.goodcop.com/v1/user/signin/instagram
+POST  https://[GOODCOP_URL]/v1/user/signin/instagram
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user/signin/instagram"
+curl "https://[GOODCOP_URL]/v1/user/signin/instagram"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -276,7 +276,7 @@ Creates a new user object via instagram.
 
 ### HTTPS Request
 
-`POST https://dev.goodcop.com/v1/user/signin/instagram`
+`POST https://[GOODCOP_URL]/v1/user/signin/instagram`
 
 ### Returns
 
@@ -292,13 +292,13 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 > Definition
 
 ```
-POST  https://dev.goodcop.com/v1/user/magiclink
+POST  https://[GOODCOP_URL]/v1/user/magiclink
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user/magiclink"
+curl "https://[GOODCOP_URL]/v1/user/magiclink"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -322,7 +322,7 @@ Creates a new user object via email by creating a token that will allow user to 
 
 ### HTTPS Request
 
-`POST https://dev.goodcop.com/v1/signup/magiclink`
+`POST https://[GOODCOP_URL]/v1/signup/magiclink`
 
 ### Request Body
 
@@ -345,13 +345,13 @@ Returns a success message and an email will be sent to user with the magic link.
 > Definition
 
 ```
-POST  https://dev.goodcop.com/v1/user/signin/phone
+POST  https://[GOODCOP_URL]/v1/user/signin/phone
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user/signin/phone"
+curl "https://[GOODCOP_URL]/v1/user/signin/phone"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -375,7 +375,7 @@ Creates an one time password for user verfication.
 
 ### HTTPS Request
 
-`POST https://dev.goodcop.com/v1/user/signin/phone`
+`POST https://[GOODCOP_URL]/v1/user/signin/phone`
 
 ### Request Body
 
@@ -398,13 +398,13 @@ Returns a success message and an one time password will be sent to user to verif
 > Definition
 
 ```
-POST  https://dev.goodcop.com/v1/user/signin/phone/verify
+POST  https://[GOODCOP_URL]/v1/user/signin/phone/verify
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user/signin/phone/verify"
+curl "https://[GOODCOP_URL]/v1/user/signin/phone/verify"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -428,7 +428,7 @@ Creates a new user object after verifying the otp.
 
 ### HTTPS Request
 
-`POST https://dev.goodcop.com/v1/user/signin/phone/verify`
+`POST https://[GOODCOP_URL]/v1/user/signin/phone/verify`
 
 ### Request Body
 
@@ -451,13 +451,13 @@ Returns a user object if correct otp and phoneNumber was provided. The returned 
 > Definition
 
 ```
-POST  https://dev.goodcop.com/v1/user/login
+POST  https://[GOODCOP_URL]/v1/user/login
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user/login"
+curl "https://[GOODCOP_URL]/v1/user/login"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -494,7 +494,7 @@ LogIn the user.
 
 ### HTTPS Request
 
-`POST https://dev.goodcop.com/v1/user/login`
+`POST https://[GOODCOP_URL]/v1/user/login`
 
 ### Request Body
 
@@ -519,13 +519,13 @@ Returns a user object if correct email and password was provided. The returned o
 > Definition
 
 ```
-POST  https://dev.goodcop.com/v1/user/passwordChange
+POST  https://[GOODCOP_URL]/v1/user/passwordChange
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user/passwordChange"
+curl "https://[GOODCOP_URL]/v1/user/passwordChange"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -549,7 +549,7 @@ Change the password for the logged in user providing the oldpassword and new pas
 
 ### HTTPS Request
 
-`POST https://dev.goodcop.com/v1/user/passwordChange`
+`POST https://[GOODCOP_URL]/v1/user/passwordChange`
 
 ### Request Body
 
@@ -575,13 +575,13 @@ Returns a success message. If no user token was provided, incorrect passwords or
 > Definition
 
 ```
-GET  https://dev.goodcop.com/v1/user/{userID}
+GET  https://[GOODCOP_URL]/v1/user/{userID}
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"
+curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -613,7 +613,7 @@ Retrieves the details of an existing user. You need only supply the unique user 
 
 ### HTTPS Request
 
-`POST https://dev.goodcop.com/v1/user/{userID}`
+`POST https://[GOODCOP_URL]/v1/user/{userID}`
 
 ### URL Params
 
@@ -636,13 +636,13 @@ Returns a user object if a valid identifier was provided. If invalide user id wa
 > Definition
 
 ```
-GET  https://dev.goodcop.com/v1/getUser/{email}
+GET  https://[GOODCOP_URL]/v1/getUser/{email}
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/getUser/test@mail.com"
+curl "https://[GOODCOP_URL]/v1/getUser/test@mail.com"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -674,7 +674,7 @@ Retrieves the details of an existing user. You need only supply the unique email
 
 ### HTTPS Request
 
-`GET https://dev.goodcop.com/v1/getUser/{email}`
+`GET https://[GOODCOP_URL]/v1/getUser/{email}`
 
 ### URL Params
 
@@ -696,13 +696,13 @@ Returns a user object if a valid identifier was provided. If invalid email was p
 > Definition
 
 ```
-GET  https://dev.goodcop.com/v1/user
+GET  https://[GOODCOP_URL]/v1/user
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user"
+curl "https://[GOODCOP_URL]/v1/user"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -761,7 +761,7 @@ Retrieves the detailed list of all product users. The users are returned in desc
 
 ### HTTPS Request
 
-`GET https://dev.goodcop.com/v1/user`
+`GET https://[GOODCOP_URL]/v1/user`
 
 ### Returns
 
@@ -776,13 +776,13 @@ Returns a list of user objects. If any other backend failures an appropriate err
 > Definition
 
 ```
-DELETE  https://dev.goodcop.com/v1/user/{userID}
+DELETE  https://[GOODCOP_URL]/v1/user/{userID}
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"
+curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json"
@@ -801,7 +801,7 @@ Deletes a user from the product. The user is not deleted permanently.
 
 ### HTTPS Request
 
-`DELETE https://dev.goodcop.com/v1/user/{userID}`
+`DELETE https://[GOODCOP_URL]/v1/user/{userID}`
 
 ### URL Params
 
@@ -823,13 +823,13 @@ Returns a message on success. If the user ID does not exist an appropriate error
 > Definition
 
 ```
-GET  https://dev.goodcop.com/v1/user/{userID}/groups
+GET  https://[GOODCOP_URL]/v1/user/{userID}/groups
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/groups"
+curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/groups"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -885,7 +885,7 @@ Retrieves the group details provided the user ID.
 
 ### HTTPS Request
 
-`GET https://dev.goodcop.com/v1/user/{userID}/groups`
+`GET https://[GOODCOP_URL]/v1/user/{userID}/groups`
 
 ### URL Params
 
@@ -908,13 +908,13 @@ Returns an array of group objects. If invalid user ID or any other backend failu
 > Definition
 
 ```
-GET  https://dev.goodcop.com/v1/user/{userID}/meta
+GET  https://[GOODCOP_URL]/v1/user/{userID}/meta
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/meta"
+curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/meta"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -932,7 +932,7 @@ Retrieves the meta details provided the user ID.
 
 ### HTTPS Request
 
-`GET https://dev.goodcop.com/v1/user/{userID}/meta`
+`GET https://[GOODCOP_URL]/v1/user/{userID}/meta`
 
 ### URL Params
 
@@ -957,13 +957,13 @@ Returns meta string. If invalid user ID or any other backend failures an appropr
 > Definition
 
 ```
-PUT  https://dev.goodcop.com/v1/user/{userID}/meta
+PUT  https://[GOODCOP_URL]/v1/user/{userID}/meta
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/meta"
+curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/meta"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -1007,7 +1007,7 @@ Updates the meta by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
-`PUT https://dev.goodcop.com/v1/user/{userID}/meta`
+`PUT https://[GOODCOP_URL]/v1/user/{userID}/meta`
 
 ### Request Body
 
@@ -1035,13 +1035,13 @@ Returns user object with updated meta. If invalid user ID or any other backend f
 > Definition
 
 ```
-GET  https://dev.goodcop.com/v1/user/{userID}/rule
+GET  https://[GOODCOP_URL]/v1/user/{userID}/rule
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"
+curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -1076,7 +1076,7 @@ Retrieves the details of all user rules.
 
 ### HTTPS Request
 
-`GET https://dev.goodcop.com/v1/user/{userID}/rule`
+`GET https://[GOODCOP_URL]/v1/user/{userID}/rule`
 
 ### URL Params
 
@@ -1098,13 +1098,13 @@ Returns the list of user rules. If invalid user ID or any other backend failures
 > Definition
 
 ```
-PUT  https://dev.goodcop.com/v1/user/{userID}/rule
+PUT  https://[GOODCOP_URL]/v1/user/{userID}/rule
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"
+curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -1160,7 +1160,7 @@ Updates the rules by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
-`PUT https://dev.goodcop.com/v1/user/{userID}/rule`
+`PUT https://[GOODCOP_URL]/v1/user/{userID}/rule`
 
 ### Request Body
 
@@ -1189,13 +1189,13 @@ Returns user object with updated rules. If invalid user ID or any other backend 
 > Definition
 
 ```
-DELETE  https://dev.goodcop.com/v1/user/{userID}/rule
+DELETE  https://[GOODCOP_URL]/v1/user/{userID}/rule
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"
+curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -1246,7 +1246,7 @@ Deletes the rules from the user.
 
 ### HTTPS Request
 
-`DELETE https://dev.goodcop.com/v1/user/{userID}/rule`
+`DELETE https://[GOODCOP_URL]/v1/user/{userID}/rule`
 
 ### URL Params
 
@@ -1269,13 +1269,13 @@ Returns user object with updated rules. If invalid user ID or any other backend 
 > Definition
 
 ```
-GET  https://dev.goodcop.com/v1/user/{userID}/groups
+GET  https://[GOODCOP_URL]/v1/user/{userID}/groups
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/groups"
+curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/groups"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -1335,7 +1335,7 @@ Retrieves the details of all groups for a user.
 
 ### HTTPS Request
 
-`GET https://dev.goodcop.com/v1/user/{userID}/groups`
+`GET https://[GOODCOP_URL]/v1/user/{userID}/groups`
 
 ### URL Params
 

@@ -5,13 +5,13 @@
 > Definition
 
 ```
-POST  https://dev.goodcop.cldcvr.com/v1/org
+POST  https://[GOODCOP_URL]/v1/org
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.cldcvr.com/v1/org"
+curl "https://[GOODCOP_URL]/v1/org"
   -X  POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -19,18 +19,18 @@ curl "https://dev.goodcop.cldcvr.com/v1/org"
   -d '{
 	"name":"testorg",
 	"meta":"test meta",
-	"contactdetails":"+918879777777"
+	"contactdetails":"customer_detail_in_string"
 }'
 ```
 
-> Example Response
+> Example Response <code style="background:#4CAF50;"> 201</code>
 
 ```json
 {
-    "id": 5642425909379072,
+    "id": 12345668787989,
     "name": "testorg",
     "meta": "test meta",
-    "contactDetails": "+918879777777",
+    "contactDetails": "customer_detail_in_string",
     "CreatedAt": "2018-03-21T17:03:16.024791+05:30",
     "UpdatedAt": "2018-03-21T17:03:16.024793+05:30"
 }
@@ -41,7 +41,7 @@ Creates a organization
 
 ### HTTPS Request
 
-`POST https://api.goodcop.com/v1/org`
+`POST https://[GOODCOP_URL]/v1/org`
 
 ### Request Body
 
@@ -54,20 +54,26 @@ contactDetails | optional | string | contact details to be stored for the org
 
 ### Returns
 
-Returns new org object if a valid authorization key provided, and returns an error otherwise.
+Returns new org object if a valid authorization key provided, and returns an error otherwise, If Organization already exist with the name provided, it will throw an error 
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
+2.  <code style="background:#FFC107;"> 404 </code> `Name is required field`
+3.  <code style="background:#FF0000;"> 500 </code> `Organization Already Exist with the name provided`
 
 ## List Org
 
 > Definition
 
 ```
-GET  https://api.goodcop.com/v1/org
+GET  https://[GOODCOP_URL]/v1/org
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/org"
+curl "https://[GOODCOP_URL]/v1/org"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -78,27 +84,27 @@ curl "https://api.goodcop.com/v1/org"
 
 ```json
 {
-    "Organizations": [
+    "orgs": [
         {
-            "id": 5649353691627520,
-            "name": "test-org",
-            "meta": "",
-            "contactDetails": "",
-            "CreatedAt": "2018-03-19T15:32:22.677154+05:30",
-            "UpdatedAt": "2018-03-19T15:32:22.677154+05:30"
-        },
-        {
-            "id": 5642425909379072,
+            "id": 12345668787989,
             "name": "testorg",
             "meta": "test meta",
-            "contactDetails": "+918879777777",
+            "contactDetails": "customer_detail_in_string",
             "CreatedAt": "2018-03-21T17:03:16.024791+05:30",
             "UpdatedAt": "2018-03-21T17:03:16.024793+05:30"
+        },
+        {
+            "id": 56424259099072,
+            "name": "testorg2",
+            "meta": "",
+            "contactDetails": "",
+            "CreatedAt": "2018-03-21T17:03:18.024791+05:30",
+            "UpdatedAt": "2018-03-21T17:03:18.024793+05:30"
         },
     ]
 }
 ```
-Goodcop will return the all organization information for the product.
+Goodcop will return the all organization inside a tenant, will be accessible to each product for that tenant
 
 ### HTTPS Request
 
