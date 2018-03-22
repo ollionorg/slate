@@ -554,17 +554,19 @@ GoodCop expects for the Authorization key to be included in all API requests to 
 <aside style="background:#5bc0de;">
 You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=</code> with your product authorization key.
 </aside>
-<h1 id='user'>User</h1><h2 id='sign-up-using-email-and-password'>Sign Up Using Email and Password</h2>
+<h1 id='user'>User</h1>
+<p>The API allows you to create, delete, and update your users with addition of socail providers. You can retrieve individual users as well as a list of all your users. Also the api gives ability to set authorization using the rules object.</p>
+<h2 id='sign-up-using-email-and-password'>Sign Up Using Email and Password</h2>
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/signup
+<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/user/signup
 
 </code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/signup"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/signup"</span>
   -X POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -587,9 +589,9 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
     </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>Creates a user object provided the email and password in the request body and returns the user object.</p>
+<p>Creates a new user object.</p>
 <h3 id='https-request'>HTTPS Request</h3>
-<p><code>POST https://api.goodcop.com/v1/signup</code></p>
+<p><code>POST https://api.goodcop.com/v1/user/signup</code></p>
 <h3 id='request-body'>Request Body</h3>
 <table><thead>
 <tr>
@@ -613,7 +615,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </tr>
 </tbody></table>
 <h3 id='returns'>Returns</h3>
-<p>Returns user object if correct email and password was provided, and returns an error otherwise.</p>
+<p>Returns a user object if correct email and password was provided. The returned object will have information about the rules, groups, metadata. If no email or password was provided, same email which already exists or any other backend validation failes an appropriate error message will be returned with an error code associated with it.</p>
 <h2 id='signin-usinggithub'>SignIn UsingGitHub</h2>
 <blockquote>
 <p>Definition</p>
