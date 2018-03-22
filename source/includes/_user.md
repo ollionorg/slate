@@ -2,7 +2,7 @@
 
 The API allows you to create, delete, and update your users with addition of social providers and passwordless authentication using magic link. You can retrieve individual users as well as a list of all your users. Also the api gives ability to set authorization level privileges using the rules object.
 
-## Signup using eamil and password
+## Signup using email and password
 
 > Definition
 
