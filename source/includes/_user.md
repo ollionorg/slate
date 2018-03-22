@@ -24,7 +24,7 @@ curl "https://dev.goodcop.com/v1/user/signup"
     }'
 ```
 
-> Example Response
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 {
@@ -64,11 +64,11 @@ Returns a user object if correct email and password was provided. The returned o
 
 ### Error Messages
 
-1.  `Invalid product API key`
-2.  `Either email or password is missing`
-3.  `Email is not valid`
-4.  `Password must be atleast 7 characters long`
-5.  `You are already registered with product1 and product2`
+1.  <code style="background:orange;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:orange;"> 404 </code> `Either email or password is missing`
+3.  <code style="background:orange;"> 404 </code> `Email is not valid`
+4.  <code style="background:orange;"> 404 </code> `Password must be atleast 7 characters long`
+5.  <code style="background:orange;"> 404 </code> `You are already registered with product1 and product2`
 
 
 ## SignIn using github
@@ -89,7 +89,7 @@ curl "https://dev.goodcop.com/v1/user/signin/github"
   -H "Device-Token: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 
@@ -111,8 +111,8 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 
 ### Error Messages
 
-1.  `Invalid product API key`
-2.  `No Callback is set for your product, please set that first`
+1.  <code style="background:orange;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:orange;"> 404 </code> `No Callback is set for your product, please set that first`
 
 ## SignIn using facebook
 
@@ -133,7 +133,7 @@ curl "https://dev.goodcop.com/v1/user/signin/google"
   -H "Device-Token: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 
@@ -155,8 +155,8 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 
 ### Error Messages
 
-1.  `Invalid product API key`
-2.  `No Callback is set for your product, please set that first`
+1.  <code style="background:orange;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:orange;"> 404 </code> `No Callback is set for your product, please set that first`
 
 ## SignIn using facebook
 
@@ -176,7 +176,7 @@ curl "https://dev.goodcop.com/v1/user/signin/facebook"
   -H "Device-Token: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 
@@ -198,8 +198,8 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 
 ### Error Messages
 
-1.  `Invalid product API key`
-2.  `No Callback is set for your product, please set that first`
+1.  <code style="background:orange;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:orange;"> 404 </code> `No Callback is set for your product, please set that first`
 
 ## SignIn using twitter
 
@@ -219,7 +219,7 @@ curl "https://dev.goodcop.com/v1/user/signin/twitter"
   -H "Device-Token: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 
@@ -241,8 +241,8 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 
 ### Error Messages
 
-1.  `Invalid product API key`
-2.  `No Callback is set for your product, please set that first`
+1.  <code style="background:orange;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:orange;"> 404 </code> `No Callback is set for your product, please set that first`
 
 ## SignIn using instagram
 
@@ -262,7 +262,7 @@ curl "https://dev.goodcop.com/v1/user/signin/instagram"
   -H "Device-Token: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 
@@ -284,8 +284,8 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 
 ### Error Messages
 
-1.  `Invalid product API key`
-2.  `No Callback is set for your product, please set that first`
+1.  <code style="background:orange;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:orange;"> 404 </code> `No Callback is set for your product, please set that first`
 
 ## SignIn using magiclink
 
@@ -308,7 +308,7 @@ curl "https://dev.goodcop.com/v1/user/magiclink"
     }'
 ```
 
-> Example Response
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 {
@@ -336,8 +336,8 @@ Returns a success message and an email will be sent to user with the magic link.
 
 ### Error Messages
 
-1.  `Invalid product API key`
-2.  `Email is missing`
+1.  <code style="background:orange;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:orange;"> 404 </code> `Email is missing`
 
 
 ## SignIn using phonenumber
@@ -361,7 +361,7 @@ curl "https://dev.goodcop.com/v1/user/signin/phone"
     }'
 ```
 
-> Example Response
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 
@@ -389,9 +389,9 @@ Returns a success message and an one time password will be sent to user to verif
 
 ### Error Messages
 
-1.  `Invalid product API key`
-2.  `Phone number is missing`
-3.  `SMS sending error`
+1.  <code style="background:orange;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:orange;"> 404 </code> `Phone number is missing`
+3.  <code style="background:orange;"> 404 </code> `SMS sending error`
 
 ## Verfiy phonenumber
 
@@ -415,7 +415,7 @@ curl "https://dev.goodcop.com/v1/user/signin/phone/verify"
     }'
 ```
 
-> Example Response
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 {
@@ -443,8 +443,8 @@ Returns a user object if correct otp and phoneNumber was provided. The returned 
 
 ### Error Messages
 
-1.  `Invalid product API key`
-2.  `Phone number or OTP missing`
+1.  <code style="background:orange;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:orange;"> 404 </code> `Phone number or OTP missing`
 
 ## Login
 
@@ -468,7 +468,7 @@ curl "https://dev.goodcop.com/v1/user/login"
     }'
 ```
 
-> Example Response
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 {
@@ -509,10 +509,10 @@ Returns a user object if correct email and password was provided. The returned o
 
 ### Error Messages
 
-1.  `Invalid product API key`
-2.  `Either email or password is missing`
-3.  `Password must be atleast 7 characters long`
-3.  `No Password,Please Set a password after signing in using magic link`
+1.  <code style="background:orange;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:orange;"> 404 </code> `Either email or password is missing`
+3.  <code style="background:orange;"> 404 </code> `Password must be atleast 7 characters long`
+3.  <code style="background:orange;"> 404 </code> `No Password,Please Set a password after signing in using magic link`
 
 ## Change password
 
@@ -537,7 +537,7 @@ curl "https://dev.goodcop.com/v1/user/passwordChange"
     }'
 ```
 
-> Example Response
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 {
@@ -564,10 +564,10 @@ Returns a success message. If no user token was provided, incorrect passwords or
 
 ### Error Messages
 
-1.  `Invalid product API key`
-2.  `user not found`
-3.  `Wrong Old Password`
-4.  `Password must be atleast 7 characters long`
+1.  <code style="background:orange;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:orange;"> 404 </code> `User not found`
+3.  <code style="background:orange;"> 404 </code> `Wrong Old Password`
+4.  <code style="background:orange;"> 404 </code> `Password must be atleast 7 characters long`
 
 
 ## Get user by Id
@@ -588,7 +588,7 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
   -H "Device-Token: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 {
@@ -627,8 +627,8 @@ Returns a user object if a valid identifier was provided. If invalide user id wa
 
 ### Error Messages
 
-1.  `Invalid product API key`
-2.  `User not found`
+1.  <code style="background:orange;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:orange;"> 404 </code> `User not found`
 
 ## Get user By email
 
@@ -649,7 +649,7 @@ curl "https://dev.goodcop.com/v1/getUser/test@mail.com"
   -H "Device-Token: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 {
@@ -688,8 +688,8 @@ Returns a user object if a valid identifier was provided. If invalid email was p
 
 ### Error Messages
 
-1.  `Invalid product API key`
-2.  `Email is not valid`
+1.  <code style="background:orange;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:orange;"> 404 </code> `Email is not valid`
 
 ## List all users
 
@@ -708,7 +708,7 @@ curl "https://dev.goodcop.com/v1/user"
   -H "Content-Type: application/json" \
 ```
 
-> Example Response
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 {
@@ -769,7 +769,7 @@ Returns a list of user objects. If any other backend failures an appropriate err
 
 ### Error Messages
 
-1.  `Invalid product API key`
+1.  <code style="background:orange;"> 401 </code> `Invalid product API key` 
 
 ## Delete user by Id
 
@@ -788,7 +788,7 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
   -H "Content-Type: application/json"
 ```
 
-> Example Response
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 {
@@ -815,8 +815,8 @@ Returns a message on success. If the user ID does not exist an appropriate error
 
 ### Error Messages
 
-1.  `Invalid product API key`
-2.  `User not found`
+1.  <code style="background:orange;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:orange;"> 404 </code> `User not found`
 
 ## Get Group Details By ID
 
@@ -836,7 +836,7 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
   -H "Device-Token: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 [
@@ -899,8 +899,8 @@ Returns an array of group objects. If invalid user ID or any other backend failu
 
 ### Error Messages
 
-1.  `Invalid product API key`
-2.  `User not found`
+1.  <code style="background:orange;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:orange;"> 404 </code> `User not found`
 
 
 ## Get User Meta By ID
@@ -921,7 +921,7 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
   -H "Device-Token: test_56789657567"
 ```
 
-> Example Response <code style="background:green;"> 200 OK</code>
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 {
@@ -947,8 +947,8 @@ Returns meta string. If invalid user ID or any other backend failures an appropr
 
 ### Error Messages
 
-1.  <code style="background:orange;"> 401 Unauthorized </code> `Invalid product API key` 
-2.  <code style="background:orange;"> 400 Bad Request </code> `User not found`
+1.  <code style="background:orange;"> 401 </code> <code style="background:orange;"> 401 </code> `Invalid product API key`  
+2.  <code style="background:orange;"> 400 </code> `User not found`
 
 
 
@@ -975,7 +975,7 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
     }'
 ```
 
-> Example Response
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 {
@@ -1038,7 +1038,7 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
   -H "Device-Token: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 {
@@ -1101,7 +1101,7 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
     }]'
 ```
 
-> Example Response
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 {
@@ -1180,7 +1180,7 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
     }]'
 ```
 
-> Example Response
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 {
@@ -1243,7 +1243,7 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
   -H "Device-Token: test_56789657567"
 ```
 
-> Example Response
+> Example Response <code style="background:#c1ef65;"> 200</code>
 
 ```json
 [
