@@ -153,7 +153,7 @@ curl "https://api.goodcop.com/v1/user/signin/facebook"
 ```json
 
 {
-    "redirectUrl": "to be updated"
+    "redirectUrl": "https://www.facebook.com/dialog/oauth?access_type=online&approval_prompt=auto&client_id=1715535545188089&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fv1%2Fcallback%2Ffacebook&response_type=code&scope=email&state=eyJib2R5Ijoie1xuXHRcImVtYWlsXCI6IFwidmFpYmhhdkBjbG91ZGNvdmVyLmluXCJcbn0iLCJkZXZpY2VJZCI6IiIsInByb2R1Y3RUb2tlbiI6IkdRU05VQWpFUTNnU19uVXl6NXhvSUwwVlh3ZG9EUnRyajBLNkI1blJQcjQ9IiwidXNlclRva2VuIjoiIn0%3D_b88554542246d0c1a092a16c66ec960f4972364d"
 }
 
 ```
@@ -229,7 +229,7 @@ curl "https://api.goodcop.com/v1/user/signin/instagram"
 ```json
 
 {
-    "redirectUrl": "to be updated"
+    "redirectUrl": "https://api.instagram.com/oauth/authorize?access_type=online&approval_prompt=auto&client_id=71e9de2416cf498285fdce2414fcba79&redirect_uri=http%3A%2F%2F127.0.0.1%3A8080%2Fv1%2Fcallback%2Finstagram&response_type=code&scope=basic&state=eyJib2R5IjoiIiwiZGV2aWNlSWQiOiIiLCJwcm9kdWN0VG9rZW4iOiJHUVNOVUFqRVEzZ1NfblV5ejV4b0lMMFZYd2RvRFJ0cmowSzZCNW5SUHI0PSIsInVzZXJUb2tlbiI6IiJ9_17061fa5b0f196ab26b3ca2ca44259b4353a42dd"
 }
 
 ```
@@ -314,6 +314,7 @@ curl "https://api.goodcop.com/v1/user/signin/phone"
 > Example Response
 
 ```json
+
 {
 	"message": "OTP sent to your mobile successfully"
 }
