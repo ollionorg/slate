@@ -577,7 +577,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
     }'</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span><span class="p">,</span><span class="w">
@@ -625,11 +625,11 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>Returns a user object if correct email and password was provided. The returned object will have information about the rules, groups, metadata. If no email or password was provided, same email which already exists or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages'>Error Messages</h3>
 <ol>
-<li> <code>Invalid product API key</code></li>
-<li> <code>Either email or password is missing</code></li>
-<li> <code>Email is not valid</code></li>
-<li> <code>Password must be atleast 7 characters long</code></li>
-<li> <code>You are already registered with product1 and product2</code></li>
+<li> <code style="background:orange;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:orange;"> 404 </code> <code>Either email or password is missing</code></li>
+<li> <code style="background:orange;"> 404 </code> <code>Email is not valid</code></li>
+<li> <code style="background:orange;"> 404 </code> <code>Password must be atleast 7 characters long</code></li>
+<li> <code style="background:orange;"> 404 </code> <code>You are already registered with product1 and product2</code></li>
 </ol>
 <h2 id='signin-using-github'>SignIn using github</h2>
 <blockquote>
@@ -648,7 +648,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
   -H <span class="s2">"Device-Token: test_56789657567"</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="w">
 </span><span class="p">{</span><span class="w">
@@ -663,8 +663,8 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>Returns a redirect url. The redirect url will be used to authenticate the user using github. If the user is successfully authenticated using github, goodcop will redirect to the product callback. If no callback is set by the product, social auth provider failure or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-2'>Error Messages</h3>
 <ol>
-<li> <code>Invalid product API key</code></li>
-<li> <code>No Callback is set for your product, please set that first</code></li>
+<li> <code style="background:orange;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:orange;"> 404 </code> <code>No Callback is set for your product, please set that first</code></li>
 </ol>
 <h2 id='signin-using-facebook'>SignIn using facebook</h2>
 <blockquote>
@@ -683,7 +683,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
   -H <span class="s2">"Device-Token: test_56789657567"</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="w">
 </span><span class="p">{</span><span class="w">
@@ -698,8 +698,8 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>Returns a redirect url. The redirect url will be used to authenticate the user using google. If the user is successfully authenticated using google, goodcop will redirect to the product callback. If no callback is set by the product, social auth provider failure or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-3'>Error Messages</h3>
 <ol>
-<li> <code>Invalid product API key</code></li>
-<li> <code>No Callback is set for your product, please set that first</code></li>
+<li> <code style="background:orange;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:orange;"> 404 </code> <code>No Callback is set for your product, please set that first</code></li>
 </ol>
 <h2 id='signin-using-facebook-2'>SignIn using facebook</h2>
 <blockquote>
@@ -718,7 +718,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
   -H <span class="s2">"Device-Token: test_56789657567"</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="w">
 </span><span class="p">{</span><span class="w">
@@ -733,8 +733,8 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>Returns a redirect url. The redirect url will be used to authenticate the user using facebook. If the user is successfully authenticated using facebook, goodcop will redirect to the product callback. If no callback is set by the product, social auth provider failure or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-4'>Error Messages</h3>
 <ol>
-<li> <code>Invalid product API key</code></li>
-<li> <code>No Callback is set for your product, please set that first</code></li>
+<li> <code style="background:orange;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:orange;"> 404 </code> <code>No Callback is set for your product, please set that first</code></li>
 </ol>
 <h2 id='signin-using-twitter'>SignIn using twitter</h2>
 <blockquote>
@@ -753,7 +753,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
   -H <span class="s2">"Device-Token: test_56789657567"</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="w">
 </span><span class="p">{</span><span class="w">
@@ -768,8 +768,8 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>Returns a redirect url. The redirect url will be used to authenticate the user using twitter. If the user is successfully authenticated using twitter, goodcop will redirect to the product callback. If no callback is set by the product, social auth provider failure or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-5'>Error Messages</h3>
 <ol>
-<li> <code>Invalid product API key</code></li>
-<li> <code>No Callback is set for your product, please set that first</code></li>
+<li> <code style="background:orange;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:orange;"> 404 </code> <code>No Callback is set for your product, please set that first</code></li>
 </ol>
 <h2 id='signin-using-instagram'>SignIn using instagram</h2>
 <blockquote>
@@ -788,7 +788,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
   -H <span class="s2">"Device-Token: test_56789657567"</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="w">
 </span><span class="p">{</span><span class="w">
@@ -803,8 +803,8 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>Returns a redirect url. The redirect url will be used to authenticate the user using instagram. If the user is successfully authenticated using instagram, goodcop will redirect to the product callback. If no callback is set by the product, social auth provider failure or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-6'>Error Messages</h3>
 <ol>
-<li> <code>Invalid product API key</code></li>
-<li> <code>No Callback is set for your product, please set that first</code></li>
+<li> <code style="background:orange;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:orange;"> 404 </code> <code>No Callback is set for your product, please set that first</code></li>
 </ol>
 <h2 id='signin-using-magiclink'>SignIn using magiclink</h2>
 <blockquote>
@@ -826,7 +826,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
     }'</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Magic link sent to email successfully"</span><span class="w">
@@ -856,8 +856,8 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>Returns a success message and an email will be sent to user with the magic link. Once user clicks on magic link goodcop will redirect to the product callback. If no email was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-7'>Error Messages</h3>
 <ol>
-<li> <code>Invalid product API key</code></li>
-<li> <code>Email is missing</code></li>
+<li> <code style="background:orange;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:orange;"> 404 </code> <code>Email is missing</code></li>
 </ol>
 <h2 id='signin-using-phonenumber'>SignIn using phonenumber</h2>
 <blockquote>
@@ -879,7 +879,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
     }'</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="w">
 </span><span class="p">{</span><span class="w">
@@ -910,9 +910,9 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>Returns a success message and an one time password will be sent to user to verify.If no email was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-8'>Error Messages</h3>
 <ol>
-<li> <code>Invalid product API key</code></li>
-<li> <code>Phone number is missing</code></li>
-<li> <code>SMS sending error</code></li>
+<li> <code style="background:orange;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:orange;"> 404 </code> <code>Phone number is missing</code></li>
+<li> <code style="background:orange;"> 404 </code> <code>SMS sending error</code></li>
 </ol>
 <h2 id='verfiy-phonenumber'>Verfiy phonenumber</h2>
 <blockquote>
@@ -935,7 +935,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
     }'</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"to be updated"</span><span class="w">
@@ -971,8 +971,8 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>Returns a user object if correct otp and phoneNumber was provided. The returned object will have user details with phone number and token. If no otp or phoneNumber was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-9'>Error Messages</h3>
 <ol>
-<li> <code>Invalid product API key</code></li>
-<li> <code>Phone number or OTP missing</code></li>
+<li> <code style="background:orange;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:orange;"> 404 </code> <code>Phone number or OTP missing</code></li>
 </ol>
 <h2 id='login'>Login</h2>
 <blockquote>
@@ -995,7 +995,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
     }'</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span><span class="p">,</span><span class="w">
@@ -1044,10 +1044,10 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>Returns a user object if correct email and password was provided. The returned object will have information about the rules, groups, metadata. If no email or password was provided, incorrect passowrd/email validation or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-10'>Error Messages</h3>
 <ol>
-<li> <code>Invalid product API key</code></li>
-<li> <code>Either email or password is missing</code></li>
-<li> <code>Password must be atleast 7 characters long</code></li>
-<li> <code>No Password,Please Set a password after signing in using magic link</code></li>
+<li> <code style="background:orange;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:orange;"> 404 </code> <code>Either email or password is missing</code></li>
+<li> <code style="background:orange;"> 404 </code> <code>Password must be atleast 7 characters long</code></li>
+<li> <code style="background:orange;"> 404 </code> <code>No Password,Please Set a password after signing in using magic link</code></li>
 </ol>
 <h2 id='change-password'>Change password</h2>
 <blockquote>
@@ -1071,7 +1071,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
     }'</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
    </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"Password Changed Successfully"</span><span class="w">
@@ -1106,10 +1106,10 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>Returns a success message. If no user token was provided, incorrect passwords or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-11'>Error Messages</h3>
 <ol>
-<li> <code>Invalid product API key</code></li>
-<li> <code>user not found</code></li>
-<li> <code>Wrong Old Password</code></li>
-<li> <code>Password must be atleast 7 characters long</code></li>
+<li> <code style="background:orange;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:orange;"> 404 </code> <code>User not found</code></li>
+<li> <code style="background:orange;"> 404 </code> <code>Wrong Old Password</code></li>
+<li> <code style="background:orange;"> 404 </code> <code>Password must be atleast 7 characters long</code></li>
 </ol>
 <h2 id='get-user-by-id'>Get user by Id</h2>
 <blockquote>
@@ -1128,7 +1128,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
   -H <span class="s2">"Device-Token: test_56789657567"</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span><span class="p">,</span><span class="w">
@@ -1170,8 +1170,8 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>Returns a user object if a valid identifier was provided. If invalide user id was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-12'>Error Messages</h3>
 <ol>
-<li> <code>Invalid product API key</code></li>
-<li> <code>User not found</code></li>
+<li> <code style="background:orange;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:orange;"> 404 </code> <code>User not found</code></li>
 </ol>
 <h2 id='get-user-by-email'>Get user By email</h2>
 <blockquote>
@@ -1190,7 +1190,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
   -H <span class="s2">"Device-Token: test_56789657567"</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span><span class="p">,</span><span class="w">
@@ -1232,8 +1232,8 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>Returns a user object if a valid identifier was provided. If invalid email was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-13'>Error Messages</h3>
 <ol>
-<li> <code>Invalid product API key</code></li>
-<li> <code>Email is not valid</code></li>
+<li> <code style="background:orange;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:orange;"> 404 </code> <code>Email is not valid</code></li>
 </ol>
 <h2 id='list-all-users'>List all users</h2>
 <blockquote>
@@ -1251,7 +1251,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
   -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1306,7 +1306,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>Returns a list of user objects. If any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-14'>Error Messages</h3>
 <ol>
-<li> <code>Invalid product API key</code></li>
+<li> <code style="background:orange;"> 401 </code> <code>Invalid product API key</code> </li>
 </ol>
 <h2 id='delete-user-by-id'>Delete user by Id</h2>
 <blockquote>
@@ -1324,7 +1324,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
   -H <span class="s2">"Content-Type: application/json"</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User deleted successfully"</span><span class="w">
@@ -1354,8 +1354,8 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>Returns a message on success. If the user ID does not exist an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-15'>Error Messages</h3>
 <ol>
-<li> <code>Invalid product API key</code></li>
-<li> <code>User not found</code></li>
+<li> <code style="background:orange;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:orange;"> 404 </code> <code>User not found</code></li>
 </ol>
 <h2 id='get-group-details-by-id'>Get Group Details By ID</h2>
 <blockquote>
@@ -1374,7 +1374,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
   -H <span class="s2">"Device-Token: test_56789657567"</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -1440,8 +1440,8 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>Returns an array of group objects. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-16'>Error Messages</h3>
 <ol>
-<li> <code>Invalid product API key</code></li>
-<li> <code>User not found</code></li>
+<li> <code style="background:orange;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:orange;"> 404 </code> <code>User not found</code></li>
 </ol>
 <h2 id='get-user-meta-by-id'>Get User Meta By ID</h2>
 <blockquote>
@@ -1460,7 +1460,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
   -H <span class="s2">"Device-Token: test_56789657567"</span>
 </code></pre>
 <blockquote>
-<p>Example Response <code style="background:green;"> 200 OK</code></p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"storing test meta info"</span><span class="p">,</span><span class="w">
@@ -1489,8 +1489,8 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>Returns meta string. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-17'>Error Messages</h3>
 <ol>
-<li> <code style="background:orange;"> 401 Unauthorized </code> <code>Invalid product API key</code> </li>
-<li> <code style="background:orange;"> 400 Bad Request </code> <code>User not found</code></li>
+<li> <code style="background:orange;"> 401 </code> <code style="background:orange;"> 401 </code> <code>Invalid product API key</code><br></li>
+<li> <code style="background:orange;"> 400 </code> <code>User not found</code></li>
 </ol>
 <h2 id='update-user-meta-by-id'>Update User Meta By ID</h2>
 <p>Provide the unique user ID and Goodcop will return the meta details.</p>
@@ -1514,7 +1514,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
     }'</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span><span class="p">,</span><span class="w">
@@ -1589,7 +1589,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
   -H <span class="s2">"Device-Token: test_56789657567"</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1654,7 +1654,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
     }]'</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span><span class="p">,</span><span class="w">
@@ -1744,7 +1744,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
     }]'</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span><span class="p">,</span><span class="w">
@@ -1808,7 +1808,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
   -H <span class="s2">"Device-Token: test_56789657567"</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:#c1ef65;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
