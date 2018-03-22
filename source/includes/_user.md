@@ -947,7 +947,7 @@ Returns meta string. If invalid user ID or any other backend failures an appropr
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> <code style="background:#FFC107;"> 401 </code> `Invalid product API key`  
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key`  
 2.  <code style="background:#FFC107;"> 400 </code> `User not found`
 
 
@@ -1090,7 +1090,7 @@ Returns the list of user rules. If invalid user ID or any other backend failures
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> <code style="background:#FFC107;"> 401 </code> `Invalid product API key`  
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key`  
 2.  <code style="background:#FFC107;"> 400 </code> `User not found`
 
 ## Update User Rules By ID
@@ -1180,7 +1180,7 @@ Returns user object with updated rules. If invalid user ID or any other backend 
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> <code style="background:#FFC107;"> 401 </code> `Invalid product API key`  
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key`  
 2.  <code style="background:#FFC107;"> 400 </code> `User not found`
 
 
@@ -1260,7 +1260,7 @@ Returns user object with updated rules. If invalid user ID or any other backend 
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> <code style="background:#FFC107;"> 401 </code> `Invalid product API key`  
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key`  
 2.  <code style="background:#FFC107;"> 400 </code> `User not found`
 
 
