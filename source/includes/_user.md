@@ -1,6 +1,6 @@
 # User
 
-The API allows you to create, delete, and update your users with addition of socail providers. You can retrieve individual users as well as a list of all your users. Also the api gives ability to set authorization using the rules object.
+The API allows you to create, delete, and update your users with addition of socail providers. You can retrieve individual users as well as a list of all your users. Also the api gives ability to set authorization level privileges using the rules object.
 
 ## Sign Up Using Email and Password
 
@@ -54,6 +54,13 @@ password | required | string | The password to set for the user to authenticate.
 ### Returns
 
 Returns a user object if correct email and password was provided. The returned object will have information about the rules, groups, metadata. If no email or password was provided, same email which already exists or any other backend validation failes an appropriate error message will be returned with an error code associated with it.
+
+### Errors
+
+`Either email or password is missing`
+`Email is not valid`
+`You are already registered with product1 and product2`
+
 
 ## SignIn UsingGitHub
 
