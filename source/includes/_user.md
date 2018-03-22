@@ -53,9 +53,9 @@ password | required | string | The password to set for the user to authenticate.
 
 ### Returns
 
-Returns a user object if correct email and password was provided. The returned object will have information about the rules, groups, metadata. If no email or password was provided, same email which already exists or any other backend validation failes an appropriate error message will be returned with an error code associated with it.
+Returns a user object if correct email and password was provided. The returned object will have information about the rules, groups, metadata. If no email or password was provided, same email which already exists or any other backend validation failures an appropriate error message will be returned with an error code associated with it.
 
-### Errors
+### Error Messages
 
 1.  `Either email or password is missing`
 2.  `Email is not valid`
