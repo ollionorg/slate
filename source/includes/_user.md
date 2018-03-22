@@ -2,7 +2,7 @@
 
 The API allows you to create, delete, and update your users with addition of social providers and passwordless authentication using magic link. You can retrieve individual users as well as a list of all your users. Also the api gives ability to set authorization level privileges using the rules object.
 
-## Signup using eamil and passowrd
+## Signup using eamil and password
 
 > Definition
 
@@ -1032,8 +1032,6 @@ Returns user object with updated meta. If invalid user ID or any other backend f
 
 ## List User Rules By ID
 
-Provide the unique user ID and Goodcop will return the list of all rules.
-
 > Definition
 
 ```
@@ -1074,6 +1072,8 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
 }
 ```
 
+Retrieves the details of all user rules.
+
 ### HTTPS Request
 
 `GET https://dev.goodcop.com/v1/user/{userID}/rule`
@@ -1086,11 +1086,14 @@ userID | required | string | Valid user identifier
 
 ### Returns
 
-Returns rules object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns the list of user rules. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FFC107;"> 401 </code> <code style="background:#FFC107;"> 401 </code> `Invalid product API key`  
+2.  <code style="background:#FFC107;"> 400 </code> `User not found`
 
 ## Update User Rules By ID
-
-Provide the unique user ID and Goodcop will return the updated list of all rules.
 
 > Definition
 
@@ -1153,6 +1156,8 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
 }
 ```
 
+Updates the rules by setting the value of the body parameter passed.
+
 ### HTTPS Request
 
 `PUT https://dev.goodcop.com/v1/user/{userID}/rule`
@@ -1171,12 +1176,15 @@ userID | required | string | Valid user identifier
 
 ### Returns
 
-Returns user object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns user object with updated rules. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FFC107;"> 401 </code> <code style="background:#FFC107;"> 401 </code> `Invalid product API key`  
+2.  <code style="background:#FFC107;"> 400 </code> `User not found`
 
 
 ## Delete User Rules By ID
-
-Provide the unique user ID and Goodcop will return the updated list of all rules.
 
 > Definition
 
@@ -1234,6 +1242,8 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
 }
 ```
 
+Deletes the rules from the user.
+
 ### HTTPS Request
 
 `DELETE https://dev.goodcop.com/v1/user/{userID}/rule`
@@ -1246,12 +1256,15 @@ userID | required | string | Valid user identifier
 
 ### Returns
 
-Returns user object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns user object with updated rules. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FFC107;"> 401 </code> <code style="background:#FFC107;"> 401 </code> `Invalid product API key`  
+2.  <code style="background:#FFC107;"> 400 </code> `User not found`
 
 
 ## Get Group Details for user By ID
-
-Provide the unique user ID and Goodcop will return the list of all groups.
 
 > Definition
 
@@ -1318,6 +1331,8 @@ curl "https://dev.goodcop.com/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a
 
 ```
 
+Retrieves the details of all groups for a user.
+
 ### HTTPS Request
 
 `GET https://dev.goodcop.com/v1/user/{userID}/groups`
@@ -1330,4 +1345,9 @@ userID | required | string | Valid user identifier
 
 ### Returns
 
-Returns array of group details with a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns list of groups details for a unique userID. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FFC107;"> 401 </code> <code style="background:#FFC107;"> 401 </code> `Invalid product API key`  
+2.  <code style="background:#FFC107;"> 400 </code> `User not found`
