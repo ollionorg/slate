@@ -1460,7 +1460,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
   -H <span class="s2">"Device-Token: test_56789657567"</span>
 </code></pre>
 <blockquote>
-<p>Example Response</p>
+<p>Example Response <code style="background:green;"> 200 OK</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"storing test meta info"</span><span class="p">,</span><span class="w">
@@ -1489,8 +1489,8 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>Returns meta string. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-17'>Error Messages</h3>
 <ol>
-<li> <code style="background:orange;">400</code><code>Invalid product API key</code> </li>
-<li> <code>User not found</code></li>
+<li> <code style="background:orange;"> 401 Unauthorized </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:orange;"> 400 Bad Request </code> <code>User not found</code></li>
 </ol>
 <h2 id='update-user-meta-by-id'>Update User Meta By ID</h2>
 <p>Provide the unique user ID and Goodcop will return the meta details.</p>
