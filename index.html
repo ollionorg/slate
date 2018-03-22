@@ -231,10 +231,28 @@
                     <a href="#sign-up-using-email-and-password" class="toc-h2 toc-link" data-title="sign-up-using-email-and-password">Sign Up Using Email and Password</a>
                   </li>
                   <li>
-                    <a href="#sign-up-usinggithub" class="toc-h2 toc-link" data-title="sign-up-usinggithub">Sign Up UsingGitHub</a>
+                    <a href="#signin-usinggithub" class="toc-h2 toc-link" data-title="signin-usinggithub">SignIn UsingGitHub</a>
                   </li>
                   <li>
-                    <a href="#sign-up-google" class="toc-h2 toc-link" data-title="sign-up-google">Sign Up Google</a>
+                    <a href="#signin-google" class="toc-h2 toc-link" data-title="signin-google">SignIn Google</a>
+                  </li>
+                  <li>
+                    <a href="#signin-facebook" class="toc-h2 toc-link" data-title="signin-facebook">SignIn Facebook</a>
+                  </li>
+                  <li>
+                    <a href="#signin-twitter" class="toc-h2 toc-link" data-title="signin-twitter">SignIn Twitter</a>
+                  </li>
+                  <li>
+                    <a href="#signin-instagram" class="toc-h2 toc-link" data-title="signin-instagram">SignIn Instagram</a>
+                  </li>
+                  <li>
+                    <a href="#signin-using-magiclink" class="toc-h2 toc-link" data-title="signin-using-magiclink">SignIn Using MagicLink</a>
+                  </li>
+                  <li>
+                    <a href="#sign-up-phonenumber" class="toc-h2 toc-link" data-title="sign-up-phonenumber">Sign Up PhoneNumber</a>
+                  </li>
+                  <li>
+                    <a href="#verfiy-phonenumber" class="toc-h2 toc-link" data-title="verfiy-phonenumber">Verfiy PhoneNumber</a>
                   </li>
                   <li>
                     <a href="#login" class="toc-h2 toc-link" data-title="login">Login</a>
@@ -596,7 +614,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </tbody></table>
 <h3 id='returns'>Returns</h3>
 <p>Returns user object if correct email and password was provided, and returns an error otherwise.</p>
-<h2 id='sign-up-usinggithub'>Sign Up UsingGitHub</h2>
+<h2 id='signin-usinggithub'>SignIn UsingGitHub</h2>
 <blockquote>
 <p>Definition</p>
 </blockquote>
@@ -623,10 +641,10 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a user object provided once authorized by github using the redirect url.</p>
 <h3 id='https-request-2'>HTTPS Request</h3>
-<p><code>POST https://api.goodcop.com/v1/signin/google</code></p>
+<p><code>POST https://api.goodcop.com/v1/signin/github</code></p>
 <h3 id='returns-2'>Returns</h3>
-<p>Returns user object from google, and returns an error otherwise.</p>
-<h2 id='sign-up-google'>Sign Up Google</h2>
+<p>Returns user object from github, and returns an error otherwise.</p>
+<h2 id='signin-google'>SignIn Google</h2>
 <blockquote>
 <p>Definition</p>
 </blockquote>
@@ -656,6 +674,249 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p><code>POST https://api.goodcop.com/v1/signin/google</code></p>
 <h3 id='returns-3'>Returns</h3>
 <p>Returns user object from google, and returns an error otherwise.</p>
+<h2 id='signin-facebook'>SignIn Facebook</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/user/signin/facebook
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/signin/facebook"</span>
+  -X POST
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"redirectUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"to be updated"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>Creates a user object provided once authorized by facebook using the redirect url.</p>
+<h3 id='https-request-4'>HTTPS Request</h3>
+<p><code>POST https://api.goodcop.com/v1/signin/facebook</code></p>
+<h3 id='returns-4'>Returns</h3>
+<p>Returns user object from facebook, and returns an error otherwise.</p>
+<h2 id='signin-twitter'>SignIn Twitter</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/user/signin/twitter
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/signin/twitter"</span>
+  -X POST
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"redirectUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.twitter.com/oauth/authorize?oauth_token=a54r3gAAAAAA4-PrAAABYkvwDWA"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>Creates a user object provided once authorized by twitter using the redirect url.</p>
+<h3 id='https-request-5'>HTTPS Request</h3>
+<p><code>POST https://api.goodcop.com/v1/signin/twitter</code></p>
+<h3 id='returns-5'>Returns</h3>
+<p>Returns user object from twitter, and returns an error otherwise.</p>
+<h2 id='signin-instagram'>SignIn Instagram</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/user/signin/instagram
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/signin/instagram"</span>
+  -X POST
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"redirectUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"to be updated"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>Creates a user object provided once authorized by instagram using the redirect url.</p>
+<h3 id='https-request-6'>HTTPS Request</h3>
+<p><code>POST https://api.goodcop.com/v1/signin/instagram</code></p>
+<h3 id='returns-6'>Returns</h3>
+<p>Returns user object from instagram, and returns an error otherwise.</p>
+<h2 id='signin-using-magiclink'>SignIn Using MagicLink</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/user/magiclink
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/magiclink"</span>
+  -X POST
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -d <span class="s1">'{
+       "email":"some_email@mail.com", 
+    }'</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Magic link sent to email successfully"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>A magic link is sent to user email to sign in.</p>
+<h3 id='https-request-7'>HTTPS Request</h3>
+<p><code>POST https://api.goodcop.com/v1/signup/magiclink</code></p>
+<h3 id='request-body-2'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email</td>
+<td>required</td>
+<td>string</td>
+<td>The email address to send to sign in.</td>
+</tr>
+</tbody></table>
+<h3 id='returns-7'>Returns</h3>
+<p>Returns user object if correct email was provided, and returns an error otherwise.</p>
+<h2 id='sign-up-phonenumber'>Sign Up PhoneNumber</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/user/signin/phone
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/signin/phone"</span>
+  -X POST
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -d <span class="s1">'{
+       "phoneNumber":"+917678788789", 
+    }'</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OTP sent to your mobile successfully"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>GoodCop will send the sms with a auto genrated otp. User needs to verfiy the otp against the phone number to 
+sign in the user</p>
+<h3 id='https-request-8'>HTTPS Request</h3>
+<p><code>POST https://api.goodcop.com/v1/user/signin/phone</code></p>
+<h3 id='request-body-3'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>phoneNumber</td>
+<td>required</td>
+<td>string</td>
+<td>Phone number to send otp</td>
+</tr>
+</tbody></table>
+<h3 id='returns-8'>Returns</h3>
+<p>Returns the success message if correct phone number is provided otherwise return 
+will be an error.</p>
+<h2 id='verfiy-phonenumber'>Verfiy PhoneNumber</h2>
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre class="highlight plaintext"><code>POST  https://api.goodcop.com/v1/user/signin/phone/verify
+
+</code></pre>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.goodcop.com/v1/user/signin/phone/verify"</span>
+  -X POST
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -d <span class="s1">'{
+       "phoneNumber":"+917678788789", 
+       "otp":"878787"
+    }'</span>
+</code></pre>
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"to be updated"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>User will verify the authenticity by verifying the otp.</p>
+<h3 id='https-request-9'>HTTPS Request</h3>
+<p><code>POST https://api.goodcop.com/v1/user/signin/phone/verify</code></p>
+<h3 id='request-body-4'>Request Body</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>phoneNumber</td>
+<td>required</td>
+<td>string</td>
+<td>Phone number of the user</td>
+</tr>
+<tr>
+<td>otp</td>
+<td>required</td>
+<td>string</td>
+<td>otp sent to user mobile</td>
+</tr>
+</tbody></table>
+<h3 id='returns-9'>Returns</h3>
+<p>Returns the user object if phonenumber was verified with otp provided otherwise return 
+will be an error.</p>
 <h2 id='login'>Login</h2>
 <blockquote>
 <p>Definition</p>
@@ -690,9 +951,9 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Authenticates the user provided the valid email and password and Retrieves the details of a user that has previously been created.</p>
-<h3 id='https-request-4'>HTTPS Request</h3>
+<h3 id='https-request-10'>HTTPS Request</h3>
 <p><code>POST https://api.goodcop.com/v1/user/login</code></p>
-<h3 id='request-body-2'>Request Body</h3>
+<h3 id='request-body-5'>Request Body</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -714,7 +975,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <td>The password to authenticate user.</td>
 </tr>
 </tbody></table>
-<h3 id='returns-4'>Returns</h3>
+<h3 id='returns-10'>Returns</h3>
 <p>Returns the user object. In case of any validation of invalid email or password, the return 
 will be an error.</p>
 <h2 id='change-password'>Change Password</h2>
@@ -746,9 +1007,9 @@ will be an error.</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Change the password for the logged in user providing the oldpassword and new password.</p>
-<h3 id='https-request-5'>HTTPS Request</h3>
+<h3 id='https-request-11'>HTTPS Request</h3>
 <p><code>POST https://api.goodcop.com/v1/user/passwordChange</code></p>
-<h3 id='request-body-3'>Request Body</h3>
+<h3 id='request-body-6'>Request Body</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -770,7 +1031,7 @@ will be an error.</p>
 <td>The new password to to set.</td>
 </tr>
 </tbody></table>
-<h3 id='returns-5'>Returns</h3>
+<h3 id='returns-11'>Returns</h3>
 <p>Returns the string message. In case of any validation of invalid oldpassword, the return 
 will be an error.</p>
 <h2 id='get-user-by-id'>Get User By ID</h2>
@@ -803,7 +1064,7 @@ will be an error.</p>
     </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eUhWVAYVcw_guO-XRLs_JIZimSiXycUAesf0VkBNptZvhZQnkC0uZacvuhtj8BVI2m5YoHbCU_AU_3hK-tytRg=="</span><span class="p">,</span><span class="w">
     </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-6'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-12'>HTTPS Request</h3>
 <p><code>POST https://api.goodcop.com/v1/user/{userID}</code></p>
 <h3 id='url-params'>URL Params</h3>
 <table><thead>
@@ -821,7 +1082,7 @@ will be an error.</p>
 <td>Valid user identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-6'>Returns</h3>
+<h3 id='returns-12'>Returns</h3>
 <p>Returns user if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='get-user-by-email'>Get User By Email</h2>
 <p>Retrieves the details of a user that has previously been created. Provide the unique email that was returned from your login request and Goodcop will return the corresponding user information.</p>
@@ -853,7 +1114,7 @@ will be an error.</p>
     </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eUhWVAYVcw_guO-XRLs_JIZimSiXycUAesf0VkBNptZvhZQnkC0uZacvuhtj8BVI2m5YoHbCU_AU_3hK-tytRg=="</span><span class="p">,</span><span class="w">
     </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-7'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-13'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/user/{email}</code></p>
 <h3 id='url-params-2'>URL Params</h3>
 <table><thead>
@@ -871,7 +1132,7 @@ will be an error.</p>
 <td>Valid email address</td>
 </tr>
 </tbody></table>
-<h3 id='returns-7'>Returns</h3>
+<h3 id='returns-13'>Returns</h3>
 <p>Returns user if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='list-users'>List Users</h2>
 <p>Retrieves the details of all users that has previously been created.</p>
@@ -925,9 +1186,9 @@ will be an error.</p>
         </span><span class="p">},</span><span class="w">
             </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-8'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-14'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/user</code></p>
-<h3 id='returns-8'>Returns</h3>
+<h3 id='returns-14'>Returns</h3>
 <p>Returns list of user objects if a valid authorization key was provided, and returns an error otherwise.</p>
 <h2 id='delete-user-by-id'>Delete User By ID</h2>
 <p>Provide the unique user ID and Goodcop will return the message for successful deletion of user.</p>
@@ -953,7 +1214,7 @@ will be an error.</p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User deleted successfully"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-9'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-15'>HTTPS Request</h3>
 <p><code>DELETE https://api.goodcop.com/v1/user/{userID}</code></p>
 <h3 id='url-params-3'>URL Params</h3>
 <table><thead>
@@ -971,7 +1232,7 @@ will be an error.</p>
 <td>Valid user identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-9'>Returns</h3>
+<h3 id='returns-15'>Returns</h3>
 <p>Returns a string message if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='get-group-details-by-id'>Get Group Details By ID</h2>
 <p>Provide the unique user ID and Goodcop will return the group details.</p>
@@ -1034,7 +1295,7 @@ will be an error.</p>
         </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5750501782061056</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
-</span></code></pre><h3 id='https-request-10'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-16'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/user/{userID}/groups</code></p>
 <h3 id='url-params-4'>URL Params</h3>
 <table><thead>
@@ -1052,7 +1313,7 @@ will be an error.</p>
 <td>Valid user identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-10'>Returns</h3>
+<h3 id='returns-16'>Returns</h3>
 <p>Returns a array of groups if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='get-user-meta-by-id'>Get User Meta By ID</h2>
 <p>Provide the unique user ID and Goodcop will return the meta details.</p>
@@ -1078,7 +1339,7 @@ will be an error.</p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"storing test meta info"</span><span class="p">,</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-11'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-17'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/user/{userID}/meta</code></p>
 <h3 id='url-params-5'>URL Params</h3>
 <table><thead>
@@ -1096,7 +1357,7 @@ will be an error.</p>
 <td>Valid user identifier</td>
 </tr>
 </tbody></table>
-<h3 id='request-body-4'>Request Body</h3>
+<h3 id='request-body-7'>Request Body</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1112,7 +1373,7 @@ will be an error.</p>
 <td>The email address to send the verfication.</td>
 </tr>
 </tbody></table>
-<h3 id='returns-11'>Returns</h3>
+<h3 id='returns-17'>Returns</h3>
 <p>Returns meta if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='update-user-meta-by-id'>Update User Meta By ID</h2>
 <p>Provide the unique user ID and Goodcop will return the meta details.</p>
@@ -1156,9 +1417,9 @@ will be an error.</p>
     </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wv0X3yJCKhzFxX92vRVs4ube944zY3YJCVtI1EAUBXTQpXrGEFmNdFSLyk6ygA7CDaK8sbN8xHhkxuwBUu5xNQ=="</span><span class="p">,</span><span class="w">
     </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-12'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-18'>HTTPS Request</h3>
 <p><code>PUT https://api.goodcop.com/v1/user/{userID}/meta</code></p>
-<h3 id='request-body-5'>Request Body</h3>
+<h3 id='request-body-8'>Request Body</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1190,7 +1451,7 @@ will be an error.</p>
 <td>Valid user identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-12'>Returns</h3>
+<h3 id='returns-18'>Returns</h3>
 <p>Returns user object with updated meta if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='list-user-rules-by-id'>List User Rules By ID</h2>
 <p>Provide the unique user ID and Goodcop will return the list of all rules.</p>
@@ -1232,7 +1493,7 @@ will be an error.</p>
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-13'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-19'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/user/{userID}/rule</code></p>
 <h3 id='url-params-7'>URL Params</h3>
 <table><thead>
@@ -1250,7 +1511,7 @@ will be an error.</p>
 <td>Valid user identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-13'>Returns</h3>
+<h3 id='returns-19'>Returns</h3>
 <p>Returns rules object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='update-user-rules-by-id'>Update User Rules By ID</h2>
 <p>Provide the unique user ID and Goodcop will return the updated list of all rules.</p>
@@ -1306,9 +1567,9 @@ will be an error.</p>
     </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wv0X3yJCKhzFxX92vRVs4ube944zY3YJCVtI1EAUBXTQpXrGEFmNdFSLyk6ygA7CDaK8sbN8xHhkxuwBUu5xNQ=="</span><span class="p">,</span><span class="w">
     </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-14'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-20'>HTTPS Request</h3>
 <p><code>PUT https://api.goodcop.com/v1/user/{userID}/rule</code></p>
-<h3 id='request-body-6'>Request Body</h3>
+<h3 id='request-body-9'>Request Body</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1340,7 +1601,7 @@ will be an error.</p>
 <td>Valid user identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-14'>Returns</h3>
+<h3 id='returns-20'>Returns</h3>
 <p>Returns user object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='delete-user-rules-by-id'>Delete User Rules By ID</h2>
 <p>Provide the unique user ID and Goodcop will return the updated list of all rules.</p>
@@ -1391,7 +1652,7 @@ will be an error.</p>
     </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wv0X3yJCKhzFxX92vRVs4ube944zY3YJCVtI1EAUBXTQpXrGEFmNdFSLyk6ygA7CDaK8sbN8xHhkxuwBUu5xNQ=="</span><span class="p">,</span><span class="w">
     </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='https-request-15'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-21'>HTTPS Request</h3>
 <p><code>DELETE https://api.goodcop.com/v1/user/{userID}/rule</code></p>
 <h3 id='url-params-9'>URL Params</h3>
 <table><thead>
@@ -1409,7 +1670,7 @@ will be an error.</p>
 <td>Valid user identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-15'>Returns</h3>
+<h3 id='returns-21'>Returns</h3>
 <p>Returns user object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h2 id='get-group-details-for-user-by-id'>Get Group Details for user By ID</h2>
 <p>Provide the unique user ID and Goodcop will return the list of all groups.</p>
@@ -1476,7 +1737,7 @@ will be an error.</p>
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 
-</span></code></pre><h3 id='https-request-16'>HTTPS Request</h3>
+</span></code></pre><h3 id='https-request-22'>HTTPS Request</h3>
 <p><code>GET https://api.goodcop.com/v1/user/{userID}/groups</code></p>
 <h3 id='url-params-10'>URL Params</h3>
 <table><thead>
@@ -1494,7 +1755,7 @@ will be an error.</p>
 <td>Valid user identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-16'>Returns</h3>
+<h3 id='returns-22'>Returns</h3>
 <p>Returns array of group details with a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
 <h1 id='group'>Group</h1><h2 id='create-group'>Create Group</h2>
 <blockquote>
