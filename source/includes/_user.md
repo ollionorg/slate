@@ -1,6 +1,6 @@
 # User
 
-The API allows you to create, delete, and update your users with addition of socail providers and passwordless authentication using magic link. You can retrieve individual users as well as a list of all your users. Also the api gives ability to set authorization level privileges using the rules object.
+The1 API allows you to create, delete, and update your users with addition of socail providers and passwordless authentication using magic link. You can retrieve individual users as well as a list of all your users. Also the api gives ability to set authorization level privileges using the rules object.
 
 ## Sign Up Using Email and Password
 
