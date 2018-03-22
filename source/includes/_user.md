@@ -53,7 +53,7 @@ password | required | string | The password to set for the user to authenticate.
 
 Returns user object if correct email and password was provided, and returns an error otherwise.
 
-## Sign Up UsingGitHub
+## SignIn UsingGitHub
 
 > Definition
 
@@ -85,13 +85,13 @@ Creates a user object provided once authorized by github using the redirect url.
 
 ### HTTPS Request
 
-`POST https://api.goodcop.com/v1/signin/google`
+`POST https://api.goodcop.com/v1/signin/github`
 
 ### Returns
 
-Returns user object from google, and returns an error otherwise.
+Returns user object from github, and returns an error otherwise.
 
-## Sign Up Google
+## SignIn Google
 
 
 > Definition
@@ -129,6 +129,263 @@ Creates a user object provided once authorized by google using the redirect url.
 ### Returns
 
 Returns user object from google, and returns an error otherwise.
+
+## SignIn Facebook
+
+> Definition
+
+```
+POST  https://api.goodcop.com/v1/user/signin/facebook
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/user/signin/facebook"
+  -X POST
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+```
+
+> Example Response
+
+```json
+
+{
+    "redirectUrl": "to be updated"
+}
+
+```
+
+Creates a user object provided once authorized by facebook using the redirect url.
+
+### HTTPS Request
+
+`POST https://api.goodcop.com/v1/signin/facebook`
+
+### Returns
+
+Returns user object from facebook, and returns an error otherwise.
+
+## SignIn Twitter
+
+> Definition
+
+```
+POST  https://api.goodcop.com/v1/user/signin/twitter
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/user/signin/twitter"
+  -X POST
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+```
+
+> Example Response
+
+```json
+
+{
+    "redirectUrl": "https://api.twitter.com/oauth/authorize?oauth_token=a54r3gAAAAAA4-PrAAABYkvwDWA"
+}
+
+```
+
+Creates a user object provided once authorized by twitter using the redirect url.
+
+### HTTPS Request
+
+`POST https://api.goodcop.com/v1/signin/twitter`
+
+### Returns
+
+Returns user object from twitter, and returns an error otherwise.
+
+## SignIn Instagram
+
+> Definition
+
+```
+POST  https://api.goodcop.com/v1/user/signin/instagram
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/user/signin/instagram"
+  -X POST
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+```
+
+> Example Response
+
+```json
+
+{
+    "redirectUrl": "to be updated"
+}
+
+```
+
+Creates a user object provided once authorized by instagram using the redirect url.
+
+### HTTPS Request
+
+`POST https://api.goodcop.com/v1/signin/instagram`
+
+### Returns
+
+Returns user object from instagram, and returns an error otherwise.
+
+## SignIn Using MagicLink
+
+> Definition
+
+```
+POST  https://api.goodcop.com/v1/user/magiclink
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/user/magiclink"
+  -X POST
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+  -d '{
+       "email":"some_email@mail.com", 
+    }'
+```
+
+> Example Response
+
+```json
+{
+    "message": "Magic link sent to email successfully"
+}
+```
+
+A magic link is sent to user email to sign in.
+
+### HTTPS Request
+
+`POST https://api.goodcop.com/v1/signup/magiclink`
+
+### Request Body
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+email | required | string | The email address to send to sign in. 
+
+### Returns
+
+Returns user object if correct email was provided, and returns an error otherwise.
+
+
+## Sign Up PhoneNumber
+
+> Definition
+
+```
+POST  https://api.goodcop.com/v1/user/signin/phone
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/user/signin/phone"
+  -X POST
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+  -d '{
+       "phoneNumber":"+917678788789", 
+    }'
+```
+
+> Example Response
+
+```json
+{
+	"message": "OTP sent to your mobile successfully"
+}
+
+```
+
+GoodCop will send the sms with a auto genrated otp. User needs to verfiy the otp against the phone number to 
+sign in the user
+
+### HTTPS Request
+
+`POST https://api.goodcop.com/v1/user/signin/phone`
+
+### Request Body
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+phoneNumber | required | string | Phone number to send otp 
+
+### Returns
+
+Returns the success message if correct phone number is provided otherwise return 
+will be an error.
+
+## Verfiy PhoneNumber
+
+> Definition
+
+```
+POST  https://api.goodcop.com/v1/user/signin/phone/verify
+
+```
+> Example Request
+
+```shell
+curl "https://api.goodcop.com/v1/user/signin/phone/verify"
+  -X POST
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Identifier: test_56789657567"
+  -d '{
+       "phoneNumber":"+917678788789", 
+       "otp":"878787"
+    }'
+```
+
+> Example Response
+
+```json
+{
+	"message": "to be updated"
+}
+
+```
+
+User will verify the authenticity by verifying the otp.
+
+### HTTPS Request
+
+`POST https://api.goodcop.com/v1/user/signin/phone/verify`
+
+### Request Body
+
+Parameter | Value | Type | Description
+--------- | ------- | --------------- | -----------
+phoneNumber | required | string | Phone number of the user 
+otp | required | string | otp sent to user mobile
+
+### Returns
+
+Returns the user object if phonenumber was verified with otp provided otherwise return 
+will be an error.
 
 
 ## Login
