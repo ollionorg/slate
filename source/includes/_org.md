@@ -5,13 +5,13 @@
 > Definition
 
 ```
-POST  https://api.goodcop.com/v1/org
+POST  https://dev.goodcop.cldcvr.com/v1/org
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/org"
+curl "https://dev.goodcop.cldcvr.com/v1/org"
   -X  POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
