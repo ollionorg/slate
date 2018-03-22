@@ -1,17 +1,19 @@
 # User
 
+The API allows you to create, delete, and update your users with addition of socail providers. You can retrieve individual users as well as a list of all your users. Also the api gives ability to set authorization using the rules object.
+
 ## Sign Up Using Email and Password
 
 > Definition
 
 ```
-POST  https://api.goodcop.com/v1/signup
+POST  https://api.goodcop.com/v1/user/signup
 
 ```
 > Example Request
 
 ```shell
-curl "https://api.goodcop.com/v1/signup"
+curl "https://api.goodcop.com/v1/user/signup"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -36,11 +38,11 @@ curl "https://api.goodcop.com/v1/signup"
 }
 ```
 
-Creates a user object provided the email and password in the request body and returns the user object.
+Creates a new user object.
 
 ### HTTPS Request
 
-`POST https://api.goodcop.com/v1/signup`
+`POST https://api.goodcop.com/v1/user/signup`
 
 ### Request Body
 
@@ -51,7 +53,7 @@ password | required | string | The password to set for the user to authenticate.
 
 ### Returns
 
-Returns user object if correct email and password was provided, and returns an error otherwise.
+Returns a user object if correct email and password was provided. The returned object will have information about the rules, groups, metadata. If no email or password was provided, same email which already exists or any other backend validation failes an appropriate error message will be returned with an error code associated with it.
 
 ## SignIn UsingGitHub
 
