@@ -8,7 +8,7 @@ The API allows you to create, delete, and update groups. You can retrieve a list
 > Definition
 
 ```
-<code style="background:#01579B;"> POST</code>  https://[GOODCOP_URL]/v1/group
+POST  https://[GOODCOP_URL]/v1/group
 
 ```
 > Example Request
