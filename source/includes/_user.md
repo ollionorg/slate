@@ -525,12 +525,6 @@ Returns a success message. If no user token was provided, incorrect passwords or
 
 ## Get user by Id
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/user/{userID}
-
-```
 > Example Request
 
 ```shell
@@ -565,7 +559,7 @@ Retrieves the details of an existing user. You need only supply the unique user 
 
 ### HTTPS Request
 
-`POST https://[GOODCOP_URL]/v1/user/{userID}`
+<code style="background:#2196F3;">POST</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/user/{userID}`
 
 ### URL Params
 
