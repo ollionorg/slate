@@ -452,13 +452,25 @@
                     <a href="#get-api-by-id" class="toc-h2 toc-link" data-title="get-api-by-id">Get Api By ID</a>
                   </li>
                   <li>
+                    <a href="#error-messages-2" class="toc-h2 toc-link" data-title="error-messages">Error Messages</a>
+                  </li>
+                  <li>
                     <a href="#get-all-apis" class="toc-h2 toc-link" data-title="get-all-apis">Get All Apis</a>
+                  </li>
+                  <li>
+                    <a href="#error-messages-3" class="toc-h2 toc-link" data-title="error-messages">Error Messages</a>
                   </li>
                   <li>
                     <a href="#delete-api-by-id" class="toc-h2 toc-link" data-title="delete-api-by-id">Delete Api By ID</a>
                   </li>
                   <li>
+                    <a href="#error-messages-4" class="toc-h2 toc-link" data-title="error-messages">Error Messages</a>
+                  </li>
+                  <li>
                     <a href="#get-rule-by-id" class="toc-h2 toc-link" data-title="get-rule-by-id">Get rule By ID</a>
+                  </li>
+                  <li>
+                    <a href="#error-messages-5" class="toc-h2 toc-link" data-title="error-messages">Error Messages</a>
                   </li>
                   <li>
                     <a href="#update-rule-by-id" class="toc-h2 toc-link" data-title="update-rule-by-id">Update rule By ID</a>
@@ -4807,7 +4819,9 @@ The x-api-key header must be provided to create a tenant.
 </tbody></table>
 <h3 id='returns-12'>Returns</h3>
 <p>Returns tenant object with deleted meta info if a valid authorization key, api key was provided, and returns an error otherwise.</p>
-<h1 id='api'>Api</h1><h2 id='create-api'>Create Api</h2>
+<h1 id='api'>Api</h1>
+<p>The API allows you to create, delete, and update api. The api gives ability to set authorization level privileges using the rules object and metadata storage.</p>
+<h2 id='create-api'>Create Api</h2>
 <blockquote>
 <p>Definition</p>
 </blockquote>
@@ -4820,8 +4834,7 @@ The x-api-key header must be provided to create a tenant.
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/api"</span>
   -X  POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
   -d <span class="s1">'{
     "name":"api test",
     "description":"this is test api",
@@ -4861,7 +4874,7 @@ The x-api-key header must be provided to create a tenant.
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Creates a api object provided the request body and returns the api object.</p>
+<p>Creates a new api object.</p>
 <h3 id='https-request'>HTTPS Request</h3>
 <p><code>POST https://[GOODCOP_URL]/v1/api</code></p>
 <h3 id='request-body'>Request Body</h3>
@@ -4899,7 +4912,13 @@ The x-api-key header must be provided to create a tenant.
 </tr>
 </tbody></table>
 <h3 id='returns'>Returns</h3>
-<p>Returns new api object if a valid authorization key and api key was provided, and returns an error otherwise.</p>
+<p>Returns a api object. The returned object will have information about the rules, description, metadata and api key that is necessary for using tenant module. If no api name was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='error-messages'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>API Already Exist with the name provided</code></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>Api name is required</code></li>
+</ol>
 <h2 id='get-api-by-id'>Get Api By ID</h2>
 <blockquote>
 <p>Definition</p>
@@ -4913,8 +4932,7 @@ The x-api-key header must be provided to create a tenant.
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/api/{apiID}"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
 </code></pre>
 <blockquote>
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
@@ -4941,7 +4959,7 @@ The x-api-key header must be provided to create a tenant.
     </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Provide the unique api ID and Goodcop will return the corresponding api information.</p>
+<p>Retrieves the details of an existing api. You need only supply the unique api identifier that was returned upon api creation.</p>
 <h3 id='https-request-2'>HTTPS Request</h3>
 <p><code>GET https://[GOODCOP_URL]/v1/api/{apiID}</code></p>
 <h3 id='url-params'>URL Params</h3>
@@ -4961,7 +4979,12 @@ The x-api-key header must be provided to create a tenant.
 </tr>
 </tbody></table>
 <h3 id='returns-2'>Returns</h3>
-<p>Returns api details if a valid authorization key, api key and valid indentifier was provided, and returns an error otherwise.</p>
+<p>Returns a api object if a valid identifier was provided. If invalid api ID was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h2 id='error-messages-2'>Error Messages</h2>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>API does not exist for given api ID</code></li>
+</ol>
 <h2 id='get-all-apis'>Get All Apis</h2>
 <blockquote>
 <p>Definition</p>
@@ -4975,8 +4998,7 @@ The x-api-key header must be provided to create a tenant.
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/api/"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
 </code></pre>
 <blockquote>
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
@@ -5047,7 +5069,7 @@ The x-api-key header must be provided to create a tenant.
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Goodcop will return the all api information for the product.</p>
+<p>Retrieves the detailed list of all product apis.</p>
 <h3 id='https-request-3'>HTTPS Request</h3>
 <p><code>GET https://[GOODCOP_URL]/v1/api</code></p>
 <h3 id='url-params-2'>URL Params</h3>
@@ -5067,7 +5089,11 @@ The x-api-key header must be provided to create a tenant.
 </tr>
 </tbody></table>
 <h3 id='returns-3'>Returns</h3>
-<p>Returns all apis details if a valid authorization key, api key and valid indentifier was provided, and returns an error otherwise.</p>
+<p>Returns a list of api objects. If any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h2 id='error-messages-3'>Error Messages</h2>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code></li>
+</ol>
 <h2 id='delete-api-by-id'>Delete Api By ID</h2>
 <blockquote>
 <p>Definition</p>
@@ -5081,8 +5107,7 @@ The x-api-key header must be provided to create a tenant.
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/api/{apiID}"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
 </code></pre>
 <blockquote>
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
@@ -5092,7 +5117,7 @@ The x-api-key header must be provided to create a tenant.
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Provide the unique api ID and Goodcop will delete the api information.</p>
+<p>Deletes a api from the product permanently.</p>
 <h3 id='https-request-4'>HTTPS Request</h3>
 <p><code>DELETE https://[GOODCOP_URL]/v1/api/{apiID}</code></p>
 <h3 id='url-params-3'>URL Params</h3>
@@ -5112,7 +5137,12 @@ The x-api-key header must be provided to create a tenant.
 </tr>
 </tbody></table>
 <h3 id='returns-4'>Returns</h3>
-<p>Returns a string message if a valid authorization key, api key and valid indentifier was provided, and returns an error otherwise.</p>
+<p>Returns a message on success. If the api ID does not exist or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h2 id='error-messages-4'>Error Messages</h2>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>API does not exist for given api ID</code></li>
+</ol>
 <h2 id='get-rule-by-id'>Get rule By ID</h2>
 <blockquote>
 <p>Definition</p>
@@ -5126,8 +5156,7 @@ The x-api-key header must be provided to create a tenant.
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/api/{apiID}/rule"</span>
   -X GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
 </code></pre>
 <blockquote>
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
@@ -5143,7 +5172,7 @@ The x-api-key header must be provided to create a tenant.
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Provide the unique api ID and Goodcop will return the list of all rules.</p>
+<p>Retrieves the details of all rules in a api.</p>
 <h3 id='https-request-5'>HTTPS Request</h3>
 <p><code>GET https://[GOODCOP_URL]/v1/api/{apiID}/rule</code></p>
 <h3 id='url-params-4'>URL Params</h3>
@@ -5163,7 +5192,12 @@ The x-api-key header must be provided to create a tenant.
 </tr>
 </tbody></table>
 <h3 id='returns-5'>Returns</h3>
-<p>Returns rules object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<p>Returns the list of api rules. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h2 id='error-messages-5'>Error Messages</h2>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>API does not exist for given api ID</code></li>
+</ol>
 <h2 id='update-rule-by-id'>Update rule By ID</h2>
 <blockquote>
 <p>Definition</p>
@@ -5177,8 +5211,7 @@ The x-api-key header must be provided to create a tenant.
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/api/{apiID}/rule"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
   -d <span class="s1">'[
         {
             "verb": "PUT",
@@ -5216,7 +5249,7 @@ The x-api-key header must be provided to create a tenant.
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Retrives all rules of a api.</p>
+<p>Updates the rules by setting the value of the body parameter passed.</p>
 <h3 id='https-request-6'>HTTPS Request</h3>
 <p><code>PUT https://[GOODCOP_URL]/v1/api/{apiID}/rule</code></p>
 <h3 id='request-body-2'>Request Body</h3>
@@ -5232,7 +5265,7 @@ The x-api-key header must be provided to create a tenant.
 <td>rules</td>
 <td>required</td>
 <td>array</td>
-<td>rules to be deleted</td>
+<td>rules to be updated</td>
 </tr>
 </tbody></table>
 <h3 id='url-params-5'>URL Params</h3>
@@ -5251,8 +5284,14 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid api identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-6'>Returns</h3>
-<p>Returns array of rules if a valid authorization key and returns an error otherwise.</p>
+
+<p>Returns updated rules in the api. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='error-messages-6'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>API does not exist for given api ID</code></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>Not Acceptable - You requested a wrong rule format</code></li>
+</ol>
 <h2 id='delete-rule-by-id'>Delete rule By ID</h2>
 <blockquote>
 <p>Definition</p>
@@ -5266,8 +5305,7 @@ The x-api-key header must be provided to create a tenant.
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/api/{apiID}/rule"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
   -d <span class="s1">'[
         {
             "verb": "PUT",
@@ -5305,7 +5343,7 @@ The x-api-key header must be provided to create a tenant.
     </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6308443803615232</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>Deletes the rules associated with the tenant. </p>
+<p>Deletes the rules from the api.</p>
 <h3 id='https-request-7'>HTTPS Request</h3>
 <p><code>DELETE https://[GOODCOP_URL]/v1/api/{apiID}/rule</code></p>
 <h3 id='request-body-3'>Request Body</h3>
@@ -5340,8 +5378,14 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid api identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-7'>Returns</h3>
-<p>Returns api object with deleted rules info if a valid authorization key and returns an error otherwise.</p>
+<h3 id='returns-6'>Returns</h3>
+<p>Returns updated rules. If invalid apiroup ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='error-messages-7'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>API does not exist for given api ID</code></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>Not Acceptable - You requested a wrong rule format</code></li>
+</ol>
 <h2 id='get-meta-by-id'>Get Meta By ID</h2>
 <blockquote>
 <p>Definition</p>
@@ -5355,8 +5399,7 @@ The x-api-key header must be provided to create a tenant.
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/api/{apiID}/meta"</span>
   -X  GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
 </code></pre>
 <blockquote>
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
@@ -5366,7 +5409,7 @@ The x-api-key header must be provided to create a tenant.
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Provide the unique tenant ID and Goodcop will return the meta information.</p>
+<p>Retrieves the meta details provided the group ID.</p>
 <h3 id='https-request-8'>HTTPS Request</h3>
 <p><code>GET https://[GOODCOP_URL]/v1/api/{apiID}/meta</code></p>
 <h3 id='url-params-7'>URL Params</h3>
@@ -5385,8 +5428,13 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid api identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-8'>Returns</h3>
-<p>Returns string meta if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h3 id='returns-7'>Returns</h3>
+<p>Returns meta string. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='error-messages-8'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>API does not exist for given api ID</code></li>
+</ol>
 <h2 id='update-meta-by-id'>Update Meta By ID</h2>
 <blockquote>
 <p>Definition</p>
@@ -5430,7 +5478,7 @@ The x-api-key header must be provided to create a tenant.
     </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6308443803615232</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>Updated meta details of the api.</p>
+<p>Updates the meta by setting the value of the body parameter passed.</p>
 <h3 id='https-request-9'>HTTPS Request</h3>
 <p><code>PUT https://[GOODCOP_URL]/v1/api/{apiID}/meta</code></p>
 <h3 id='request-body-4'>Request Body</h3>
@@ -5465,8 +5513,13 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid api identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-9'>Returns</h3>
-<p>Returns api object with updated meta info if a valid authorization key and returns an error otherwise.</p>
+
+<p>Returns updated meta string. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='error-messages-9'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>API does not exist for given api ID</code></li>
+</ol>
 <h2 id='delete-meta-by-id'>Delete Meta By ID</h2>
 <blockquote>
 <p>Definition</p>
@@ -5510,7 +5563,7 @@ The x-api-key header must be provided to create a tenant.
     </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6308443803615232</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>Deletes the meta associated with the api. </p>
+<p>Replaces the meta with empty string.</p>
 <h3 id='https-request-10'>HTTPS Request</h3>
 <p><code>DELETE https://[GOODCOP_URL]/v1/api/{apiID}/meta</code></p>
 <h3 id='url-params-9'>URL Params</h3>
@@ -5529,8 +5582,13 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid api identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-10'>Returns</h3>
-<p>Returns api object with deleted meta info if a valid authorization key and returns an error otherwise.</p>
+<h3 id='returns-8'>Returns</h3>
+<p>Returns group object with no metadata. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='error-messages-10'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>API does not exist for given api ID</code></li>
+</ol>
 <h1 id='organization'>Organization</h1><h2 id='create-org'>Create Org</h2>
 <blockquote>
 <p>Definition</p>
