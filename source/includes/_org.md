@@ -5,10 +5,6 @@ from the organization.
 
 ## Create Org
 
-> Definition
-
-```
-POST  https://[GOODCOP_URL]/v1/org
 
 ```
 > Example Request
@@ -43,7 +39,7 @@ Creates a new organization object.
 
 ### HTTPS Request
 
-`POST https://[GOODCOP_URL]/v1/org`
+<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/org</code>
 
 ### Request Body
 

@@ -43,7 +43,7 @@ Creates a new user object.
 
 ### HTTPS Request
 
-<code style="background:#43A047;">POST</code> <code>https://[GOODCOP_URL]/v1/user/signup`<code>
+<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signup<code>
 
 ### Request Body
 
@@ -67,11 +67,6 @@ Returns a user object if correct email and password was provided. The returned o
 
 
 ## SignIn using github
-
-> Definition
-
-```
-POST  https://[GOODCOP_URL]/v1/user/signin/github
 
 ```
 > Example Request
@@ -98,7 +93,7 @@ Creates a new user object via github.
 
 ### HTTPS Request
 
-`POST https://[GOODCOP_URL]/v1/user/signin/github`
+<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/github</code>
 
 ### Returns
 
@@ -111,12 +106,6 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## SignIn using facebook
-
-
-> Definition
-
-```
-POST  https://[GOODCOP_URL]/v1/user/signin/google
 
 ```
 > Example Request
@@ -143,7 +132,7 @@ Creates a new user object via google.
 
 ### HTTPS Request
 
-`POST https://[GOODCOP_URL]/v1/user/signin/google`
+<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/google</code>
 
 ### Returns
 
@@ -156,11 +145,6 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## SignIn using facebook
-
-> Definition
-
-```
-POST  https://[GOODCOP_URL]/v1/user/signin/facebook
 
 ```
 > Example Request
@@ -187,7 +171,7 @@ Creates a new user object via facebook.
 
 ### HTTPS Request
 
-`POST https://[GOODCOP_URL]/v1/user/signin/facebook`
+<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/facebook</code>
 
 ### Returns
 
@@ -200,11 +184,6 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## SignIn using twitter
-
-> Definition
-
-```
-POST  https://[GOODCOP_URL]/v1/user/signin/twitter
 
 ```
 > Example Request
@@ -231,7 +210,7 @@ Creates a new user object via twitter.
 
 ### HTTPS Request
 
-`POST https://[GOODCOP_URL]/v1/user/signin/twitter`
+<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/twitter</code>
 
 ### Returns
 
@@ -244,11 +223,6 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## SignIn using instagram
-
-> Definition
-
-```
-POST  https://[GOODCOP_URL]/v1/user/signin/instagram
 
 ```
 > Example Request
@@ -275,7 +249,7 @@ Creates a new user object via instagram.
 
 ### HTTPS Request
 
-`POST https://[GOODCOP_URL]/v1/user/signin/instagram`
+<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/instagram</code>
 
 ### Returns
 
@@ -288,11 +262,6 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## SignIn using magiclink
-
-> Definition
-
-```
-POST  https://[GOODCOP_URL]/v1/user/magiclink
 
 ```
 > Example Request
@@ -322,7 +291,7 @@ Creates a new user object via email by creating a token that will allow user to 
 
 ### HTTPS Request
 
-`POST https://[GOODCOP_URL]/v1/signup/magiclink`
+<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/signup/magiclink</code>
 
 ### Request Body
 
@@ -342,11 +311,6 @@ Returns a success message and an email will be sent to user with the magic link.
 
 
 ## SignIn using phonenumber
-
-> Definition
-
-```
-POST  https://[GOODCOP_URL]/v1/user/signin/phone
 
 ```
 > Example Request
@@ -376,7 +340,7 @@ Creates an one time password for user verfication.
 
 ### HTTPS Request
 
-`POST https://[GOODCOP_URL]/v1/user/signin/phone`
+<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/phone</code>
 
 ### Request Body
 
@@ -398,9 +362,6 @@ Returns a success message and an one time password will be sent to user to verif
 ## Verfiy phonenumber
 
 > Definition
-
-```
-POST  https://[GOODCOP_URL]/v1/user/signin/phone/verify
 
 ```
 > Example Request
@@ -430,7 +391,7 @@ Creates a new user object after verifying the otp.
 
 ### HTTPS Request
 
-`POST https://[GOODCOP_URL]/v1/user/signin/phone/verify`
+<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/phone/verify</code>
 
 ### Request Body
 
@@ -450,11 +411,6 @@ Returns a user object if correct otp and phoneNumber was provided. The returned 
 3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Login
-
-> Definition
-
-```
-POST  https://[GOODCOP_URL]/v1/user/login
 
 ```
 > Example Request
@@ -497,7 +453,7 @@ LogIn the user.
 
 ### HTTPS Request
 
-`POST https://[GOODCOP_URL]/v1/user/login`
+<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/login</code>
 
 ### Request Body
 
@@ -519,11 +475,6 @@ Returns a user object if correct email and password was provided. The returned o
 5.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Change password
-
-> Definition
-
-```
-POST  https://[GOODCOP_URL]/v1/user/passwordChange
 
 ```
 > Example Request
@@ -552,7 +503,7 @@ Change the password for the logged in user providing the oldpassword and new pas
 
 ### HTTPS Request
 
-`POST https://[GOODCOP_URL]/v1/user/passwordChange`
+<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/passwordChange</code>
 
 ### Request Body
 

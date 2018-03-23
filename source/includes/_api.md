@@ -4,11 +4,6 @@ The API allows you to create, delete, and update api. The api gives ability to s
 
 ## Create Api
 
-> Definition
-
-```
-POST  https://[GOODCOP_URL]/v1/api
-
 ```
 > Example Request
 
@@ -64,7 +59,7 @@ Creates a new api object.
 
 ### HTTPS Request
 
-`POST https://[GOODCOP_URL]/v1/api`
+<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/api</code>
 
 ### Request Body
 

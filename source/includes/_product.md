@@ -17,11 +17,6 @@ Api that needs a secure token are :
 
 ## Create Product
 
-> Definition
-
-```
-POST  https://[GOODCOP_URL]/v1/product
-
 ```
 > Example Request
 
@@ -63,7 +58,7 @@ Creates a new product object.
 
 ### HTTPS Request
 
-`POST https://[GOODCOP_URL]/v1/group`
+<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/group</code>
 
 ### Request Body
 

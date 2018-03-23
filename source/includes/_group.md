@@ -5,11 +5,6 @@ The API allows you to create, delete, and update groups. You can retrieve a list
 
 ## Create Group
 
-> Definition
-
-```
-POST  https://[GOODCOP_URL]/v1/group
-
 ```
 > Example Request
 
@@ -51,7 +46,7 @@ Creates a new group object.
 
 ### HTTPS Request
 
-`POST https://[GOODCOP_URL]/v1/group`
+<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/group</code>
 
 ### Request Body
 

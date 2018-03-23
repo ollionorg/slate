@@ -8,11 +8,6 @@ The x-api-key header must be provided to request the tenant api's.
 
 ## Create Tenant
 
-> Definition
-
-```
-POST  https://[GOODCOP_URL]/v1/tenant
-
 ```
 > Example Request
 
@@ -63,7 +58,7 @@ Creates a new tenant object.
 
 ### HTTPS Request
 
-`POST https://[GOODCOP_URL]/v1/tenant`
+<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/tenant</code>
 
 ### Request Body
 
