@@ -507,7 +507,7 @@ Returns success message. If invalid tenant ID or any other backend failures an a
 > Example Request
 
 ```shell
-curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret"
+curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret&fields=email"
   -X "GET"
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json"
@@ -529,13 +529,14 @@ Retrieves the secret information for the tenant.
 
 ### HTTPS Request
 
-<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret</code>
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret&fields=email</code>
 
 ### URL Params
 
 Parameter | Value | Type | Description
 --------- | ------- | --------------- | -----------
 tenantID | required | string | Valid tenant identifier
+fields | optional | string | Secrets key name 
 
 
 ### Returns
