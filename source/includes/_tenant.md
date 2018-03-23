@@ -138,8 +138,6 @@ tenantID | required | string | Valid tenant identifier
 
 ### Returns
 
-### Returns
-
 Returns a tenant object if a valid identifier was provided. If invalid tenant ID was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 ## Error Messages
@@ -330,8 +328,7 @@ PUT  https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule
 curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
   -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
   -d '[
         {
