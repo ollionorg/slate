@@ -429,6 +429,7 @@ Parameter | Value | Type | Description
 --------- | ------- | --------------- | -----------
 apiID | required | string | Valid api identifier
 
+### Returns
 
 Returns updated rules in the api. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
@@ -515,7 +516,7 @@ apiID | required | string | Valid api identifier
 
 ### Returns
 
-Returns updated rules. If invalid apiroup ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+Returns updated rules. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 ### Error Messages
 
@@ -705,7 +706,7 @@ apiID | required | string | Valid api identifier
 
 ### Returns
 
-Returns group object with no metadata. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+Returns api object with no metadata. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 ### Error Messages
 

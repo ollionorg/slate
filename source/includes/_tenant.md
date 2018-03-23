@@ -1,5 +1,11 @@
 # Tenant
 
+The API allows you to create, delete, and update tenant. The api gives ability to set authorization level privileges using the rules object and metadata storage. You can also set protected information in the secrets api for tenant.
+
+<aside style="background:#5bc0de;">
+The x-api-key header must be provided to request the tenant api's.
+</aside>
+
 ## Create Tenant
 
 > Definition
@@ -12,10 +18,9 @@ POST  https://[GOODCOP_URL]/v1/tenant
 
 ```shell
 curl "https://[GOODCOP_URL]/v1/tenant"
-  -X "POST"
+  -X  POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
   -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
   -d '{
 	"name":"test tenant",
@@ -51,11 +56,8 @@ curl "https://[GOODCOP_URL]/v1/tenant"
 }
 ```
 
-Creates a tenant object provided the request body and returns the group object.
+Creates a new tenant object.
 
-<aside style="background:#5bc0de;">
-The x-api-key header must be provided to create a tenant.
-</aside>
 
 ### HTTPS Request
 
@@ -74,7 +76,14 @@ secrets | optional | string | secrets of tenant
 
 ### Returns
 
-Returns new tenant object if a valid authorization key and api key was provided, and returns an error otherwise.
+Returns a api object. The returned object will have information about the rules, description, metadata and api key that is necessary for using tenant module. If no api name was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
+3.  <code style="background:#FFC107;"> 400 </code> `Tenant Already Exist with the name provided`
+4.  <code style="background:#FFC107;"> 400 </code> `Tenant name is required`
 
 ## Get Tenant By ID
 
@@ -88,10 +97,9 @@ GET  https://[GOODCOP_URL]/v1/tenant/{tenantID}
 
 ```shell
 curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}"
-  -X "GET"
+  -X  GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json" 
   -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
 ```
 
@@ -110,12 +118,12 @@ curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}"
         }
     ],
     "meta": "tenant meta",
-    "secrets": "secrets"
+    "secrets": ""
 }
 
 ```
 
-Retrieves the details of a tenant. Provide the unique tenant ID and Goodcop will return the corresponding user information.
+Retrieves the details of an existing tenant. You need only supply the unique tenant identifier that was returned upon tenant creation.
 
 ### HTTPS Request
 
@@ -130,7 +138,15 @@ tenantID | required | string | Valid tenant identifier
 
 ### Returns
 
-Returns tenant details if a valid authorization key, api key and valid indentifier was provided, and returns an error otherwise.
+### Returns
+
+Returns a tenant object if a valid identifier was provided. If invalid tenant ID was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+## Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
+3.  <code style="background:#FFC107;"> 400 </code> `Tenant does not exist for given api ID`
 
 ## Get All Tenants
 
@@ -144,10 +160,9 @@ GET  https://[GOODCOP_URL]/v1/tenant
 
 ```shell
 curl "https://[GOODCOP_URL]/v1/tenant"
-  -X "GET"
+  -X  GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
   -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
 ```
 
@@ -175,7 +190,7 @@ curl "https://[GOODCOP_URL]/v1/tenant"
 
 ```
 
-Retrieves the details of a all tenants for a particular api.
+Retrieves the detailed list of all product tenants.
 
 ### HTTPS Request
 
@@ -184,7 +199,12 @@ Retrieves the details of a all tenants for a particular api.
 
 ### Returns
 
-Returns array of tenants if a valid authorization key, api key was provided, and returns an error otherwise.
+Returns a list of tenant objects. If any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+## Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key`
+2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
 
 ## Delete Tenant By ID
 
@@ -200,8 +220,7 @@ DELETE  https://[GOODCOP_URL]/v1/tenant/{tenantID}
 curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
   -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
 ```
 
@@ -214,7 +233,7 @@ curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}"
 
 ```
 
-Deletes the tenant.
+Deletes a tenant from the product permanently.
 
 ### HTTPS Request
 
@@ -230,7 +249,14 @@ tenantID | required | string | Valid tenant identifier
 
 ### Returns
 
-Returns string message if a valid authorization key, api key was provided, and returns an error otherwise.
+Returns a message on success. If the tenant ID does not exist or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+## Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
+3.  <code style="background:#FFC107;"> 400 </code> `Tenant does not exist for given api ID`
+
 
 ## Get Rule By ID
 
@@ -266,7 +292,7 @@ curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule"
 
 ```
 
-Provide the unique tenant ID and Goodcop will return the list of all rules.
+Retrieves the details of all rules for a tenant.
 
 ### HTTPS Request
 
@@ -281,7 +307,13 @@ tenantID | required | string | Valid tenant identifier
 
 ### Returns
 
-Returns rules object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns the list of tenant rules. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+## Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
+3.  <code style="background:#FFC107;"> 400 </code> `Tenant does not exist for given api ID`
 
 
 ## Update Rule By ID
@@ -340,7 +372,7 @@ curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule"
 
 ```
 
-Retrives all rules of a tenants for a particular api.
+Updates the rules by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
@@ -361,7 +393,14 @@ tenantID | required | string | Valid tenant identifier
 
 ### Returns
 
-Returns array of rules if a valid authorization key, api key was provided, and returns an error otherwise.
+Returns updated rules for the tenant. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+## Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
+3.  <code style="background:#FFC107;"> 400 </code> `Tenant does not exist for given api ID`
+4.  <code style="background:#FFC107;"> 400 </code> `Not Acceptable - You requested a wrong rule format`
 
 
 ## Delete Rule By ID
@@ -415,7 +454,7 @@ curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule"
 }
 ```
 
-Deletes the rules associated with the tenant. 
+Deletes the rules from the tenant.
 
 ### HTTPS Request
 
@@ -437,7 +476,14 @@ tenantID | required | string | Valid tenant identifier
 
 ### Returns
 
-Returns tenant object with deleted rules info if a valid authorization key, api key was provided, and returns an error otherwise.
+Returns tenant object with updated rules. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+## Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
+3.  <code style="background:#FFC107;"> 400 </code> `Tenant does not exist for given api ID`
+4.  <code style="background:#FFC107;"> 400 </code> `Not Acceptable - You requested a wrong rule format`
 
 ## Update Secret By ID
 
@@ -453,8 +499,7 @@ PUT  https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret
 curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
   -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
   -d '{
 	"secrets":"{\"email\":\"mail@gmail.com\"}"
@@ -490,7 +535,7 @@ curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret"
 }
 ```
 
-Retrives all rules of a tenants for a particular api.
+Updates the secrets by setting the value of the body parameter passed. The secret information is stored in protected format.
 
 ### HTTPS Request
 
@@ -511,7 +556,14 @@ tenantID | required | string | Valid tenant identifier
 
 ### Returns
 
-Returns tenant object with updated secret info if a valid authorization key, api key was provided, and returns an error otherwise.
+Returns updated secrets in the tenant. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+## Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
+3.  <code style="background:#FFC107;"> 400 </code> `Tenant does not exist for given api ID`
+4.  <code style="background:#FFC107;"> 400 </code> `secrets should be stringified objectt`
 
 ## Get Secret By ID
 
@@ -527,8 +579,7 @@ GET  https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret
 curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret"
   -X "GET"
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
   -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
 ```
 
@@ -543,7 +594,7 @@ curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret"
 
 ```
 
-Provide the unique tenant ID and Goodcop will return the secret.
+Retrieves the secret information for the tenant. 
 
 ### HTTPS Request
 
@@ -558,7 +609,14 @@ tenantID | required | string | Valid tenant identifier
 
 ### Returns
 
-Returns secrets if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns the secrets stored with the tenant. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+## Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
+3.  <code style="background:#FFC107;"> 400 </code> `Tenant does not exist for given api ID`
+4.  <code style="background:#FFC107;"> 400 </code> `Not Acceptable - You requested a wrong secrets format`
 
 ## Get Meta By ID
 
@@ -574,8 +632,7 @@ GET  https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta
 curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta"
   -X "GET"
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
   -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
 ```
 
@@ -588,7 +645,7 @@ curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta"
 
 ```
 
-Provide the unique tenant ID and Goodcop will return the meta information.
+Retrieves the meta details provided the tenant ID.
 
 ### HTTPS Request
 
@@ -603,7 +660,13 @@ tenantID | required | string | Valid tenant identifier
 
 ### Returns
 
-Returns string meta if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns meta string. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
+3.  <code style="background:#FFC107;"> 400 </code> `Tenant does not exist for given api ID`
 
 ## Update Meta By ID
 
@@ -620,8 +683,7 @@ PUT  https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta
 curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
   -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
   -d '{
 	"meta":"update tenant meta"
@@ -657,7 +719,7 @@ curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta"
 }
 ```
 
-Updated meta details of the tenant.
+Updates the meta by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
@@ -678,7 +740,13 @@ tenantID | required | string | Valid tenant identifier
 
 ### Returns
 
-Returns tenant object with updated meta info if a valid authorization key, api key was provided, and returns an error otherwise.
+Returns updated tenant object with updated string. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
+3.  <code style="background:#FFC107;"> 400 </code> `Tenant does not exist for given api ID`
 
 ## Delete Meta By ID 
 
@@ -695,8 +763,7 @@ DELETE  https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta
 curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
   -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
   -d '{
 	    "meta":""
@@ -732,7 +799,7 @@ curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta"
 }
 ```
 
-Deletes the meta associated with the tenant. 
+Replaces the meta with empty string.
 
 ### HTTPS Request
 
@@ -748,4 +815,10 @@ tenantID | required | string | Valid tenant identifier
 
 ### Returns
 
-Returns tenant object with deleted meta info if a valid authorization key, api key was provided, and returns an error otherwise.
+Returns tenant object with no metadata. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
+3.  <code style="background:#FFC107;"> 400 </code> `Tenant does not exist for given api ID`
