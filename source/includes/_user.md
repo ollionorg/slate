@@ -107,7 +107,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 
 ## SignIn using facebook
 
-```
+
 > Example Request
 
 ```shell
@@ -146,7 +146,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 
 ## SignIn using facebook
 
-```
+
 > Example Request
 
 ```shell
@@ -185,7 +185,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 
 ## SignIn using twitter
 
-```
+
 > Example Request
 
 ```shell
@@ -224,7 +224,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 
 ## SignIn using instagram
 
-```
+
 > Example Request
 
 ```shell
@@ -263,7 +263,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 
 ## SignIn using magiclink
 
-```
+
 > Example Request
 
 ```shell
@@ -312,7 +312,7 @@ Returns a success message and an email will be sent to user with the magic link.
 
 ## SignIn using phonenumber
 
-```
+
 > Example Request
 
 ```shell
@@ -363,7 +363,7 @@ Returns a success message and an one time password will be sent to user to verif
 
 > Definition
 
-```
+
 > Example Request
 
 ```shell
@@ -412,7 +412,6 @@ Returns a user object if correct otp and phoneNumber was provided. The returned 
 
 ## Login
 
-```
 > Example Request
 
 ```shell
@@ -449,7 +448,7 @@ curl "https://[GOODCOP_URL]/v1/user/login"
 
 ```
 
-LogIn the user.
+LogsIn the user.
 
 ### HTTPS Request
 
@@ -476,7 +475,6 @@ Returns a user object if correct email and password was provided. The returned o
 
 ## Change password
 
-```
 > Example Request
 
 ```shell

@@ -5,7 +5,7 @@ The API allows you to create, delete, and update groups. You can retrieve a list
 
 ## Create Group
 
-```
+
 > Example Request
 
 ```shell

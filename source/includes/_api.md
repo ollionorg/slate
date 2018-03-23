@@ -4,7 +4,6 @@ The API allows you to create, delete, and update api. The api gives ability to s
 
 ## Create Api
 
-```
 > Example Request
 
 ```shell

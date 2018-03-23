@@ -8,7 +8,7 @@ The x-api-key header must be provided to request the tenant api's.
 
 ## Create Tenant
 
-```
+
 > Example Request
 
 ```shell

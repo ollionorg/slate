@@ -6,7 +6,7 @@ from the organization.
 ## Create Org
 
 
-```
+
 > Example Request
 
 ```shell

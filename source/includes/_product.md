@@ -17,7 +17,7 @@ Api that needs a secure token are :
 
 ## Create Product
 
-```
+
 > Example Request
 
 ```shell
