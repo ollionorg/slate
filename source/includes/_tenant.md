@@ -302,12 +302,6 @@ Returns the list of tenant rules. If invalid tenant ID or any other backend fail
 
 ## Update Rule By ID
 
-> Definition
-
-```
-PUT  https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule
-
-```
 > Example Request
 
 ```shell
@@ -359,7 +353,7 @@ Updates the rules by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
-`PUT https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule`
+<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule</code>
 
 ### Request Body
 
@@ -472,12 +466,6 @@ Returns tenant object with updated rules. If invalid tenant ID or any other back
 
 ## Update Secret By ID
 
-> Definition
-
-```
-PUT  https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret
-
-```
 > Example Request
 
 ```shell
@@ -524,7 +512,7 @@ Updates the secrets by setting the value of the body parameter passed. The secre
 
 ### HTTPS Request
 
-`PUT https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret`
+<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret</code>
 
 ### Request Body
 
@@ -647,13 +635,6 @@ Returns meta string. If invalid tenant ID or any other backend failures an appro
 
 ## Update Meta By ID
 
-
-> Definition
-
-```
-PUT  https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta
-
-```
 > Example Request
 
 ```shell
@@ -700,7 +681,7 @@ Updates the meta by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
-`PUT https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta`
+<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta</code>
 
 ### Request Body
 

@@ -281,12 +281,6 @@ Returns a message on success. If the group ID does not exist or any other backen
 
 ## Add Multiple Users to Group By ID
 
-> Definition
-
-```
-PUT  https://[GOODCOP_URL]/v1/group/{groupID}/user
-
-```
 > Example Request
 
 ```shell
@@ -325,7 +319,7 @@ Adds multiple users to a group.
 
 ### HTTPS Request
 
-`PUT https://[GOODCOP_URL]/v1/group/{groupID}/users`
+<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/group/{groupID}/users</code>
 
 ### Request Body
 
@@ -353,12 +347,6 @@ Returns an array of users which were succesfully added to the group. If the grou
 
 ## Add Single User to Group By Email
 
-> Definition
-
-```
-PUT  https://[GOODCOP_URL]/v1/group/{groupID}/userEmail
-
-```
 > Example Request
 
 ```shell
@@ -384,7 +372,7 @@ Adds a single user to a group by email address.
 
 ### HTTPS Request
 
-`PUT https://[GOODCOP_URL]/v1/group/{groupID}/userEmail`
+<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/group/{groupID}/userEmail</code>
 
 ### Request Body
 
@@ -686,7 +674,7 @@ Updates the meta by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
-`PUT https://[GOODCOP_URL]/v1/group/{groupID}/meta`
+<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/group/{groupID}/meta</code>
 
 ### Request Body
 
@@ -849,12 +837,7 @@ Returns the list of group rules. If invalid group ID or any other backend failur
 
 ## Update Group Rules By ID
 
-> Definition
 
-```
-PUT  https://[GOODCOP_URL]/v1/user/{userID}/rule
-
-```
 > Example Request
 
 ```shell
@@ -898,7 +881,7 @@ Updates the rules by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
-`PUT https://[GOODCOP_URL]/v1/group/{groupID}/rule`
+<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/group/{groupID}/rule</code>
 
 ### Request Body
 

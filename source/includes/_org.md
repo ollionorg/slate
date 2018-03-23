@@ -213,12 +213,6 @@ Returns a message on success. If the org ID does not exist or any other backend 
 ## Update Org
 
 
-> Definition
-
-```
-PUT  https://[GOODCOP_URL]/v1/org/{orgID}
-
-```
 > Example Request
 
 ```shell
@@ -249,7 +243,7 @@ Updates the org information by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
-`PUT https://[GOODCOP_URL]/v1/org/{orgID}`
+<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/org/{orgID}</code>
 
 ### Request Body
 
@@ -321,12 +315,7 @@ Returns meta string. If invalid org ID or any other backend failures an appropri
 
 ## Update Org Meta By ID
 
-> Definition
 
-```
-PUT  https://[GOODCOP_URL]/v1/user/{userID}/meta
-
-```
 > Example Request
 
 ```shell
@@ -353,7 +342,7 @@ Updates the meta by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
-`PUT https://[GOODCOP_URL]/v1/org/{orgID}/meta`
+<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/org/{orgID}/meta</code>
 
 ### Request Body
 

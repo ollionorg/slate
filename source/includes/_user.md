@@ -878,12 +878,6 @@ Returns meta string. If invalid user ID or any other backend failures an appropr
 
 ## Update User Meta By ID
 
-> Definition
-
-```
-PUT  https://[GOODCOP_URL]/v1/user/{userID}/meta
-
-```
 > Example Request
 
 ```shell
@@ -930,7 +924,7 @@ Updates the meta by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
-`PUT https://[GOODCOP_URL]/v1/user/{userID}/meta`
+<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/user/{userID}/meta</code>
 
 ### Request Body
 
@@ -1013,12 +1007,6 @@ Returns the list of user rules. If invalid user ID or any other backend failures
 
 ## Update User Rules By ID
 
-> Definition
-
-```
-PUT  https://[GOODCOP_URL]/v1/user/{userID}/rule
-
-```
 > Example Request
 
 ```shell
@@ -1077,7 +1065,7 @@ Updates the rules by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
-`PUT https://[GOODCOP_URL]/v1/user/{userID}/rule`
+<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/user/{userID}/rule</code>
 
 ### Request Body
 

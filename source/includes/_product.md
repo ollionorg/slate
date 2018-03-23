@@ -259,13 +259,6 @@ Returns a product object if a valid identifier was provided. If invalid product 
 
 ## Update Product By ID
 
-
-> Definition
-
-```
-PUT  https://[GOODCOP_URL]/v1/product/{productID}
-
-```
 > Example Request
 
 ```shell
@@ -323,7 +316,7 @@ Updates the product information by setting the value of the body parameter passe
 
 ### HTTPS Request
 
-`PUT https://[GOODCOP_URL]/v1/product/{productID}`
+<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/product/{productID}</code>
 
 ### Request Body
 
@@ -403,12 +396,7 @@ Returns a message on success. If the product ID does not exist or any other back
 
 ## Update Product Meta By ID
 
-> Definition
 
-```
-PUT  https://[GOODCOP_URL]/v1/product/{productID}/meta
-
-```
 > Example Request
 
 ```shell
@@ -439,7 +427,7 @@ The category header can be provided with two options either api or user dependin
 
 ### HTTPS Request
 
-`PUT https://[GOODCOP_URL]/v1/product/{productID}/meta`
+<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/product/{productID}/meta</code>
 
 ### URL Params
 
@@ -609,12 +597,6 @@ Returns the list of product rules. If invalid product ID or any other backend fa
 
 ## Update Product Rules By ID
 
-> Definition
-
-```
-PUT  https://[GOODCOP_URL]/v1/product/{productID}/rule
-
-```
 > Example Request
 
 ```shell
@@ -660,7 +642,7 @@ The category header can be provided with two options either api or user dependin
 
 ### HTTPS Request
 
-`PUT https://[GOODCOP_URL]/v1/product/{productID}/rule`
+<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/product/{productID}/rule</code>
 
 ### Request Body
 
@@ -793,7 +775,7 @@ Creates a new product api key.
 
 ### HTTPS Request
 
-`PUT https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}`
+<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}</code>
 
 ### URL Params
 
