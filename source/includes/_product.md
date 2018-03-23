@@ -898,7 +898,7 @@ Deletes a api key from the product permanently.
 ### HTTPS Request
 
 
-<code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}<code>
+<code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}</code>
 
 ### URL Params
 
