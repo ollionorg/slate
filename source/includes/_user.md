@@ -49,7 +49,7 @@ Creates a new user object.
 
 ### HTTPS Request
 
-`POST https://[GOODCOP_URL]/v1/user/signup`
+<code style="background:blue;">POST</code> https://[GOODCOP_URL]/v1/user/signup`
 
 ### Request Body
 

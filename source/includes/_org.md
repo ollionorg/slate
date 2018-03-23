@@ -61,8 +61,8 @@ Returns new org object if a valid authorization key provided, and returns an err
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
-2.  <code style="background:#FFC107;"> 404 </code> `Name is required field`
-3.  <code style="background:#FF0000;"> 500 </code> `Organization Already Exist with the name provided`
+2.  <code style="background:#FFC107;"> 400 </code> `Name is required field`
+3.  <code style="background:#FF0000;"> 400 </code> `Organization Already Exist with the name provided`
 4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## List Orgs
