@@ -676,7 +676,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a new user object.</p>
 <h3 id='https-request'>HTTPS Request</h3>
-<p><code>POST https://[GOODCOP_URL]/v1/user/signup</code></p>
+<p><code style="background:blue;">POST</code> https://[GOODCOP_URL]/v1/user/signup`</p>
 <h3 id='request-body'>Request Body</h3>
 <table><thead>
 <tr>
@@ -5949,8 +5949,8 @@ from the organization.</p>
 <h3 id='error-messages'>Error Messages</h3>
 <ol>
 <li> <code style="background:#FF7043;"> 401 </code> <code>Authorization error. Kindly provide product API key</code> </li>
-<li> <code style="background:#FFC107;"> 404 </code> <code>Name is required field</code></li>
-<li> <code style="background:#FF0000;"> 500 </code> <code>Organization Already Exist with the name provided</code></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>Name is required field</code></li>
+<li> <code style="background:#FF0000;"> 400 </code> <code>Organization Already Exist with the name provided</code></li>
 <li> <code style="background:#FF0000;"> 500 </code> <code>We had a problem with our server. Try again later.</code></li>
 </ol>
 <h2 id='list-orgs'>List Orgs</h2>
