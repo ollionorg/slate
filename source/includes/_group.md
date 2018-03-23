@@ -8,13 +8,13 @@ The API allows you to create, delete, and update groups. You can retrieve a list
 > Definition
 
 ```
-POST  https://dev.goodcop.com/v1/group
+POST  https://[GOODCOP_URL]/v1/group
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/group"
+curl "https://[GOODCOP_URL]/v1/group"
   -X  POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json"
@@ -51,7 +51,7 @@ Creates a new group object.
 
 ### HTTPS Request
 
-`POST https://dev.goodcop.com/v1/group`
+`POST https://[GOODCOP_URL]/v1/group`
 
 ### Request Body
 
@@ -78,13 +78,13 @@ Returns a group object. The returned object will have information about the rule
 > Definition
 
 ```
-GET  https://dev.goodcop.com/v1/group/{groupID}
+GET  https://[GOODCOP_URL]/v1/group/{groupID}
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/group/5707274949492736"
+curl "https://[GOODCOP_URL]/v1/group/5707274949492736"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json"
@@ -115,7 +115,7 @@ Retrieves the details of an existing group. You need only supply the unique grou
 
 ### HTTPS Request
 
-`GET https://dev.goodcop.com/v1/group/{groupID}`
+`GET https://[GOODCOP_URL]/v1/group/{groupID}`
 
 ### URL Params
 
@@ -137,13 +137,13 @@ Returns a group object if a valid identifier was provided. If invalid group id w
 > Definition
 
 ```
-GET  https://dev.goodcop.com/v1/group
+GET  https://[GOODCOP_URL]/v1/group
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/group"
+curl "https://[GOODCOP_URL]/v1/group"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -187,7 +187,7 @@ Retrieves the detailed list of all product groups. The groups are returned in de
 
 ### HTTPS Request
 
-`GET https://dev.goodcop.com/v1/group`
+`GET https://[GOODCOP_URL]/v1/group`
 
 ### Returns
 
@@ -202,13 +202,13 @@ Returns a list of group objects. If any other backend failures an appropriate er
 > Definition
 
 ```
-DELETE  https://dev.goodcop.com/v1/group/{groupID}
+DELETE  https://[GOODCOP_URL]/v1/group/{groupID}
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/group/5707274949492736"
+curl "https://[GOODCOP_URL]/v1/group/5707274949492736"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -227,7 +227,7 @@ Deletes a group from the product permanently.
 
 ### HTTPS Request
 
-`DELETE https://dev.goodcop.com/v1/group/{groupID}`
+`DELETE https://[GOODCOP_URL]/v1/group/{groupID}`
 
 ### URL Params
 
@@ -249,13 +249,13 @@ Returns a message on success. If the group ID does not exist or any other backen
 > Definition
 
 ```
-DELETE  https://dev.goodcop.com/v1/group
+DELETE  https://[GOODCOP_URL]/v1/group
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/group"
+curl "https://[GOODCOP_URL]/v1/group"
   -X DELETE
   -d '[5717800035287040,5717800035287766]'
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
@@ -275,7 +275,7 @@ Deletes multiple groups from the product permanently.
 
 ### HTTPS Request
 
-`DELETE https://dev.goodcop.com/v1/group`
+`DELETE https://[GOODCOP_URL]/v1/group`
 
 ### Request Body
 
@@ -298,13 +298,13 @@ Returns a message on success. If the group ID does not exist or any other backen
 > Definition
 
 ```
-PUT  https://dev.goodcop.com/v1/group/{groupID}/user
+PUT  https://[GOODCOP_URL]/v1/group/{groupID}/user
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/group/5707274949492736/user"
+curl "https://[GOODCOP_URL]/v1/group/5707274949492736/user"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -340,7 +340,7 @@ Adds multiple users to a group.
 
 ### HTTPS Request
 
-`PUT https://dev.goodcop.com/v1/group/{groupID}/users`
+`PUT https://[GOODCOP_URL]/v1/group/{groupID}/users`
 
 ### Request Body
 
@@ -370,13 +370,13 @@ Returns an array of users which were succesfully added to the group. If the grou
 > Definition
 
 ```
-PUT  https://dev.goodcop.com/v1/group/{groupID}/userEmail
+PUT  https://[GOODCOP_URL]/v1/group/{groupID}/userEmail
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/group/5707274949492736/userEmail"
+curl "https://[GOODCOP_URL]/v1/group/5707274949492736/userEmail"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -399,7 +399,7 @@ Adds a single user to a group by email address.
 
 ### HTTPS Request
 
-`PUT https://dev.goodcop.com/v1/group/{groupID}/userEmail`
+`PUT https://[GOODCOP_URL]/v1/group/{groupID}/userEmail`
 
 ### Request Body
 
@@ -431,13 +431,13 @@ Provide the unique user ID, Group ID and Goodcop will return the user details.
 > Definition
 
 ```
-GET  https://dev.goodcop.com/v1/group/{groupID}/user/{userID}
+GET  https://[GOODCOP_URL]/v1/group/{groupID}/user/{userID}
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/group/5717800035287040/user/test_a660-9242-4521-b614-e46ffead2b2b"
+curl "https://[GOODCOP_URL]/v1/group/5717800035287040/user/test_a660-9242-4521-b614-e46ffead2b2b"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -463,7 +463,7 @@ curl "https://dev.goodcop.com/v1/group/5717800035287040/user/test_a660-9242-4521
 
 ### HTTPS Request
 
-`GET  https://dev.goodcop.com/v1/group/{groupID}/user/{userID}`
+`GET  https://[GOODCOP_URL]/v1/group/{groupID}/user/{userID}`
 
 ### URL Params
 
@@ -484,13 +484,13 @@ Provide the unique Group ID and Goodcop will return the list of user details.
 > Definition
 
 ```
-GET  https://dev.goodcop.com/v1/group/{groupID}/user
+GET  https://[GOODCOP_URL]/v1/group/{groupID}/user
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/group/5717800035287040/user"
+curl "https://[GOODCOP_URL]/v1/group/5717800035287040/user"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -550,7 +550,7 @@ curl "https://dev.goodcop.com/v1/group/5717800035287040/user"
 
 ### HTTPS Request
 
-`GET  https://dev.goodcop.com/v1/group/{groupID}/user`
+`GET  https://[GOODCOP_URL]/v1/group/{groupID}/user`
 
 ### URL Params
 
@@ -570,13 +570,13 @@ Provide the unique user ID and Goodcop will return the message for successful de
 > Definition
 
 ```
-DELETE  https://dev.goodcop.com/v1/group/{groupID}/user/{userID}
+DELETE  https://[GOODCOP_URL]/v1/group/{groupID}/user/{userID}
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/group/5717800035287040/user/test_a660-9242-4521-b614-e46ffead2b2b"
+curl "https://[GOODCOP_URL]/v1/group/5717800035287040/user/test_a660-9242-4521-b614-e46ffead2b2b"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -593,7 +593,7 @@ curl "https://dev.goodcop.com/v1/group/5717800035287040/user/test_a660-9242-4521
 
 ### HTTPS Request
 
-`DELETE https://dev.goodcop.com/v1/group/{groupID}/user/{userID}`
+`DELETE https://[GOODCOP_URL]/v1/group/{groupID}/user/{userID}`
 
 ### URL Params
 
@@ -613,13 +613,13 @@ Provide the unique group ID and Goodcop will return the meta inforamtion for the
 > Definition
 
 ```
-GET  https://dev.goodcop.com/v1/group/{groupID}/meta
+GET  https://[GOODCOP_URL]/v1/group/{groupID}/meta
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/group/5717800035287040/meta"
+curl "https://[GOODCOP_URL]/v1/group/5717800035287040/meta"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -636,7 +636,7 @@ curl "https://dev.goodcop.com/v1/group/5717800035287040/meta"
 
 ### HTTPS Request
 
-`DELETE https://dev.goodcop.com/v1/group/{groupID}/meta`
+`DELETE https://[GOODCOP_URL]/v1/group/{groupID}/meta`
 
 ### URL Params
 
@@ -656,13 +656,13 @@ Provide the unique user ID and Goodcop will return the meta details.
 > Definition
 
 ```
-PUT  https://dev.goodcop.com/v1/group/{groupID}/meta
+PUT  https://[GOODCOP_URL]/v1/group/{groupID}/meta
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/group/5717800035287040/meta"
+curl "https://[GOODCOP_URL]/v1/group/5717800035287040/meta"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -683,7 +683,7 @@ curl "https://dev.goodcop.com/v1/group/5717800035287040/meta"
 
 ### HTTPS Request
 
-`PUT https://dev.goodcop.com/v1/group/{groupID}/meta`
+`PUT https://[GOODCOP_URL]/v1/group/{groupID}/meta`
 
 ### Request Body
 
@@ -709,13 +709,13 @@ Provide the unique group ID, meta and Goodcop will return the group details with
 > Definition
 
 ```
-DELETE  https://dev.goodcop.com/v1/group/{groupID}/meta
+DELETE  https://[GOODCOP_URL]/v1/group/{groupID}/meta
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/group/5717800035287040/meta"
+curl "https://[GOODCOP_URL]/v1/group/5717800035287040/meta"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -757,7 +757,7 @@ curl "https://dev.goodcop.com/v1/group/5717800035287040/meta"
 
 ### HTTPS Request
 
-`DELETE https://dev.goodcop.com/v1/group/{groupID}/meta`
+`DELETE https://[GOODCOP_URL]/v1/group/{groupID}/meta`
 
 ### Request Body
 
@@ -782,13 +782,13 @@ Provide the unique group ID and Goodcop will return the list of all rules.
 > Definition
 
 ```
-GET  https://dev.goodcop.com/v1/group/{groupID}/rule
+GET  https://[GOODCOP_URL]/v1/group/{groupID}/rule
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/group/5717800035287040/rule"
+curl "https://[GOODCOP_URL]/v1/group/5717800035287040/rule"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -821,7 +821,7 @@ curl "https://dev.goodcop.com/v1/group/5717800035287040/rule"
 
 ### HTTPS Request
 
-`GET https://dev.goodcop.com/v1/group/{groupID}/rule`
+`GET https://[GOODCOP_URL]/v1/group/{groupID}/rule`
 
 ### URL Params
 
@@ -840,13 +840,13 @@ Provide the unique user ID and Goodcop will return the updated list of all rules
 > Definition
 
 ```
-PUT  https://dev.goodcop.com/v1/user/{userID}/rule
+PUT  https://[GOODCOP_URL]/v1/user/{userID}/rule
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/group/5717800035287040/rule"
+curl "https://[GOODCOP_URL]/v1/group/5717800035287040/rule"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -885,7 +885,7 @@ curl "https://dev.goodcop.com/v1/group/5717800035287040/rule"
 
 ### HTTPS Request
 
-`PUT https://dev.goodcop.com/v1/group/{groupID}/rule`
+`PUT https://[GOODCOP_URL]/v1/group/{groupID}/rule`
 
 ### Request Body
 
@@ -910,13 +910,13 @@ Provide the unique group ID, rule array and Goodcop will return the updated list
 > Definition
 
 ```
-DELETE  https://dev.goodcop.com/v1/group/{groupID}/rule
+DELETE  https://[GOODCOP_URL]/v1/group/{groupID}/rule
 
 ```
 > Example Request
 
 ```shell
-curl "https://dev.goodcop.com/v1/group/5717800035287040/rule"
+curl "https://[GOODCOP_URL]/v1/group/5717800035287040/rule"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
@@ -949,7 +949,7 @@ curl "https://dev.goodcop.com/v1/group/5717800035287040/rule"
 
 ### HTTPS Request
 
-`DELETE https://dev.goodcop.com/v1/group/{groupID}/rule`
+`DELETE https://[GOODCOP_URL]/v1/group/{groupID}/rule`
 
 ### URL Params
 
