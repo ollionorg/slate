@@ -43,7 +43,7 @@ Creates a new user object.
 
 ### HTTPS Request
 
-<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signup<code>
+<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signup</code>
 
 ### Request Body
 
@@ -559,7 +559,7 @@ Retrieves the details of an existing user. You need only supply the unique user 
 
 ### HTTPS Request
 
-<code style="background:#2196F3;">POST</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/user/{userID}`
+<code style="background:#2196F3;">POST</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/user/{userID}</code>
 
 ### URL Params
 
