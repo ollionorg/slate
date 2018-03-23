@@ -74,7 +74,7 @@ secrets | optional | string | secrets of tenant
 
 Returns a api object. The returned object will have information about the rules, description, metadata and api key that is necessary for using tenant module. If no api name was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-#### Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
@@ -614,7 +614,7 @@ tenantID | required | string | Valid tenant identifier
 
 Returns meta string. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-#### Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
@@ -688,7 +688,7 @@ tenantID | required | string | Valid tenant identifier
 
 Returns updated tenant object with updated string. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-#### Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
@@ -757,7 +757,7 @@ tenantID | required | string | Valid tenant identifier
 
 Returns tenant object with no metadata. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-#### Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`

@@ -71,7 +71,7 @@ name | required | string | The name of the product.
 
 Returns a product object. The returned object will have information about the rules, description, metadata and api keys that needs to be used as authorization token for accessing other goodcop api modules. If no product name was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-#### Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Name is required field`
@@ -177,7 +177,7 @@ Retrieves the detailed list of all products.
 
 Returns a list of product objects. If any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-#### Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Name is required field`
