@@ -411,25 +411,49 @@
                     <a href="#get-tenant-by-id" class="toc-h2 toc-link" data-title="get-tenant-by-id">Get Tenant By ID</a>
                   </li>
                   <li>
+                    <a href="#error-messages-2" class="toc-h2 toc-link" data-title="error-messages">Error Messages</a>
+                  </li>
+                  <li>
                     <a href="#get-all-tenants" class="toc-h2 toc-link" data-title="get-all-tenants">Get All Tenants</a>
+                  </li>
+                  <li>
+                    <a href="#error-messages-3" class="toc-h2 toc-link" data-title="error-messages">Error Messages</a>
                   </li>
                   <li>
                     <a href="#delete-tenant-by-id" class="toc-h2 toc-link" data-title="delete-tenant-by-id">Delete Tenant By ID</a>
                   </li>
                   <li>
+                    <a href="#error-messages-4" class="toc-h2 toc-link" data-title="error-messages">Error Messages</a>
+                  </li>
+                  <li>
                     <a href="#get-rule-by-id" class="toc-h2 toc-link" data-title="get-rule-by-id">Get Rule By ID</a>
+                  </li>
+                  <li>
+                    <a href="#error-messages-5" class="toc-h2 toc-link" data-title="error-messages">Error Messages</a>
                   </li>
                   <li>
                     <a href="#update-rule-by-id" class="toc-h2 toc-link" data-title="update-rule-by-id">Update Rule By ID</a>
                   </li>
                   <li>
+                    <a href="#error-messages-6" class="toc-h2 toc-link" data-title="error-messages">Error Messages</a>
+                  </li>
+                  <li>
                     <a href="#delete-rule-by-id" class="toc-h2 toc-link" data-title="delete-rule-by-id">Delete Rule By ID</a>
+                  </li>
+                  <li>
+                    <a href="#error-messages-7" class="toc-h2 toc-link" data-title="error-messages">Error Messages</a>
                   </li>
                   <li>
                     <a href="#update-secret-by-id" class="toc-h2 toc-link" data-title="update-secret-by-id">Update Secret By ID</a>
                   </li>
                   <li>
+                    <a href="#error-messages-8" class="toc-h2 toc-link" data-title="error-messages">Error Messages</a>
+                  </li>
+                  <li>
                     <a href="#get-secret-by-id" class="toc-h2 toc-link" data-title="get-secret-by-id">Get Secret By ID</a>
+                  </li>
+                  <li>
+                    <a href="#error-messages-9" class="toc-h2 toc-link" data-title="error-messages">Error Messages</a>
                   </li>
                   <li>
                     <a href="#get-meta-by-id" class="toc-h2 toc-link" data-title="get-meta-by-id">Get Meta By ID</a>
@@ -4015,7 +4039,13 @@ The category header can be provided with two options either api or user dependin
 </tbody></table>
 <h3 id='returns-15'>Returns</h3>
 <p>Returns string message if a valid authorization key and a valid identifiers were provided, and returns an error otherwise.</p>
-<h1 id='tenant'>Tenant</h1><h2 id='create-tenant'>Create Tenant</h2>
+<h1 id='tenant'>Tenant</h1>
+<p>The API allows you to create, delete, and update tenant. The api gives ability to set authorization level privileges using the rules object and metadata storage. You can also set protected information in the secrets api for tenant.</p>
+
+<aside style="background:#5bc0de;">
+The x-api-key header must be provided to request the tenant api's.
+</aside>
+<h2 id='create-tenant'>Create Tenant</h2>
 <blockquote>
 <p>Definition</p>
 </blockquote>
@@ -4026,10 +4056,9 @@ The category header can be provided with two options either api or user dependin
 <p>Example Request</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant"</span>
-  -X <span class="s2">"POST"</span>
+  -X  POST
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
   -H <span class="s1">'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8='</span> <span class="se">\</span>
   -d <span class="s1">'{
     "name":"test tenant",
@@ -4063,11 +4092,7 @@ The category header can be provided with two options either api or user dependin
     </span><span class="s2">"secrets"</span><span class="p">:</span><span class="w"> </span><span class="s2">"secrets"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>Creates a tenant object provided the request body and returns the group object.</p>
-
-<aside style="background:#5bc0de;">
-The x-api-key header must be provided to create a tenant.
-</aside>
+<p>Creates a new tenant object.</p>
 <h3 id='https-request'>HTTPS Request</h3>
 <p><code>POST https://[GOODCOP_URL]/v1/tenant</code></p>
 <h3 id='request-body'>Request Body</h3>
@@ -4111,7 +4136,14 @@ The x-api-key header must be provided to create a tenant.
 </tr>
 </tbody></table>
 <h3 id='returns'>Returns</h3>
-<p>Returns new tenant object if a valid authorization key and api key was provided, and returns an error otherwise.</p>
+<p>Returns a api object. The returned object will have information about the rules, description, metadata and api key that is necessary for using tenant module. If no api name was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='error-messages'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization Error. Kindly provide correct API key</code></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>Tenant Already Exist with the name provided</code></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>Tenant name is required</code></li>
+</ol>
 <h2 id='get-tenant-by-id'>Get Tenant By ID</h2>
 <blockquote>
 <p>Definition</p>
@@ -4123,10 +4155,9 @@ The x-api-key header must be provided to create a tenant.
 <p>Example Request</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant/{tenantID}"</span>
-  -X <span class="s2">"GET"</span>
+  -X  GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -H <span class="s2">"Content-Type: application/json"</span> 
   -H <span class="s1">'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8='</span> <span class="se">\</span>
 </code></pre>
 <blockquote>
@@ -4144,11 +4175,11 @@ The x-api-key header must be provided to create a tenant.
         </span><span class="p">}</span><span class="w">
     </span><span class="p">],</span><span class="w">
     </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tenant meta"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"secrets"</span><span class="p">:</span><span class="w"> </span><span class="s2">"secrets"</span><span class="w">
+    </span><span class="s2">"secrets"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Retrieves the details of a tenant. Provide the unique tenant ID and Goodcop will return the corresponding user information.</p>
+<p>Retrieves the details of an existing tenant. You need only supply the unique tenant identifier that was returned upon tenant creation.</p>
 <h3 id='https-request-2'>HTTPS Request</h3>
 <p><code>GET https://[GOODCOP_URL]/v1/tenant/{tenantID}</code></p>
 <h3 id='url-params'>URL Params</h3>
@@ -4167,8 +4198,14 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid tenant identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-2'>Returns</h3>
-<p>Returns tenant details if a valid authorization key, api key and valid indentifier was provided, and returns an error otherwise.</p>
+<h3 id='returns-2'>Returns</h3><h3 id='returns-3'>Returns</h3>
+<p>Returns a tenant object if a valid identifier was provided. If invalid tenant ID was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h2 id='error-messages-2'>Error Messages</h2>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization Error. Kindly provide correct API key</code></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>Tenant does not exist for given api ID</code></li>
+</ol>
 <h2 id='get-all-tenants'>Get All Tenants</h2>
 <blockquote>
 <p>Definition</p>
@@ -4180,10 +4217,9 @@ The x-api-key header must be provided to create a tenant.
 <p>Example Request</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant"</span>
-  -X <span class="s2">"GET"</span>
+  -X  GET
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
   -H <span class="s1">'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8='</span> <span class="se">\</span>
 </code></pre>
 <blockquote>
@@ -4209,11 +4245,16 @@ The x-api-key header must be provided to create a tenant.
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Retrieves the details of a all tenants for a particular api.</p>
+<p>Retrieves the detailed list of all product tenants.</p>
 <h3 id='https-request-3'>HTTPS Request</h3>
 <p><code>GET https://[GOODCOP_URL]/v1/tenant</code></p>
-<h3 id='returns-3'>Returns</h3>
-<p>Returns array of tenants if a valid authorization key, api key was provided, and returns an error otherwise.</p>
+<h3 id='returns-4'>Returns</h3>
+<p>Returns a list of tenant objects. If any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h2 id='error-messages-3'>Error Messages</h2>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code></li>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization Error. Kindly provide correct API key</code></li>
+</ol>
 <h2 id='delete-tenant-by-id'>Delete Tenant By ID</h2>
 <blockquote>
 <p>Definition</p>
@@ -4227,8 +4268,7 @@ The x-api-key header must be provided to create a tenant.
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant/{tenantID}"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
   -H <span class="s1">'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8='</span> <span class="se">\</span>
 </code></pre>
 <blockquote>
@@ -4239,7 +4279,7 @@ The x-api-key header must be provided to create a tenant.
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Deletes the tenant.</p>
+<p>Deletes a tenant from the product permanently.</p>
 <h3 id='https-request-4'>HTTPS Request</h3>
 <p><code>DELETE https://[GOODCOP_URL]/v1/tenant/{tenantID}</code></p>
 <h3 id='url-params-2'>URL Params</h3>
@@ -4258,8 +4298,14 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid tenant identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-4'>Returns</h3>
-<p>Returns string message if a valid authorization key, api key was provided, and returns an error otherwise.</p>
+<h3 id='returns-5'>Returns</h3>
+<p>Returns a message on success. If the tenant ID does not exist or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h2 id='error-messages-4'>Error Messages</h2>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization Error. Kindly provide correct API key</code></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>Tenant does not exist for given api ID</code></li>
+</ol>
 <h2 id='get-rule-by-id'>Get Rule By ID</h2>
 <blockquote>
 <p>Definition</p>
@@ -4291,7 +4337,7 @@ The x-api-key header must be provided to create a tenant.
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Provide the unique tenant ID and Goodcop will return the list of all rules.</p>
+<p>Retrieves the details of all rules for a tenant.</p>
 <h3 id='https-request-5'>HTTPS Request</h3>
 <p><code>GET https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule</code></p>
 <h3 id='url-params-3'>URL Params</h3>
@@ -4310,8 +4356,14 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid tenant identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-5'>Returns</h3>
-<p>Returns rules object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h3 id='returns-6'>Returns</h3>
+<p>Returns the list of tenant rules. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h2 id='error-messages-5'>Error Messages</h2>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization Error. Kindly provide correct API key</code></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>Tenant does not exist for given api ID</code></li>
+</ol>
 <h2 id='update-rule-by-id'>Update Rule By ID</h2>
 <blockquote>
 <p>Definition</p>
@@ -4365,7 +4417,7 @@ The x-api-key header must be provided to create a tenant.
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Retrives all rules of a tenants for a particular api.</p>
+<p>Updates the rules by setting the value of the body parameter passed.</p>
 <h3 id='https-request-6'>HTTPS Request</h3>
 <p><code>PUT https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule</code></p>
 <h3 id='request-body-2'>Request Body</h3>
@@ -4400,8 +4452,15 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid tenant identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-6'>Returns</h3>
-<p>Returns array of rules if a valid authorization key, api key was provided, and returns an error otherwise.</p>
+<h3 id='returns-7'>Returns</h3>
+<p>Returns updated rules for the tenant. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h2 id='error-messages-6'>Error Messages</h2>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization Error. Kindly provide correct API key</code></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>Tenant does not exist for given api ID</code></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>Not Acceptable - You requested a wrong rule format</code></li>
+</ol>
 <h2 id='delete-rule-by-id'>Delete Rule By ID</h2>
 <blockquote>
 <p>Definition</p>
@@ -4449,7 +4508,7 @@ The x-api-key header must be provided to create a tenant.
     </span><span class="s2">"secrets"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{</span><span class="se">\"</span><span class="s2">email</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">mail@gmail.com</span><span class="se">\"</span><span class="s2">}"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>Deletes the rules associated with the tenant. </p>
+<p>Deletes the rules from the tenant.</p>
 <h3 id='https-request-7'>HTTPS Request</h3>
 <p><code>DELETE https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule</code></p>
 <h3 id='request-body-3'>Request Body</h3>
@@ -4484,8 +4543,15 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid tenant identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-7'>Returns</h3>
-<p>Returns tenant object with deleted rules info if a valid authorization key, api key was provided, and returns an error otherwise.</p>
+<h3 id='returns-8'>Returns</h3>
+<p>Returns tenant object with updated rules. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h2 id='error-messages-7'>Error Messages</h2>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization Error. Kindly provide correct API key</code></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>Tenant does not exist for given api ID</code></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>Not Acceptable - You requested a wrong rule format</code></li>
+</ol>
 <h2 id='update-secret-by-id'>Update Secret By ID</h2>
 <blockquote>
 <p>Definition</p>
@@ -4499,8 +4565,7 @@ The x-api-key header must be provided to create a tenant.
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
   -H <span class="s1">'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8='</span> <span class="se">\</span>
   -d <span class="s1">'{
     "secrets":"{\"email\":\"mail@gmail.com\"}"
@@ -4534,7 +4599,7 @@ The x-api-key header must be provided to create a tenant.
     </span><span class="s2">"secrets"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{</span><span class="se">\"</span><span class="s2">email</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">mail@gmail.com</span><span class="se">\"</span><span class="s2">}"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>Retrives all rules of a tenants for a particular api.</p>
+<p>Updates the secrets by setting the value of the body parameter passed. The secret information is stored in protected format.</p>
 <h3 id='https-request-8'>HTTPS Request</h3>
 <p><code>PUT https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret</code></p>
 <h3 id='request-body-4'>Request Body</h3>
@@ -4569,8 +4634,15 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid tenant identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-8'>Returns</h3>
-<p>Returns tenant object with updated secret info if a valid authorization key, api key was provided, and returns an error otherwise.</p>
+<h3 id='returns-9'>Returns</h3>
+<p>Returns updated secrets in the tenant. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h2 id='error-messages-8'>Error Messages</h2>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization Error. Kindly provide correct API key</code></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>Tenant does not exist for given api ID</code></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>secrets should be stringified objectt</code></li>
+</ol>
 <h2 id='get-secret-by-id'>Get Secret By ID</h2>
 <blockquote>
 <p>Definition</p>
@@ -4584,8 +4656,7 @@ The x-api-key header must be provided to create a tenant.
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret"</span>
   -X <span class="s2">"GET"</span>
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
   -H <span class="s1">'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8='</span> <span class="se">\</span>
 </code></pre>
 <blockquote>
@@ -4598,7 +4669,7 @@ The x-api-key header must be provided to create a tenant.
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Provide the unique tenant ID and Goodcop will return the secret.</p>
+<p>Retrieves the secret information for the tenant. </p>
 <h3 id='https-request-9'>HTTPS Request</h3>
 <p><code>GET https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret</code></p>
 <h3 id='url-params-7'>URL Params</h3>
@@ -4617,8 +4688,15 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid tenant identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-9'>Returns</h3>
-<p>Returns secrets if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h3 id='returns-10'>Returns</h3>
+<p>Returns the secrets stored with the tenant. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h2 id='error-messages-9'>Error Messages</h2>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization Error. Kindly provide correct API key</code></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>Tenant does not exist for given api ID</code></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>Not Acceptable - You requested a wrong secrets format</code></li>
+</ol>
 <h2 id='get-meta-by-id'>Get Meta By ID</h2>
 <blockquote>
 <p>Definition</p>
@@ -4632,8 +4710,7 @@ The x-api-key header must be provided to create a tenant.
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta"</span>
   -X <span class="s2">"GET"</span>
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
   -H <span class="s1">'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8='</span> <span class="se">\</span>
 </code></pre>
 <blockquote>
@@ -4644,7 +4721,7 @@ The x-api-key header must be provided to create a tenant.
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Provide the unique tenant ID and Goodcop will return the meta information.</p>
+<p>Retrieves the meta details provided the tenant ID.</p>
 <h3 id='https-request-10'>HTTPS Request</h3>
 <p><code>GET https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta</code></p>
 <h3 id='url-params-8'>URL Params</h3>
@@ -4663,8 +4740,14 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid tenant identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-10'>Returns</h3>
-<p>Returns string meta if a valid authorization key and a valid identifier was provided, and returns an error otherwise.</p>
+<h3 id='returns-11'>Returns</h3>
+<p>Returns meta string. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='error-messages-10'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization Error. Kindly provide correct API key</code></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>Tenant does not exist for given api ID</code></li>
+</ol>
 <h2 id='update-meta-by-id'>Update Meta By ID</h2>
 <blockquote>
 <p>Definition</p>
@@ -4678,8 +4761,7 @@ The x-api-key header must be provided to create a tenant.
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta"</span>
   -X PUT
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
   -H <span class="s1">'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8='</span> <span class="se">\</span>
   -d <span class="s1">'{
     "meta":"update tenant meta"
@@ -4713,7 +4795,7 @@ The x-api-key header must be provided to create a tenant.
     </span><span class="s2">"secrets"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{</span><span class="se">\"</span><span class="s2">email</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">mail@gmail.com</span><span class="se">\"</span><span class="s2">}"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>Updated meta details of the tenant.</p>
+<p>Updates the meta by setting the value of the body parameter passed.</p>
 <h3 id='https-request-11'>HTTPS Request</h3>
 <p><code>PUT https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta</code></p>
 <h3 id='request-body-5'>Request Body</h3>
@@ -4748,8 +4830,14 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid tenant identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-11'>Returns</h3>
-<p>Returns tenant object with updated meta info if a valid authorization key, api key was provided, and returns an error otherwise.</p>
+<h3 id='returns-12'>Returns</h3>
+<p>Returns updated tenant object with updated string. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='error-messages-11'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization Error. Kindly provide correct API key</code></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>Tenant does not exist for given api ID</code></li>
+</ol>
 <h2 id='delete-meta-by-id'>Delete Meta By ID</h2>
 <blockquote>
 <p>Definition</p>
@@ -4763,8 +4851,7 @@ The x-api-key header must be provided to create a tenant.
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta"</span>
   -X DELETE
   -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Identifier: test_56789657567"</span>
+  -H <span class="s2">"Content-Type: application/json"</span>
   -H <span class="s1">'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8='</span> <span class="se">\</span>
   -d <span class="s1">'{
         "meta":""
@@ -4798,7 +4885,7 @@ The x-api-key header must be provided to create a tenant.
     </span><span class="s2">"secrets"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{</span><span class="se">\"</span><span class="s2">email</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">mail@gmail.com</span><span class="se">\"</span><span class="s2">}"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>Deletes the meta associated with the tenant. </p>
+<p>Replaces the meta with empty string.</p>
 <h3 id='https-request-12'>HTTPS Request</h3>
 <p><code>DELETE https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta</code></p>
 <h3 id='url-params-10'>URL Params</h3>
@@ -4817,8 +4904,14 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid tenant identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-12'>Returns</h3>
-<p>Returns tenant object with deleted meta info if a valid authorization key, api key was provided, and returns an error otherwise.</p>
+<h3 id='returns-13'>Returns</h3>
+<p>Returns tenant object with no metadata. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='error-messages-12'>Error Messages</h3>
+<ol>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
+<li> <code style="background:#FF7043;"> 401 </code> <code>Authorization Error. Kindly provide correct API key</code></li>
+<li> <code style="background:#FFC107;"> 400 </code> <code>Tenant does not exist for given api ID</code></li>
+</ol>
 <h1 id='api'>Api</h1>
 <p>The API allows you to create, delete, and update api. The api gives ability to set authorization level privileges using the rules object and metadata storage.</p>
 <h2 id='create-api'>Create Api</h2>
@@ -5284,7 +5377,7 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid api identifier</td>
 </tr>
 </tbody></table>
-
+<h3 id='returns-6'>Returns</h3>
 <p>Returns updated rules in the api. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-6'>Error Messages</h3>
 <ol>
@@ -5378,8 +5471,8 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid api identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-6'>Returns</h3>
-<p>Returns updated rules. If invalid apiroup ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='returns-7'>Returns</h3>
+<p>Returns updated rules. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-7'>Error Messages</h3>
 <ol>
 <li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
@@ -5428,7 +5521,7 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid api identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-7'>Returns</h3>
+<h3 id='returns-8'>Returns</h3>
 <p>Returns meta string. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-8'>Error Messages</h3>
 <ol>
@@ -5582,8 +5675,8 @@ The x-api-key header must be provided to create a tenant.
 <td>Valid api identifier</td>
 </tr>
 </tbody></table>
-<h3 id='returns-8'>Returns</h3>
-<p>Returns group object with no metadata. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<h3 id='returns-9'>Returns</h3>
+<p>Returns api object with no metadata. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-10'>Error Messages</h3>
 <ol>
 <li> <code style="background:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
