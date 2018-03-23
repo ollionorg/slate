@@ -71,9 +71,9 @@ Returns boolean value.If invalid group ID or any other backend failures an appro
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `user-token is missing in header.`
-3.  <code style="background:#FFC107;"> 400 </code> `x-api-key is missing in header.`
-4.  <code style="background:#FFC107;"> 400 </code> `verb is missing in header.`
-5.  <code style="background:#FFC107;"> 400 </code> `path is missing in header.`
-6.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `user-token is missing in header.`
+3.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `x-api-key is missing in header.`
+4.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `verb is missing in header.`
+5.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `path is missing in header.`
+6.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`

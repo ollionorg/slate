@@ -76,10 +76,10 @@ Returns a api object. The returned object will have information about the rules,
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `API Already Exist with the name provided`
-3.  <code style="background:#FFC107;"> 400 </code> `Api name is required`
-4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `API Already Exist with the name provided`
+3.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Api name is required`
+4.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Get Api By ID
 
@@ -136,9 +136,9 @@ Returns a api object if a valid identifier was provided. If invalid api ID was p
 
 ## Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `API does not exist for given api ID`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `API does not exist for given api ID`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Get All Apis
 
@@ -239,8 +239,8 @@ Returns a list of api objects. If any other backend failures an appropriate erro
 
 ## Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key`
-2.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key`
+2.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Delete Api By ID
 
@@ -286,9 +286,9 @@ Returns a message on success. If the api ID does not exist or any other backend 
 
 ## Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `API does not exist for given api ID`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `API does not exist for given api ID`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Get rule By ID
@@ -336,9 +336,9 @@ Returns the list of api rules. If invalid api ID or any other backend failures a
 
 ## Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `API does not exist for given api ID`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `API does not exist for given api ID`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Update rule By ID
 
@@ -418,10 +418,10 @@ Returns updated rules in the api. If invalid api ID or any other backend failure
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `API does not exist for given api ID`
-3.  <code style="background:#FFC107;"> 400 </code> `Not Acceptable - You requested a wrong rule format`
-4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `API does not exist for given api ID`
+3.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Not Acceptable - You requested a wrong rule format`
+4.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Delete rule By ID
@@ -504,10 +504,10 @@ Returns updated rules. If invalid api ID or any other backend failures an approp
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `API does not exist for given api ID`
-3.  <code style="background:#FFC107;"> 400 </code> `Not Acceptable - You requested a wrong rule format`
-4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `API does not exist for given api ID`
+3.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Not Acceptable - You requested a wrong rule format`
+4.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Get Meta By ID
 
@@ -548,9 +548,9 @@ Returns meta string. If invalid api ID or any other backend failures an appropri
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `API does not exist for given api ID`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `API does not exist for given api ID`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Update Meta By ID
 
@@ -621,9 +621,9 @@ Returns updated meta string. If invalid api ID or any other backend failures an 
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `API does not exist for given api ID`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `API does not exist for given api ID`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Delete Meta By ID
 
@@ -691,6 +691,6 @@ Returns api object with no metadata. If invalid api ID or any other backend fail
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `API does not exist for given api ID`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `API does not exist for given api ID`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`

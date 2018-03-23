@@ -56,10 +56,10 @@ Returns new org object if a valid authorization key provided, and returns an err
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `Name is required field`
-3.  <code style="background:#FF0000;"> 400 </code> `Organization Already Exist with the name provided`
-4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Name is required field`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 400 </code> `Organization Already Exist with the name provided`
+4.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## List Orgs
 
@@ -109,8 +109,8 @@ Returns a list of org objects. If any other backend failures an appropriate erro
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
-2.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
+2.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Get Org by ID
 
@@ -156,10 +156,10 @@ Returns a org object if a valid identifier was provided. If invalid org ID was p
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
-2.  <code style="background:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
-3.  <code style="background:#FF7043;"> 400 </code> `Org not found` 
-4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
+2.  <code style="background:#FFFFFF;color:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
+3.  <code style="background:#FFFFFF;color:#FF7043;"> 400 </code> `Org not found` 
+4.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Delete Org By ID
@@ -204,10 +204,10 @@ Returns a message on success. If the org ID does not exist or any other backend 
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
-2.  <code style="background:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
-3.  <code style="background:#FF7043;"> 400 </code> `Org not found` 
-4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
+2.  <code style="background:#FFFFFF;color:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
+3.  <code style="background:#FFFFFF;color:#FF7043;"> 400 </code> `Org not found` 
+4.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Update Org
@@ -269,10 +269,10 @@ Returns updated org object. If invalid org ID or any other backend failures an a
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
-2.  <code style="background:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
-3.  <code style="background:#FF7043;"> 400 </code> `Org not found` 
-4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
+2.  <code style="background:#FFFFFF;color:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
+3.  <code style="background:#FFFFFF;color:#FF7043;"> 400 </code> `Org not found` 
+4.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Get Org Meta By ID
@@ -313,10 +313,10 @@ Returns meta string. If invalid org ID or any other backend failures an appropri
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
-2.  <code style="background:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
-3.  <code style="background:#FF7043;"> 400 </code> `Org not found` 
-4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
+2.  <code style="background:#FFFFFF;color:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
+3.  <code style="background:#FFFFFF;color:#FF7043;"> 400 </code> `Org not found` 
+4.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Update Org Meta By ID
@@ -373,11 +373,11 @@ Returns updated meta string. If invalid org ID or any other backend failures an 
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
-2.  <code style="background:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
-3.  <code style="background:#FF7043;"> 400 </code> `Meta should not empty, use \"deletemeta\" to delete it`
-4.  <code style="background:#FF7043;"> 400 </code> `Org not found` 
-5.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
+2.  <code style="background:#FFFFFF;color:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
+3.  <code style="background:#FFFFFF;color:#FF7043;"> 400 </code> `Meta should not empty, use \"deletemeta\" to delete it`
+4.  <code style="background:#FFFFFF;color:#FF7043;"> 400 </code> `Org not found` 
+5.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Delete Org Meta By ID
@@ -425,10 +425,10 @@ Returns success message on succesfull deletion of meta. If invalid org ID or any
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
-2.  <code style="background:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
-3.  <code style="background:#FF7043;"> 400 </code> `Org not found` 
-4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
+2.  <code style="background:#FFFFFF;color:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
+3.  <code style="background:#FFFFFF;color:#FF7043;"> 400 </code> `Org not found` 
+4.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Add Users to Org
 
@@ -480,11 +480,11 @@ Returns string message on success. If the org ID does not exist, user IDs are in
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
-2.  <code style="background:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
-3.  <code style="background:#FF7043;"> 400 </code> `Org not found` 
-4.  <code style="background:#FF7043;"> 400 </code> `User not found` 
-5.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
+2.  <code style="background:#FFFFFF;color:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
+3.  <code style="background:#FFFFFF;color:#FF7043;"> 400 </code> `Org not found` 
+4.  <code style="background:#FFFFFF;color:#FF7043;"> 400 </code> `User not found` 
+5.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Get Org Users By ID
@@ -524,10 +524,10 @@ Returns a array of user IDs if a valid identifiers was provided. If invalid org 
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
-2.  <code style="background:#FF7043;"> 400 </code> `Org id should be valid and parsable`
-3.  <code style="background:#FF7043;"> 400 </code> `Org not found` 
-4. <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.` 
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
+2.  <code style="background:#FFFFFF;color:#FF7043;"> 400 </code> `Org id should be valid and parsable`
+3.  <code style="background:#FFFFFF;color:#FF7043;"> 400 </code> `Org not found` 
+4. <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.` 
 
 ## Remove Users from Org By ID
 
@@ -577,7 +577,7 @@ Returns a success message on removal of users from the group. If invalid org ID 
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
-2.  <code style="background:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
-3.  <code style="background:#FF7043;"> 400 </code> `Org not found` 
-4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
+2.  <code style="background:#FFFFFF;color:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
+3.  <code style="background:#FFFFFF;color:#FF7043;"> 400 </code> `Org not found` 
+4.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`

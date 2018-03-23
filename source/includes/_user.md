@@ -58,12 +58,12 @@ Returns a user object if correct email and password was provided. The returned o
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `Either email or password is missing`
-3.  <code style="background:#FFC107;"> 400 </code> `Email is not valid`
-4.  <code style="background:#FFC107;"> 400 </code> `Password must be atleast 7 characters long`
-5.  <code style="background:#FFC107;"> 400 </code> `You are already registered with product1 and product2`
-6.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Either email or password is missing`
+3.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Email is not valid`
+4.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Password must be atleast 7 characters long`
+5.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `You are already registered with product1 and product2`
+6.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## SignIn using github
@@ -101,9 +101,9 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## SignIn using facebook
 
@@ -140,9 +140,9 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## SignIn using facebook
 
@@ -179,9 +179,9 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## SignIn using twitter
 
@@ -218,9 +218,9 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## SignIn using instagram
 
@@ -257,9 +257,9 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## SignIn using magiclink
 
@@ -305,9 +305,9 @@ Returns a success message and an email will be sent to user with the magic link.
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `Email is missing`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Email is missing`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## SignIn using phonenumber
@@ -354,10 +354,10 @@ Returns a success message and an one time password will be sent to user to verif
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `Phone number is missing`
-3.  <code style="background:#FFC107;"> 400 </code> `SMS sending error`
-4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Phone number is missing`
+3.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `SMS sending error`
+4.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Verfiy phonenumber
 
@@ -406,9 +406,9 @@ Returns a user object if correct otp and phoneNumber was provided. The returned 
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `Phone number or OTP missing`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Phone number or OTP missing`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Login
 
@@ -467,11 +467,11 @@ Returns a user object if correct email and password was provided. The returned o
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `Either email or password is missing`
-3.  <code style="background:#FFC107;"> 400 </code> `Password must be atleast 7 characters long`
-4.  <code style="background:#FFC107;"> 400 </code> `No Password,Please Set a password after signing in using magic link`
-5.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Either email or password is missing`
+3.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Password must be atleast 7 characters long`
+4.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `No Password,Please Set a password after signing in using magic link`
+5.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Change password
 
@@ -516,11 +516,11 @@ Returns a success message. If no user token was provided, incorrect passwords or
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `User not found`
-3.  <code style="background:#FFC107;"> 400 </code> `Wrong Old Password`
-4.  <code style="background:#FFC107;"> 400 </code> `Password must be atleast 7 characters long`
-5.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `User not found`
+3.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Wrong Old Password`
+4.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Password must be atleast 7 characters long`
+5.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Get user by Id
@@ -573,9 +573,9 @@ Returns a user object if a valid identifier was provided. If invalide user id wa
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `User not found`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `User not found`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Get user By email
 
@@ -627,9 +627,9 @@ Returns a user object if a valid identifier was provided. If invalid email was p
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `Email is not valid`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Email is not valid`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## List all users
 
@@ -703,8 +703,8 @@ Returns a list of user objects. If any other backend failures an appropriate err
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key`
-2.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key`
+2.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Delete user by Id
 
@@ -750,9 +750,9 @@ Returns a message on success. If the user ID does not exist an appropriate error
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `User not found`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `User not found`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Get Group Details By ID
 
@@ -828,9 +828,9 @@ Returns an array of group objects. If invalid user ID or any other backend failu
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 400 </code> `User not found`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `User not found`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Get User Meta By ID
@@ -870,9 +870,9 @@ Returns meta string. If invalid user ID or any other backend failures an appropr
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key`  
-2.  <code style="background:#FFC107;"> 400 </code> `User not found`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key`  
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `User not found`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 
@@ -950,9 +950,9 @@ Returns user object with updated meta. If invalid user ID or any other backend f
 
 ### Error Messages
 
-1.  <code style="background:#FFC107;"> 401 </code> `Invalid product API key`  
-2.  <code style="background:#FFC107;"> 400 </code> `User not found`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FFC107;"> 401 </code> `Invalid product API key`  
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `User not found`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## List User Rules By ID
 
@@ -1007,9 +1007,9 @@ Returns the list of user rules. If invalid user ID or any other backend failures
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key`  
-2.  <code style="background:#FFC107;"> 400 </code> `User not found`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key`  
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `User not found`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Update User Rules By ID
 
@@ -1097,9 +1097,9 @@ Returns user object with updated rules. If invalid user ID or any other backend 
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key`  
-2.  <code style="background:#FFC107;"> 400 </code> `User not found`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key`  
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `User not found`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Delete User Rules By ID
@@ -1177,9 +1177,9 @@ Returns user object with updated rules. If invalid user ID or any other backend 
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key`  
-2.  <code style="background:#FFC107;"> 400 </code> `User not found`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key`  
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `User not found`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Get Group Details for user By ID
@@ -1260,6 +1260,6 @@ Returns list of groups details for a unique userID. If invalid user ID or any ot
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key`  
-2.  <code style="background:#FFC107;"> 400 </code> `User not found`
-3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key`  
+2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `User not found`
+3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
