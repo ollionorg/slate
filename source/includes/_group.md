@@ -71,6 +71,7 @@ Returns a group object. The returned object will have information about the rule
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `Group name is required`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Get Group By ID
@@ -131,6 +132,7 @@ Returns a group object if a valid identifier was provided. If invalid group id w
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `Group does not exist for given groupID`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## List Groups
 
@@ -195,6 +197,7 @@ Returns a list of group objects. If any other backend failures an appropriate er
 ## Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Delete Group By ID
 
@@ -241,6 +244,7 @@ Returns a message on success. If the group ID does not exist or any other backen
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `Group does not exist for given groupID`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Delete Multiple Group
 
@@ -288,6 +292,7 @@ Returns a message on success. If the group ID does not exist or any other backen
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `Group does not exist for given groupID`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Add Multiple Users to Group By ID
@@ -359,6 +364,7 @@ Returns an array of users which were succesfully added to the group. If the grou
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `Users not found`
 3.  <code style="background:#FFC107;"> 400 </code> `Group id is not valid`
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Add Single User to Group By Email
@@ -417,6 +423,7 @@ Returns an array of users which were succesfully added to the group. If the grou
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `Users not found`
 3.  <code style="background:#FFC107;"> 400 </code> `Group id is not valid`
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Get User for Group By ID
@@ -475,6 +482,7 @@ Returns a user object if a valid identifiers was provided. If invalid user ID or
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `Users not found`
 3.  <code style="background:#FFC107;"> 400 </code> `Group id is not valid`
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Get All Users for Group By ID
@@ -579,6 +587,7 @@ Returns a list of user objects. If any other backend failures an appropriate err
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Delete User from Group By ID
 
@@ -627,6 +636,7 @@ Returns a success message on removal of user from the group. If invalid user ID,
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `Users not found`
 3.  <code style="background:#FFC107;"> 400 </code> `Group id is not valid`
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Get Group Meta By ID
 
@@ -673,6 +683,7 @@ Returns meta string. If invalid group ID or any other backend failures an approp
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `Group id is not valid`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Update Group Meta By ID
@@ -730,6 +741,7 @@ Returns updated meta string. If invalid group ID or any other backend failures a
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `Group id is not valid`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Delete Group Meta By ID
@@ -808,6 +820,7 @@ Returns group object with no metadata. If invalid group ID or any other backend 
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `Group id is not valid`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Get Group Rules By ID
@@ -871,6 +884,7 @@ Returns the list of group rules. If invalid group ID or any other backend failur
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `Group id is not valid`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Update Group Rules By ID
 
@@ -946,6 +960,7 @@ Returns updated rules in the group. If invalid user ID or any other backend fail
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `Group id is not valid`
 3.  <code style="background:#FFC107;"> 400 </code> `Not Acceptable - You requested a wrong rule format`
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Delete Group Rules By ID
 
@@ -1009,3 +1024,4 @@ Returns updated rules. If invalid group ID or any other backend failures an appr
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `Group id is not valid`
 3.  <code style="background:#FFC107;"> 400 </code> `Not Acceptable - You requested a wrong rule format`
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`

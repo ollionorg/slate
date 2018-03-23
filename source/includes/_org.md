@@ -1,5 +1,8 @@
 # Organization
 
+The API allows you to create, delete, and update an prganization. The api gives ability to store metadata, add/remove multiple users
+from the organization.
+
 ## Create Org
 
 > Definition
@@ -14,8 +17,7 @@ POST  https://[GOODCOP_URL]/v1/org
 curl "https://[GOODCOP_URL]/v1/org"
   -X  POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
   -d '{
 	"name":"testorg",
 	"meta":"test meta",
@@ -31,13 +33,13 @@ curl "https://[GOODCOP_URL]/v1/org"
     "name": "testorg",
     "meta": "test meta",
     "contactDetails": "customer_detail_in_string",
-    "CreatedAt": "2018-03-21T17:03:16.024791+05:30",
-    "UpdatedAt": "2018-03-21T17:03:16.024793+05:30"
+    "createdAt": "2018-03-21T17:03:16.024791+05:30",
+    "updatedAt": "2018-03-21T17:03:16.024793+05:30"
 }
 
 ```
 
-Creates a organization
+Creates a new organization object.
 
 ### HTTPS Request
 
@@ -61,8 +63,9 @@ Returns new org object if a valid authorization key provided, and returns an err
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
 2.  <code style="background:#FFC107;"> 404 </code> `Name is required field`
 3.  <code style="background:#FF0000;"> 500 </code> `Organization Already Exist with the name provided`
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
-## List Org
+## List Orgs
 
 > Definition
 
@@ -76,8 +79,7 @@ GET  https://[GOODCOP_URL]/v1/org
 curl "https://[GOODCOP_URL]/v1/org"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;">200</code>
@@ -90,21 +92,22 @@ curl "https://[GOODCOP_URL]/v1/org"
             "name": "testorg",
             "meta": "test meta",
             "contactDetails": "customer_detail_in_string",
-            "CreatedAt": "2018-03-21T17:03:16.024791+05:30",
-            "UpdatedAt": "2018-03-21T17:03:16.024793+05:30"
+            "createdAt": "2018-03-21T17:03:16.024791+05:30",
+            "updatedAt": "2018-03-21T17:03:16.024793+05:30"
         },
         {
             "id": 56424259099072,
             "name": "testorg2",
             "meta": "",
             "contactDetails": "",
-            "CreatedAt": "2018-03-21T17:03:18.024791+05:30",
-            "UpdatedAt": "2018-03-21T17:03:18.024793+05:30"
+            "createdAt": "2018-03-21T17:03:18.024791+05:30",
+            "updatedAt": "2018-03-21T17:03:18.024793+05:30"
         },
     ]
 }
 ```
-Goodcop will return the all organization inside a tenant, will be accessible to each product for that tenant
+
+Retrieves the detailed list of all organization for the product.
 
 ### HTTPS Request
 
@@ -112,11 +115,12 @@ Goodcop will return the all organization inside a tenant, will be accessible to 
 
 ### Returns
 
-Returns all organization details if a valid authorization key and returns an error otherwise.
+Returns a list of org objects. If any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
+2.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Get Org by ID
 
@@ -132,8 +136,7 @@ GET  https://[GOODCOP_URL]/v1/org/{orgID}
 curl "https://[GOODCOP_URL]/v1/org/5642425909379072"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;">200</code>
@@ -144,12 +147,12 @@ curl "https://[GOODCOP_URL]/v1/org/5642425909379072"
     "name": "testorg",
     "meta": "test meta",
     "contactDetails": "customer_detail_in_string",
-    "CreatedAt": "2018-03-21T17:03:16.024791+05:30",
-    "UpdatedAt": "2018-03-21T17:03:16.024793+05:30"
+    "createdAt": "2018-03-21T17:03:16.024791+05:30",
+    "updatedAt": "2018-03-21T17:03:16.024793+05:30"
 }
 
 ```
-Goodcop will return the api's all information.
+Retrieves the details of an existing org. You need only supply the unique org identifier that was returned upon org creation.
 
 ### HTTPS Request
 
@@ -164,19 +167,18 @@ orgID | required | string | Valid org identifier
 
 ### Returns
 
-Returns org details if a valid authorization key, and valid indentifier was provided, and returns an error otherwise.
+Returns a org object if a valid identifier was provided. If invalid org ID was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
 
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
 2.  <code style="background:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
-3.  <code style="background:#FFC107;"> 404 </code> `Org not Found`
-4.  <code style="background:#FF0000;"> 500 </code> `Some error occured`
+3.  <code style="background:#FF7043;"> 400 </code> `Org not found` 
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Delete Org By ID
-
-Provide the unique org ID and Goodcop will return the message for successful deletion of org.
 
 > Definition
 
@@ -190,8 +192,7 @@ DELETE  https://[GOODCOP_URL]/v1/org/{orgID}
 curl "https://[GOODCOP_URL]/v1/org/6309146567639040"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;">200</code>
@@ -201,6 +202,7 @@ curl "https://[GOODCOP_URL]/v1/org/6309146567639040"
     "message": "Org Deleted Successfully"
 }
 ```
+Deletes an org from the product permanently.
 
 ### HTTPS Request
 
@@ -214,18 +216,18 @@ orgID | required | string | Valid org identifier
 
 ### Returns
 
-Returns a string message if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns a message on success. If the org ID does not exist or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
 2.  <code style="background:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
-3.  <code style="background:#FF0000;"> 500 </code> `Some error occured`
+3.  <code style="background:#FF7043;"> 400 </code> `Org not found` 
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Update Org
 
-Provide the unique org ID and Goodcop will return the organization details, contactdetail can be updated only as of now.
 
 > Definition
 
@@ -239,8 +241,7 @@ PUT  https://[GOODCOP_URL]/v1/org/{orgID}
 curl "https://[GOODCOP_URL]/v1/user/5642425909379072"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
   -d '{
 	"contactdetails":"+91877777776666"
     }'
@@ -254,11 +255,13 @@ curl "https://[GOODCOP_URL]/v1/user/5642425909379072"
     "name": "testorg",
     "meta": "test meta",
     "contactDetails": "+91877777776666",
-    "CreatedAt": "2018-03-21T17:03:16.024791+05:30",
-    "UpdatedAt": "2018-03-21T17:16:10.013299+05:30"
+    "createdAt": "2018-03-21T17:03:16.024791+05:30",
+    "updatedAt": "2018-03-21T17:16:10.013299+05:30"
 }
 
 ```
+
+Updates the org information by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
@@ -278,17 +281,17 @@ orgID | required | string | Valid org identifier
 
 ### Returns
 
-Returns org object with updated contact details if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns updated org object. If invalid org ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
 2.  <code style="background:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
-3.  <code style="background:#FF7043;"> 400 </code> `Nothing to Update`
+3.  <code style="background:#FF7043;"> 400 </code> `Org not found` 
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
+
 
 ## Get Org Meta By ID
-
-Provide the unique org ID and Goodcop will return the meta details.
 
 > Definition
 
@@ -314,6 +317,8 @@ curl "https://[GOODCOP_URL]/v1/user/5642425909379072/meta"
 }
 ```
 
+Retrieves the meta details provided the product ID.
+
 ### HTTPS Request
 
 `GET https://[GOODCOP_URL]/v1/org/{orgID}/meta`
@@ -326,17 +331,17 @@ orgID | required | string | Valid org identifier
 
 ### Returns
 
-Returns meta information if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns meta string. If invalid org ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
 2.  <code style="background:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
+3.  <code style="background:#FF7043;"> 400 </code> `Org not found` 
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Update Org Meta By ID
-
-Provide the unique org ID and Goodcop will return the meta details.
 
 > Definition
 
@@ -366,6 +371,8 @@ curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/m
 
 ```
 
+Updates the meta by setting the value of the body parameter passed.
+
 ### HTTPS Request
 
 `PUT https://[GOODCOP_URL]/v1/org/{orgID}/meta`
@@ -384,19 +391,19 @@ orgID | required | string | Valid org identifier
 
 ### Returns
 
-Returns string message of updation if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns updated meta string. If invalid org ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
 2.  <code style="background:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
 3.  <code style="background:#FF7043;"> 400 </code> `Meta should not empty, use \"deletemeta\" to delete it`
-3.  <code style="background:#FF0000;"> 500 </code> `some error occured`
+4.  <code style="background:#FF7043;"> 400 </code> `Org not found` 
+5.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Delete Org Meta By ID
 
-Provide the unique org ID and Goodcop will delete the meta string.
 
 > Definition
 
@@ -411,8 +418,7 @@ curl "https://[GOODCOP_URL]/v1/product/5642425909379072/meta"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "category: api" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;">200</code>
@@ -422,6 +428,8 @@ curl "https://[GOODCOP_URL]/v1/product/5642425909379072/meta"
     "message": "meta deleted successfully"
 }
 ```
+
+Replaces the meta with empty string.
 
 ### HTTPS Request
 
@@ -435,13 +443,14 @@ orgID | required | string | Valid org identifier
 
 ### Returns
 
-Returns success message string if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns success message on succesfull deletion of meta. If invalid org ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
 2.  <code style="background:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
-3.  <code style="background:#FF0000;"> 500 </code> `some error occured`
+3.  <code style="background:#FF7043;"> 400 </code> `Org not found` 
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Add Users to Org
 
@@ -457,8 +466,7 @@ POST  https://[GOODCOP_URL]/v1/org/{orgID}/users
 curl "https://[GOODCOP_URL]/v1/org/5642425909379072/users"
   -X  POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
   -d '{
 	"users":["0ef3011b-b228-4771-bad5-bd7c0ebd70d8","3fd58316-6f6d-4c1b-9eb7-2678fe886b4d"]
 }'
@@ -473,7 +481,7 @@ curl "https://[GOODCOP_URL]/v1/org/5642425909379072/users"
 
 ```
 
-Add Users to Org
+Add multple users to an organization.
 
 ### HTTPS Request
 
@@ -483,25 +491,26 @@ Add Users to Org
 
 Parameter | Value | Type | Description
 --------- | ------- | --------------- | -----------
-users | required | array | users ids
-orgID | required | param | orgid
+users | required | array | Valid users identifier 
+orgID | required | param | Valid org identifier 
 
 
 ### Returns
 
-Returns success message string if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns string message on success. If the org ID does not exist, user IDs are invalid or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
 2.  <code style="background:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
-2.  <code style="background:#FF7043;"> 400 </code> `field missing` 
+3.  <code style="background:#FF7043;"> 400 </code> `Org not found` 
+4.  <code style="background:#FF7043;"> 400 </code> `User not found` 
+5.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Get Org Users By ID
 
-Provide the unique org ID and Goodcop will return the users details.
 
 > Definition
 
@@ -515,8 +524,7 @@ GET  https://[GOODCOP_URL]/v1/org/{orgID}/users
 curl "https://[GOODCOP_URL]/v1/org/5642425909379072/users"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json" 
 ```
 
 > Example Response <code style="background:#4CAF50;">200</code>
@@ -527,7 +535,7 @@ curl "https://[GOODCOP_URL]/v1/org/5642425909379072/users"
 }
 ```
 
-Get Org Users By ID
+Retrieves the user IDs for the organization. You need only supply the unique group identifier.
 
 ### HTTPS Request
 
@@ -541,17 +549,16 @@ orgID | required | string | Valid org identifier
 
 ### Returns
 
-Returns users array associated with the org if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
-
+Returns a array of user IDs if a valid identifiers was provided. If invalid org ID was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
-2.  <code style="background:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
+2.  <code style="background:#FF7043;"> 400 </code> `Org id should be valid and parsable`
+3.  <code style="background:#FF7043;"> 400 </code> `Org not found` 
+4. <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.` 
 
 ## Remove Users from Org By ID
-
-Provide the unique array of user IDs and Goodcop will return the message for successful deletion of users from org.
 
 > Definition
 
@@ -581,7 +588,7 @@ curl "https://[GOODCOP_URL]/v1/org/5642425909379072/users"
 }
 ```
 
-Remove Users from Org By ID
+Removes the a multiple users from a group.
 
 ### HTTPS Request
 
@@ -595,9 +602,11 @@ orgID | required | integer | Org id to be passed in param
 
 ### Returns
 
-Returns a string message if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns a success message on removal of users from the group. If invalid org ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
 2.  <code style="background:#FF7043;"> 400 </code> `Org id should be valid and parsable` 
+3.  <code style="background:#FF7043;"> 400 </code> `Org not found` 
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`

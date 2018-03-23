@@ -73,4 +73,13 @@ curl "https://[GOODCOP_URL]/v1/auth"
 
 ### Returns
 
-Returns boolean value if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns boolean value.If invalid group ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Authorization error. Kindly provide product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `user-token is missing in header.`
+3.  <code style="background:#FFC107;"> 400 </code> `x-api-key is missing in header.`
+4.  <code style="background:#FFC107;"> 400 </code> `verb is missing in header.`
+5.  <code style="background:#FFC107;"> 400 </code> `path is missing in header.`
+6.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`

@@ -52,7 +52,9 @@ curl "https://[GOODCOP_URL]/v1/product"
             "name": "default",
             "value": "test_2va8vfZ4j1Ci1qvGreQ-u8OwD3LjYQ9ksegxEp0="
         }
-    ]
+    ],
+    "createdAt": "2018-03-21T17:03:16.024791+05:30",
+    "updatedAt": "2018-03-21T17:03:16.024793+05:30"
 }
 
 ```
@@ -78,6 +80,7 @@ Returns a product object. The returned object will have information about the ru
 
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
 2.  <code style="background:#FFC107;"> 400 </code> `Name is required field`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## List Products
 
@@ -189,6 +192,7 @@ Returns a list of product objects. If any other backend failures an appropriate 
 
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
 2.  <code style="background:#FFC107;"> 400 </code> `Name is required field`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 
@@ -267,11 +271,11 @@ Returns a product object if a valid identifier was provided. If invalid product 
 
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Update Product By ID
 
-Provide the product details and Goodcop will return the updated product information.
 
 > Definition
 
@@ -365,6 +369,7 @@ Returns updated product object. If invalid product ID or any other backend failu
 
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Delete Product By ID
 
@@ -411,6 +416,7 @@ Returns a message on success. If the product ID does not exist or any other back
 
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Update Product Meta By ID
 
@@ -466,6 +472,7 @@ Returns updated meta string. If invalid product ID or any other backend failures
 
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Get Product Meta By ID
 
@@ -516,6 +523,7 @@ Returns meta string. If invalid product ID or any other backend failures an appr
 
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Delete Product Meta By ID
 
@@ -567,6 +575,7 @@ Returns success message on succesfull deletion of meta. If invalid product ID or
 
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Get Product Rules By ID
@@ -624,7 +633,7 @@ Returns the list of product rules. If invalid product ID or any other backend fa
 
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
-
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Update Product Rules By ID
 
@@ -702,6 +711,7 @@ Returns updated rules for the product. If invalid product ID or any other backen
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
 3.  <code style="background:#FFC107;"> 400 </code> `Not Acceptable - You requested a wrong rule format`
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Delete Product Rules By ID
 
@@ -770,6 +780,7 @@ Returns updated rules for the product. If invalid product ID or any other backen
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
 3.  <code style="background:#FFC107;"> 400 </code> `Not Acceptable - You requested a wrong rule format`
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Create Product APIKey By ID
 
@@ -829,6 +840,7 @@ Returns a list of all api keys. The returned object will have information of the
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
 3.  <code style="background:#FFC107;"> 400 </code> `APIKEY name already exits. Try with another name`
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Get Product APIKey By ID
@@ -881,6 +893,7 @@ Returns a key details. If invalid product ID, invalid key name was provided or a
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
 3.  <code style="background:#FFC107;"> 400 </code> `Invalid Key Name`
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Get All Product APIKeys By ID
@@ -938,6 +951,7 @@ Returns a list of api keys. If any other backend failures an appropriate error m
 
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Delete Product APIKey By ID
@@ -989,3 +1003,4 @@ Returns a message on success. If the product ID does not exist, api key name doe
 1.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
 3.  <code style="background:#FFC107;"> 400 </code> `Invalid Key Name`
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`

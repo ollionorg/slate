@@ -69,6 +69,7 @@ Returns a user object if correct email and password was provided. The returned o
 3.  <code style="background:#FFC107;"> 400 </code> `Email is not valid`
 4.  <code style="background:#FFC107;"> 400 </code> `Password must be atleast 7 characters long`
 5.  <code style="background:#FFC107;"> 400 </code> `You are already registered with product1 and product2`
+6.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## SignIn using github
@@ -113,6 +114,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## SignIn using facebook
 
@@ -157,6 +159,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## SignIn using facebook
 
@@ -200,6 +203,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## SignIn using twitter
 
@@ -243,6 +247,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## SignIn using instagram
 
@@ -286,6 +291,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## SignIn using magiclink
 
@@ -338,6 +344,7 @@ Returns a success message and an email will be sent to user with the magic link.
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `Email is missing`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## SignIn using phonenumber
@@ -392,6 +399,7 @@ Returns a success message and an one time password will be sent to user to verif
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `Phone number is missing`
 3.  <code style="background:#FFC107;"> 400 </code> `SMS sending error`
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Verfiy phonenumber
 
@@ -445,6 +453,7 @@ Returns a user object if correct otp and phoneNumber was provided. The returned 
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `Phone number or OTP missing`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Login
 
@@ -512,7 +521,8 @@ Returns a user object if correct email and password was provided. The returned o
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `Either email or password is missing`
 3.  <code style="background:#FFC107;"> 400 </code> `Password must be atleast 7 characters long`
-3.  <code style="background:#FFC107;"> 400 </code> `No Password,Please Set a password after signing in using magic link`
+4.  <code style="background:#FFC107;"> 400 </code> `No Password,Please Set a password after signing in using magic link`
+5.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Change password
 
@@ -528,8 +538,7 @@ POST  https://[GOODCOP_URL]/v1/user/passwordChange
 curl "https://[GOODCOP_URL]/v1/user/passwordChange"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Token: test_56789657567"
+  -H "Content-Type: application/json"
   -H 'user-token: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
   -d '{
        "oldapassword":"test", 
@@ -568,6 +577,7 @@ Returns a success message. If no user token was provided, incorrect passwords or
 2.  <code style="background:#FFC107;"> 400 </code> `User not found`
 3.  <code style="background:#FFC107;"> 400 </code> `Wrong Old Password`
 4.  <code style="background:#FFC107;"> 400 </code> `Password must be atleast 7 characters long`
+5.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Get user by Id
@@ -584,8 +594,7 @@ GET  https://[GOODCOP_URL]/v1/user/{userID}
 curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Token: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;"> 200</code>
@@ -629,6 +638,7 @@ Returns a user object if a valid identifier was provided. If invalide user id wa
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `User not found`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Get user By email
 
@@ -645,8 +655,7 @@ GET  https://[GOODCOP_URL]/v1/getUser/{email}
 curl "https://[GOODCOP_URL]/v1/getUser/test@mail.com"
   -X POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Token: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;"> 200</code>
@@ -690,6 +699,7 @@ Returns a user object if a valid identifier was provided. If invalid email was p
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `Email is not valid`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## List all users
 
@@ -705,7 +715,7 @@ GET  https://[GOODCOP_URL]/v1/user
 curl "https://[GOODCOP_URL]/v1/user"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;"> 200</code>
@@ -769,7 +779,8 @@ Returns a list of user objects. If any other backend failures an appropriate err
 
 ### Error Messages
 
-1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key`
+2.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Delete user by Id
 
@@ -817,6 +828,7 @@ Returns a message on success. If the user ID does not exist an appropriate error
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `User not found`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Get Group Details By ID
 
@@ -832,8 +844,7 @@ GET  https://[GOODCOP_URL]/v1/user/{userID}/groups
 curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/groups"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Token: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;"> 200</code>
@@ -901,6 +912,7 @@ Returns an array of group objects. If invalid user ID or any other backend failu
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFC107;"> 400 </code> `User not found`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Get User Meta By ID
@@ -917,8 +929,7 @@ GET  https://[GOODCOP_URL]/v1/user/{userID}/meta
 curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/meta"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Token: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;"> 200</code>
@@ -949,6 +960,7 @@ Returns meta string. If invalid user ID or any other backend failures an appropr
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key`  
 2.  <code style="background:#FFC107;"> 400 </code> `User not found`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 
@@ -966,8 +978,7 @@ PUT  https://[GOODCOP_URL]/v1/user/{userID}/meta
 curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/meta"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Token: test_56789657567"
+  -H "Content-Type: application/json"
   -d '{
 	"meta":"storing test meta info"
     }'
@@ -1029,6 +1040,7 @@ Returns user object with updated meta. If invalid user ID or any other backend f
 
 1.  <code style="background:#FFC107;"> 401 </code> `Invalid product API key`  
 2.  <code style="background:#FFC107;"> 400 </code> `User not found`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## List User Rules By ID
 
@@ -1044,8 +1056,7 @@ GET  https://[GOODCOP_URL]/v1/user/{userID}/rule
 curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Token: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;"> 200</code>
@@ -1092,6 +1103,7 @@ Returns the list of user rules. If invalid user ID or any other backend failures
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key`  
 2.  <code style="background:#FFC107;"> 400 </code> `User not found`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Update User Rules By ID
 
@@ -1107,8 +1119,7 @@ PUT  https://[GOODCOP_URL]/v1/user/{userID}/rule
 curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Token: test_56789657567"
+  -H "Content-Type: application/json"
   -d '[{
             "verb": "GET",
             "path": "/credentials/5687539843203072",
@@ -1182,6 +1193,7 @@ Returns user object with updated rules. If invalid user ID or any other backend 
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key`  
 2.  <code style="background:#FFC107;"> 400 </code> `User not found`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Delete User Rules By ID
@@ -1198,8 +1210,7 @@ DELETE  https://[GOODCOP_URL]/v1/user/{userID}/rule
 curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/rule"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Token: test_56789657567"
+  -H "Content-Type: application/json"
   -d '[{
             "verb": "GET",
             "path": "/credentials/5687539843203072",
@@ -1262,6 +1273,7 @@ Returns user object with updated rules. If invalid user ID or any other backend 
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key`  
 2.  <code style="background:#FFC107;"> 400 </code> `User not found`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Get Group Details for user By ID
@@ -1278,8 +1290,7 @@ GET  https://[GOODCOP_URL]/v1/user/{userID}/groups
 curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/groups"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Token: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;"> 200</code>
@@ -1351,3 +1362,4 @@ Returns list of groups details for a unique userID. If invalid user ID or any ot
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key`  
 2.  <code style="background:#FFC107;"> 400 </code> `User not found`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`

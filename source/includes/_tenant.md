@@ -52,7 +52,9 @@ curl "https://[GOODCOP_URL]/v1/tenant"
         }
     ],
     "meta": "tenant meta",
-    "secrets": "secrets"
+    "secrets": "secrets",
+    "createdAt": "2018-03-21T17:03:16.024791+05:30",
+    "updatedAt": "2018-03-21T17:03:16.024793+05:30"
 }
 ```
 
@@ -84,6 +86,7 @@ Returns a api object. The returned object will have information about the rules,
 2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
 3.  <code style="background:#FFC107;"> 400 </code> `Tenant Already Exist with the name provided`
 4.  <code style="background:#FFC107;"> 400 </code> `Tenant name is required`
+5.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Get Tenant By ID
 
@@ -145,6 +148,7 @@ Returns a tenant object if a valid identifier was provided. If invalid tenant ID
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
 3.  <code style="background:#FFC107;"> 400 </code> `Tenant does not exist for given api ID`
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Get All Tenants
 
@@ -203,6 +207,7 @@ Returns a list of tenant objects. If any other backend failures an appropriate e
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key`
 2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
+3.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Delete Tenant By ID
 
@@ -254,6 +259,7 @@ Returns a message on success. If the tenant ID does not exist or any other backe
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
 3.  <code style="background:#FFC107;"> 400 </code> `Tenant does not exist for given api ID`
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Get Rule By ID
@@ -270,8 +276,7 @@ GET  https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule
 curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
   -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
 ```
 
@@ -312,6 +317,7 @@ Returns the list of tenant rules. If invalid tenant ID or any other backend fail
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
 3.  <code style="background:#FFC107;"> 400 </code> `Tenant does not exist for given api ID`
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Update Rule By ID
@@ -398,6 +404,7 @@ Returns updated rules for the tenant. If invalid tenant ID or any other backend 
 2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
 3.  <code style="background:#FFC107;"> 400 </code> `Tenant does not exist for given api ID`
 4.  <code style="background:#FFC107;"> 400 </code> `Not Acceptable - You requested a wrong rule format`
+5.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
 ## Delete Rule By ID
@@ -481,6 +488,7 @@ Returns tenant object with updated rules. If invalid tenant ID or any other back
 2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
 3.  <code style="background:#FFC107;"> 400 </code> `Tenant does not exist for given api ID`
 4.  <code style="background:#FFC107;"> 400 </code> `Not Acceptable - You requested a wrong rule format`
+5.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Update Secret By ID
 
@@ -560,7 +568,8 @@ Returns updated secrets in the tenant. If invalid tenant ID or any other backend
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
 3.  <code style="background:#FFC107;"> 400 </code> `Tenant does not exist for given api ID`
-4.  <code style="background:#FFC107;"> 400 </code> `secrets should be stringified objectt`
+4.  <code style="background:#FFC107;"> 400 </code> `secrets should be stringified object`
+5.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Get Secret By ID
 
@@ -614,6 +623,7 @@ Returns the secrets stored with the tenant. If invalid tenant ID or any other ba
 2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
 3.  <code style="background:#FFC107;"> 400 </code> `Tenant does not exist for given api ID`
 4.  <code style="background:#FFC107;"> 400 </code> `Not Acceptable - You requested a wrong secrets format`
+5.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Get Meta By ID
 
@@ -664,6 +674,7 @@ Returns meta string. If invalid tenant ID or any other backend failures an appro
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
 3.  <code style="background:#FFC107;"> 400 </code> `Tenant does not exist for given api ID`
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Update Meta By ID
 
@@ -744,6 +755,7 @@ Returns updated tenant object with updated string. If invalid tenant ID or any o
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
 3.  <code style="background:#FFC107;"> 400 </code> `Tenant does not exist for given api ID`
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 ## Delete Meta By ID 
 
@@ -819,3 +831,4 @@ Returns tenant object with no metadata. If invalid tenant ID or any other backen
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
 3.  <code style="background:#FFC107;"> 400 </code> `Tenant does not exist for given api ID`
+4.  <code style="background:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
