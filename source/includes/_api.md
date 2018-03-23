@@ -58,7 +58,7 @@ Creates a new api object.
 
 ### HTTPS Request
 
-<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/api</code>
+<code style="background:#4CAF50;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/api</code>
 
 ### Request Body
 
@@ -83,12 +83,6 @@ Returns a api object. The returned object will have information about the rules,
 
 ## Get Api By ID
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/api/{apiID}
-
-```
 > Example Request
 
 ```shell
@@ -127,7 +121,7 @@ Retrieves the details of an existing api. You need only supply the unique api id
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/api/{apiID}`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/api/{apiID}</code>
 
 ### URL Params
 
@@ -148,12 +142,6 @@ Returns a api object if a valid identifier was provided. If invalid api ID was p
 
 ## Get All Apis
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/api
-
-```
 > Example Request
 
 ```shell
@@ -237,7 +225,7 @@ Retrieves the detailed list of all product apis.
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/api`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/api</code>
 
 ### URL Params
 
@@ -305,12 +293,6 @@ Returns a message on success. If the api ID does not exist or any other backend 
 
 ## Get rule By ID
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/api/{apiID}/rule
-
-```
 > Example Request
 
 ```shell
@@ -339,7 +321,7 @@ Retrieves the details of all rules in a api.
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/api/{apiID}/rule`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/api/{apiID}/rule</code>
 
 ### URL Params
 
@@ -529,12 +511,6 @@ Returns updated rules. If invalid api ID or any other backend failures an approp
 
 ## Get Meta By ID
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/api/{apiID}/meta
-
-```
 > Example Request
 
 ```shell
@@ -557,7 +533,7 @@ Retrieves the meta details provided the group ID.
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/api/{apiID}/meta`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/api/{apiID}/meta</code>
 
 ### URL Params
 

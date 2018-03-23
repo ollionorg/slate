@@ -39,7 +39,7 @@ Creates a new organization object.
 
 ### HTTPS Request
 
-<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/org</code>
+<code style="background:#4CAF50;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/org</code>
 
 ### Request Body
 
@@ -63,12 +63,6 @@ Returns new org object if a valid authorization key provided, and returns an err
 
 ## List Orgs
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/org
-
-```
 > Example Request
 
 ```shell
@@ -107,7 +101,7 @@ Retrieves the detailed list of all organization for the product.
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/org`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/org</code>
 
 ### Returns
 
@@ -120,12 +114,6 @@ Returns a list of org objects. If any other backend failures an appropriate erro
 
 ## Get Org by ID
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/org/{orgID}
-
-```
 > Example Request
 
 ```shell
@@ -152,7 +140,7 @@ Retrieves the details of an existing org. You need only supply the unique org id
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/org/{orgID}`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/org/{orgID}</code>
 
 ### URL Params
 
@@ -289,12 +277,6 @@ Returns updated org object. If invalid org ID or any other backend failures an a
 
 ## Get Org Meta By ID
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/org/{orgID}/meta
-
-```
 > Example Request
 
 ```shell
@@ -317,7 +299,7 @@ Retrieves the meta details provided the product ID.
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/org/{orgID}/meta`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/org/{orgID}/meta</code>
 
 ### URL Params
 
@@ -507,13 +489,6 @@ Returns string message on success. If the org ID does not exist, user IDs are in
 
 ## Get Org Users By ID
 
-
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/org/{orgID}/users
-
-```
 > Example Request
 
 ```shell
@@ -535,7 +510,7 @@ Retrieves the user IDs for the organization. You need only supply the unique gro
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/org/{orgID}/users`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/org/{orgID}/users</code>
 
 ### URL Params
 

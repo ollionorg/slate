@@ -38,12 +38,6 @@ In the above case, if `user1` within `group1` request for url `/organization/blo
 As per GoodCop Wildcard mechanism any url after `/organization/`(inclusive) will be given access, hence `true`.
 
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/auth
-
-```
 > Example Request
 
 ```shell
@@ -68,7 +62,7 @@ curl "https://[GOODCOP_URL]/v1/auth"
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/auth`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/auth</code>
 
 
 ### Returns

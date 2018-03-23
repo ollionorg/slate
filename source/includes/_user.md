@@ -43,7 +43,7 @@ Creates a new user object.
 
 ### HTTPS Request
 
-<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signup</code>
+<code style="background:#4CAF50;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signup</code>
 
 ### Request Body
 
@@ -93,7 +93,7 @@ Creates a new user object via github.
 
 ### HTTPS Request
 
-<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/github</code>
+<code style="background:#4CAF50;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/github</code>
 
 ### Returns
 
@@ -132,7 +132,7 @@ Creates a new user object via google.
 
 ### HTTPS Request
 
-<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/google</code>
+<code style="background:#4CAF50;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/google</code>
 
 ### Returns
 
@@ -171,7 +171,7 @@ Creates a new user object via facebook.
 
 ### HTTPS Request
 
-<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/facebook</code>
+<code style="background:#4CAF50;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/facebook</code>
 
 ### Returns
 
@@ -210,7 +210,7 @@ Creates a new user object via twitter.
 
 ### HTTPS Request
 
-<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/twitter</code>
+<code style="background:#4CAF50;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/twitter</code>
 
 ### Returns
 
@@ -249,7 +249,7 @@ Creates a new user object via instagram.
 
 ### HTTPS Request
 
-<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/instagram</code>
+<code style="background:#4CAF50;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/instagram</code>
 
 ### Returns
 
@@ -291,7 +291,7 @@ Creates a new user object via email by creating a token that will allow user to 
 
 ### HTTPS Request
 
-<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/signup/magiclink</code>
+<code style="background:#4CAF50;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/signup/magiclink</code>
 
 ### Request Body
 
@@ -340,7 +340,7 @@ Creates an one time password for user verfication.
 
 ### HTTPS Request
 
-<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/phone</code>
+<code style="background:#4CAF50;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/phone</code>
 
 ### Request Body
 
@@ -391,7 +391,7 @@ Creates a new user object after verifying the otp.
 
 ### HTTPS Request
 
-<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/phone/verify</code>
+<code style="background:#4CAF50;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/phone/verify</code>
 
 ### Request Body
 
@@ -452,7 +452,7 @@ LogsIn the user.
 
 ### HTTPS Request
 
-<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/login</code>
+<code style="background:#4CAF50;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/login</code>
 
 ### Request Body
 
@@ -501,7 +501,7 @@ Change the password for the logged in user providing the oldpassword and new pas
 
 ### HTTPS Request
 
-<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/passwordChange</code>
+<code style="background:#4CAF50;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/passwordChange</code>
 
 ### Request Body
 
@@ -559,7 +559,7 @@ Retrieves the details of an existing user. You need only supply the unique user 
 
 ### HTTPS Request
 
-<code style="background:#2196F3;">POST</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/user/{userID}</code>
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/user/{userID}</code>
 
 ### URL Params
 
@@ -579,13 +579,6 @@ Returns a user object if a valid identifier was provided. If invalide user id wa
 
 ## Get user By email
 
-
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/getUser/{email}
-
-```
 > Example Request
 
 ```shell
@@ -620,7 +613,7 @@ Retrieves the details of an existing user. You need only supply the unique email
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/getUser/{email}`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/getUser/{email}</code>
 
 ### URL Params
 
@@ -640,12 +633,6 @@ Returns a user object if a valid identifier was provided. If invalid email was p
 
 ## List all users
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/user
-
-```
 > Example Request
 
 ```shell
@@ -708,7 +695,7 @@ Retrieves the detailed list of all product users. The users are returned in desc
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/user`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/user</code>
 
 ### Returns
 
@@ -769,12 +756,6 @@ Returns a message on success. If the user ID does not exist an appropriate error
 
 ## Get Group Details By ID
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/user/{userID}/groups
-
-```
 > Example Request
 
 ```shell
@@ -833,7 +814,7 @@ Retrieves the group details provided the user ID.
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/user/{userID}/groups`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/user/{userID}/groups</code>
 
 ### URL Params
 
@@ -854,12 +835,6 @@ Returns an array of group objects. If invalid user ID or any other backend failu
 
 ## Get User Meta By ID
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/user/{userID}/meta
-
-```
 > Example Request
 
 ```shell
@@ -880,7 +855,7 @@ Retrieves the meta details provided the user ID.
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/user/{userID}/meta`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/user/{userID}/meta</code>
 
 ### URL Params
 
@@ -981,12 +956,6 @@ Returns user object with updated meta. If invalid user ID or any other backend f
 
 ## List User Rules By ID
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/user/{userID}/rule
-
-```
 > Example Request
 
 ```shell
@@ -1024,7 +993,7 @@ Retrieves the details of all user rules.
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/user/{userID}/rule`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/user/{userID}/rule</code>
 
 ### URL Params
 
@@ -1215,12 +1184,6 @@ Returns user object with updated rules. If invalid user ID or any other backend 
 
 ## Get Group Details for user By ID
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/user/{userID}/groups
-
-```
 > Example Request
 
 ```shell
@@ -1283,7 +1246,7 @@ Retrieves the details of all groups for a user.
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/user/{userID}/groups`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/user/{userID}/groups</code>
 
 ### URL Params
 

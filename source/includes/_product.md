@@ -58,7 +58,7 @@ Creates a new product object.
 
 ### HTTPS Request
 
-<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/group</code>
+<code style="background:#4CAF50;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/group</code>
 
 ### Request Body
 
@@ -79,12 +79,6 @@ Returns a product object. The returned object will have information about the ru
 
 ## List Products
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/product
-
-```
 > Example Request
 
 ```shell
@@ -177,7 +171,7 @@ Retrieves the detailed list of all products.
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/product`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/product</code>
 
 ### Returns
 
@@ -193,12 +187,6 @@ Returns a list of product objects. If any other backend failures an appropriate 
 
 ## Get Product By ID
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/product/{productID}
-
-```
 > Example Request
 
 ```shell
@@ -250,7 +238,7 @@ Retrieves the details of an existing product. You need only supply the unique pr
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/product/{productID}`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/product/{productID}</code>
 
 ### URL Params
 
@@ -471,12 +459,7 @@ Returns updated meta string. If invalid product ID or any other backend failures
 
 ## Get Product Meta By ID
 
-> Definition
 
-```
-GET  https://[GOODCOP_URL]/v1/product/{productID}/meta
-
-```
 > Example Request
 
 ```shell
@@ -502,7 +485,7 @@ The category header can be provided with two options either api or user dependin
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/product/{productID}/meta`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/product/{productID}/meta</code>
 
 ### URL Params
 
@@ -575,12 +558,6 @@ Returns success message on succesfull deletion of meta. If invalid product ID or
 
 ## Get Product Rules By ID
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/product/{productID}/rule
-
-```
 > Example Request
 
 ```shell
@@ -612,7 +589,7 @@ The category header can be provided with two options either api or user dependin
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/product/{productID}/rule`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/product/{productID}/rule</code>
 
 ### URL Params
 
@@ -840,12 +817,6 @@ Returns a list of all api keys. The returned object will have information of the
 
 ## Get Product APIKey By ID
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}
-
-```
 > Example Request
 
 ```shell
@@ -869,7 +840,7 @@ Retrieves the details of an existing api key. You need to supply the unique prod
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}`</code>
 
 ### URL Params
 
@@ -893,12 +864,7 @@ Returns a key details. If invalid product ID, invalid key name was provided or a
 
 ## Get All Product APIKeys By ID
 
-> Definition
 
-```
-GET  https://[GOODCOP_URL]/v1/product/{productID}/apikey
-
-```
 > Example Request
 
 ```shell
@@ -930,7 +896,7 @@ Retrieves the detailed list of all api keys for the product.
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/product/{productID}/apikey/`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/product/{productID}/apikey/</code>
 
 ### URL Params
 

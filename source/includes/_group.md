@@ -46,7 +46,7 @@ Creates a new group object.
 
 ### HTTPS Request
 
-<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/group</code>
+<code style="background:#4CAF50;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/group</code>
 
 ### Request Body
 
@@ -71,12 +71,7 @@ Returns a group object. The returned object will have information about the rule
 
 ## Get Group By ID
 
-> Definition
 
-```
-GET  https://[GOODCOP_URL]/v1/group/{groupID}
-
-```
 > Example Request
 
 ```shell
@@ -111,7 +106,7 @@ Retrieves the details of an existing group. You need only supply the unique grou
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/group/{groupID}`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/group/{groupID}</code>
 
 ### URL Params
 
@@ -131,12 +126,6 @@ Returns a group object if a valid identifier was provided. If invalid group id w
 
 ## List Groups
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/group
-
-```
 > Example Request
 
 ```shell
@@ -183,7 +172,7 @@ Retrieves the detailed list of all product groups. The groups are returned in de
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/group`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/group</code>
 
 ### Returns
 
@@ -423,12 +412,6 @@ Returns an array of users which were succesfully added to the group. If the grou
 
 ## Get User for Group By ID
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/group/{groupID}/user/{userID}
-
-```
 > Example Request
 
 ```shell
@@ -459,7 +442,7 @@ Retrieves the details of an user in a group. You need only supply the unique use
 
 ### HTTPS Request
 
-`GET  https://[GOODCOP_URL]/v1/group/{groupID}/user/{userID}`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/group/{groupID}/user/{userID}</code>
 
 ### URL Params
 
@@ -482,12 +465,7 @@ Returns a user object if a valid identifiers was provided. If invalid user ID or
 
 ## Get All Users for Group By ID
 
-> Definition
 
-```
-GET  https://[GOODCOP_URL]/v1/group/{groupID}/user
-
-```
 > Example Request
 
 ```shell
@@ -566,7 +544,7 @@ Retrieves the details of all users in a group.
 
 ### HTTPS Request
 
-`GET  https://[GOODCOP_URL]/v1/group/{groupID}/user`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/group/{groupID}/user</code>
 
 ### URL Params
 
@@ -635,17 +613,11 @@ Returns a success message on removal of user from the group. If invalid user ID,
 
 ## Get Group Meta By ID
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/group/{groupID}/meta
-
-```
 > Example Request
 
 ```shell
 curl "https://[GOODCOP_URL]/v1/group/5717800035287040/meta"
-  -X DELETE
+  -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json"
 ```
@@ -662,7 +634,7 @@ Retrieves the meta details provided the group ID.
 
 ### HTTPS Request
 
-`DELETE https://[GOODCOP_URL]/v1/group/{groupID}/meta`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/group/{groupID}/meta</code>
 
 ### URL Params
 
@@ -820,12 +792,6 @@ Returns group object with no metadata. If invalid group ID or any other backend 
 
 ## Get Group Rules By ID
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/group/{groupID}/rule
-
-```
 > Example Request
 
 ```shell
@@ -863,7 +829,7 @@ Retrieves the details of all rules in a group.
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/group/{groupID}/rule`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/group/{groupID}/rule</code>
 
 ### URL Params
 

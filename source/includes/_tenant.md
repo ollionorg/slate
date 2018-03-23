@@ -58,7 +58,7 @@ Creates a new tenant object.
 
 ### HTTPS Request
 
-<code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/tenant</code>
+<code style="background:#4CAF50;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/tenant</code>
 
 ### Request Body
 
@@ -85,12 +85,7 @@ Returns a api object. The returned object will have information about the rules,
 
 ## Get Tenant By ID
 
-> Definition
 
-```
-GET  https://[GOODCOP_URL]/v1/tenant/{tenantID}
-
-```
 > Example Request
 
 ```shell
@@ -125,7 +120,7 @@ Retrieves the details of an existing tenant. You need only supply the unique ten
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/tenant/{tenantID}`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/tenant/{tenantID}</code>
 
 ### URL Params
 
@@ -147,12 +142,7 @@ Returns a tenant object if a valid identifier was provided. If invalid tenant ID
 
 ## Get All Tenants
 
-> Definition
 
-```
-GET  https://[GOODCOP_URL]/v1/tenant
-
-```
 > Example Request
 
 ```shell
@@ -191,7 +181,7 @@ Retrieves the detailed list of all product tenants.
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/tenant`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/tenant`</code>
 
 
 ### Returns
@@ -259,12 +249,7 @@ Returns a message on success. If the tenant ID does not exist or any other backe
 
 ## Get Rule By ID
 
-> Definition
 
-```
-GET  https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule
-
-```
 > Example Request
 
 ```shell
@@ -294,7 +279,7 @@ Retrieves the details of all rules for a tenant.
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule</code>
 
 ### URL Params
 
@@ -568,12 +553,7 @@ Returns updated secrets in the tenant. If invalid tenant ID or any other backend
 
 ## Get Secret By ID
 
-> Definition
 
-```
-GET  https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret
-
-```
 > Example Request
 
 ```shell
@@ -599,7 +579,7 @@ Retrieves the secret information for the tenant.
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret</code>
 
 ### URL Params
 
@@ -622,12 +602,6 @@ Returns the secrets stored with the tenant. If invalid tenant ID or any other ba
 
 ## Get Meta By ID
 
-> Definition
-
-```
-GET  https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta
-
-```
 > Example Request
 
 ```shell
@@ -651,7 +625,7 @@ Retrieves the meta details provided the tenant ID.
 
 ### HTTPS Request
 
-`GET https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta`
+<code style="background:#2196F3;">GET</code> <code style="background:#E3F2FD;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta</code>
 
 ### URL Params
 
