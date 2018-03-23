@@ -164,12 +164,7 @@ Returns a org object if a valid identifier was provided. If invalid org ID was p
 
 ## Delete Org By ID
 
-> Definition
 
-```
-DELETE  https://[GOODCOP_URL]/v1/org/{orgID}
-
-```
 > Example Request
 
 ```shell
@@ -190,7 +185,8 @@ Deletes an org from the product permanently.
 
 ### HTTPS Request
 
-`DELETE https://[GOODCOP_URL]/v1/org/{orgID}`
+
+<code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/org/{orgID}</code>
 
 ### URL Params
 
@@ -243,7 +239,7 @@ Updates the org information by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
-<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/org/{orgID}</code>
+<code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/org/{orgID}</code>
 
 ### Request Body
 
@@ -342,7 +338,7 @@ Updates the meta by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
-<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/org/{orgID}/meta</code>
+<code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/org/{orgID}/meta</code>
 
 ### Request Body
 
@@ -371,13 +367,6 @@ Returns updated meta string. If invalid org ID or any other backend failures an 
 
 ## Delete Org Meta By ID
 
-
-> Definition
-
-```
-DELETE  https://[GOODCOP_URL]/v1/org/{orgID}/meta
-
-```
 > Example Request
 
 ```shell
@@ -400,7 +389,8 @@ Replaces the meta with empty string.
 
 ### HTTPS Request
 
-`DELETE https://[GOODCOP_URL]/v1/org/{orgID}/meta`
+
+<code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/org/{orgID}/meta</code>
 
 ### URL Params
 
@@ -421,12 +411,7 @@ Returns success message on succesfull deletion of meta. If invalid org ID or any
 
 ## Add Users to Org
 
-> Definition
 
-```
-POST  https://[GOODCOP_URL]/v1/org/{orgID}/users
-
-```
 > Example Request
 
 ```shell
@@ -452,7 +437,7 @@ Add multple users to an organization.
 
 ### HTTPS Request
 
-`POST https://[GOODCOP_URL]/v1/org/{orgID}/users`
+<code style="background:#4CAF50;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/org/{orgID}/users</code>
 
 ### Request Body
 
@@ -520,12 +505,6 @@ Returns a array of user IDs if a valid identifiers was provided. If invalid org 
 
 ## Remove Users from Org By ID
 
-> Definition
-
-```
-DELETE  https://[GOODCOP_URL]/v1/org/{orgID}/users
-
-```
 > Example Request
 
 ```shell
@@ -552,7 +531,7 @@ Removes the a multiple users from a group.
 
 ### HTTPS Request
 
-`DELETE https://[GOODCOP_URL]/v1/org/{orgID}/users`
+<code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/org/{orgID}/users</code>
 
 ### Request Body
 

@@ -708,12 +708,6 @@ Returns a list of user objects. If any other backend failures an appropriate err
 
 ## Delete user by Id
 
-> Definition
-
-```
-DELETE  https://[GOODCOP_URL]/v1/user/{userID}
-
-```
 > Example Request
 
 ```shell
@@ -736,7 +730,8 @@ Deletes a user from the product. The user is not deleted permanently.
 
 ### HTTPS Request
 
-`DELETE https://[GOODCOP_URL]/v1/user/{userID}`
+
+<code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/user/{userID}</code>
 
 ### URL Params
 
@@ -924,7 +919,7 @@ Updates the meta by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
-<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/user/{userID}/meta</code>
+<code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/user/{userID}/meta</code>
 
 ### Request Body
 
@@ -1065,7 +1060,7 @@ Updates the rules by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
-<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/user/{userID}/rule</code>
+<code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/user/{userID}/rule</code>
 
 ### Request Body
 
@@ -1092,12 +1087,6 @@ Returns user object with updated rules. If invalid user ID or any other backend 
 
 ## Delete User Rules By ID
 
-> Definition
-
-```
-DELETE  https://[GOODCOP_URL]/v1/user/{userID}/rule
-
-```
 > Example Request
 
 ```shell
@@ -1151,7 +1140,7 @@ Deletes the rules from the user.
 
 ### HTTPS Request
 
-`DELETE https://[GOODCOP_URL]/v1/user/{userID}/rule`
+<code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/user/{userID}/rule</code>
 
 ### URL Params
 

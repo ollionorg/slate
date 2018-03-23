@@ -8,7 +8,6 @@ The x-api-key header must be provided to request the tenant api's.
 
 ## Create Tenant
 
-
 > Example Request
 
 ```shell
@@ -196,12 +195,6 @@ Returns a list of tenant objects. If any other backend failures an appropriate e
 
 ## Delete Tenant By ID
 
-> Definition
-
-```
-DELETE  https://[GOODCOP_URL]/v1/tenant/{tenantID}
-
-```
 > Example Request
 
 ```shell
@@ -225,7 +218,8 @@ Deletes a tenant from the product permanently.
 
 ### HTTPS Request
 
-`DELETE https://[GOODCOP_URL]/v1/tenant/{tenantID}`
+
+<code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/tenant/{tenantID}</code>
 
 
 ### URL Params
@@ -353,7 +347,7 @@ Updates the rules by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
-<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule</code>
+<code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule</code>
 
 ### Request Body
 
@@ -383,13 +377,6 @@ Returns updated rules for the tenant. If invalid tenant ID or any other backend 
 
 ## Delete Rule By ID
 
-
-> Definition
-
-```
-DELETE  https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule
-
-```
 > Example Request
 
 ```shell
@@ -436,7 +423,8 @@ Deletes the rules from the tenant.
 
 ### HTTPS Request
 
-`DELETE https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule`
+
+<code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule</code>
 
 
 ### Request Body
@@ -512,7 +500,7 @@ Updates the secrets by setting the value of the body parameter passed. The secre
 
 ### HTTPS Request
 
-<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret</code>
+<code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret</code>
 
 ### Request Body
 
@@ -681,7 +669,7 @@ Updates the meta by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
-<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta</code>
+<code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta</code>
 
 ### Request Body
 
@@ -709,13 +697,6 @@ Returns updated tenant object with updated string. If invalid tenant ID or any o
 
 ## Delete Meta By ID 
 
-
-> Definition
-
-```
-DELETE  https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta
-
-```
 > Example Request
 
 ```shell
@@ -762,7 +743,7 @@ Replaces the meta with empty string.
 
 ### HTTPS Request
 
-`DELETE https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta`
+<code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta</code>
 
 
 ### URL Params

@@ -185,12 +185,7 @@ Returns a list of group objects. If any other backend failures an appropriate er
 
 ## Delete Group By ID
 
-> Definition
 
-```
-DELETE  https://[GOODCOP_URL]/v1/group/{groupID}
-
-```
 > Example Request
 
 ```shell
@@ -212,7 +207,8 @@ Deletes a group from the product permanently.
 
 ### HTTPS Request
 
-`DELETE https://[GOODCOP_URL]/v1/group/{groupID}`
+
+<code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/group/{groupID}</code>
 
 ### URL Params
 
@@ -319,7 +315,7 @@ Adds multiple users to a group.
 
 ### HTTPS Request
 
-<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/group/{groupID}/users</code>
+<code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/group/{groupID}/users</code>
 
 ### Request Body
 
@@ -372,7 +368,7 @@ Adds a single user to a group by email address.
 
 ### HTTPS Request
 
-<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/group/{groupID}/userEmail</code>
+<code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/group/{groupID}/userEmail</code>
 
 ### Request Body
 
@@ -674,7 +670,7 @@ Updates the meta by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
-<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/group/{groupID}/meta</code>
+<code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/group/{groupID}/meta</code>
 
 ### Request Body
 
@@ -701,12 +697,7 @@ Returns updated meta string. If invalid group ID or any other backend failures a
 
 ## Delete Group Meta By ID
 
-> Definition
 
-```
-DELETE  https://[GOODCOP_URL]/v1/group/{groupID}/meta
-
-```
 > Example Request
 
 ```shell
@@ -753,7 +744,8 @@ Replaces the meta with empty string.
 
 ### HTTPS Request
 
-`DELETE https://[GOODCOP_URL]/v1/group/{groupID}/meta`
+
+<code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/group/{groupID}/meta</code>
 
 ### Request Body
 
@@ -908,12 +900,7 @@ Returns updated rules in the group. If invalid user ID or any other backend fail
 
 ## Delete Group Rules By ID
 
-> Definition
 
-```
-DELETE  https://[GOODCOP_URL]/v1/group/{groupID}/rule
-
-```
 > Example Request
 
 ```shell
@@ -951,7 +938,7 @@ Deletes the rules from the group.
 
 ### HTTPS Request
 
-`DELETE https://[GOODCOP_URL]/v1/group/{groupID}/rule`
+<code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/group/{groupID}/rule</code>
 
 ### URL Params
 

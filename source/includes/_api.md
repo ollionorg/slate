@@ -244,12 +244,6 @@ Returns a list of api objects. If any other backend failures an appropriate erro
 
 ## Delete Api By ID
 
-> Definition
-
-```
-DELETE  https://[GOODCOP_URL]/v1/api/{apiID}
-
-```
 > Example Request
 
 ```shell
@@ -271,7 +265,7 @@ Deletes a api from the product permanently.
 
 ### HTTPS Request
 
-`DELETE https://[GOODCOP_URL]/v1/api/{apiID}`
+<code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/api/{apiID}</code>
 
 ### URL Params
 
@@ -393,7 +387,7 @@ Updates the rules by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
-<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/api/{apiID}/rule</code>
+<code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/api/{apiID}/rule</code>
 
 ### Request Body
 
@@ -421,12 +415,7 @@ Returns updated rules in the api. If invalid api ID or any other backend failure
 
 ## Delete rule By ID
 
-> Definition
 
-```
-DELETE  https://[GOODCOP_URL]/v1/api/{apiID}/rule
-
-```
 > Example Request
 
 ```shell
@@ -477,7 +466,8 @@ Deletes the rules from the api.
 
 ### HTTPS Request
 
-`DELETE https://[GOODCOP_URL]/v1/api/{apiID}/rule`
+
+<code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/api/{apiID}/rule</code>
 
 
 ### Request Body
@@ -592,7 +582,7 @@ Updates the meta by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
-<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/api/{apiID}/meta</code>
+<code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/api/{apiID}/meta</code>
 
 ### Request Body
 
@@ -617,12 +607,6 @@ Returns updated meta string. If invalid api ID or any other backend failures an 
 
 ## Delete Meta By ID
 
-> Definition
-
-```
-DELETE  https://[GOODCOP_URL]/v1/api/{apiID}/meta
-
-```
 > Example Request
 
 ```shell
@@ -665,7 +649,8 @@ Replaces the meta with empty string.
 
 ### HTTPS Request
 
-`DELETE https://[GOODCOP_URL]/v1/api/{apiID}/meta`
+
+<code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/api/{apiID}/meta</code>
 
 
 ### URL Params

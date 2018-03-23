@@ -316,7 +316,7 @@ Updates the product information by setting the value of the body parameter passe
 
 ### HTTPS Request
 
-<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/product/{productID}</code>
+<code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/product/{productID}</code>
 
 ### Request Body
 
@@ -349,12 +349,6 @@ Returns updated product object. If invalid product ID or any other backend failu
 
 ## Delete Product By ID
 
-> Definition
-
-```
-DELETE  https://[GOODCOP_URL]/v1/product/{productID}
-
-```
 > Example Request
 
 ```shell
@@ -376,7 +370,7 @@ Deletes a product permanently.
 
 ### HTTPS Request
 
-`DELETE https://[GOODCOP_URL]/v1/product/{productID}`
+<code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/product/{productID}</code>
 
 ### URL Params
 
@@ -427,7 +421,7 @@ The category header can be provided with two options either api or user dependin
 
 ### HTTPS Request
 
-<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/product/{productID}/meta</code>
+<code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/product/{productID}/meta</code>
 
 ### URL Params
 
@@ -493,12 +487,6 @@ Returns meta string. If invalid product ID or any other backend failures an appr
 
 ## Delete Product Meta By ID
 
-> Definition
-
-```
-DELETE  https://[GOODCOP_URL]/v1/product/{productID}/meta
-
-```
 > Example Request
 
 ```shell
@@ -525,7 +513,7 @@ The category header can be provided with two options either api or user dependin
 
 ### HTTPS Request
 
-`DELETE https://[GOODCOP_URL]/v1/product/{productID}/meta`
+<code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/product/{productID}/meta</code>
 
 ### URL Params
 
@@ -642,7 +630,7 @@ The category header can be provided with two options either api or user dependin
 
 ### HTTPS Request
 
-<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/product/{productID}/rule</code>
+<code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/product/{productID}/rule</code>
 
 ### Request Body
 
@@ -669,12 +657,6 @@ Returns updated rules for the product. If invalid product ID or any other backen
 
 ## Delete Product Rules By ID
 
-> Definition
-
-```
-DELETE  https://[GOODCOP_URL]/v1/product/{productID}/rule
-
-```
 > Example Request
 
 ```shell
@@ -711,7 +693,7 @@ Deletes the rules from the product.
 
 ### HTTPS Request
 
-`DELETE https://[GOODCOP_URL]/v1/product/{productID}/rule`
+<code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/product/{productID}/rule</code>
 
 ### Request Body
 
@@ -738,12 +720,6 @@ Returns updated rules for the product. If invalid product ID or any other backen
 
 ## Create Product APIKey By ID
 
-> Definition
-
-```
-PUT  https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}
-
-```
 > Example Request
 
 ```shell
@@ -775,7 +751,7 @@ Creates a new product api key.
 
 ### HTTPS Request
 
-<code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}</code>
+<code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}</code>
 
 ### URL Params
 
@@ -899,12 +875,6 @@ Returns a list of api keys. If any other backend failures an appropriate error m
 
 ## Delete Product APIKey By ID
 
-> Definition
-
-```
-DELETE  https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}
-
-```
 > Example Request
 
 ```shell
@@ -927,7 +897,8 @@ Deletes a api key from the product permanently.
 
 ### HTTPS Request
 
-`DELETE https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}`
+
+<code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}<code>
 
 ### URL Params
 
