@@ -704,14 +704,15 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <li> <code style="background:#FFC107;"> 400 </code> <code>You are already registered with product1 and product2</code></li>
 <li> <code style="background:#FF0000;"> 500 </code> <code>We had a problem with our server. Try again later.</code></li>
 </ol>
-<h2 id='signin-using-github'>SignIn using github</h2><pre class="highlight plaintext"><code>&gt; Example Request
-
-```shell
-curl "https://[GOODCOP_URL]/v1/user/signin/github"
+<h2 id='signin-using-github'>SignIn using github</h2>
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/signin/github"</span>
   -X POST
-  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Token: test_56789657567"
+  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Device-Token: test_56789657567"</span>
 </code></pre>
 <blockquote>
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
