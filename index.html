@@ -1317,12 +1317,6 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </ol>
 <h2 id='delete-user-by-id'>Delete user by Id</h2>
 <blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/user/{userID}
-
-</code></pre>
-<blockquote>
 <p>Example Request</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span>
@@ -1340,7 +1334,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Deletes a user from the product. The user is not deleted permanently.</p>
 <h3 id='https-request-15'>HTTPS Request</h3>
-<p><code>DELETE https://[GOODCOP_URL]/v1/user/{userID}</code></p>
+<p><code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/user/{userID}</code></p>
 <h3 id='url-params-3'>URL Params</h3>
 <table><thead>
 <tr>
@@ -1531,7 +1525,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Updates the meta by setting the value of the body parameter passed.</p>
 <h3 id='https-request-18'>HTTPS Request</h3>
-<p><code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/user/{userID}/meta</code></p>
+<p><code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/user/{userID}/meta</code></p>
 <h3 id='request-body-7'>Request Body</h3>
 <table><thead>
 <tr>
@@ -1686,7 +1680,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Updates the rules by setting the value of the body parameter passed.</p>
 <h3 id='https-request-20'>HTTPS Request</h3>
-<p><code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/user/{userID}/rule</code></p>
+<p><code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/user/{userID}/rule</code></p>
 <h3 id='request-body-8'>Request Body</h3>
 <table><thead>
 <tr>
@@ -1728,12 +1722,6 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <li> <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> <code>We had a problem with our server. Try again later.</code></li>
 </ol>
 <h2 id='delete-user-rules-by-id'>Delete User Rules By ID</h2>
-<blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/user/{userID}/rule
-
-</code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
@@ -1783,7 +1771,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Deletes the rules from the user.</p>
 <h3 id='https-request-21'>HTTPS Request</h3>
-<p><code>DELETE https://[GOODCOP_URL]/v1/user/{userID}/rule</code></p>
+<p><code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/user/{userID}/rule</code></p>
 <h3 id='url-params-9'>URL Params</h3>
 <table><thead>
 <tr>
@@ -2084,12 +2072,6 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </ol>
 <h2 id='delete-group-by-id'>Delete Group By ID</h2>
 <blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/group/{groupID}
-
-</code></pre>
-<blockquote>
 <p>Example Request</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/group/5707274949492736"</span>
@@ -2106,7 +2088,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Deletes a group from the product permanently.</p>
 <h3 id='https-request-4'>HTTPS Request</h3>
-<p><code>DELETE https://[GOODCOP_URL]/v1/group/{groupID}</code></p>
+<p><code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/group/{groupID}</code></p>
 <h3 id='url-params-2'>URL Params</h3>
 <table><thead>
 <tr>
@@ -2216,7 +2198,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Adds multiple users to a group.</p>
 <h3 id='https-request-6'>HTTPS Request</h3>
-<p><code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/group/{groupID}/users</code></p>
+<p><code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/group/{groupID}/users</code></p>
 <h3 id='request-body-3'>Request Body</h3>
 <table><thead>
 <tr>
@@ -2280,7 +2262,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Adds a single user to a group by email address.</p>
 <h3 id='https-request-7'>HTTPS Request</h3>
-<p><code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/group/{groupID}/userEmail</code></p>
+<p><code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/group/{groupID}/userEmail</code></p>
 <h3 id='request-body-4'>Request Body</h3>
 <table><thead>
 <tr>
@@ -2607,7 +2589,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Updates the meta by setting the value of the body parameter passed.</p>
 <h3 id='https-request-12'>HTTPS Request</h3>
-<p><code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/group/{groupID}/meta</code></p>
+<p><code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/group/{groupID}/meta</code></p>
 <h3 id='request-body-5'>Request Body</h3>
 <table><thead>
 <tr>
@@ -2650,12 +2632,6 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </ol>
 <h2 id='delete-group-meta-by-id'>Delete Group Meta By ID</h2>
 <blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/group/{groupID}/meta
-
-</code></pre>
-<blockquote>
 <p>Example Request</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/group/5717800035287040/meta"</span>
@@ -2697,7 +2673,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Replaces the meta with empty string.</p>
 <h3 id='https-request-13'>HTTPS Request</h3>
-<p><code>DELETE https://[GOODCOP_URL]/v1/group/{groupID}/meta</code></p>
+<p><code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/group/{groupID}/meta</code></p>
 <h3 id='request-body-6'>Request Body</h3>
 <table><thead>
 <tr>
@@ -2881,12 +2857,6 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </ol>
 <h2 id='delete-group-rules-by-id'>Delete Group Rules By ID</h2>
 <blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/group/{groupID}/rule
-
-</code></pre>
-<blockquote>
 <p>Example Request</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/group/5717800035287040/rule"</span>
@@ -2919,7 +2889,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Deletes the rules from the group.</p>
 <h3 id='https-request-16'>HTTPS Request</h3>
-<p><code>DELETE https://[GOODCOP_URL]/v1/group/{groupID}/rule</code></p>
+<p><code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/group/{groupID}/rule</code></p>
 <h3 id='url-params-13'>URL Params</h3>
 <table><thead>
 <tr>
@@ -3246,7 +3216,7 @@ Api that needs a secure token are :
 </span></code></pre>
 <p>Updates the product information by setting the value of the body parameter passed.</p>
 <h3 id='https-request-4'>HTTPS Request</h3>
-<p><code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/product/{productID}</code></p>
+<p><code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/product/{productID}</code></p>
 <h3 id='request-body-2'>Request Body</h3>
 <table><thead>
 <tr>
@@ -3325,12 +3295,6 @@ Api that needs a secure token are :
 </ol>
 <h2 id='delete-product-by-id'>Delete Product By ID</h2>
 <blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/product/{productID}
-
-</code></pre>
-<blockquote>
 <p>Example Request</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product/5178306911535104"</span>
@@ -3347,7 +3311,7 @@ Api that needs a secure token are :
 </span></code></pre>
 <p>Deletes a product permanently.</p>
 <h3 id='https-request-5'>HTTPS Request</h3>
-<p><code>DELETE https://[GOODCOP_URL]/v1/product/{productID}</code></p>
+<p><code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/product/{productID}</code></p>
 <h3 id='url-params-3'>URL Params</h3>
 <table><thead>
 <tr>
@@ -3398,7 +3362,7 @@ Api that needs a secure token are :
 The category header can be provided with two options either api or user depending on which type meta you want to change 
 </aside>
 <h3 id='https-request-6'>HTTPS Request</h3>
-<p><code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/product/{productID}/meta</code></p>
+<p><code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/product/{productID}/meta</code></p>
 <h3 id='url-params-4'>URL Params</h3>
 <table><thead>
 <tr>
@@ -3473,12 +3437,6 @@ The category header can be provided with two options either api or user dependin
 </ol>
 <h2 id='delete-product-meta-by-id'>Delete Product Meta By ID</h2>
 <blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/product/{productID}/meta
-
-</code></pre>
-<blockquote>
 <p>Example Request</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product/5178306911535104/meta"</span>
@@ -3500,7 +3458,7 @@ The category header can be provided with two options either api or user dependin
 The category header can be provided with two options either api or user depending on which type meta you want to change 
 </aside>
 <h3 id='https-request-8'>HTTPS Request</h3>
-<p><code>DELETE https://[GOODCOP_URL]/v1/product/{productID}/meta</code></p>
+<p><code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/product/{productID}/meta</code></p>
 <h3 id='url-params-6'>URL Params</h3>
 <table><thead>
 <tr>
@@ -3621,7 +3579,7 @@ The category header can be provided with two options either api or user dependin
 The category header can be provided with two options either api or user depending on which type meta you want to change 
 </aside>
 <h3 id='https-request-10'>HTTPS Request</h3>
-<p><code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/product/{productID}/rule</code></p>
+<p><code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/product/{productID}/rule</code></p>
 <h3 id='request-body-3'>Request Body</h3>
 <table><thead>
 <tr>
@@ -3665,12 +3623,6 @@ The category header can be provided with two options either api or user dependin
 </ol>
 <h2 id='delete-product-rules-by-id'>Delete Product Rules By ID</h2>
 <blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/product/{productID}/rule
-
-</code></pre>
-<blockquote>
 <p>Example Request</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product/5178306911535104/rule"</span>
@@ -3702,7 +3654,7 @@ The category header can be provided with two options either api or user dependin
 </span></code></pre>
 <p>Deletes the rules from the product.</p>
 <h3 id='https-request-11'>HTTPS Request</h3>
-<p><code>DELETE https://[GOODCOP_URL]/v1/product/{productID}/rule</code></p>
+<p><code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/product/{productID}/rule</code></p>
 <h3 id='request-body-4'>Request Body</h3>
 <table><thead>
 <tr>
@@ -3746,12 +3698,6 @@ The category header can be provided with two options either api or user dependin
 </ol>
 <h2 id='create-product-apikey-by-id'>Create Product APIKey By ID</h2>
 <blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>PUT  https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}
-
-</code></pre>
-<blockquote>
 <p>Example Request</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product/6308443803615232/apikey/testKey"</span>
@@ -3778,7 +3724,7 @@ The category header can be provided with two options either api or user dependin
 </span></code></pre>
 <p>Creates a new product api key.</p>
 <h3 id='https-request-12'>HTTPS Request</h3>
-<p><code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}</code></p>
+<p><code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}</code></p>
 <h3 id='url-params-10'>URL Params</h3>
 <table><thead>
 <tr>
@@ -3917,12 +3863,6 @@ The category header can be provided with two options either api or user dependin
 </ol>
 <h2 id='delete-product-apikey-by-id'>Delete Product APIKey By ID</h2>
 <blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}
-
-</code></pre>
-<blockquote>
 <p>Example Request</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product/6308443803615232/apikey/testKey"</span>
@@ -3940,7 +3880,7 @@ The category header can be provided with two options either api or user dependin
 </span></code></pre>
 <p>Deletes a api key from the product permanently.</p>
 <h3 id='https-request-15'>HTTPS Request</h3>
-<p><code>DELETE https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}</code></p>
+<p><code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/product/{productID}/apikey/{apikeyname}<code></p>
 <h3 id='url-params-13'>URL Params</h3>
 <table><thead>
 <tr>
@@ -4177,12 +4117,6 @@ The x-api-key header must be provided to request the tenant api's.
 </ol>
 <h2 id='delete-tenant-by-id'>Delete Tenant By ID</h2>
 <blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/tenant/{tenantID}
-
-</code></pre>
-<blockquote>
 <p>Example Request</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant/{tenantID}"</span>
@@ -4201,7 +4135,7 @@ The x-api-key header must be provided to request the tenant api's.
 </span></code></pre>
 <p>Deletes a tenant from the product permanently.</p>
 <h3 id='https-request-4'>HTTPS Request</h3>
-<p><code>DELETE https://[GOODCOP_URL]/v1/tenant/{tenantID}</code></p>
+<p><code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/tenant/{tenantID}</code></p>
 <h3 id='url-params-2'>URL Params</h3>
 <table><thead>
 <tr>
@@ -4327,7 +4261,7 @@ The x-api-key header must be provided to request the tenant api's.
 </span></code></pre>
 <p>Updates the rules by setting the value of the body parameter passed.</p>
 <h3 id='https-request-6'>HTTPS Request</h3>
-<p><code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule</code></p>
+<p><code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule</code></p>
 <h3 id='request-body-2'>Request Body</h3>
 <table><thead>
 <tr>
@@ -4372,12 +4306,6 @@ The x-api-key header must be provided to request the tenant api's.
 </ol>
 <h2 id='delete-rule-by-id'>Delete Rule By ID</h2>
 <blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule
-
-</code></pre>
-<blockquote>
 <p>Example Request</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule"</span>
@@ -4419,7 +4347,7 @@ The x-api-key header must be provided to request the tenant api's.
 </span></code></pre>
 <p>Deletes the rules from the tenant.</p>
 <h3 id='https-request-7'>HTTPS Request</h3>
-<p><code>DELETE https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule</code></p>
+<p><code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule</code></p>
 <h3 id='request-body-3'>Request Body</h3>
 <table><thead>
 <tr>
@@ -4505,7 +4433,7 @@ The x-api-key header must be provided to request the tenant api's.
 </span></code></pre>
 <p>Updates the secrets by setting the value of the body parameter passed. The secret information is stored in protected format.</p>
 <h3 id='https-request-8'>HTTPS Request</h3>
-<p><code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret</code></p>
+<p><code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret</code></p>
 <h3 id='request-body-4'>Request Body</h3>
 <table><thead>
 <tr>
@@ -4686,7 +4614,7 @@ The x-api-key header must be provided to request the tenant api's.
 </span></code></pre>
 <p>Updates the meta by setting the value of the body parameter passed.</p>
 <h3 id='https-request-11'>HTTPS Request</h3>
-<p><code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta</code></p>
+<p><code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta</code></p>
 <h3 id='request-body-5'>Request Body</h3>
 <table><thead>
 <tr>
@@ -4730,12 +4658,6 @@ The x-api-key header must be provided to request the tenant api's.
 </ol>
 <h2 id='delete-meta-by-id'>Delete Meta By ID</h2>
 <blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta
-
-</code></pre>
-<blockquote>
 <p>Example Request</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta"</span>
@@ -4777,7 +4699,7 @@ The x-api-key header must be provided to request the tenant api's.
 </span></code></pre>
 <p>Replaces the meta with empty string.</p>
 <h3 id='https-request-12'>HTTPS Request</h3>
-<p><code>DELETE https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta</code></p>
+<p><code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta</code></p>
 <h3 id='url-params-10'>URL Params</h3>
 <table><thead>
 <tr>
@@ -5067,12 +4989,6 @@ The x-api-key header must be provided to request the tenant api's.
 </ol>
 <h2 id='delete-api-by-id'>Delete Api By ID</h2>
 <blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/api/{apiID}
-
-</code></pre>
-<blockquote>
 <p>Example Request</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/api/{apiID}"</span>
@@ -5090,7 +5006,7 @@ The x-api-key header must be provided to request the tenant api's.
 </span></code></pre>
 <p>Deletes a api from the product permanently.</p>
 <h3 id='https-request-4'>HTTPS Request</h3>
-<p><code>DELETE https://[GOODCOP_URL]/v1/api/{apiID}</code></p>
+<p><code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/api/{apiID}</code></p>
 <h3 id='url-params-3'>URL Params</h3>
 <table><thead>
 <tr>
@@ -5212,7 +5128,7 @@ The x-api-key header must be provided to request the tenant api's.
 </span></code></pre>
 <p>Updates the rules by setting the value of the body parameter passed.</p>
 <h3 id='https-request-6'>HTTPS Request</h3>
-<p><code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/api/{apiID}/rule</code></p>
+<p><code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/api/{apiID}/rule</code></p>
 <h3 id='request-body-2'>Request Body</h3>
 <table><thead>
 <tr>
@@ -5255,12 +5171,6 @@ The x-api-key header must be provided to request the tenant api's.
 <li> <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> <code>We had a problem with our server. Try again later.</code></li>
 </ol>
 <h2 id='delete-rule-by-id'>Delete rule By ID</h2>
-<blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/api/{apiID}/rule
-
-</code></pre>
 <blockquote>
 <p>Example Request</p>
 </blockquote>
@@ -5307,7 +5217,7 @@ The x-api-key header must be provided to request the tenant api's.
 </span></code></pre>
 <p>Deletes the rules from the api.</p>
 <h3 id='https-request-7'>HTTPS Request</h3>
-<p><code>DELETE https://[GOODCOP_URL]/v1/api/{apiID}/rule</code></p>
+<p><code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/api/{apiID}/rule</code></p>
 <h3 id='request-body-3'>Request Body</h3>
 <table><thead>
 <tr>
@@ -5432,7 +5342,7 @@ The x-api-key header must be provided to request the tenant api's.
 </span></code></pre>
 <p>Updates the meta by setting the value of the body parameter passed.</p>
 <h3 id='https-request-9'>HTTPS Request</h3>
-<p><code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/api/{apiID}/meta</code></p>
+<p><code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/api/{apiID}/meta</code></p>
 <h3 id='request-body-4'>Request Body</h3>
 <table><thead>
 <tr>
@@ -5475,12 +5385,6 @@ The x-api-key header must be provided to request the tenant api's.
 </ol>
 <h2 id='delete-meta-by-id'>Delete Meta By ID</h2>
 <blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/api/{apiID}/meta
-
-</code></pre>
-<blockquote>
 <p>Example Request</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/api/{apiID}/meta"</span>
@@ -5518,7 +5422,7 @@ The x-api-key header must be provided to request the tenant api's.
 </span></code></pre>
 <p>Replaces the meta with empty string.</p>
 <h3 id='https-request-10'>HTTPS Request</h3>
-<p><code>DELETE https://[GOODCOP_URL]/v1/api/{apiID}/meta</code></p>
+<p><code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/api/{apiID}/meta</code></p>
 <h3 id='url-params-9'>URL Params</h3>
 <table><thead>
 <tr>
@@ -5708,12 +5612,6 @@ from the organization.</p>
 </ol>
 <h2 id='delete-org-by-id'>Delete Org By ID</h2>
 <blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/org/{orgID}
-
-</code></pre>
-<blockquote>
 <p>Example Request</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/org/6309146567639040"</span>
@@ -5730,7 +5628,7 @@ from the organization.</p>
 </span></code></pre>
 <p>Deletes an org from the product permanently.</p>
 <h3 id='https-request-4'>HTTPS Request</h3>
-<p><code>DELETE https://[GOODCOP_URL]/v1/org/{orgID}</code></p>
+<p><code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/org/{orgID}</code></p>
 <h3 id='url-params-2'>URL Params</h3>
 <table><thead>
 <tr>
@@ -5783,7 +5681,7 @@ from the organization.</p>
 </span></code></pre>
 <p>Updates the org information by setting the value of the body parameter passed.</p>
 <h3 id='https-request-5'>HTTPS Request</h3>
-<p><code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/org/{orgID}</code></p>
+<p><code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/org/{orgID}</code></p>
 <h3 id='request-body-2'>Request Body</h3>
 <table><thead>
 <tr>
@@ -5893,7 +5791,7 @@ from the organization.</p>
 </span></code></pre>
 <p>Updates the meta by setting the value of the body parameter passed.</p>
 <h3 id='https-request-7'>HTTPS Request</h3>
-<p><code style="background:#FFC107;">GET</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/org/{orgID}/meta</code></p>
+<p><code style="background:#FFC107;">PUT</code> <code style="background:#FFF8E1;">https://[GOODCOP_URL]/v1/org/{orgID}/meta</code></p>
 <h3 id='request-body-3'>Request Body</h3>
 <table><thead>
 <tr>
@@ -5938,12 +5836,6 @@ from the organization.</p>
 </ol>
 <h2 id='delete-org-meta-by-id'>Delete Org Meta By ID</h2>
 <blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/org/{orgID}/meta
-
-</code></pre>
-<blockquote>
 <p>Example Request</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product/5642425909379072/meta"</span>
@@ -5961,7 +5853,7 @@ from the organization.</p>
 </span></code></pre>
 <p>Replaces the meta with empty string.</p>
 <h3 id='https-request-8'>HTTPS Request</h3>
-<p><code>DELETE https://[GOODCOP_URL]/v1/org/{orgID}/meta</code></p>
+<p><code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/org/{orgID}/meta</code></p>
 <h3 id='url-params-6'>URL Params</h3>
 <table><thead>
 <tr>
@@ -5989,12 +5881,6 @@ from the organization.</p>
 </ol>
 <h2 id='add-users-to-org'>Add Users to Org</h2>
 <blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/org/{orgID}/users
-
-</code></pre>
-<blockquote>
 <p>Example Request</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/org/5642425909379072/users"</span>
@@ -6015,7 +5901,7 @@ from the organization.</p>
 </span></code></pre>
 <p>Add multple users to an organization.</p>
 <h3 id='https-request-9'>HTTPS Request</h3>
-<p><code>POST https://[GOODCOP_URL]/v1/org/{orgID}/users</code></p>
+<p><code style="background:#4CAF50;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/org/{orgID}/users</code></p>
 <h3 id='request-body-4'>Request Body</h3>
 <table><thead>
 <tr>
@@ -6094,12 +5980,6 @@ from the organization.</p>
 </ol>
 <h2 id='remove-users-from-org-by-id'>Remove Users from Org By ID</h2>
 <blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>DELETE  https://[GOODCOP_URL]/v1/org/{orgID}/users
-
-</code></pre>
-<blockquote>
 <p>Example Request</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/org/5642425909379072/users"</span>
@@ -6121,7 +6001,7 @@ from the organization.</p>
 </span></code></pre>
 <p>Removes the a multiple users from a group.</p>
 <h3 id='https-request-11'>HTTPS Request</h3>
-<p><code>DELETE https://[GOODCOP_URL]/v1/org/{orgID}/users</code></p>
+<p><code style="background:#EF5350;">DELETE</code> <code style="background:#FFEBEE;">https://[GOODCOP_URL]/v1/org/{orgID}/users</code></p>
 <h3 id='request-body-5'>Request Body</h3>
 <table><thead>
 <tr>
