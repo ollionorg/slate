@@ -58,7 +58,7 @@ Returns a user object if correct email and password was provided. The returned o
 
 ### Error Messages
 
-1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
+1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `**Invalid product API key**` 
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Either email or password is missing`
 3.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Email is not valid`
 4.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Password must be atleast 7 characters long`
