@@ -1,5 +1,7 @@
 # Api
 
+The API allows you to create, delete, and update api. The api gives ability to set authorization level privileges using the rules object and metadata storage.
+
 ## Create Api
 
 > Definition
@@ -14,8 +16,7 @@ POST  https://[GOODCOP_URL]/v1/api
 curl "https://[GOODCOP_URL]/v1/api"
   -X  POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
   -d '{
 	"name":"api test",
 	"description":"this is test api",
@@ -57,7 +58,7 @@ curl "https://[GOODCOP_URL]/v1/api"
 
 ```
 
-Creates a api object provided the request body and returns the api object.
+Creates a new api object.
 
 ### HTTPS Request
 
@@ -75,7 +76,13 @@ meta | optional | string | meta information of the api
 
 ### Returns
 
-Returns new api object if a valid authorization key and api key was provided, and returns an error otherwise.
+Returns a api object. The returned object will have information about the rules, description, metadata and api key that is necessary for using tenant module. If no api name was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `API Already Exist with the name provided`
+3.  <code style="background:#FFC107;"> 400 </code> `Api name is required`
 
 ## Get Api By ID
 
@@ -91,8 +98,7 @@ GET  https://[GOODCOP_URL]/v1/api/{apiID}
 curl "https://[GOODCOP_URL]/v1/api/{apiID}"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;"> 200</code>
@@ -120,7 +126,7 @@ curl "https://[GOODCOP_URL]/v1/api/{apiID}"
     }
 
 ```
-Provide the unique api ID and Goodcop will return the corresponding api information.
+Retrieves the details of an existing api. You need only supply the unique api identifier that was returned upon api creation.
 
 ### HTTPS Request
 
@@ -135,7 +141,12 @@ apiID | required | string | Valid api identifier
 
 ### Returns
 
-Returns api details if a valid authorization key, api key and valid indentifier was provided, and returns an error otherwise.
+Returns a api object if a valid identifier was provided. If invalid api ID was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+## Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `API does not exist for given api ID`
 
 ## Get All Apis
 
@@ -151,8 +162,7 @@ GET  https://[GOODCOP_URL]/v1/api
 curl "https://[GOODCOP_URL]/v1/api/"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;"> 200</code>
@@ -224,7 +234,8 @@ curl "https://[GOODCOP_URL]/v1/api/"
 }
 
 ```
-Goodcop will return the all api information for the product.
+
+Retrieves the detailed list of all product apis.
 
 ### HTTPS Request
 
@@ -236,10 +247,13 @@ Parameter | Value | Type | Description
 --------- | ------- | --------------- | -----------
 apiID | required | string | Valid api identifier
 
-
 ### Returns
 
-Returns all apis details if a valid authorization key, api key and valid indentifier was provided, and returns an error otherwise.
+Returns a list of api objects. If any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+## Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key`
 
 ## Delete Api By ID
 
@@ -255,8 +269,7 @@ DELETE  https://[GOODCOP_URL]/v1/api/{apiID}
 curl "https://[GOODCOP_URL]/v1/api/{apiID}"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;"> 200</code>
@@ -267,7 +280,7 @@ curl "https://[GOODCOP_URL]/v1/api/{apiID}"
 }
 
 ```
-Provide the unique api ID and Goodcop will delete the api information.
+Deletes a api from the product permanently.
 
 ### HTTPS Request
 
@@ -282,7 +295,12 @@ apiID | required | string | Valid api identifier
 
 ### Returns
 
-Returns a string message if a valid authorization key, api key and valid indentifier was provided, and returns an error otherwise.
+Returns a message on success. If the api ID does not exist or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+## Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `API does not exist for given api ID`
 
 
 ## Get rule By ID
@@ -299,8 +317,7 @@ GET  https://[GOODCOP_URL]/v1/api/{apiID}/rule
 curl "https://[GOODCOP_URL]/v1/api/{apiID}/rule"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;"> 200</code>
@@ -318,7 +335,7 @@ curl "https://[GOODCOP_URL]/v1/api/{apiID}/rule"
 
 ```
 
-Provide the unique api ID and Goodcop will return the list of all rules.
+Retrieves the details of all rules in a api.
 
 ### HTTPS Request
 
@@ -333,7 +350,12 @@ apiID | required | string | Valid api identifier
 
 ### Returns
 
-Returns rules object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns the list of api rules. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+## Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `API does not exist for given api ID`
 
 ## Update rule By ID
 
@@ -349,8 +371,7 @@ PUT  https://[GOODCOP_URL]/v1/api/{apiID}/rule
 curl "https://[GOODCOP_URL]/v1/api/{apiID}/rule"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
   -d '[
         {
             "verb": "PUT",
@@ -390,7 +411,7 @@ curl "https://[GOODCOP_URL]/v1/api/{apiID}/rule"
 
 ```
 
-Retrives all rules of a api.
+Updates the rules by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
@@ -400,7 +421,7 @@ Retrives all rules of a api.
 
 Parameter | Value | Type | Description
 --------- | ------- | --------------- | -----------
-rules | required | array | rules to be deleted 
+rules | required | array | rules to be updated 
 
 ### URL Params
 
@@ -409,9 +430,13 @@ Parameter | Value | Type | Description
 apiID | required | string | Valid api identifier
 
 
-### Returns
+Returns updated rules in the api. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-Returns array of rules if a valid authorization key and returns an error otherwise.
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `API does not exist for given api ID`
+3.  <code style="background:#FFC107;"> 400 </code> `Not Acceptable - You requested a wrong rule format`
 
 
 ## Delete rule By ID
@@ -428,8 +453,7 @@ DELETE  https://[GOODCOP_URL]/v1/api/{apiID}/rule
 curl "https://[GOODCOP_URL]/v1/api/{apiID}/rule"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
   -d '[
         {
             "verb": "PUT",
@@ -469,7 +493,7 @@ curl "https://[GOODCOP_URL]/v1/api/{apiID}/rule"
 }
 ```
 
-Deletes the rules associated with the tenant. 
+Deletes the rules from the api.
 
 ### HTTPS Request
 
@@ -491,7 +515,13 @@ apiID | required | string | Valid api identifier
 
 ### Returns
 
-Returns api object with deleted rules info if a valid authorization key and returns an error otherwise.
+Returns updated rules. If invalid apiroup ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `API does not exist for given api ID`
+3.  <code style="background:#FFC107;"> 400 </code> `Not Acceptable - You requested a wrong rule format`
 
 ## Get Meta By ID
 
@@ -507,8 +537,7 @@ GET  https://[GOODCOP_URL]/v1/api/{apiID}/meta
 curl "https://[GOODCOP_URL]/v1/api/{apiID}/meta"
   -X  GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;"> 200</code>
@@ -520,7 +549,7 @@ curl "https://[GOODCOP_URL]/v1/api/{apiID}/meta"
 
 ```
 
-Provide the unique tenant ID and Goodcop will return the meta information.
+Retrieves the meta details provided the group ID.
 
 ### HTTPS Request
 
@@ -535,7 +564,12 @@ apiID | required | string | Valid api identifier
 
 ### Returns
 
-Returns string meta if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns meta string. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `API does not exist for given api ID`
 
 ## Update Meta By ID
 
@@ -583,7 +617,7 @@ curl "https://[GOODCOP_URL]/v1/api/{apiID}/meta"
 }
 ```
 
-Updated meta details of the api.
+Updates the meta by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
@@ -602,9 +636,12 @@ Parameter | Value | Type | Description
 apiID | required | string | Valid api identifier
 
 
-### Returns
+Returns updated meta string. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-Returns api object with updated meta info if a valid authorization key and returns an error otherwise.
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `API does not exist for given api ID`
 
 ## Delete Meta By ID
 
@@ -652,7 +689,7 @@ curl "https://[GOODCOP_URL]/v1/api/{apiID}/meta"
 }
 ```
 
-Deletes the meta associated with the api. 
+Replaces the meta with empty string.
 
 ### HTTPS Request
 
@@ -668,4 +705,9 @@ apiID | required | string | Valid api identifier
 
 ### Returns
 
-Returns api object with deleted meta info if a valid authorization key and returns an error otherwise.
+Returns group object with no metadata. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `API does not exist for given api ID`
