@@ -354,7 +354,7 @@ orgID | required | string | Valid org identifier
 
 ### Returns
 
-Returns updated meta string. If invalid org ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+Returns meta string with no metadata. If invalid org ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 ### Error Messages
 

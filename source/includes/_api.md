@@ -441,24 +441,13 @@ curl "https://[GOODCOP_URL]/v1/api/{apiID}/rule"
 
 ```json
 {
-    "id": 5643625413214208,
-    "name": "api test",
-    "description": "this is test api",
     "rules": [
         {
             "verb": "GET",
             "path": "/organizations/5746055551385600/*",
             "effect": true
         }
-    ],
-    "meta": "test api",
-    "apiKeys": [
-        {
-            "name": "default",
-            "value": "asZ7nYKajsIl8RqtYYK-oyS2MC_6EKMYXMCDq0J7FfQ="
-        }
-    ],
-    "productId": 6308443803615232
+    ]
 }
 ```
 
@@ -557,24 +546,7 @@ curl "https://[GOODCOP_URL]/v1/api/{apiID}/meta"
 
 ```json
 {
-    "id": 5643625413214208,
-    "name": "api test",
-    "description": "this is test api",
-    "rules": [
-        {
-            "verb": "GET",
-            "path": "/organizations/5746055551385600/*",
-            "effect": true
-        }
-    ],
-    "meta": "updated api meta",
-    "apiKeys": [
-        {
-            "name": "default",
-            "value": "asZ7nYKajsIl8RqtYYK-oyS2MC_6EKMYXMCDq0J7FfQ="
-        }
-    ],
-    "productId": 6308443803615232
+    "meta": "updated api meta"
 }
 ```
 
@@ -624,24 +596,8 @@ curl "https://[GOODCOP_URL]/v1/api/{apiID}/meta"
 
 ```json
 {
-    "id": 5643625413214208,
-    "name": "api test",
-    "description": "this is test api",
-    "rules": [
-        {
-            "verb": "GET",
-            "path": "/organizations/5746055551385600/*",
-            "effect": true
-        }
-    ],
-    "meta": "",
-    "apiKeys": [
-        {
-            "name": "default",
-            "value": "asZ7nYKajsIl8RqtYYK-oyS2MC_6EKMYXMCDq0J7FfQ="
-        }
-    ],
-    "productId": 6308443803615232
+
+    "meta": ""
 }
 ```
 
@@ -662,7 +618,7 @@ apiID | required | string | Valid api identifier
 
 ### Returns
 
-Returns api object with no metadata. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+Returns meta string no metadata. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 ### Error Messages
 

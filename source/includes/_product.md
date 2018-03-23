@@ -501,7 +501,7 @@ curl "https://[GOODCOP_URL]/v1/product/5178306911535104/meta"
 
 ```json
 {
-    "message": "meta deleted successfully"
+    "meta": ""
 }
 ```
 
@@ -523,7 +523,7 @@ productID | required | string | Valid product identifier
 
 ### Returns
 
-Returns success message on succesfull deletion of meta. If invalid product ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+Returns meta string with no metadata. If invalid product ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 ### Error Messages
 

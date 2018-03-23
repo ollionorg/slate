@@ -1020,8 +1020,6 @@ curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/r
 
 ```json
 {
-    "userId": "test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a",
-    "email": "test@mail.com",
     "rules": [
         {
             "verb": "GET",
@@ -1038,21 +1036,7 @@ curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/r
             "path": "/credentials/5687539843203072",
             "effect": true
         }
-    ],
-    "groups": [
-        5717800035287040,
-        5664530495438848,
-    ],
-    "meta": "storing test meta info",
-    "devicetokens": [
-                    {
-                        "token": "TVzm6SDRY5i5lpXgrsNYxok9zgJODJsA7VB15yl2qvUeTG_n3HYmEHaYwt73K-1vGpsUTV18wssDyEWGHdInPw==",
-                        "deviceid": ""
-                    }
-    ],
-    "verified": false,
-    "createdAt": "0001-01-01T05:21:10+05:21",
-    "updatedAt": "2018-03-22T12:08:02.07777+05:30"
+    ]
 }
 ```
 
@@ -1076,7 +1060,7 @@ userID | required | string | Valid user identifier
 
 ### Returns
 
-Returns user object with updated rules. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+Returns updated rules. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 ### Error Messages
 
@@ -1105,8 +1089,6 @@ curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/r
 
 ```json
 {
-    "userId": "test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a",
-    "email": "test@mail.com",
     "rules": [
         {
             "verb": "PUT",
@@ -1118,21 +1100,7 @@ curl "https://[GOODCOP_URL]/v1/user/test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a/r
             "path": "/credentials/5687539843203072",
             "effect": true
         }
-    ],
-    "groups": [
-        5717800035287040,
-        5664530495438848,
-    ],
-    "meta": "storing test meta info",
-    "devicetokens": [
-                    {
-                        "token": "TVzm6SDRY5i5lpXgrsNYxok9zgJODJsA7VB15yl2qvUeTG_n3HYmEHaYwt73K-1vGpsUTV18wssDyEWGHdInPw==",
-                        "deviceid": ""
-                    }
-    ],
-    "verified": false,
-    "createdAt": "0001-01-01T05:21:10+05:21",
-    "updatedAt": "2018-03-22T12:08:02.07777+05:30"
+    ]
 }
 ```
 
@@ -1150,7 +1118,7 @@ userID | required | string | Valid user identifier
 
 ### Returns
 
-Returns user object with updated rules. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+Returns updated rules. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 ### Error Messages
 

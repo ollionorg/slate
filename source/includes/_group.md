@@ -714,28 +714,7 @@ curl "https://[GOODCOP_URL]/v1/group/5717800035287040/meta"
 
 ```json
 {
-    "groupId": 5717800035287040,
-    "name": "admin",
-    "description": "",
-    "rules": [
-        {
-            "verb": "GET",
-            "path": "/credentials/5687539843203072",
-            "effect": true
-        },
-        {
-            "verb": "PUT",
-            "path": "/credentials/5687539843203072",
-            "effect": true
-        },
-        {
-            "verb": "DELETE",
-            "path": "/credentials/5687539843203072",
-            "effect": true
-        }
-    ],
-    "meta": "",
-    "productId": 5750501782061056
+    "meta": ""
 }
 
 ```
@@ -761,7 +740,7 @@ groupID | required | string | Valid group identifier
 
 ### Returns
 
-Returns group object with no metadata. If invalid group ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+Returns meta string with no metadata. If invalid group ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 ### Error Messages
 

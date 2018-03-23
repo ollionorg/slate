@@ -258,7 +258,7 @@ curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule"
 
 ```json
 {
-    "Rules": [
+    "rules": [
         {
             "verb": "GET",
             "path": "/organizations/5746055551385600/*",
@@ -404,18 +404,13 @@ curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/rule"
 
 ```json
 {
-    "id": 5996636694118400,
-    "name": "test tenant",
-    "apiId": 5916827746041856,
     "rules": [
         {
             "verb": "GET",
             "path": "/organizations/5746055551385600/*",
             "effect": true
         }
-    ],
-    "meta": "",
-    "secrets": "{\"email\":\"mail@gmail.com\"}"
+    ]
 }
 ```
 
@@ -442,7 +437,7 @@ tenantID | required | string | Valid tenant identifier
 
 ### Returns
 
-Returns tenant object with updated rules. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+Returns updated rules. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 ### Error Messages
 
@@ -471,28 +466,7 @@ curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/secret"
 
 ```json
 {
-    "id": 5996636694118400,
-    "name": "test api",
-    "apiId": 5916827746041856,
-    "rules": [
-        {
-            "verb": "GET",
-            "path": "/organizations/5746055551385600/*",
-            "effect": true
-        },
-        {
-            "verb": "PUT",
-            "path": "/organizations/5162157834502144/*",
-            "effect": true
-        },
-        {
-            "verb": "POST",
-            "path": "/organizations/5162157834502144/*",
-            "effect": true
-        }
-    ],
-    "meta": "api meta",
-    "secrets": "{\"email\":\"mail@gmail.com\"}"
+    "message":"Secrets updated"
 }
 ```
 
@@ -517,7 +491,7 @@ tenantID | required | string | Valid tenant identifier
 
 ### Returns
 
-Returns updated secrets in the tenant. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+Returns success message. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 ### Error Messages
 
@@ -640,28 +614,7 @@ curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta"
 
 ```json
 {
-    "id": 5996636694118400,
-    "name": "test tenant",
-    "apiId": 5916827746041856,
-    "rules": [
-        {
-            "verb": "GET",
-            "path": "/organizations/5746055551385600/*",
-            "effect": true
-        },
-        {
-            "verb": "PUT",
-            "path": "/organizations/5162157834502144/*",
-            "effect": true
-        },
-        {
-            "verb": "POST",
-            "path": "/organizations/5162157834502144/*",
-            "effect": true
-        }
-    ],
-    "meta": "updated tenant meta",
-    "secrets": "{\"email\":\"mail@gmail.com\"}"
+    "meta": "updated tenant meta"
 }
 ```
 
@@ -686,7 +639,7 @@ tenantID | required | string | Valid tenant identifier
 
 ### Returns
 
-Returns updated tenant object with updated string. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+Returns updated meta string. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 ### Error Messages
 
@@ -714,28 +667,7 @@ curl "https://[GOODCOP_URL]/v1/tenant/{tenantID}/meta"
 
 ```json
 {
-    "id": 5996636694118400,
-    "name": "test tenant",
-    "apiId": 5916827746041856,
-    "rules": [
-        {
-            "verb": "GET",
-            "path": "/organizations/5746055551385600/*",
-            "effect": true
-        },
-        {
-            "verb": "PUT",
-            "path": "/organizations/5162157834502144/*",
-            "effect": true
-        },
-        {
-            "verb": "POST",
-            "path": "/organizations/5162157834502144/*",
-            "effect": true
-        }
-    ],
     "meta": "",
-    "secrets": "{\"email\":\"mail@gmail.com\"}"
 }
 ```
 
@@ -755,7 +687,7 @@ tenantID | required | string | Valid tenant identifier
 
 ### Returns
 
-Returns tenant object with no metadata. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+Returns meta with no metadata. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 ### Error Messages
 
