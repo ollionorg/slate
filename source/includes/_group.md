@@ -8,7 +8,7 @@ The API allows you to create, delete, and update groups. You can retrieve a list
 > Definition
 
 ```
-POST  https://[GOODCOP_URL]/v1/group
+<code style="background:#01579B;"> POST</code>  https://[GOODCOP_URL]/v1/group
 
 ```
 > Example Request
@@ -146,8 +146,7 @@ GET  https://[GOODCOP_URL]/v1/group
 curl "https://[GOODCOP_URL]/v1/group"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;"> 200</code>
@@ -211,8 +210,7 @@ DELETE  https://[GOODCOP_URL]/v1/group/{groupID}
 curl "https://[GOODCOP_URL]/v1/group/5707274949492736"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;"> 200</code>
@@ -259,8 +257,7 @@ curl "https://[GOODCOP_URL]/v1/group"
   -X DELETE
   -d '[5717800035287040,5717800035287766]'
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;"> 200</code>
@@ -308,7 +305,6 @@ curl "https://[GOODCOP_URL]/v1/group/5707274949492736/user"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
   -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
   -d '{ 
       "users":[
                     "01e097a1-fedd-466f-96c9-3eaee6cc7f1f",
@@ -379,8 +375,7 @@ PUT  https://[GOODCOP_URL]/v1/group/{groupID}/userEmail
 curl "https://[GOODCOP_URL]/v1/group/5707274949492736/userEmail"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
   -d '{ 
 	    "email":"test@mail.com"
     }'
@@ -426,8 +421,6 @@ Returns an array of users which were succesfully added to the group. If the grou
 
 ## Get User for Group By ID
 
-Provide the unique user ID, Group ID and Goodcop will return the user details.
-
 > Definition
 
 ```
@@ -440,8 +433,7 @@ GET  https://[GOODCOP_URL]/v1/group/{groupID}/user/{userID}
 curl "https://[GOODCOP_URL]/v1/group/5717800035287040/user/test_a660-9242-4521-b614-e46ffead2b2b"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;"> 200</code>
@@ -461,6 +453,8 @@ curl "https://[GOODCOP_URL]/v1/group/5717800035287040/user/test_a660-9242-4521-b
 
 ```
 
+Retrieves the details of an user in a group. You need only supply the unique user and group identifier.
+
 ### HTTPS Request
 
 `GET  https://[GOODCOP_URL]/v1/group/{groupID}/user/{userID}`
@@ -474,12 +468,16 @@ userID | required | string | Valid user identifier
 
 ### Returns
 
-Returns user object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns a user object if a valid identifiers was provided. If invalid user ID or group ID was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `Users not found`
+3.  <code style="background:#FFC107;"> 400 </code> `Group id is not valid`
 
 
 ## Get All Users for Group By ID
-
-Provide the unique Group ID and Goodcop will return the list of user details.
 
 > Definition
 
@@ -493,8 +491,7 @@ GET  https://[GOODCOP_URL]/v1/group/{groupID}/user
 curl "https://[GOODCOP_URL]/v1/group/5717800035287040/user"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;"> 200</code>
@@ -510,8 +507,15 @@ curl "https://[GOODCOP_URL]/v1/group/5717800035287040/user"
                 5717800035287040
             ],
             "meta": "",
-            "token": "usPAGnmuNtq8JXIprybHXq2c90uC6Jxr62DFv9CpwFO3S25x6WYdT20AZT1xVE1rmSMT5ZwxQhT7sgo5-S42ag==",
-            "verified": false
+            "devicetokens": [
+                    {
+                        "token": "e_aMotSZFW0A9QiXWE0N2dkDIiLUBLHLrS6hAQyhD98Py11RAb4_YKjNijvaX4m5qWN8JwBhhi48iecFF38DmA==",
+                        "deviceid": "13ACFCFB-40F6-4823-B8FC-8CA3D3A5DEDE"
+                    }
+                ],
+              "verified": true,
+              "createdAt": "0001-01-01T05:21:10+05:21",
+              "updatedAt": "2018-03-22T12:08:02.07777+05:30"
         },
         {
             "userId": "test1_a660-9242-4521-b614-e46ffead2b2b",
@@ -540,13 +544,22 @@ curl "https://[GOODCOP_URL]/v1/group/5717800035287040/user"
                 5717800035287040
             ],
             "meta": "",
-            "token": "Mo6Z-QWu5Lgpm14tDaP1Wz_Rz-pyLOae6LVTheWKxSJI4Vmfqfdrn0NfZ1niOr3f8mwrG791EOcTiEY2jbdgMw==",
-            "verified": false
+           "devicetokens": [
+                    {
+                        "token": "TVzm6SDRY5i5lpXgrsNYxok9zgJODJsA7VB15yl2qvUeTG_n3HYmEHaYwt73K-1vGpsUTV18wssDyEWGHdInPw==",
+                        "deviceid": ""
+                    }
+                ],
+              "verified": true,
+              "createdAt": "0001-01-01T05:21:10+05:21",
+              "updatedAt": "2018-03-22T12:08:02.07777+05:30"
         }
     ]
 }
 
 ```
+
+Retrieves the details of all users in a group.
 
 ### HTTPS Request
 
@@ -561,11 +574,13 @@ groupID | required | string | Valid group identifier
 
 ### Returns
 
-Returns list of user object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns a list of user objects. If any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 
 ## Delete User from Group By ID
-
-Provide the unique user ID and Goodcop will return the message for successful deletion of user.
 
 > Definition
 
@@ -579,8 +594,7 @@ DELETE  https://[GOODCOP_URL]/v1/group/{groupID}/user/{userID}
 curl "https://[GOODCOP_URL]/v1/group/5717800035287040/user/test_a660-9242-4521-b614-e46ffead2b2b"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;"> 200</code>
@@ -590,6 +604,8 @@ curl "https://[GOODCOP_URL]/v1/group/5717800035287040/user/test_a660-9242-4521-b
     "message": "Group deleted successfully"
 }
 ```
+
+Removes the a single user from a group.
 
 ### HTTPS Request
 
@@ -604,11 +620,15 @@ userID | required | string | Valid user identifier
 
 ### Returns
 
-Returns a string message if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns a success message on removal of user from the group. If invalid user ID, group ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `Users not found`
+3.  <code style="background:#FFC107;"> 400 </code> `Group id is not valid`
 
 ## Get Group Meta By ID
-
-Provide the unique group ID and Goodcop will return the meta inforamtion for the group.
 
 > Definition
 
@@ -622,8 +642,7 @@ GET  https://[GOODCOP_URL]/v1/group/{groupID}/meta
 curl "https://[GOODCOP_URL]/v1/group/5717800035287040/meta"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;"> 200</code>
@@ -633,6 +652,8 @@ curl "https://[GOODCOP_URL]/v1/group/5717800035287040/meta"
     "meta": "test meta"
 
 ```
+
+Retrieves the meta details provided the group ID.
 
 ### HTTPS Request
 
@@ -646,12 +667,15 @@ groupID | required | string | Valid group identifier
 
 ### Returns
 
-Returns a meta string if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns meta string. If invalid group ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `Group id is not valid`
 
 
 ## Update Group Meta By ID
-
-Provide the unique user ID and Goodcop will return the meta details.
 
 > Definition
 
@@ -665,8 +689,7 @@ PUT  https://[GOODCOP_URL]/v1/group/{groupID}/meta
 curl "https://[GOODCOP_URL]/v1/group/5717800035287040/meta"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
   -d '{
 	    "meta":"update test meta"
     }'
@@ -680,6 +703,8 @@ curl "https://[GOODCOP_URL]/v1/group/5717800035287040/meta"
 }
 
 ```
+
+Updates the meta by setting the value of the body parameter passed.
 
 ### HTTPS Request
 
@@ -699,12 +724,15 @@ groupID | required | string | Valid group identifier
 
 ### Returns
 
-Returns string with updated meta if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns updated meta string. If invalid group ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `Group id is not valid`
 
 
 ## Delete Group Meta By ID
-
-Provide the unique group ID, meta and Goodcop will return the group details with empty meta.
 
 > Definition
 
@@ -718,8 +746,7 @@ DELETE  https://[GOODCOP_URL]/v1/group/{groupID}/meta
 curl "https://[GOODCOP_URL]/v1/group/5717800035287040/meta"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
   -d '{
 	    "meta":""
     }'
@@ -755,6 +782,8 @@ curl "https://[GOODCOP_URL]/v1/group/5717800035287040/meta"
 
 ```
 
+Replaces the meta with empty string.
+
 ### HTTPS Request
 
 `DELETE https://[GOODCOP_URL]/v1/group/{groupID}/meta`
@@ -773,11 +802,15 @@ groupID | required | string | Valid group identifier
 
 ### Returns
 
-Returns group object with deleted meta if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns group object with no metadata. If invalid group ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `Group id is not valid`
+
 
 ## Get Group Rules By ID
-
-Provide the unique group ID and Goodcop will return the list of all rules.
 
 > Definition
 
@@ -791,8 +824,7 @@ GET  https://[GOODCOP_URL]/v1/group/{groupID}/rule
 curl "https://[GOODCOP_URL]/v1/group/5717800035287040/rule"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;"> 200</code>
@@ -819,6 +851,8 @@ curl "https://[GOODCOP_URL]/v1/group/5717800035287040/rule"
 }
 ```
 
+Retrieves the details of all rules in a group.
+
 ### HTTPS Request
 
 `GET https://[GOODCOP_URL]/v1/group/{groupID}/rule`
@@ -831,11 +865,14 @@ groupID | required | string | Valid group identifier
 
 ### Returns
 
-Returns rules object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns the list of group rules. If invalid group ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `Group id is not valid`
 
 ## Update Group Rules By ID
-
-Provide the unique user ID and Goodcop will return the updated list of all rules.
 
 > Definition
 
@@ -849,8 +886,7 @@ PUT  https://[GOODCOP_URL]/v1/user/{userID}/rule
 curl "https://[GOODCOP_URL]/v1/group/5717800035287040/rule"
   -X PUT
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
   -d '[{
             "verb": "DELETE",
             "path": "/credentials/5687539843203072",
@@ -883,6 +919,8 @@ curl "https://[GOODCOP_URL]/v1/group/5717800035287040/rule"
 
 ```
 
+Updates the rules by setting the value of the body parameter passed.
+
 ### HTTPS Request
 
 `PUT https://[GOODCOP_URL]/v1/group/{groupID}/rule`
@@ -901,11 +939,15 @@ groupID | required | string | Valid group identifier
 
 ### Returns
 
-Returns update rules object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns updated rules in the group. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `Group id is not valid`
+3.  <code style="background:#FFC107;"> 400 </code> `Not Acceptable - You requested a wrong rule format`
 
 ## Delete Group Rules By ID
-
-Provide the unique group ID, rule array and Goodcop will return the updated list of all rules.
 
 > Definition
 
@@ -919,8 +961,7 @@ DELETE  https://[GOODCOP_URL]/v1/group/{groupID}/rule
 curl "https://[GOODCOP_URL]/v1/group/5717800035287040/rule"
   -X DELETE
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json" 
   -d '[{
             "verb": "GET",
             "path": "/credentials/5687539843203072",
@@ -947,6 +988,8 @@ curl "https://[GOODCOP_URL]/v1/group/5717800035287040/rule"
 }
 ```
 
+Deletes the rules from the group.
+
 ### HTTPS Request
 
 `DELETE https://[GOODCOP_URL]/v1/group/{groupID}/rule`
@@ -959,4 +1002,10 @@ groupID | required | string | Valid group identifier
 
 ### Returns
 
-Returns updated rules object if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns updated rules. If invalid group ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `Group id is not valid`
+3.  <code style="background:#FFC107;"> 400 </code> `Not Acceptable - You requested a wrong rule format`

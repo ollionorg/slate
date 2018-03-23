@@ -730,7 +730,7 @@ curl "https://[GOODCOP_URL]/v1/user"
             "meta": "",
             "devicetokens": [
                     {
-                        "token": "TVzm6SDRY5i5lpXgrsNYxok9zgJODJsA7VB15yl2qvUeTG_n3HYmEHaYwt73K-1vGpsUTV18wssDyEWGHdInPw==",
+                        "token": "e_aMotSZFW0A9QiXWE0N2dkDIiLUBLHLrS6hAQyhD98Py11RAb4_YKjNijvaX4m5qWN8JwBhhi48iecFF38DmA==",
                         "deviceid": ""
                     }
                 ],
@@ -1027,7 +1027,7 @@ Returns user object with updated meta. If invalid user ID or any other backend f
 
 ### Error Messages
 
-1.  <code style="background:#FFC107;"> 401 </code> <code style="background:#FFC107;"> 401 </code> `Invalid product API key`  
+1.  <code style="background:#FFC107;"> 401 </code> `Invalid product API key`  
 2.  <code style="background:#FFC107;"> 400 </code> `User not found`
 
 ## List User Rules By ID
