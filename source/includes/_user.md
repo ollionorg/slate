@@ -68,7 +68,7 @@ Returns a user object if correct email and password was provided. The returned o
 
 ## SignIn using github
 
-```
+
 > Example Request
 
 ```shell
