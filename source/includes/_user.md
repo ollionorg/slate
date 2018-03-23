@@ -4,12 +4,6 @@ The API allows you to create, delete, and update your users with addition of soc
 
 ## Signup using email and password
 
-> Definition
-
-```
-POST  https://[GOODCOP_URL]/v1/user/signup
-
-```
 > Example Request
 
 ```shell
@@ -49,7 +43,7 @@ Creates a new user object.
 
 ### HTTPS Request
 
-<code style="background:blue;">POST</code> https://[GOODCOP_URL]/v1/user/signup`
+<code style="background:#43A047;">POST</code> <code>https://[GOODCOP_URL]/v1/user/signup`<code>
 
 ### Request Body
 
