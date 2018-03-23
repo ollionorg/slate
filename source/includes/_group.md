@@ -1,5 +1,8 @@
 # Group
 
+The API allows you to create, delete, and update groups. You can retrieve a list of all your users associated with a group. Also the api gives ability to set authorization level privileges using the rules object and metadata storage.
+
+
 ## Create Group
 
 > Definition
@@ -14,8 +17,7 @@ POST  https://dev.goodcop.com/v1/group
 curl "https://dev.goodcop.com/v1/group"
   -X  POST
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
   -d '{
         "name":"test_group",
         "rules":[
@@ -39,11 +41,13 @@ curl "https://dev.goodcop.com/v1/group"
         }
     ],
     "meta": "",
-    "productId": 5750501782061056
+    "productId": 5750501782061056,
+    "createdAt": "2018-03-22T16:54:51.578986+05:30",
+    "updatedAt": "2018-03-22T16:54:51.578987+05:30"
 }
 ```
 
-Creates a group object provided the name in the request body and returns the group object.
+Creates a new group object.
 
 ### HTTPS Request
 
@@ -61,11 +65,15 @@ meta | optional | string | Provide metadata to store against the group
 
 ### Returns
 
-Returns group object if correct type of name is provided, and returns an error otherwise.
+Returns a group object. The returned object will have information about the rules, description, metadata. If no group name was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `Group name is required`
+
 
 ## Get Group By ID
-
-Retrieves the details of a group that has previously been created. Provide the unique group ID that was returned from your login request and Goodcop will return the corresponding user information.
 
 > Definition
 
@@ -79,8 +87,7 @@ GET  https://dev.goodcop.com/v1/group/{groupID}
 curl "https://dev.goodcop.com/v1/group/5707274949492736"
   -X GET
   -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
-  -H "Content-Type: application/json" \
-  -H "Device-Identifier: test_56789657567"
+  -H "Content-Type: application/json"
 ```
 
 > Example Response <code style="background:#4CAF50;"> 200</code>
@@ -98,10 +105,13 @@ curl "https://dev.goodcop.com/v1/group/5707274949492736"
         }
     ],
     "meta": "",
-    "productId": 5750501782061056
+    "productId": 5750501782061056,
+    "createdAt": "2018-03-22T16:54:51.578986+05:30",
+    "updatedAt": "2018-03-22T16:54:51.578987+05:30"
 }
 
 ```
+Retrieves the details of an existing group. You need only supply the unique group identifier that was returned upon group creation.
 
 ### HTTPS Request
 
@@ -115,12 +125,14 @@ groupID | required | string | Valid group identifier
 
 ### Returns
 
-Returns group details if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns a group object if a valid identifier was provided. If invalid group id was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `Group does not exist for given groupID`
 
 ## List Groups
-
-Retrieves the details of all groups that has previously been created.
 
 > Definition
 
@@ -171,17 +183,21 @@ curl "https://dev.goodcop.com/v1/group"
 
 ```
 
+Retrieves the detailed list of all product groups. The groups are returned in descending order of creation.
+
 ### HTTPS Request
 
 `GET https://dev.goodcop.com/v1/group`
 
 ### Returns
 
-Returns list of group objects if a valid authorization key was provided, and returns an error otherwise.
+Returns a list of group objects. If any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+## Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
 
 ## Delete Group By ID
-
-Provide the unique group ID and Goodcop will return the message for successful deletion of group.
 
 > Definition
 
@@ -207,6 +223,8 @@ curl "https://dev.goodcop.com/v1/group/5707274949492736"
 }
 ```
 
+Deletes a group from the product permanently.
+
 ### HTTPS Request
 
 `DELETE https://dev.goodcop.com/v1/group/{groupID}`
@@ -219,11 +237,14 @@ groupID | required | string | Valid group identifier
 
 ### Returns
 
-Returns a string message if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns a message on success. If the group ID does not exist or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `Group does not exist for given groupID`
 
 ## Delete Multiple Group
-
-Provide the unique array of group IDs and Goodcop will return the message for successful deletion of group.
 
 > Definition
 
@@ -250,6 +271,8 @@ curl "https://dev.goodcop.com/v1/group"
 }
 ```
 
+Deletes multiple groups from the product permanently.
+
 ### HTTPS Request
 
 `DELETE https://dev.goodcop.com/v1/group`
@@ -262,11 +285,15 @@ groupIDs | array | integer | Array of Valid group identifiers
 
 ### Returns
 
-Returns a string message if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns a message on success. If the group ID does not exist or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `Group does not exist for given groupID`
+
 
 ## Add Multiple Users to Group By ID
-
-Provide the unique group ID and Goodcop will add multiple users to the group.
 
 > Definition
 
@@ -309,6 +336,8 @@ curl "https://dev.goodcop.com/v1/group/5707274949492736/user"
 }
 ```
 
+Adds multiple users to a group.
+
 ### HTTPS Request
 
 `PUT https://dev.goodcop.com/v1/group/{groupID}/users`
@@ -327,12 +356,16 @@ groupID | required | string | Valid group identifier
 
 ### Returns
 
-Returns a object with updated mesage if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns an array of users which were succesfully added to the group. If the group ID does not exist, user IDs are invalid or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `Users not found`
+3.  <code style="background:#FFC107;"> 400 </code> `Group id is not valid`
 
 
 ## Add Single User to Group By Email
-
-Provide the unique email address and Goodcop will add the user to the specified group.
 
 > Definition
 
@@ -362,6 +395,8 @@ curl "https://dev.goodcop.com/v1/group/5707274949492736/userEmail"
 
 ```
 
+Adds a single user to a group by email address.
+
 ### HTTPS Request
 
 `PUT https://dev.goodcop.com/v1/group/{groupID}/userEmail`
@@ -380,7 +415,13 @@ groupID | required | string | Valid group identifier
 
 ### Returns
 
-Returns a user ID to which was added if a valid authorization key and a valid identifier was provided, and returns an error otherwise.
+Returns an array of users which were succesfully added to the group. If the group ID does not exist, user IDs are invalid or any other backend failures an appropriate error message will be returned with an error code associated with it.
+
+### Error Messages
+
+1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
+2.  <code style="background:#FFC107;"> 400 </code> `Users not found`
+3.  <code style="background:#FFC107;"> 400 </code> `Group id is not valid`
 
 
 ## Get User for Group By ID

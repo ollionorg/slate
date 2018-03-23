@@ -65,10 +65,10 @@ Returns a user object if correct email and password was provided. The returned o
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 404 </code> `Either email or password is missing`
-3.  <code style="background:#FFC107;"> 404 </code> `Email is not valid`
-4.  <code style="background:#FFC107;"> 404 </code> `Password must be atleast 7 characters long`
-5.  <code style="background:#FFC107;"> 404 </code> `You are already registered with product1 and product2`
+2.  <code style="background:#FFC107;"> 400 </code> `Either email or password is missing`
+3.  <code style="background:#FFC107;"> 400 </code> `Email is not valid`
+4.  <code style="background:#FFC107;"> 400 </code> `Password must be atleast 7 characters long`
+5.  <code style="background:#FFC107;"> 400 </code> `You are already registered with product1 and product2`
 
 
 ## SignIn using github
@@ -112,7 +112,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 404 </code> `No Callback is set for your product, please set that first`
+2.  <code style="background:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
 
 ## SignIn using facebook
 
@@ -156,7 +156,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 404 </code> `No Callback is set for your product, please set that first`
+2.  <code style="background:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
 
 ## SignIn using facebook
 
@@ -199,7 +199,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 404 </code> `No Callback is set for your product, please set that first`
+2.  <code style="background:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
 
 ## SignIn using twitter
 
@@ -242,7 +242,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 404 </code> `No Callback is set for your product, please set that first`
+2.  <code style="background:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
 
 ## SignIn using instagram
 
@@ -285,7 +285,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 404 </code> `No Callback is set for your product, please set that first`
+2.  <code style="background:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
 
 ## SignIn using magiclink
 
@@ -337,7 +337,7 @@ Returns a success message and an email will be sent to user with the magic link.
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 404 </code> `Email is missing`
+2.  <code style="background:#FFC107;"> 400 </code> `Email is missing`
 
 
 ## SignIn using phonenumber
@@ -390,8 +390,8 @@ Returns a success message and an one time password will be sent to user to verif
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 404 </code> `Phone number is missing`
-3.  <code style="background:#FFC107;"> 404 </code> `SMS sending error`
+2.  <code style="background:#FFC107;"> 400 </code> `Phone number is missing`
+3.  <code style="background:#FFC107;"> 400 </code> `SMS sending error`
 
 ## Verfiy phonenumber
 
@@ -444,7 +444,7 @@ Returns a user object if correct otp and phoneNumber was provided. The returned 
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 404 </code> `Phone number or OTP missing`
+2.  <code style="background:#FFC107;"> 400 </code> `Phone number or OTP missing`
 
 ## Login
 
@@ -510,9 +510,9 @@ Returns a user object if correct email and password was provided. The returned o
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 404 </code> `Either email or password is missing`
-3.  <code style="background:#FFC107;"> 404 </code> `Password must be atleast 7 characters long`
-3.  <code style="background:#FFC107;"> 404 </code> `No Password,Please Set a password after signing in using magic link`
+2.  <code style="background:#FFC107;"> 400 </code> `Either email or password is missing`
+3.  <code style="background:#FFC107;"> 400 </code> `Password must be atleast 7 characters long`
+3.  <code style="background:#FFC107;"> 400 </code> `No Password,Please Set a password after signing in using magic link`
 
 ## Change password
 
@@ -565,9 +565,9 @@ Returns a success message. If no user token was provided, incorrect passwords or
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 404 </code> `User not found`
-3.  <code style="background:#FFC107;"> 404 </code> `Wrong Old Password`
-4.  <code style="background:#FFC107;"> 404 </code> `Password must be atleast 7 characters long`
+2.  <code style="background:#FFC107;"> 400 </code> `User not found`
+3.  <code style="background:#FFC107;"> 400 </code> `Wrong Old Password`
+4.  <code style="background:#FFC107;"> 400 </code> `Password must be atleast 7 characters long`
 
 
 ## Get user by Id
@@ -628,7 +628,7 @@ Returns a user object if a valid identifier was provided. If invalide user id wa
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 404 </code> `User not found`
+2.  <code style="background:#FFC107;"> 400 </code> `User not found`
 
 ## Get user By email
 
@@ -689,7 +689,7 @@ Returns a user object if a valid identifier was provided. If invalid email was p
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 404 </code> `Email is not valid`
+2.  <code style="background:#FFC107;"> 400 </code> `Email is not valid`
 
 ## List all users
 
@@ -816,7 +816,7 @@ Returns a message on success. If the user ID does not exist an appropriate error
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 404 </code> `User not found`
+2.  <code style="background:#FFC107;"> 400 </code> `User not found`
 
 ## Get Group Details By ID
 
@@ -900,7 +900,7 @@ Returns an array of group objects. If invalid user ID or any other backend failu
 ### Error Messages
 
 1.  <code style="background:#FF7043;"> 401 </code> `Invalid product API key` 
-2.  <code style="background:#FFC107;"> 404 </code> `User not found`
+2.  <code style="background:#FFC107;"> 400 </code> `User not found`
 
 
 ## Get User Meta By ID
