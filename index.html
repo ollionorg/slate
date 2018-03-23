@@ -1565,8 +1565,6 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@mail.com"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
@@ -1583,21 +1581,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
             </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
         </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="mi">5717800035287040</span><span class="p">,</span><span class="w">
-        </span><span class="mi">5664530495438848</span><span class="p">,</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"storing test meta info"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"devicetokens"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                    </span><span class="p">{</span><span class="w">
-                        </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TVzm6SDRY5i5lpXgrsNYxok9zgJODJsA7VB15yl2qvUeTG_n3HYmEHaYwt73K-1vGpsUTV18wssDyEWGHdInPw=="</span><span class="p">,</span><span class="w">
-                        </span><span class="s2">"deviceid"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
-                    </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0001-01-01T05:21:10+05:21"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-22T12:08:02.07777+05:30"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Updates the rules by setting the value of the body parameter passed.</p>
@@ -1636,7 +1620,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </tr>
 </tbody></table>
 <h3 id='returns-20'>Returns</h3>
-<p>Returns user object with updated rules. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<p>Returns updated rules. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-20'>Error Messages</h3>
 <ol>
 <li> <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> <code>Invalid product API key</code><br></li>
@@ -1661,8 +1645,6 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test_oio4205c7-4139-4e14-a0d0-c5932ad99e9a"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@mail.com"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
@@ -1674,21 +1656,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
             </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
         </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="mi">5717800035287040</span><span class="p">,</span><span class="w">
-        </span><span class="mi">5664530495438848</span><span class="p">,</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"storing test meta info"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"devicetokens"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                    </span><span class="p">{</span><span class="w">
-                        </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TVzm6SDRY5i5lpXgrsNYxok9zgJODJsA7VB15yl2qvUeTG_n3HYmEHaYwt73K-1vGpsUTV18wssDyEWGHdInPw=="</span><span class="p">,</span><span class="w">
-                        </span><span class="s2">"deviceid"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
-                    </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0001-01-01T05:21:10+05:21"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-22T12:08:02.07777+05:30"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Deletes the rules from the user.</p>
@@ -1711,7 +1679,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </tr>
 </tbody></table>
 <h3 id='returns-21'>Returns</h3>
-<p>Returns user object with updated rules. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<p>Returns updated rules. If invalid user ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-21'>Error Messages</h3>
 <ol>
 <li> <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> <code>Invalid product API key</code><br></li>
@@ -2568,28 +2536,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"groupId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5717800035287040</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DELETE"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/credentials/5687539843203072"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5750501782061056</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
@@ -2629,7 +2576,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </tr>
 </tbody></table>
 <h3 id='returns-13'>Returns</h3>
-<p>Returns group object with no metadata. If invalid group ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<p>Returns meta string with no metadata. If invalid group ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-13'>Error Messages</h3>
 <ol>
 <li> <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
@@ -3371,7 +3318,7 @@ The category header can be provided with two options either api or user dependin
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"meta deleted successfully"</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Replaces the meta with empty string.</p>
@@ -3398,7 +3345,7 @@ The category header can be provided with two options either api or user dependin
 </tr>
 </tbody></table>
 <h3 id='returns-8'>Returns</h3>
-<p>Returns success message on succesfull deletion of meta. If invalid product ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<p>Returns meta string with no metadata. If invalid product ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-8'>Error Messages</h3>
 <ol>
 <li> <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> <code>Authorization Error. Kindly provide product API key</code></li>
@@ -4097,7 +4044,7 @@ The x-api-key header must be provided to request the tenant api's.
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"Rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5746055551385600/*"</span><span class="p">,</span><span class="w">
@@ -4253,18 +4200,13 @@ The x-api-key header must be provided to request the tenant api's.
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5996636694118400</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test tenant"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"apiId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5916827746041856</span><span class="p">,</span><span class="w">
     </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5746055551385600/*"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
         </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"secrets"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{</span><span class="se">\"</span><span class="s2">email</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">mail@gmail.com</span><span class="se">\"</span><span class="s2">}"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Deletes the rules from the tenant.</p>
@@ -4303,7 +4245,7 @@ The x-api-key header must be provided to request the tenant api's.
 </tr>
 </tbody></table>
 <h3 id='returns-7'>Returns</h3>
-<p>Returns tenant object with updated rules. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<p>Returns updated rules. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-7'>Error Messages</h3>
 <ol>
 <li> <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
@@ -4329,28 +4271,7 @@ The x-api-key header must be provided to request the tenant api's.
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5996636694118400</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test api"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"apiId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5916827746041856</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5746055551385600/*"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5162157834502144/*"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5162157834502144/*"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api meta"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"secrets"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{</span><span class="se">\"</span><span class="s2">email</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">mail@gmail.com</span><span class="se">\"</span><span class="s2">}"</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"Secrets updated"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Updates the secrets by setting the value of the body parameter passed. The secret information is stored in protected format.</p>
@@ -4389,7 +4310,7 @@ The x-api-key header must be provided to request the tenant api's.
 </tr>
 </tbody></table>
 <h3 id='returns-8'>Returns</h3>
-<p>Returns updated secrets in the tenant. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<p>Returns success message. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-8'>Error Messages</h3>
 <ol>
 <li> <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
@@ -4510,28 +4431,7 @@ The x-api-key header must be provided to request the tenant api's.
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5996636694118400</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test tenant"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"apiId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5916827746041856</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5746055551385600/*"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5162157834502144/*"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5162157834502144/*"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"updated tenant meta"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"secrets"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{</span><span class="se">\"</span><span class="s2">email</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">mail@gmail.com</span><span class="se">\"</span><span class="s2">}"</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"updated tenant meta"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Updates the meta by setting the value of the body parameter passed.</p>
@@ -4570,7 +4470,7 @@ The x-api-key header must be provided to request the tenant api's.
 </tr>
 </tbody></table>
 <h3 id='returns-11'>Returns</h3>
-<p>Returns updated tenant object with updated string. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<p>Returns updated meta string. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-11'>Error Messages</h3>
 <ol>
 <li> <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
@@ -4595,28 +4495,7 @@ The x-api-key header must be provided to request the tenant api's.
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5996636694118400</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test tenant"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"apiId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5916827746041856</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5746055551385600/*"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5162157834502144/*"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5162157834502144/*"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
     </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"secrets"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{</span><span class="se">\"</span><span class="s2">email</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">mail@gmail.com</span><span class="se">\"</span><span class="s2">}"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Replaces the meta with empty string.</p>
@@ -4639,7 +4518,7 @@ The x-api-key header must be provided to request the tenant api's.
 </tr>
 </tbody></table>
 <h3 id='returns-12'>Returns</h3>
-<p>Returns tenant object with no metadata. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<p>Returns meta with no metadata. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-12'>Error Messages</h3>
 <ol>
 <li> <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
@@ -5117,24 +4996,13 @@ The x-api-key header must be provided to request the tenant api's.
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5643625413214208</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api test"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"this is test api"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5746055551385600/*"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
         </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test api"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"apiKeys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"asZ7nYKajsIl8RqtYYK-oyS2MC_6EKMYXMCDq0J7FfQ="</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6308443803615232</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Deletes the rules from the api.</p>
@@ -5242,24 +5110,7 @@ The x-api-key header must be provided to request the tenant api's.
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5643625413214208</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api test"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"this is test api"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5746055551385600/*"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"updated api meta"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"apiKeys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"asZ7nYKajsIl8RqtYYK-oyS2MC_6EKMYXMCDq0J7FfQ="</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6308443803615232</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"updated api meta"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Updates the meta by setting the value of the body parameter passed.</p>
@@ -5322,24 +5173,8 @@ The x-api-key header must be provided to request the tenant api's.
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5643625413214208</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api test"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"this is test api"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"verb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/organizations/5746055551385600/*"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"effect"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"apiKeys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"asZ7nYKajsIl8RqtYYK-oyS2MC_6EKMYXMCDq0J7FfQ="</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">6308443803615232</span><span class="w">
+
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Replaces the meta with empty string.</p>
@@ -5362,7 +5197,7 @@ The x-api-key header must be provided to request the tenant api's.
 </tr>
 </tbody></table>
 <h3 id='returns-9'>Returns</h3>
-<p>Returns api object with no metadata. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<p>Returns meta string no metadata. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-10'>Error Messages</h3>
 <ol>
 <li> <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> <code>Invalid product API key</code> </li>
@@ -5747,7 +5582,7 @@ from the organization.</p>
 </tr>
 </tbody></table>
 <h3 id='returns-7'>Returns</h3>
-<p>Returns updated meta string. If invalid org ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
+<p>Returns meta string with no metadata. If invalid org ID or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-7'>Error Messages</h3>
 <ol>
 <li> <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> <code>Authorization error. Kindly provide product API key</code> </li>
