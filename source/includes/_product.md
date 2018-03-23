@@ -71,7 +71,7 @@ name | required | string | The name of the product.
 
 Returns a product object. The returned object will have information about the rules, description, metadata and api keys that needs to be used as authorization token for accessing other goodcop api modules. If no product name was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-### Error Messages
+#### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Name is required field`
@@ -177,7 +177,7 @@ Retrieves the detailed list of all products.
 
 Returns a list of product objects. If any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-### Error Messages
+#### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Name is required field`
@@ -250,7 +250,7 @@ productID | required | string | Valid product identifier
 
 Returns a product object if a valid identifier was provided. If invalid product ID was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
@@ -341,7 +341,7 @@ productID | required | string | Valid user identifier
 Returns updated product object. If invalid product ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
@@ -382,7 +382,7 @@ productID | required | string | Valid product identifier
 
 Returns a message on success. If the product ID does not exist or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
@@ -433,7 +433,7 @@ productID | required | string | Valid product identifier
 
 Returns updated meta string. If invalid product ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
@@ -479,7 +479,7 @@ productID | required | string | Valid product identifier
 
 Returns meta string. If invalid product ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
@@ -525,7 +525,7 @@ productID | required | string | Valid product identifier
 
 Returns success message on succesfull deletion of meta. If invalid product ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
@@ -577,7 +577,7 @@ productID | required | string | Valid product identifier
 
 Returns the list of product rules. If invalid product ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
@@ -648,7 +648,7 @@ productID | required | string | Valid product identifier
 
 Returns updated rules for the product. If invalid product ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
@@ -711,7 +711,7 @@ productID | required | string | Valid product identifier
 
 Returns updated rules for the product. If invalid product ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
@@ -765,7 +765,7 @@ apikeyname | required | string | Name of the api key to be generated
 
 Returns a list of all api keys. The returned object will have information of the new key and can be used to access goodcop modules. If no api name was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
@@ -812,7 +812,7 @@ apikeyname | required | string | Name of the api key to be generated
 
 Returns a key details. If invalid product ID, invalid key name was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
@@ -866,7 +866,7 @@ productID | required | string | Valid product identifier
 
 Returns a list of api keys. If any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`
@@ -912,7 +912,7 @@ apikeyname | required | string | Name of the api key to be generated
 
 Returns a message on success. If the product ID does not exist, api key name does not exists or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide product API key`
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `Product API key and Product id doesnt match`

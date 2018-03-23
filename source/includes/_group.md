@@ -178,7 +178,7 @@ Retrieves the detailed list of all product groups. The groups are returned in de
 
 Returns a list of group objects. If any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`

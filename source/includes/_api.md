@@ -134,7 +134,7 @@ apiID | required | string | Valid api identifier
 
 Returns a api object if a valid identifier was provided. If invalid api ID was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `API does not exist for given api ID`
@@ -237,7 +237,7 @@ apiID | required | string | Valid api identifier
 
 Returns a list of api objects. If any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key`
 2.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
@@ -278,7 +278,7 @@ apiID | required | string | Valid api identifier
 
 Returns a message on success. If the api ID does not exist or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `API does not exist for given api ID`
@@ -328,7 +328,7 @@ apiID | required | string | Valid api identifier
 
 Returns the list of api rules. If invalid api ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `API does not exist for given api ID`

@@ -74,7 +74,7 @@ secrets | optional | string | secrets of tenant
 
 Returns a api object. The returned object will have information about the rules, description, metadata and api key that is necessary for using tenant module. If no api name was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-### Error Messages
+#### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
@@ -132,7 +132,7 @@ tenantID | required | string | Valid tenant identifier
 
 Returns a tenant object if a valid identifier was provided. If invalid tenant ID was provided or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
@@ -187,7 +187,7 @@ Retrieves the detailed list of all product tenants.
 
 Returns a list of tenant objects. If any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key`
 2.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
@@ -233,7 +233,7 @@ tenantID | required | string | Valid tenant identifier
 
 Returns a message on success. If the tenant ID does not exist or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
@@ -286,7 +286,7 @@ tenantID | required | string | Valid tenant identifier
 
 Returns the list of tenant rules. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
@@ -366,7 +366,7 @@ tenantID | required | string | Valid tenant identifier
 
 Returns updated rules for the tenant. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
@@ -444,7 +444,7 @@ tenantID | required | string | Valid tenant identifier
 
 Returns tenant object with updated rules. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
@@ -519,7 +519,7 @@ tenantID | required | string | Valid tenant identifier
 
 Returns updated secrets in the tenant. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
@@ -568,7 +568,7 @@ tenantID | required | string | Valid tenant identifier
 
 Returns the secrets stored with the tenant. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-## Error Messages
+### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
@@ -614,7 +614,7 @@ tenantID | required | string | Valid tenant identifier
 
 Returns meta string. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-### Error Messages
+#### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
@@ -688,7 +688,7 @@ tenantID | required | string | Valid tenant identifier
 
 Returns updated tenant object with updated string. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-### Error Messages
+#### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
@@ -757,7 +757,7 @@ tenantID | required | string | Valid tenant identifier
 
 Returns tenant object with no metadata. If invalid tenant ID or any other backend failures an appropriate error message will be returned with an error code associated with it.
 
-### Error Messages
+#### Error Messages
 
 1.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Invalid product API key` 
 2.  <code style="background:#FFFFFF;color:#FF7043;"> 401 </code> `Authorization Error. Kindly provide correct API key`
