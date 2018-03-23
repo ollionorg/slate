@@ -1,6 +1,4 @@
 ---
-![alt text](source/images/logo.png)
-
 title: GoodCop API Reference
 
 language_tabs:
