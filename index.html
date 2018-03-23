@@ -670,7 +670,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a new user object.</p>
 <h3 id='https-request'>HTTPS Request</h3>
-<p><code style="background:#43A047;">POST</code> <code>https://[GOODCOP_URL]/v1/user/signup`<code></p>
+<p><code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signup<code></p>
 <h3 id='request-body'>Request Body</h3>
 <table><thead>
 <tr>
@@ -704,21 +704,14 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <li> <code style="background:#FFC107;"> 400 </code> <code>You are already registered with product1 and product2</code></li>
 <li> <code style="background:#FF0000;"> 500 </code> <code>We had a problem with our server. Try again later.</code></li>
 </ol>
-<h2 id='signin-using-github'>SignIn using github</h2>
-<blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/user/signin/github
+<h2 id='signin-using-github'>SignIn using github</h2><pre class="highlight plaintext"><code>&gt; Example Request
 
-</code></pre>
-<blockquote>
-<p>Example Request</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/signin/github"</span>
+```shell
+curl "https://[GOODCOP_URL]/v1/user/signin/github"
   -X POST
-  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Token: test_56789657567"</span>
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Token: test_56789657567"
 </code></pre>
 <blockquote>
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
@@ -731,7 +724,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a new user object via github.</p>
 <h3 id='https-request-2'>HTTPS Request</h3>
-<p><code>POST https://[GOODCOP_URL]/v1/user/signin/github</code></p>
+<p><code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/github</code></p>
 <h3 id='returns-2'>Returns</h3>
 <p>Returns a redirect url. The redirect url will be used to authenticate the user using github. If the user is successfully authenticated using github, goodcop will redirect to the product callback. If no callback is set by the product, social auth provider failure or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-2'>Error Messages</h3>
@@ -740,21 +733,14 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <li> <code style="background:#FFC107;"> 400 </code> <code>No Callback is set for your product, please set that first</code></li>
 <li> <code style="background:#FF0000;"> 500 </code> <code>We had a problem with our server. Try again later.</code></li>
 </ol>
-<h2 id='signin-using-facebook'>SignIn using facebook</h2>
-<blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/user/signin/google
+<h2 id='signin-using-facebook'>SignIn using facebook</h2><pre class="highlight plaintext"><code>&gt; Example Request
 
-</code></pre>
-<blockquote>
-<p>Example Request</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/signin/google"</span>
+```shell
+curl "https://[GOODCOP_URL]/v1/user/signin/google"
   -X POST
-  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Token: test_56789657567"</span>
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Token: test_56789657567"
 </code></pre>
 <blockquote>
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
@@ -767,7 +753,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a new user object via google.</p>
 <h3 id='https-request-3'>HTTPS Request</h3>
-<p><code>POST https://[GOODCOP_URL]/v1/user/signin/google</code></p>
+<p><code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/google</code></p>
 <h3 id='returns-3'>Returns</h3>
 <p>Returns a redirect url. The redirect url will be used to authenticate the user using google. If the user is successfully authenticated using google, goodcop will redirect to the product callback. If no callback is set by the product, social auth provider failure or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-3'>Error Messages</h3>
@@ -776,21 +762,14 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <li> <code style="background:#FFC107;"> 400 </code> <code>No Callback is set for your product, please set that first</code></li>
 <li> <code style="background:#FF0000;"> 500 </code> <code>We had a problem with our server. Try again later.</code></li>
 </ol>
-<h2 id='signin-using-facebook-2'>SignIn using facebook</h2>
-<blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/user/signin/facebook
+<h2 id='signin-using-facebook-2'>SignIn using facebook</h2><pre class="highlight plaintext"><code>&gt; Example Request
 
-</code></pre>
-<blockquote>
-<p>Example Request</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/signin/facebook"</span>
+```shell
+curl "https://[GOODCOP_URL]/v1/user/signin/facebook"
   -X POST
-  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Token: test_56789657567"</span>
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Token: test_56789657567"
 </code></pre>
 <blockquote>
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
@@ -803,7 +782,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a new user object via facebook.</p>
 <h3 id='https-request-4'>HTTPS Request</h3>
-<p><code>POST https://[GOODCOP_URL]/v1/user/signin/facebook</code></p>
+<p><code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/facebook</code></p>
 <h3 id='returns-4'>Returns</h3>
 <p>Returns a redirect url. The redirect url will be used to authenticate the user using facebook. If the user is successfully authenticated using facebook, goodcop will redirect to the product callback. If no callback is set by the product, social auth provider failure or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-4'>Error Messages</h3>
@@ -812,21 +791,14 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <li> <code style="background:#FFC107;"> 400 </code> <code>No Callback is set for your product, please set that first</code></li>
 <li> <code style="background:#FF0000;"> 500 </code> <code>We had a problem with our server. Try again later.</code></li>
 </ol>
-<h2 id='signin-using-twitter'>SignIn using twitter</h2>
-<blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/user/signin/twitter
+<h2 id='signin-using-twitter'>SignIn using twitter</h2><pre class="highlight plaintext"><code>&gt; Example Request
 
-</code></pre>
-<blockquote>
-<p>Example Request</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/signin/twitter"</span>
+```shell
+curl "https://[GOODCOP_URL]/v1/user/signin/twitter"
   -X POST
-  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Token: test_56789657567"</span>
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Token: test_56789657567"
 </code></pre>
 <blockquote>
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
@@ -839,7 +811,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a new user object via twitter.</p>
 <h3 id='https-request-5'>HTTPS Request</h3>
-<p><code>POST https://[GOODCOP_URL]/v1/user/signin/twitter</code></p>
+<p><code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/twitter</code></p>
 <h3 id='returns-5'>Returns</h3>
 <p>Returns a redirect url. The redirect url will be used to authenticate the user using twitter. If the user is successfully authenticated using twitter, goodcop will redirect to the product callback. If no callback is set by the product, social auth provider failure or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-5'>Error Messages</h3>
@@ -848,21 +820,14 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <li> <code style="background:#FFC107;"> 400 </code> <code>No Callback is set for your product, please set that first</code></li>
 <li> <code style="background:#FF0000;"> 500 </code> <code>We had a problem with our server. Try again later.</code></li>
 </ol>
-<h2 id='signin-using-instagram'>SignIn using instagram</h2>
-<blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/user/signin/instagram
+<h2 id='signin-using-instagram'>SignIn using instagram</h2><pre class="highlight plaintext"><code>&gt; Example Request
 
-</code></pre>
-<blockquote>
-<p>Example Request</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/signin/instagram"</span>
+```shell
+curl "https://[GOODCOP_URL]/v1/user/signin/instagram"
   -X POST
-  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Token: test_56789657567"</span>
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Token: test_56789657567"
 </code></pre>
 <blockquote>
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
@@ -875,7 +840,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a new user object via instagram.</p>
 <h3 id='https-request-6'>HTTPS Request</h3>
-<p><code>POST https://[GOODCOP_URL]/v1/user/signin/instagram</code></p>
+<p><code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/instagram</code></p>
 <h3 id='returns-6'>Returns</h3>
 <p>Returns a redirect url. The redirect url will be used to authenticate the user using instagram. If the user is successfully authenticated using instagram, goodcop will redirect to the product callback. If no callback is set by the product, social auth provider failure or any other backend failures an appropriate error message will be returned with an error code associated with it.</p>
 <h3 id='error-messages-6'>Error Messages</h3>
@@ -884,24 +849,17 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <li> <code style="background:#FFC107;"> 400 </code> <code>No Callback is set for your product, please set that first</code></li>
 <li> <code style="background:#FF0000;"> 500 </code> <code>We had a problem with our server. Try again later.</code></li>
 </ol>
-<h2 id='signin-using-magiclink'>SignIn using magiclink</h2>
-<blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/user/magiclink
+<h2 id='signin-using-magiclink'>SignIn using magiclink</h2><pre class="highlight plaintext"><code>&gt; Example Request
 
-</code></pre>
-<blockquote>
-<p>Example Request</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/magiclink"</span>
+```shell
+curl "https://[GOODCOP_URL]/v1/user/magiclink"
   -X POST
-  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Token: test_56789657567"</span>
-  -d <span class="s1">'{
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Token: test_56789657567"
+  -d '{
        "email":"some_email@mail.com", 
-    }'</span>
+    }'
 </code></pre>
 <blockquote>
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
@@ -913,7 +871,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a new user object via email by creating a token that will allow user to log in through the link sent to their email.</p>
 <h3 id='https-request-7'>HTTPS Request</h3>
-<p><code>POST https://[GOODCOP_URL]/v1/signup/magiclink</code></p>
+<p><code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/signup/magiclink</code></p>
 <h3 id='request-body-2'>Request Body</h3>
 <table><thead>
 <tr>
@@ -938,24 +896,17 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <li> <code style="background:#FFC107;"> 400 </code> <code>Email is missing</code></li>
 <li> <code style="background:#FF0000;"> 500 </code> <code>We had a problem with our server. Try again later.</code></li>
 </ol>
-<h2 id='signin-using-phonenumber'>SignIn using phonenumber</h2>
-<blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/user/signin/phone
+<h2 id='signin-using-phonenumber'>SignIn using phonenumber</h2><pre class="highlight plaintext"><code>&gt; Example Request
 
-</code></pre>
-<blockquote>
-<p>Example Request</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/signin/phone"</span>
+```shell
+curl "https://[GOODCOP_URL]/v1/user/signin/phone"
   -X POST
-  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Token: test_56789657567"</span>
-  -d <span class="s1">'{
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Token: test_56789657567"
+  -d '{
        "phoneNumber":"+917678788789", 
-    }'</span>
+    }'
 </code></pre>
 <blockquote>
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
@@ -968,7 +919,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates an one time password for user verfication.</p>
 <h3 id='https-request-8'>HTTPS Request</h3>
-<p><code>POST https://[GOODCOP_URL]/v1/user/signin/phone</code></p>
+<p><code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/phone</code></p>
 <h3 id='request-body-3'>Request Body</h3>
 <table><thead>
 <tr>
@@ -998,21 +949,18 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <blockquote>
 <p>Definition</p>
 </blockquote>
-<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/user/signin/phone/verify
+<pre class="highlight plaintext"><code>&gt; Example Request
 
-</code></pre>
-<blockquote>
-<p>Example Request</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/signin/phone/verify"</span>
+```shell
+curl "https://[GOODCOP_URL]/v1/user/signin/phone/verify"
   -X POST
-  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Token: test_56789657567"</span>
-  -d <span class="s1">'{
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Token: test_56789657567"
+  -d '{
        "phoneNumber":"+917678788789", 
        "otp":"878787"
-    }'</span>
+    }'
 </code></pre>
 <blockquote>
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
@@ -1024,7 +972,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a new user object after verifying the otp.</p>
 <h3 id='https-request-9'>HTTPS Request</h3>
-<p><code>POST https://[GOODCOP_URL]/v1/user/signin/phone/verify</code></p>
+<p><code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/signin/phone/verify</code></p>
 <h3 id='request-body-4'>Request Body</h3>
 <table><thead>
 <tr>
@@ -1055,25 +1003,18 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <li> <code style="background:#FFC107;"> 400 </code> <code>Phone number or OTP missing</code></li>
 <li> <code style="background:#FF0000;"> 500 </code> <code>We had a problem with our server. Try again later.</code></li>
 </ol>
-<h2 id='login'>Login</h2>
-<blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/user/login
+<h2 id='login'>Login</h2><pre class="highlight plaintext"><code>&gt; Example Request
 
-</code></pre>
-<blockquote>
-<p>Example Request</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/login"</span>
+```shell
+curl "https://[GOODCOP_URL]/v1/user/login"
   -X POST
-  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  -H <span class="s2">"Device-Token: test_56789657567"</span>
-  -d <span class="s1">'{
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json" \
+  -H "Device-Token: test_56789657567"
+  -d '{
        "email":"test", 
        "password":"test@#987"
-    }'</span>
+    }'
 </code></pre>
 <blockquote>
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
@@ -1098,7 +1039,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>LogIn the user.</p>
 <h3 id='https-request-10'>HTTPS Request</h3>
-<p><code>POST https://[GOODCOP_URL]/v1/user/login</code></p>
+<p><code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/login</code></p>
 <h3 id='request-body-5'>Request Body</h3>
 <table><thead>
 <tr>
@@ -1131,25 +1072,18 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 <li> <code style="background:#FFC107;"> 400 </code> <code>No Password,Please Set a password after signing in using magic link</code></li>
 <li> <code style="background:#FF0000;"> 500 </code> <code>We had a problem with our server. Try again later.</code></li>
 </ol>
-<h2 id='change-password'>Change password</h2>
-<blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/user/passwordChange
+<h2 id='change-password'>Change password</h2><pre class="highlight plaintext"><code>&gt; Example Request
 
-</code></pre>
-<blockquote>
-<p>Example Request</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/user/passwordChange"</span>
+```shell
+curl "https://[GOODCOP_URL]/v1/user/passwordChange"
   -X POST
-  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span>
-  -H <span class="s1">'user-token: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8='</span> <span class="se">\</span>
-  -d <span class="s1">'{
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json"
+  -H 'user-token: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
+  -d '{
        "oldapassword":"test", 
        "newpassword":"test@#987"
-    }'</span>
+    }'
 </code></pre>
 <blockquote>
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
@@ -1160,7 +1094,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Change the password for the logged in user providing the oldpassword and new password.</p>
 <h3 id='https-request-11'>HTTPS Request</h3>
-<p><code>POST https://[GOODCOP_URL]/v1/user/passwordChange</code></p>
+<p><code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/user/passwordChange</code></p>
 <h3 id='request-body-6'>Request Body</h3>
 <table><thead>
 <tr>
@@ -2006,26 +1940,19 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </ol>
 <h1 id='group'>Group</h1>
 <p>The API allows you to create, delete, and update groups. You can retrieve a list of all your users associated with a group. Also the api gives ability to set authorization level privileges using the rules object and metadata storage.</p>
-<h2 id='create-group'>Create Group</h2>
-<blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/group
+<h2 id='create-group'>Create Group</h2><pre class="highlight plaintext"><code>&gt; Example Request
 
-</code></pre>
-<blockquote>
-<p>Example Request</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/group"</span>
+```shell
+curl "https://[GOODCOP_URL]/v1/group"
   -X  POST
-  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span>
-  -d <span class="s1">'{
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json"
+  -d '{
         "name":"test_group",
         "rules":[
             {"path":"thrifty/billing","verb":"GET","effect":true}
         ]
-    }'</span>
+    }'
 </code></pre>
 <blockquote>
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
@@ -2049,7 +1976,7 @@ You must replace <code style="#000000;">test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5
 </span></code></pre>
 <p>Creates a new group object.</p>
 <h3 id='https-request'>HTTPS Request</h3>
-<p><code>POST https://[GOODCOP_URL]/v1/group</code></p>
+<p><code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/group</code></p>
 <h3 id='request-body'>Request Body</h3>
 <table><thead>
 <tr>
@@ -3131,23 +3058,16 @@ Api that needs a secure token are :
 2.  Get All Products
 
 </aside>
-<h2 id='create-product'>Create Product</h2>
-<blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/product
+<h2 id='create-product'>Create Product</h2><pre class="highlight plaintext"><code>&gt; Example Request
 
-</code></pre>
-<blockquote>
-<p>Example Request</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/product"</span>
+```shell
+curl "https://[GOODCOP_URL]/v1/product"
   -X POST
-  -H <span class="s2">"Authorization: test_hHHJujfwvRyjjuR"</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span>
-  -d <span class="s1">'{
+  -H "Authorization: test_hHHJujfwvRyjjuR" \
+  -H "Content-Type: application/json"
+  -d '{
         "name":"test_product"
-    }'</span>
+    }'
 </code></pre>
 <blockquote>
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
@@ -3174,7 +3094,7 @@ Api that needs a secure token are :
 </span></code></pre>
 <p>Creates a new product object.</p>
 <h3 id='https-request'>HTTPS Request</h3>
-<p><code>POST https://[GOODCOP_URL]/v1/group</code></p>
+<p><code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/group</code></p>
 <h3 id='request-body'>Request Body</h3>
 <table><thead>
 <tr>
@@ -4210,22 +4130,15 @@ The category header can be provided with two options either api or user dependin
 <aside style="background:#5bc0de;">
 The x-api-key header must be provided to request the tenant api's.
 </aside>
-<h2 id='create-tenant'>Create Tenant</h2>
-<blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/tenant
+<h2 id='create-tenant'>Create Tenant</h2><pre class="highlight plaintext"><code>&gt; Example Request
 
-</code></pre>
-<blockquote>
-<p>Example Request</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/tenant"</span>
+```shell
+curl "https://[GOODCOP_URL]/v1/tenant"
   -X  POST
-  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span>
-  -H <span class="s1">'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8='</span> <span class="se">\</span>
-  -d <span class="s1">'{
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json"
+  -H 'x-api-key: test_MLd587_Hi3TrTwfLNRg8mKiUwDlM7Z5VuODE9KhM8=' \
+  -d '{
     "name":"test tenant",
     "apiId":5916827746041856,
     "rules": [
@@ -4237,7 +4150,7 @@ The x-api-key header must be provided to request the tenant api's.
     ],
     "meta":"tenant meta",
     "secrets":"secrets"
-    }'</span>
+    }'
 </code></pre>
 <blockquote>
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
@@ -4261,7 +4174,7 @@ The x-api-key header must be provided to request the tenant api's.
 </span></code></pre>
 <p>Creates a new tenant object.</p>
 <h3 id='https-request'>HTTPS Request</h3>
-<p><code>POST https://[GOODCOP_URL]/v1/tenant</code></p>
+<p><code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/tenant</code></p>
 <h3 id='request-body'>Request Body</h3>
 <table><thead>
 <tr>
@@ -5091,21 +5004,14 @@ The x-api-key header must be provided to request the tenant api's.
 </ol>
 <h1 id='api'>Api</h1>
 <p>The API allows you to create, delete, and update api. The api gives ability to set authorization level privileges using the rules object and metadata storage.</p>
-<h2 id='create-api'>Create Api</h2>
-<blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/api
+<h2 id='create-api'>Create Api</h2><pre class="highlight plaintext"><code>&gt; Example Request
 
-</code></pre>
-<blockquote>
-<p>Example Request</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/api"</span>
+```shell
+curl "https://[GOODCOP_URL]/v1/api"
   -X  POST
-  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span>
-  -d <span class="s1">'{
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json"
+  -d '{
     "name":"api test",
     "description":"this is test api",
     "rules": [
@@ -5116,7 +5022,7 @@ The x-api-key header must be provided to request the tenant api's.
         }
     ],
     "meta":"test api",
-    }'</span>
+    }'
 </code></pre>
 <blockquote>
 <p>Example Response <code style="background:#4CAF50;"> 200</code></p>
@@ -5148,7 +5054,7 @@ The x-api-key header must be provided to request the tenant api's.
 </span></code></pre>
 <p>Creates a new api object.</p>
 <h3 id='https-request'>HTTPS Request</h3>
-<p><code>POST https://[GOODCOP_URL]/v1/api</code></p>
+<p><code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/api</code></p>
 <h3 id='request-body'>Request Body</h3>
 <table><thead>
 <tr>
@@ -5874,25 +5780,18 @@ The x-api-key header must be provided to request the tenant api's.
 <h1 id='organization'>Organization</h1>
 <p>The API allows you to create, delete, and update an prganization. The api gives ability to store metadata, add/remove multiple users
 from the organization.</p>
-<h2 id='create-org'>Create Org</h2>
-<blockquote>
-<p>Definition</p>
-</blockquote>
-<pre class="highlight plaintext"><code>POST  https://[GOODCOP_URL]/v1/org
+<h2 id='create-org'>Create Org</h2><pre class="highlight plaintext"><code>&gt; Example Request
 
-</code></pre>
-<blockquote>
-<p>Example Request</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://[GOODCOP_URL]/v1/org"</span>
+```shell
+curl "https://[GOODCOP_URL]/v1/org"
   -X  POST
-  -H <span class="s2">"Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs="</span> <span class="se">\</span>
-  -H <span class="s2">"Content-Type: application/json"</span>
-  -d <span class="s1">'{
+  -H "Authorization: test_aIsKmHDTaSvYJGHGHJ5_QsnJZ4UWJFwMgt5AIA4Oyvs=" \
+  -H "Content-Type: application/json"
+  -d '{
     "name":"testorg",
     "meta":"test meta",
     "contactdetails":"customer_detail_in_string"
-}'</span>
+}'
 </code></pre>
 <blockquote>
 <p>Example Response <code style="background:#4CAF50;"> 201</code></p>
@@ -5909,7 +5808,7 @@ from the organization.</p>
 </span></code></pre>
 <p>Creates a new organization object.</p>
 <h3 id='https-request'>HTTPS Request</h3>
-<p><code>POST https://[GOODCOP_URL]/v1/org</code></p>
+<p><code style="background:#81C784;">POST</code> <code style="background:#E8F5E9;">https://[GOODCOP_URL]/v1/org</code></p>
 <h3 id='request-body'>Request Body</h3>
 <table><thead>
 <tr>
