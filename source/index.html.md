@@ -22,7 +22,7 @@ includes:
 search: true
 ---
 
-# API Reference
+# GoodCop API Reference
 
 The GoodCop API is organized around REST. Our API has resource-oriented URLs, and uses HTTPS response codes to indicate API errors. We use built-in HTTPS features, like HTTPS authentication and HTTPS verbs, which are understood by off-the-shelf HTTPS clients. JSON is returned by all API responses, including errors.
 
