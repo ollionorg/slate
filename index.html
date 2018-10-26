@@ -236,6 +236,9 @@
                   <li>
                     <a href="#get-an-active-channel" class="toc-h2 toc-link" data-title="get-an-active-channel">Get an active Channel</a>
                   </li>
+                  <li>
+                    <a href="#update-channel-status" class="toc-h2 toc-link" data-title="update-channel-status">Update Channel Status</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -270,6 +273,22 @@
               </ul>
           </li>
           <li>
+            <a href="#blacklist" class="toc-h1 toc-link" data-title="blacklist">Blacklist</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#blacklist-whitelist-user-from-channel" class="toc-h2 toc-link" data-title="blacklist-whitelist-user-from-channel">Blacklist/ Whitelist User from Channel</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#broadcast-messages" class="toc-h1 toc-link" data-title="broadcast-messages">Broadcast Messages</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#broadcast-messages-to-particular-channel" class="toc-h2 toc-link" data-title="broadcast-messages-to-particular-channel">Broadcast messages to particular channel :</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="errors">Errors</a>
           </li>
       </div>
@@ -284,9 +303,8 @@
         <h1 id='introduction'>Introduction</h1>
 <p>Welcome to the Data aggregator API! You can use this API to access Data aggregator API endpoints, which can get information on various channels, users, and chats from redis.</p>
 
-<p>Click to check the api status: <a href="http://localhost:3000">Status Check</a>.</p>
-<h1 id='channels'>Channels</h1><h2 id='get-all-channels'>Get All Channels</h2><pre class="highlight plaintext"><code>&lt;host&gt;/channels
-</code></pre>
+<p>Click to check the api status(provided the caller is in the VPC): <a href="http://172.28.0.15:14022">Status Check</a>.</p>
+<h1 id='channels'>Channels</h1><h2 id='get-all-channels'>Get All Channels</h2>
 <blockquote>
 <p>The above API returns JSON structured like this:</p>
 </blockquote>
@@ -331,7 +349,7 @@
 </span></code></pre>
 <p>This endpoint retrieves data for all channels availble in redis.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/channels</code></p>
+<p><code>GET  http://172.28.0.15:14022/channels/</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -348,8 +366,11 @@
 <aside class="success">
 Returns — Status 200
 </aside>
-<h2 id='get-a-specific-channel'>Get a Specific Channel</h2><pre class="highlight plaintext"><code>&lt;host&gt;/channels?channel_id=96
-</code></pre>
+
+<aside class="notice">
+When channel is not found Returns — Not Found 400
+</aside>
+<h2 id='get-a-specific-channel'>Get a Specific Channel</h2>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
@@ -376,7 +397,7 @@ Returns — Status 200
    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/channels/?channel_id=96</code></p>
+<p><code>GET  http://172.28.0.15:14022/channels?channel_id=96</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -392,6 +413,10 @@ Returns — Status 200
 
 <aside class="success">
 Returns — Status 200
+</aside>
+
+<aside class="notice">
+When channel is not found Returns — Not Found 400
 </aside>
 <h2 id='get-all-active-channels'>Get all active Channels</h2>
 <blockquote>
@@ -442,7 +467,7 @@ Returns — Status 200
    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET http://example.com/channels/?active=true</code></p>
+<p><code>GET  http://172.28.0.15:14022/channels?active=true</code></p>
 <h3 id='url-parameters-3'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -508,7 +533,7 @@ Returns — Status 200
    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/?channel_id=96&amp;active=true</code></p>
+<p><code>GET  http://172.28.0.15:14022/kittens?channel_id=96&amp;active=true</code></p>
 <h3 id='url-parameters-4'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -528,6 +553,42 @@ Returns — Status 200
 
 <aside class="success">
 Returns — Status 200
+</aside>
+<h2 id='update-channel-status'>Update Channel Status</h2>
+<blockquote>
+<p>The above API returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"channel_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">96</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint updates the status of the channel</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>POST  http://172.28.0.15:14022/channels/</code></p>
+<h3 id='url-parameters-5'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>channel_id</td>
+<td>The ID of the channel</td>
+</tr>
+<tr>
+<td>active</td>
+<td>The expected status (true/false) of the channel</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+Returns — Status 200
+</aside>
+
+<aside class="notice">
+When channel is not found Returns — Not Found 400
 </aside>
 <h1 id='chats'>Chats</h1><h2 id='get-all-chats'>Get All Chats</h2>
 <blockquote>
@@ -560,11 +621,15 @@ Returns — Status 200
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves data for all channels availble in redis.</p>
-<h3 id='http-request-5'>HTTP Request</h3>
-<p><code>GET http://example.com/chats</code></p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>GET  http://172.28.0.15:14022/chats/</code></p>
 
 <aside class="success">
 Returns — Status 200
+</aside>
+
+<aside class="notice">
+When channel is not found Returns — Not Found 400
 </aside>
 
 <aside class="notice">
@@ -599,11 +664,15 @@ This API does not have timestamps in parameters. So response does not have chat_
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-6'>HTTP Request</h3>
-<p><code>GET http://example.com/chats?channel_id=96</code></p>
+</span></code></pre><h3 id='http-request-7'>HTTP Request</h3>
+<p><code>GET  http://172.28.0.15:14022/chats?channel_id=96</code></p>
 
 <aside class="success">
 Returns — Status 200
+</aside>
+
+<aside class="notice">
+When channel is not found Returns — Not Found 400
 </aside>
 
 <aside class="notice">
@@ -640,8 +709,8 @@ This API does not have timestamps in parameters. So response does not have chat_
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-7'>HTTP Request</h3>
-<p><code>GET http://example.com/chats?channel_id=96&amp;ts_start=1539939879</code></p>
+</span></code></pre><h3 id='http-request-8'>HTTP Request</h3>
+<p><code>GET  http://172.28.0.15:14022/chats?channel_id=96&amp;ts_start=1539939879</code></p>
 
 <aside class="success">
 Returns — Status 200
@@ -681,11 +750,15 @@ chats_in_period key will be returned for the users(those were active at the give
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-8'>HTTP Request</h3>
-<p><code>GET http://example.com/chats?channel_id=96&amp;ts_start=1539939879&amp;ts_end=1539944558</code></p>
+</span></code></pre><h3 id='http-request-9'>HTTP Request</h3>
+<p><code>GET  http://172.28.0.15:14022/chats?channel_id=96&amp;ts_start=1539939879&amp;ts_end=1539944558</code></p>
 
 <aside class="success">
 Returns — Status 200
+</aside>
+
+<aside class="notice">
+When channel is not found Returns — Not Found 400
 </aside>
 
 <aside class="notice">
@@ -723,8 +796,8 @@ chats_in_period key will be returned for the users(those were active at the give
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves chat data for all channels availble in redis.</p>
-<h3 id='http-request-9'>HTTP Request</h3>
-<p><code>GET http://example.com/chat_aggregate/</code></p>
+<h3 id='http-request-10'>HTTP Request</h3>
+<p><code>GET  http://172.28.0.15:14022/chat_aggregate/</code></p>
 
 <aside class="success">
 Returns — Status 200
@@ -762,8 +835,8 @@ Returns — Status 200
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves chat data for all channels from given start timestamp untill last.</p>
-<h3 id='http-request-10'>HTTP Request</h3>
-<p><code>GET http://example.com/chat_aggregate?ts_start=1539939879</code></p>
+<h3 id='http-request-11'>HTTP Request</h3>
+<p><code>GET  http://172.28.0.15:14022/chat_aggregate?ts_start=1539939879</code></p>
 
 <aside class="success">
 Returns — Status 200
@@ -801,11 +874,88 @@ Returns — Status 200
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves chat data for all channels from given start timestamp untill last timestamp.</p>
-<h3 id='http-request-11'>HTTP Request</h3>
-<p><code>GET http://example.com/chat_aggregate?ts_start=1539939879&amp;ts_end=1539945364</code></p>
+<h3 id='http-request-12'>HTTP Request</h3>
+<p><code>GET  http://172.28.0.15:14022/chat_aggregate?ts_start=1539939879&amp;ts_end=1539945364</code></p>
 
 <aside class="success">
 Returns — Status 200
+</aside>
+<h1 id='blacklist'>Blacklist</h1><h2 id='blacklist-whitelist-user-from-channel'>Blacklist/ Whitelist User from Channel</h2>
+<blockquote>
+<p>The above API returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"channel_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">96</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"blacklist"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1234</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves data for all channels available in redis.</p>
+<h3 id='http-request-13'>HTTP Request</h3>
+<p><code>GET  http://172.28.0.15:14022/blacklists/</code></p>
+<h3 id='url-parameters-6'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>channel_id</td>
+<td>The ID of the channel</td>
+</tr>
+<tr>
+<td>blacklist</td>
+<td>The status (true/false) of the user to blacklist</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>The ID of the user to blacklist</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+Returns — Status 200
+</aside>
+
+<aside class="notice">
+When channel is not found Returns — Not Found 400
+</aside>
+<h1 id='broadcast-messages'>Broadcast Messages</h1><h2 id='broadcast-messages-to-particular-channel'>Broadcast messages to particular channel :</h2>
+<blockquote>
+<p>The above API returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> 
+  </span><span class="s2">"channel_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">841</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"broadcast"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"{</span><span class="se">\"</span><span class="s2">type</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">GENERATED_MSG</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">data</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">channel_id</span><span class="se">\"</span><span class="s2">:841,</span><span class="se">\"</span><span class="s2">message</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">xxxx</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">is_vibrate</span><span class="se">\"</span><span class="s2">:true,</span><span class="se">\"</span><span class="s2">send_pns</span><span class="se">\"</span><span class="s2">:true,</span><span class="se">\"</span><span class="s2">user</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">id</span><span class="se">\"</span><span class="s2">:id,</span><span class="se">\"</span><span class="s2">name</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">the-name</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">image</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">url-of-image</span><span class="se">\"</span><span class="s2">},</span><span class="se">\"</span><span class="s2">timestamp</span><span class="se">\"</span><span class="s2">: 11111111}}"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint broadcasts any type of messages to Particular Channel.</p>
+<h3 id='http-request-14'>HTTP Request</h3>
+<p><code>GET  http://172.28.0.15:14022/broadcast/</code></p>
+<h3 id='url-parameters-7'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>channel_id</td>
+<td>The ID of the channel</td>
+</tr>
+<tr>
+<td>broadcast</td>
+<td>The broadcast message</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+Returns — Status 200
+</aside>
+
+<aside class="notice">
+When channel is not found Returns — Not Found 400
 </aside>
 <h1 id='errors'>Errors</h1>
 <p>The GoodCop API uses the following error codes:</p>
@@ -837,24 +987,8 @@ Returns — Status 200
 <td>Method Not Allowed -- You tried to access a resource with an invalid method.</td>
 </tr>
 <tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The resource requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many resources! Slow down!</td>
-</tr>
-<tr>
 <td>500</td>
 <td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
 </tr>
 </tbody></table>
 
