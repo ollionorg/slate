@@ -311,8 +311,12 @@
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"channels"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
       </span><span class="s2">"blacklists"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+        </span><span class="s2">"total_blacklists"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="mi">8965646</span><span class="w">
+        </span><span class="p">]</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"channel_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">104</span><span class="p">,</span><span class="w">
       </span><span class="s2">"chats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -324,12 +328,18 @@
         </span><span class="s2">"total_concurrent_guests"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
         </span><span class="s2">"total_concurrent_users"</span><span class="p">:</span><span class="w"> </span><span class="mi">-31</span><span class="p">,</span><span class="w">
         </span><span class="s2">"total_guests"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"total_users"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+        </span><span class="s2">"total_registered_users"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_users"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
       </span><span class="s2">"blacklists"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+        </span><span class="s2">"total_blacklists"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="mi">1234</span><span class="p">,</span><span class="w">
+          </span><span class="mi">8965646</span><span class="w">
+        </span><span class="p">]</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"channel_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">96</span><span class="p">,</span><span class="w">
       </span><span class="s2">"chats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -341,7 +351,8 @@
         </span><span class="s2">"total_concurrent_guests"</span><span class="p">:</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w">
         </span><span class="s2">"total_concurrent_users"</span><span class="p">:</span><span class="w"> </span><span class="mi">695</span><span class="p">,</span><span class="w">
         </span><span class="s2">"total_guests"</span><span class="p">:</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"total_users"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
+        </span><span class="s2">"total_registered_users"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_users"</span><span class="p">:</span><span class="w"> </span><span class="mi">31</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
@@ -375,26 +386,31 @@ When channel is not found Returns — Not Found 400
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-   </span><span class="s2">"channels"</span><span class="p">:[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-         </span><span class="s2">"active"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"blacklists"</span><span class="p">:{</span><span class="w">
-            </span><span class="s2">"user_id"</span><span class="p">:[]</span><span class="w">
-         </span><span class="p">},</span><span class="w">
-         </span><span class="s2">"channel_id"</span><span class="p">:</span><span class="mi">96</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"chats"</span><span class="p">:{</span><span class="w">
-            </span><span class="s2">"total_brodcast"</span><span class="p">:</span><span class="mi">2764</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_received"</span><span class="p">:</span><span class="mi">266859</span><span class="w">
-         </span><span class="p">},</span><span class="w">
-         </span><span class="s2">"users"</span><span class="p">:{</span><span class="w">
-            </span><span class="s2">"total_concurrent"</span><span class="p">:</span><span class="mi">722</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_concurrent_guests"</span><span class="p">:</span><span class="mi">27</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_concurrent_users"</span><span class="p">:</span><span class="mi">695</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_guests"</span><span class="p">:</span><span class="mi">27</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_users"</span><span class="p">:</span><span class="mi">4</span><span class="w">
-         </span><span class="p">}</span><span class="w">
+  </span><span class="s2">"channels"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"blacklists"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"total_blacklists"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="mi">1234</span><span class="p">,</span><span class="w">
+          </span><span class="mi">8965646</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"channel_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">96</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"chats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"total_brodcast"</span><span class="p">:</span><span class="w"> </span><span class="mi">2764</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_received"</span><span class="p">:</span><span class="w"> </span><span class="mi">266859</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"total_concurrent"</span><span class="p">:</span><span class="w"> </span><span class="mi">722</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_concurrent_guests"</span><span class="p">:</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_concurrent_users"</span><span class="p">:</span><span class="w"> </span><span class="mi">695</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_guests"</span><span class="p">:</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_registered_users"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_users"</span><span class="p">:</span><span class="w"> </span><span class="mi">31</span><span class="w">
       </span><span class="p">}</span><span class="w">
-   </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET  http://172.28.0.15:14022/channels?channel_id=96</code></p>
@@ -423,48 +439,30 @@ When channel is not found Returns — Not Found 400
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-   </span><span class="s2">"channels"</span><span class="p">:[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-         </span><span class="s2">"active"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"blacklists"</span><span class="p">:{</span><span class="w">
-            </span><span class="s2">"user_id"</span><span class="p">:[</span><span class="w">
-               </span><span class="mi">8965646</span><span class="w">
-            </span><span class="p">]</span><span class="w">
-         </span><span class="p">},</span><span class="w">
-         </span><span class="s2">"channel_id"</span><span class="p">:</span><span class="mi">104</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"chats"</span><span class="p">:{</span><span class="w">
-            </span><span class="s2">"total_brodcast"</span><span class="p">:</span><span class="mi">870</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_received"</span><span class="p">:</span><span class="mi">59702</span><span class="w">
-         </span><span class="p">},</span><span class="w">
-         </span><span class="s2">"users"</span><span class="p">:{</span><span class="w">
-            </span><span class="s2">"total_concurrent"</span><span class="p">:</span><span class="mi">-26</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_concurrent_guests"</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_concurrent_users"</span><span class="p">:</span><span class="mi">-31</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_guests"</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_users"</span><span class="p">:</span><span class="mi">3</span><span class="w">
-         </span><span class="p">}</span><span class="w">
+  </span><span class="s2">"channels"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"blacklists"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"total_blacklists"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="mi">8965646</span><span class="w">
+        </span><span class="p">]</span><span class="w">
       </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-         </span><span class="s2">"active"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"blacklists"</span><span class="p">:{</span><span class="w">
-            </span><span class="s2">"user_id"</span><span class="p">:[</span><span class="w">
-
-            </span><span class="p">]</span><span class="w">
-         </span><span class="p">},</span><span class="w">
-         </span><span class="s2">"channel_id"</span><span class="p">:</span><span class="mi">96</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"chats"</span><span class="p">:{</span><span class="w">
-            </span><span class="s2">"total_brodcast"</span><span class="p">:</span><span class="mi">2764</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_received"</span><span class="p">:</span><span class="mi">266859</span><span class="w">
-         </span><span class="p">},</span><span class="w">
-         </span><span class="s2">"users"</span><span class="p">:{</span><span class="w">
-            </span><span class="s2">"total_concurrent"</span><span class="p">:</span><span class="mi">722</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_concurrent_guests"</span><span class="p">:</span><span class="mi">27</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_concurrent_users"</span><span class="p">:</span><span class="mi">695</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_guests"</span><span class="p">:</span><span class="mi">27</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_users"</span><span class="p">:</span><span class="mi">4</span><span class="w">
-         </span><span class="p">}</span><span class="w">
+      </span><span class="s2">"channel_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">104</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"chats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"total_brodcast"</span><span class="p">:</span><span class="w"> </span><span class="mi">870</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_received"</span><span class="p">:</span><span class="w"> </span><span class="mi">59702</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"total_concurrent"</span><span class="p">:</span><span class="w"> </span><span class="mi">-26</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_concurrent_guests"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_concurrent_users"</span><span class="p">:</span><span class="w"> </span><span class="mi">-31</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_guests"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_registered_users"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_users"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w">
       </span><span class="p">}</span><span class="w">
-   </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
 <p><code>GET  http://172.28.0.15:14022/channels?active=true</code></p>
@@ -489,48 +487,30 @@ Returns — Status 200
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-   </span><span class="s2">"channels"</span><span class="p">:[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-         </span><span class="s2">"active"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"blacklists"</span><span class="p">:{</span><span class="w">
-            </span><span class="s2">"user_id"</span><span class="p">:[</span><span class="w">
-               </span><span class="mi">8965646</span><span class="w">
-            </span><span class="p">]</span><span class="w">
-         </span><span class="p">},</span><span class="w">
-         </span><span class="s2">"channel_id"</span><span class="p">:</span><span class="mi">104</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"chats"</span><span class="p">:{</span><span class="w">
-            </span><span class="s2">"total_brodcast"</span><span class="p">:</span><span class="mi">870</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_received"</span><span class="p">:</span><span class="mi">59702</span><span class="w">
-         </span><span class="p">},</span><span class="w">
-         </span><span class="s2">"users"</span><span class="p">:{</span><span class="w">
-            </span><span class="s2">"total_concurrent"</span><span class="p">:</span><span class="mi">-26</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_concurrent_guests"</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_concurrent_users"</span><span class="p">:</span><span class="mi">-31</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_guests"</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_users"</span><span class="p">:</span><span class="mi">3</span><span class="w">
-         </span><span class="p">}</span><span class="w">
+  </span><span class="s2">"channels"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"blacklists"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"total_blacklists"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="mi">8965646</span><span class="w">
+        </span><span class="p">]</span><span class="w">
       </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-         </span><span class="s2">"active"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"blacklists"</span><span class="p">:{</span><span class="w">
-            </span><span class="s2">"user_id"</span><span class="p">:[</span><span class="w">
-
-            </span><span class="p">]</span><span class="w">
-         </span><span class="p">},</span><span class="w">
-         </span><span class="s2">"channel_id"</span><span class="p">:</span><span class="mi">96</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"chats"</span><span class="p">:{</span><span class="w">
-            </span><span class="s2">"total_brodcast"</span><span class="p">:</span><span class="mi">2764</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_received"</span><span class="p">:</span><span class="mi">266859</span><span class="w">
-         </span><span class="p">},</span><span class="w">
-         </span><span class="s2">"users"</span><span class="p">:{</span><span class="w">
-            </span><span class="s2">"total_concurrent"</span><span class="p">:</span><span class="mi">722</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_concurrent_guests"</span><span class="p">:</span><span class="mi">27</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_concurrent_users"</span><span class="p">:</span><span class="mi">695</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_guests"</span><span class="p">:</span><span class="mi">27</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"total_users"</span><span class="p">:</span><span class="mi">4</span><span class="w">
-         </span><span class="p">}</span><span class="w">
+      </span><span class="s2">"channel_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">104</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"chats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"total_brodcast"</span><span class="p">:</span><span class="w"> </span><span class="mi">870</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_received"</span><span class="p">:</span><span class="w"> </span><span class="mi">59702</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"total_concurrent"</span><span class="p">:</span><span class="w"> </span><span class="mi">-26</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_concurrent_guests"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_concurrent_users"</span><span class="p">:</span><span class="w"> </span><span class="mi">-31</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_guests"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_registered_users"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_users"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w">
       </span><span class="p">}</span><span class="w">
-   </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
 <p><code>GET  http://172.28.0.15:14022/kittens?channel_id=96&amp;active=true</code></p>
@@ -598,22 +578,22 @@ When channel is not found Returns — Not Found 400
   </span><span class="s2">"channel_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"96"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"chat_in-channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"chat_in_channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
       </span><span class="s2">"total_chats"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
       </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5513252"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"chat_in-channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">78176</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"chat_in_channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">78176</span><span class="p">,</span><span class="w">
       </span><span class="s2">"total_chats"</span><span class="p">:</span><span class="w"> </span><span class="mi">96408</span><span class="p">,</span><span class="w">
       </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8965643"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"chat_in-channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">57980</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"chat_in_channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">57980</span><span class="p">,</span><span class="w">
       </span><span class="s2">"total_chats"</span><span class="p">:</span><span class="w"> </span><span class="mi">57980</span><span class="p">,</span><span class="w">
       </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8965644"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"chat_in-channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">130701</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"chat_in_channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">130701</span><span class="p">,</span><span class="w">
       </span><span class="s2">"total_chats"</span><span class="p">:</span><span class="w"> </span><span class="mi">130701</span><span class="p">,</span><span class="w">
       </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8965645"</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -643,22 +623,22 @@ This API does not have timestamps in parameters. So response does not have chat_
   </span><span class="s2">"channel_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">96</span><span class="p">,</span><span class="w">
   </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"chat_in-channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"chat_in_channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
       </span><span class="s2">"total_chats"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
       </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5513252</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"chat_in-channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">78176</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"chat_in_channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">78176</span><span class="p">,</span><span class="w">
       </span><span class="s2">"total_chats"</span><span class="p">:</span><span class="w"> </span><span class="mi">96408</span><span class="p">,</span><span class="w">
       </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8965643</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"chat_in-channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">57980</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"chat_in_channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">57980</span><span class="p">,</span><span class="w">
       </span><span class="s2">"total_chats"</span><span class="p">:</span><span class="w"> </span><span class="mi">57980</span><span class="p">,</span><span class="w">
       </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8965644</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"chat_in-channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">130701</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"chat_in_channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">130701</span><span class="p">,</span><span class="w">
       </span><span class="s2">"total_chats"</span><span class="p">:</span><span class="w"> </span><span class="mi">130701</span><span class="p">,</span><span class="w">
       </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8965645</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -687,23 +667,23 @@ This API does not have timestamps in parameters. So response does not have chat_
   </span><span class="s2">"ts_start"</span><span class="p">:</span><span class="w"> </span><span class="mi">1539939879</span><span class="p">,</span><span class="w">
   </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"chat_in-channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"chat_in_channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
       </span><span class="s2">"chats_in_period"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"total_chats"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
       </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5513252</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"chat_in-channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">78176</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"chat_in_channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">78176</span><span class="p">,</span><span class="w">
       </span><span class="s2">"total_chats"</span><span class="p">:</span><span class="w"> </span><span class="mi">96408</span><span class="p">,</span><span class="w">
       </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8965643</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"chat_in-channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">57980</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"chat_in_channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">57980</span><span class="p">,</span><span class="w">
       </span><span class="s2">"total_chats"</span><span class="p">:</span><span class="w"> </span><span class="mi">57980</span><span class="p">,</span><span class="w">
       </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8965644</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"chat_in-channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">130701</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"chat_in_channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">130701</span><span class="p">,</span><span class="w">
       </span><span class="s2">"total_chats"</span><span class="p">:</span><span class="w"> </span><span class="mi">130701</span><span class="p">,</span><span class="w">
       </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8965645</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -728,23 +708,23 @@ chats_in_period key will be returned for the users(those were active at the give
   </span><span class="s2">"ts_start"</span><span class="p">:</span><span class="w"> </span><span class="mi">1539939879</span><span class="p">,</span><span class="w">
   </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"chat_in-channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"chat_in_channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
       </span><span class="s2">"chats_in_period"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"total_chats"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
       </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5513252</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"chat_in-channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">78176</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"chat_in_channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">78176</span><span class="p">,</span><span class="w">
       </span><span class="s2">"total_chats"</span><span class="p">:</span><span class="w"> </span><span class="mi">96408</span><span class="p">,</span><span class="w">
       </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8965643</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"chat_in-channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">57980</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"chat_in_channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">57980</span><span class="p">,</span><span class="w">
       </span><span class="s2">"total_chats"</span><span class="p">:</span><span class="w"> </span><span class="mi">57980</span><span class="p">,</span><span class="w">
       </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8965644</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"chat_in-channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">130701</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"chat_in_channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">130701</span><span class="p">,</span><span class="w">
       </span><span class="s2">"total_chats"</span><span class="p">:</span><span class="w"> </span><span class="mi">130701</span><span class="p">,</span><span class="w">
       </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8965645</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -790,7 +770,7 @@ chats_in_period key will be returned for the users(those were active at the give
       </span><span class="p">{</span><span class="w">
         </span><span class="s2">"total_chats"</span><span class="p">:</span><span class="w"> </span><span class="mi">96408</span><span class="p">,</span><span class="w">
         </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8965643</span><span class="w">
-      </span><span class="p">},{},{}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -829,7 +809,7 @@ Returns — Status 200
         </span><span class="s2">"chats_in_period"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
         </span><span class="s2">"total_chats"</span><span class="p">:</span><span class="w"> </span><span class="mi">130701</span><span class="p">,</span><span class="w">
         </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8965645</span><span class="w">
-      </span><span class="p">},{},{}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -868,7 +848,7 @@ Returns — Status 200
         </span><span class="s2">"chats_in_period"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
         </span><span class="s2">"total_chats"</span><span class="p">:</span><span class="w"> </span><span class="mi">130701</span><span class="p">,</span><span class="w">
         </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8965645</span><span class="w">
-      </span><span class="p">},{},{}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -958,7 +938,7 @@ Returns — Status 200
 When channel is not found Returns — Not Found 400
 </aside>
 <h1 id='errors'>Errors</h1>
-<p>The GoodCop API uses the following error codes:</p>
+<p>The Toko-Data-Aggregator API uses the following error codes:</p>
 
 <table><thead>
 <tr>
@@ -971,20 +951,8 @@ When channel is not found Returns — Not Found 400
 <td>Bad Request -- Your request is invalid.</td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The request is hidden for administrators only.</td>
-</tr>
-<tr>
 <td>404</td>
 <td>Not Found -- The specified resource could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a resource with an invalid method.</td>
 </tr>
 <tr>
 <td>500</td>
