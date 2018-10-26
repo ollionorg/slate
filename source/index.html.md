@@ -31,8 +31,12 @@ Click to check the api status(provided the caller is in the VPC): [Status Check]
 {
   "channels": [
     {
+      "active": true,
       "blacklists": {
-        "user_id": []
+        "total_blacklists": 1,
+        "user_id": [
+          8965646
+        ]
       },
       "channel_id": 104,
       "chats": {
@@ -44,12 +48,18 @@ Click to check the api status(provided the caller is in the VPC): [Status Check]
         "total_concurrent_guests": 5,
         "total_concurrent_users": -31,
         "total_guests": 5,
-        "total_users": 3
+        "total_registered_users": 3,
+        "total_users": 8
       }
     },
     {
+      "active": false,
       "blacklists": {
-        "user_id": []
+        "total_blacklists": 2,
+        "user_id": [
+          1234,
+          8965646
+        ]
       },
       "channel_id": 96,
       "chats": {
@@ -61,7 +71,8 @@ Click to check the api status(provided the caller is in the VPC): [Status Check]
         "total_concurrent_guests": 27,
         "total_concurrent_users": 695,
         "total_guests": 27,
-        "total_users": 4
+        "total_registered_users": 4,
+        "total_users": 31
       }
     }
   ]
@@ -93,26 +104,31 @@ When channel is not found Returns — Not Found 400
 
 ```json
 {
-   "channels":[
-      {
-         "active":true,
-         "blacklists":{
-            "user_id":[]
-         },
-         "channel_id":96,
-         "chats":{
-            "total_brodcast":2764,
-            "total_received":266859
-         },
-         "users":{
-            "total_concurrent":722,
-            "total_concurrent_guests":27,
-            "total_concurrent_users":695,
-            "total_guests":27,
-            "total_users":4
-         }
+  "channels": [
+    {
+      "active": false,
+      "blacklists": {
+        "total_blacklists": 2,
+        "user_id": [
+          1234,
+          8965646
+        ]
+      },
+      "channel_id": 96,
+      "chats": {
+        "total_brodcast": 2764,
+        "total_received": 266859
+      },
+      "users": {
+        "total_concurrent": 722,
+        "total_concurrent_guests": 27,
+        "total_concurrent_users": 695,
+        "total_guests": 27,
+        "total_registered_users": 4,
+        "total_users": 31
       }
-   ]
+    }
+  ]
 }
 ```
 
@@ -141,48 +157,30 @@ When channel is not found Returns — Not Found 400
 
 ```json
 {
-   "channels":[
-      {
-         "active":true,
-         "blacklists":{
-            "user_id":[
-               8965646
-            ]
-         },
-         "channel_id":104,
-         "chats":{
-            "total_brodcast":870,
-            "total_received":59702
-         },
-         "users":{
-            "total_concurrent":-26,
-            "total_concurrent_guests":5,
-            "total_concurrent_users":-31,
-            "total_guests":5,
-            "total_users":3
-         }
+  "channels": [
+    {
+      "active": true,
+      "blacklists": {
+        "total_blacklists": 1,
+        "user_id": [
+          8965646
+        ]
       },
-      {
-         "active":true,
-         "blacklists":{
-            "user_id":[
-
-            ]
-         },
-         "channel_id":96,
-         "chats":{
-            "total_brodcast":2764,
-            "total_received":266859
-         },
-         "users":{
-            "total_concurrent":722,
-            "total_concurrent_guests":27,
-            "total_concurrent_users":695,
-            "total_guests":27,
-            "total_users":4
-         }
+      "channel_id": 104,
+      "chats": {
+        "total_brodcast": 870,
+        "total_received": 59702
+      },
+      "users": {
+        "total_concurrent": -26,
+        "total_concurrent_guests": 5,
+        "total_concurrent_users": -31,
+        "total_guests": 5,
+        "total_registered_users": 3,
+        "total_users": 8
       }
-   ]
+    }
+  ]
 }
 ```
 
@@ -207,48 +205,30 @@ Returns — Status 200
 
 ```json
 {
-   "channels":[
-      {
-         "active":true,
-         "blacklists":{
-            "user_id":[
-               8965646
-            ]
-         },
-         "channel_id":104,
-         "chats":{
-            "total_brodcast":870,
-            "total_received":59702
-         },
-         "users":{
-            "total_concurrent":-26,
-            "total_concurrent_guests":5,
-            "total_concurrent_users":-31,
-            "total_guests":5,
-            "total_users":3
-         }
+  "channels": [
+    {
+      "active": true,
+      "blacklists": {
+        "total_blacklists": 1,
+        "user_id": [
+          8965646
+        ]
       },
-      {
-         "active":true,
-         "blacklists":{
-            "user_id":[
-
-            ]
-         },
-         "channel_id":96,
-         "chats":{
-            "total_brodcast":2764,
-            "total_received":266859
-         },
-         "users":{
-            "total_concurrent":722,
-            "total_concurrent_guests":27,
-            "total_concurrent_users":695,
-            "total_guests":27,
-            "total_users":4
-         }
+      "channel_id": 104,
+      "chats": {
+        "total_brodcast": 870,
+        "total_received": 59702
+      },
+      "users": {
+        "total_concurrent": -26,
+        "total_concurrent_guests": 5,
+        "total_concurrent_users": -31,
+        "total_guests": 5,
+        "total_registered_users": 3,
+        "total_users": 8
       }
-   ]
+    }
+  ]
 }
 ```
 
@@ -313,22 +293,22 @@ When channel is not found Returns — Not Found 400
   "channel_id": "96",
   "users": [
     {
-      "chat_in-channel": 2,
+      "chat_in_channel": 2,
       "total_chats": 2,
       "user_id": "5513252"
     },
     {
-      "chat_in-channel": 78176,
+      "chat_in_channel": 78176,
       "total_chats": 96408,
       "user_id": "8965643"
     },
     {
-      "chat_in-channel": 57980,
+      "chat_in_channel": 57980,
       "total_chats": 57980,
       "user_id": "8965644"
     },
     {
-      "chat_in-channel": 130701,
+      "chat_in_channel": 130701,
       "total_chats": 130701,
       "user_id": "8965645"
     }
@@ -361,22 +341,22 @@ This API does not have timestamps in parameters. So response does not have chat_
   "channel_id": 96,
   "users": [
     {
-      "chat_in-channel": 2,
+      "chat_in_channel": 2,
       "total_chats": 2,
       "user_id": 5513252
     },
     {
-      "chat_in-channel": 78176,
+      "chat_in_channel": 78176,
       "total_chats": 96408,
       "user_id": 8965643
     },
     {
-      "chat_in-channel": 57980,
+      "chat_in_channel": 57980,
       "total_chats": 57980,
       "user_id": 8965644
     },
     {
-      "chat_in-channel": 130701,
+      "chat_in_channel": 130701,
       "total_chats": 130701,
       "user_id": 8965645
     }
@@ -408,23 +388,23 @@ This API does not have timestamps in parameters. So response does not have chat_
   "ts_start": 1539939879,
   "users": [
     {
-      "chat_in-channel": 2,
+      "chat_in_channel": 2,
       "chats_in_period": 0,
       "total_chats": 2,
       "user_id": 5513252
     },
     {
-      "chat_in-channel": 78176,
+      "chat_in_channel": 78176,
       "total_chats": 96408,
       "user_id": 8965643
     },
     {
-      "chat_in-channel": 57980,
+      "chat_in_channel": 57980,
       "total_chats": 57980,
       "user_id": 8965644
     },
     {
-      "chat_in-channel": 130701,
+      "chat_in_channel": 130701,
       "total_chats": 130701,
       "user_id": 8965645
     }
@@ -454,23 +434,23 @@ chats_in_period key will be returned for the users(those were active at the give
   "ts_start": 1539939879,
   "users": [
     {
-      "chat_in-channel": 2,
+      "chat_in_channel": 2,
       "chats_in_period": 0,
       "total_chats": 2,
       "user_id": 5513252
     },
     {
-      "chat_in-channel": 78176,
+      "chat_in_channel": 78176,
       "total_chats": 96408,
       "user_id": 8965643
     },
     {
-      "chat_in-channel": 57980,
+      "chat_in_channel": 57980,
       "total_chats": 57980,
       "user_id": 8965644
     },
     {
-      "chat_in-channel": 130701,
+      "chat_in_channel": 130701,
       "total_chats": 130701,
       "user_id": 8965645
     }
@@ -523,7 +503,7 @@ chats_in_period key will be returned for the users(those were active at the give
       {
         "total_chats": 96408,
         "user_id": 8965643
-      },{},{}
+      }
     ]
   }
 }
@@ -567,7 +547,7 @@ Returns — Status 200
         "chats_in_period": 3,
         "total_chats": 130701,
         "user_id": 8965645
-      },{},{}
+      }
     ]
   }
 }
@@ -612,7 +592,7 @@ Returns — Status 200
         "chats_in_period": 3,
         "total_chats": 130701,
         "user_id": 8965645
-      },{},{}
+      }
     ]
   }
 }
