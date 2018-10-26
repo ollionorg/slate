@@ -18,17 +18,12 @@ search: true
 
 Welcome to the Data aggregator API! You can use this API to access Data aggregator API endpoints, which can get information on various channels, users, and chats from redis.
 
-Click to check the api status: [Status Check](http://localhost:3000).
+Click to check the api status(provided the caller is in the VPC): [Status Check]( http://172.28.0.15:14022 ).
 
 
 # Channels
 
 ## Get All Channels
-
-
-```Endpoint
-<host>/channels
-```
 
 > The above API returns JSON structured like this:
 
@@ -77,7 +72,7 @@ This endpoint retrieves data for all channels availble in redis.
 
 ### HTTP Request
 
-`GET http://example.com/channels`
+`GET  http://172.28.0.15:14022/channels/`
 
 ### URL Parameters
 
@@ -88,13 +83,11 @@ channel_id | The ID of the channel to retrieve
 <aside class="success">
 Returns — Status 200
 </aside>
-
+<aside class="notice">
+When channel is not found Returns — Not Found 400
+</aside>
 
 ## Get a Specific Channel
-
-```Endpoint
-<host>/channels?channel_id=96
-```
 
 > The above command returns JSON structured like this:
 
@@ -126,7 +119,7 @@ Returns — Status 200
 
 ### HTTP Request
 
-`GET http://example.com/channels/?channel_id=96`
+`GET  http://172.28.0.15:14022/channels?channel_id=96`
 
 
 ### URL Parameters
@@ -137,6 +130,9 @@ channel_id | The ID of the channel to retrieve
 
 <aside class="success">
 Returns — Status 200
+</aside>
+<aside class="notice">
+When channel is not found Returns — Not Found 400
 </aside>
 
 ## Get all active Channels
@@ -192,7 +188,7 @@ Returns — Status 200
 
 ### HTTP Request
 
-`GET http://example.com/channels/?active=true`
+`GET  http://172.28.0.15:14022/channels?active=true`
 
 ### URL Parameters
 
@@ -259,7 +255,7 @@ Returns — Status 200
 
 ### HTTP Request
 
-`GET http://example.com/kittens/?channel_id=96&active=true`
+`GET  http://172.28.0.15:14022/kittens?channel_id=96&active=true`
 
 ### URL Parameters
 
@@ -273,6 +269,37 @@ active     | The status of the channel to retrieve
 Returns — Status 200
 </aside>
 
+## Update Channel Status
+
+> The above API returns JSON structured like this:
+
+```json
+{
+  "channel_id": 96,
+  "active": true
+}
+```
+
+This endpoint updates the status of the channel
+
+### HTTP Request
+
+`POST  http://172.28.0.15:14022/channels/`
+
+### URL Parameters
+
+Parameter  | Description
+---------  | -----------
+channel_id | The ID of the channel 
+active     | The expected status (true/false) of the channel
+
+
+<aside class="success">
+Returns — Status 200
+</aside>
+<aside class="notice">
+When channel is not found Returns — Not Found 400
+</aside>
 
 
 # Chats
@@ -313,12 +340,14 @@ This endpoint retrieves data for all channels availble in redis.
 
 ### HTTP Request
 
-`GET http://example.com/chats`
+`GET  http://172.28.0.15:14022/chats/`
 
 <aside class="success">
 Returns — Status 200
 </aside>
-
+<aside class="notice">
+When channel is not found Returns — Not Found 400
+</aside>
 <aside class="notice">
 This API does not have timestamps in parameters. So response does not have chat_in_period key.
 </aside>
@@ -357,12 +386,14 @@ This API does not have timestamps in parameters. So response does not have chat_
 
 ### HTTP Request
 
-`GET http://example.com/chats?channel_id=96`
+`GET  http://172.28.0.15:14022/chats?channel_id=96`
 
 <aside class="success">
 Returns — Status 200
 </aside>
-
+<aside class="notice">
+When channel is not found Returns — Not Found 400
+</aside>
 <aside class="notice">
 This API does not have timestamps in parameters. So response does not have chat_in_period key.
 </aside>
@@ -403,7 +434,7 @@ This API does not have timestamps in parameters. So response does not have chat_
 
 ### HTTP Request
 
-`GET http://example.com/chats?channel_id=96&ts_start=1539939879`
+`GET  http://172.28.0.15:14022/chats?channel_id=96&ts_start=1539939879`
 
 <aside class="success">
 Returns — Status 200
@@ -450,12 +481,14 @@ chats_in_period key will be returned for the users(those were active at the give
 
 ### HTTP Request
 
-`GET http://example.com/chats?channel_id=96&ts_start=1539939879&ts_end=1539944558`
+`GET  http://172.28.0.15:14022/chats?channel_id=96&ts_start=1539939879&ts_end=1539944558`
 
 <aside class="success">
 Returns — Status 200
 </aside>
-
+<aside class="notice">
+When channel is not found Returns — Not Found 400
+</aside>
 <aside class="notice">
 chats_in_period key will be returned for the users(those were active at the given timestamp)
 </aside>
@@ -500,7 +533,7 @@ This endpoint retrieves chat data for all channels availble in redis.
 
 ### HTTP Request
 
-`GET http://example.com/chat_aggregate/`
+`GET  http://172.28.0.15:14022/chat_aggregate/`
 
 <aside class="success">
 Returns — Status 200
@@ -544,7 +577,7 @@ This endpoint retrieves chat data for all channels from given start timestamp un
 
 ### HTTP Request
 
-`GET http://example.com/chat_aggregate?ts_start=1539939879`
+`GET  http://172.28.0.15:14022/chat_aggregate?ts_start=1539939879`
 
 <aside class="success">
 Returns — Status 200
@@ -589,8 +622,81 @@ This endpoint retrieves chat data for all channels from given start timestamp un
 
 ### HTTP Request
 
-`GET http://example.com/chat_aggregate?ts_start=1539939879&ts_end=1539945364`
+`GET  http://172.28.0.15:14022/chat_aggregate?ts_start=1539939879&ts_end=1539945364`
 
 <aside class="success">
 Returns — Status 200
+</aside>
+
+
+
+# Blacklist
+
+## Blacklist/ Whitelist User from Channel
+
+
+> The above API returns JSON structured like this:
+
+```json
+{
+  "channel_id": 96,
+  "blacklist": true,
+  "user_id": 1234
+}
+```
+
+This endpoint retrieves data for all channels available in redis.
+
+### HTTP Request
+
+`GET  http://172.28.0.15:14022/blacklists/`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+channel_id | The ID of the channel
+blacklist | The status (true/false) of the user to blacklist
+user_id   | The ID of the user to blacklist
+
+
+<aside class="success">
+Returns — Status 200
+</aside>
+<aside class="notice">
+When channel is not found Returns — Not Found 400
+</aside>
+# Broadcast Messages
+
+## Broadcast messages to particular channel :
+
+
+> The above API returns JSON structured like this:
+
+```json
+{ 
+  "channel_id" : 841,
+  "broadcast" : "{\"type\":\"GENERATED_MSG\",\"data\":{\"channel_id\":841,\"message\":\"xxxx\",\"is_vibrate\":true,\"send_pns\":true,\"user\":{\"id\":id,\"name\":\"the-name\",\"image\":\"url-of-image\"},\"timestamp\": 11111111}}"
+}
+```
+
+This endpoint broadcasts any type of messages to Particular Channel.
+
+### HTTP Request
+
+`GET  http://172.28.0.15:14022/broadcast/`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+channel_id | The ID of the channel
+broadcast |  The broadcast message
+
+
+<aside class="success">
+Returns — Status 200
+</aside>
+<aside class="notice">
+When channel is not found Returns — Not Found 400
 </aside>
