@@ -66,7 +66,7 @@ Returns a user object if correct email and password was provided. The returned o
 6.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
 
-## SignIn using github
+## SignIn using Github
 
 
 > Example Request
@@ -105,7 +105,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
 3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
-## SignIn using facebook
+## SignIn using Google
 
 
 > Example Request
@@ -144,7 +144,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
 3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
-## SignIn using facebook
+## SignIn using Facebook
 
 
 > Example Request
@@ -183,7 +183,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
 3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
-## SignIn using twitter
+## SignIn using Twitter
 
 
 > Example Request
@@ -222,7 +222,7 @@ Returns a redirect url. The redirect url will be used to authenticate the user u
 2.  <code style="background:#FFFFFF;color:#FFC107;"> 400 </code> `No Callback is set for your product, please set that first`
 3.  <code style="background:#FFFFFF;color:#FF0000;"> 500 </code> `We had a problem with our server. Try again later.`
 
-## SignIn using instagram
+## SignIn using Instagram
 
 
 > Example Request
